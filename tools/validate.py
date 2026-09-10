@@ -32,21 +32,29 @@ def main():
         check(f"skill metadata: {module['id']}",
               metadata.get("name") == module["id"] and metadata.get("description") == module["description"])
         check(f"skill entrypoint length: {module['id']}", len(raw.splitlines()) < 180)
-    for case in data["cases"]:
-        check(f"case references: {case['id']}",
-              case["document"] in data["documents"] and (ROOT / case["image"]).is_file()
-              and all(skill in ids for skill in case["skills"]))
+    sections = [s["id"] for s in data["knowledge"]["sections"]]
+    check("unique knowledge sections", len(sections) == len(set(sections)))
+    for article in data["knowledge"]["articles"]:
+        check(f"knowledge article: {article['path']}",
+              article["path"] in data["documents"] and article["section"] in sections,
+              "missing document" if article["path"] not in data["documents"] else "")
+    for lab in data["labs"]:
+        check(f"lab references: {lab['id']}",
+              lab["document"] in data["documents"] and (ROOT / lab["image"]).is_file()
+              and all(skill in ids for skill in lab["skills"]))
     for asset in data["assets"]:
-        check(f"recorded image bytes: {asset['file']}", digest(ROOT / asset["file"]) == asset["sha256"])
+        check(f"recorded image bytes: {asset['file']}",
+              (ROOT / asset["file"]).is_file() and digest(ROOT / asset["file"]) == asset["sha256"],
+              "" if (ROOT / asset["file"]).is_file() else "file is missing")
     for manifest in (ROOT / "provenance/references").glob("*/manifest.json"):
         for asset in json.loads(manifest.read_text())["images"]:
             check(f"reference image bytes: {asset['file']}", digest(ROOT / asset["file"]) == asset["sha256"])
-    joints = json.loads((ROOT / "examples/printed-joints/native-manifest.json").read_text())
-    joint_report = json.loads((ROOT / "examples/printed-joints/verification.json").read_text())
-    native = json.loads((ROOT / "examples/printed-joints/native-checks.json").read_text())
+    joints = json.loads((ROOT / "labs/printed-joints/native-manifest.json").read_text())
+    joint_report = json.loads((ROOT / "labs/printed-joints/verification.json").read_text())
+    native = json.loads((ROOT / "labs/printed-joints/native-checks.json").read_text())
     check("joints native source current", digest(ROOT / joints["source_file"]) == joints["source_sha256"])
     check("joints frozen native checks", native["status"] == "passed" and native["versionId"] == joints["versionId"] and len(native["checks"]) == 16)
-    check("joints verifier current", digest(ROOT / "examples/printed-joints/verify.py") == joint_report["script_sha256"])
+    check("joints verifier current", digest(ROOT / "labs/printed-joints/verify.py") == joint_report["script_sha256"])
     check("joints complete geometry checks", joint_report["status"] == "passed" and len(joint_report["cases"]) == 8)
     for artifact in joints["artifacts"]:
         check(f"joint native source consumed: {artifact['name']}", artifact["featureSourceSha256"] == joints["source_sha256"] and artifact["featureStatus"] == "OK")
@@ -69,7 +77,9 @@ def main():
         check(f"generated file current: {name}", (ROOT / name).read_text() == expected)
     tests = json.loads((ROOT / "validation/tests.json").read_text())
     for path, sha in tests["inputs_sha256"].items():
-        check(f"test evidence current: {path}", digest(ROOT / path) == sha)
+        present = (ROOT / path).is_file()
+        check(f"test evidence current: {path}", present and digest(ROOT / path) == sha,
+              "" if present else "recorded test input no longer exists")
     report = {"status": "failed" if errors else "passed", "checks_run": len(checks),
               "errors": errors, "checks": checks}
     (ROOT / "validation/content.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")

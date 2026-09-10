@@ -1,0 +1,35 @@
+{
+  "status": "reviewed-reference-only; no physical verification",
+  "sources": [
+    {
+      "url": "https://www.youtube.com/watch?v=7aJ4dDyyf20",
+      "title": "Stop Printing Flat: The 45° Secret for Stronger Parts",
+      "creator": "CNC Kitchen (Stefan Hermann)",
+      "upload_date": "20251026",
+      "duration_seconds": 1025,
+      "accessed": "2026-09-10",
+      "method": "Author-supplied English subtitles converted to a local plain-text transcript, plus 105 sampled frames (one every ~9.8 s) taken from the publicly served storyboard tiles at 320x180 and reviewed as contact sheets. The 360p video stream was requested but refused by the server (HTTP 403), so no video file was retained; the visual review therefore rests on the sampled frames only.",
+      "metadata_file": "var/research/print-orientation/7aJ4dDyyf20.info.json",
+      "metadata_sha256": "97863426893a5156f3ea56a75972910b4f498c33239becb61a3d2a1c5e479a8a",
+      "subtitle_file": "var/research/print-orientation/7aJ4dDyyf20.en.json3",
+      "subtitle_sha256": "77773f5249a07a8dd55a3a90efbbc7b9be2bceabb4e330fe52ac07b519db1f72",
+      "transcript_file": "var/research/print-orientation/transcript.txt",
+      "transcript_sha256": "72967c3be33a7742c6d7ff9dee36299dce84afdd4e0e7f8b4ef9d1177a9ab1c9",
+      "video_file": null,
+      "video_sha256": null,
+      "video_note": "Not downloaded; the 360p progressive stream returned HTTP 403.",
+      "derived_article": "knowledge/manufacturing/print-orientation.md"
+    }
+  ],
+  "images": [
+    {
+      "file": "provenance/references/print-orientation/7aJ4dDyyf20-contact.png",
+      "sha256": "2e4f49eff47eeae100f191a9d501b43dc01c6b4cd12dbbbf0d3cd23eeb154fe6",
+      "bytes": 131440,
+      "caption": "Nine low-resolution storyboard frames retained as evidence of the visual review: tensile strength over printing angle as bar chart and as interpolated curve; the corner bracket standing on its tip in the slicer; the same bracket with a corner cut flat for bed contact; a failed angled print whose supports released; two flat plates printed in different orientations; the arch demonstrator tilted in the slicer; the vacuum hose adapter printed at an angle; the hook failure-load chart.",
+      "processing": "Storyboard tiles (320x180) upscaled 2x with Lanczos, composed into a 3x3 grid and reduced to a 64-colour palette to stay small.",
+      "status": "source frames, quoted for verification only; not measurement data"
+    }
+  ],
+  "copyright": "The video, its footage and its test data remain with their author (CNC Kitchen). No full transcript and no complete frame set are redistributed here; only the single low-resolution contact sheet above is retained so the visual review can be checked. The transcript and the full frame sampling stay in the local, untracked var/research/print-orientation/ directory."
+}

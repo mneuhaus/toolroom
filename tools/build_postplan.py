@@ -30,11 +30,10 @@ def doc_id(path: str) -> str:
 
 
 SELECTED = {
-    "docs/architecture.md", "docs/consolidation.md", "docs/scope.md",
-    "profiles/README.md", "docs/design-languages/mosey.md", "knowledge/core.md", "knowledge/recipes.md",
-    "knowledge/construction-patterns.md", "knowledge/verification.md", "knowledge/joints.md", "docs/joints/additional-references.md",
+    "README.md", "docs/architecture.md", "docs/history.md", "docs/scope.md", "profiles/README.md",
+    *(a["path"] for a in DATA["knowledge"]["articles"]),
     *(m["document"] for m in DATA["modules"]),
-    *(c["document"] for c in DATA["cases"]),
+    *(l["document"] for l in DATA["labs"]),
 }
 
 
@@ -118,7 +117,7 @@ def picture(path: str, alt: str, caption: str = "", cls: str = "") -> str:
 
 def article(path: str, title: str | None = None) -> str:
     title = title or DATA["documents"][path]["title"]
-    anchor = ' id="mosey"' if path == "docs/design-languages/mosey.md" else (' id="joints"' if path == "examples/printed-joints/README.md" else "")
+    anchor = ' id="mosey"' if path == "knowledge/design/mosey.md" else (' id="joints"' if path == "labs/printed-joints/README.md" else "")
     return f'<details class="reading" id="{doc_id(path)}"><summary>{esc(title)}</summary><div class="article"{anchor}>{fragment(path)}</div></details>'
 
 
@@ -148,29 +147,20 @@ def profiles() -> str:
 
 
 def main():
-    brand = '<a class="brand" href="#overview"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 35 12v17l-15 9L5 29V12Z M5 12l15 9 15-9 M20 21v17" fill="none" stroke="currentColor" stroke-width="2.2"/></svg><span>cad<span class="brand-dot">.</span><br>skills</span></a>'
-    sections = [("overview", "Overview"), ("architecture", "Architecture"), ("skills", "Skill library"), ("profiles", "Profile"), ("examples", "In practice"), ("evidence", "Verification lab"), ("knowledge", "Knowledge base"), ("next", "Development")]
+    brand = '<a class="brand" href="#overview"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 35 12v17l-15 9L5 29V12Z M5 12l15 9 15-9 M20 21v17" fill="none" stroke="currentColor" stroke-width="2.2"/></svg><span>tool<span class="brand-dot">\u00b7</span><br>room</span></a>'
+    sections = [("overview", "Overview"), ("architecture", "Architecture"), ("skills", "Skills"), ("profiles", "Profiles"), ("labs", "Labs"), ("knowledge", "Knowledge base"), ("next", "Development")]
     nav = '<nav>' + "".join(f'<a href="#{key}"><span class="nav-number">{i:02}</span>{label}</a>' for i, (key, label) in enumerate(sections, 1)) + '</nav>'
-    hero = picture("site/assets/sparky-after.png", "Sparky R14: rear view of the X/Z unit", "SPARKY / R14 · NATIVE CAD GEOMETRY", "hero-figure")
-    content = [f'<section id="overview" class="chapter first"><div class="page-meta"><span class="pill warm">READING EDITION / 10 SEPTEMBER 2026</span><span class="eyebrow">FROM 27 PROJECT AND TOOL FOLDERS</span></div><div class="hero"><div class="hero-copy"><span class="eyebrow accent">A SHARED TOOLKIT</span><h1>From idea<br>to part<span class="accent-dot">.</span></h1><p>CAD knowledge that fits together. Construction, manufacturing and design, connected through traceable checks and real project examples.</p><a class="button" href="#architecture">Explore the framework ↗</a></div>{hero}</div><div class="stats-line"><div class="stat"><strong>10</strong><span>composable skills</span></div><div class="stat"><strong>08</strong><span>practical case studies</span></div><div class="stat"><strong>05</strong><span>shared layers</span></div></div><p class="edition-note">This reading edition brings together the architecture, skill entrypoints and project examples for discussion. Chapters and details open without JavaScript. The complete local edition also includes the interactive workbench, full-text search, note export and all technical references.</p></section>']
+    hero = picture("site/assets/joints-J06-assembled.png", "Two printed parts joined by the J06 echo-lock principle", "PRINTED JOINTS LAB / J06 \u00b7 NATIVE CAD GEOMETRY", "hero-figure")
+    stats = f'<div class="stats-line"><div class="stat"><strong>{len(DATA["modules"]):02}</strong><span>composable skills</span></div><div class="stat"><strong>{len(DATA["knowledge"]["articles"]):02}</strong><span>knowledge articles</span></div><div class="stat"><strong>{len(DATA["labs"]):02}</strong><span>reproducible labs</span></div></div>'
+    content = [f'<section id="overview" class="chapter first"><div class="page-meta"><span class="pill warm">READING EDITION / 10 SEPTEMBER 2026</span><span class="eyebrow">A CAD KNOWLEDGE BASE AND SKILL FRAMEWORK</span></div><div class="hero"><div class="hero-copy"><span class="eyebrow accent">TOOLROOM</span><h1>From idea<br>to part<span class="accent-dot">.</span></h1><p>CAD knowledge that fits together. Construction, manufacturing and design, connected through traceable checks and reproducible labs.</p><a class="button" href="#architecture">Explore the framework \u2197</a></div>{hero}</div>{stats}<p class="edition-note">This reading edition brings together the architecture, skill entrypoints, knowledge base and labs for discussion. Chapters and details open without JavaScript. The complete local edition also includes the interactive workbench, full-text search, note export and all technical references.</p>' + article("README.md", "Read me: what Toolroom is") + '</section>']
 
     content.append('<section id="architecture" class="chapter">' + heading("02 / CONNECTIONS", "Five layers. One shared workflow.", "Combine the building blocks to suit the task.") + f'<div class="article" id="{doc_id("docs/architecture.md")}">{fragment("docs/architecture.md")}</div></section>')
 
     skills = "".join(article(m["document"], m["title"]) for m in DATA["modules"])
-    content.append('<section id="skills" class="chapter">' + heading("03 / SKILL LIBRARY", "The knowledge has a shared home.", "Ten short entrypoints. Open a skill to read its purpose and working method. All documentation uses English; detailed technical references are included in the complete local edition.") + skills + '</section>')
+    content.append('<section id="skills" class="chapter">' + heading("03 / SKILLS", "An entrypoint for every task.", "Ten short entrypoints. Open a skill to read its purpose and working method. All documentation uses English; detailed technical references are included in the complete local edition.") + skills + '</section>')
 
-    manufacturing = '<div class="table-wrap"><table><thead><tr><th>Process</th><th>Key parameters</th><th>Status in the collection</th></tr></thead><tbody><tr><td>FDM</td><td>Print pose, material, layers, fit and support</td><td>Most extensively documented project branch</td></tr><tr><td>Laser cutting</td><td>Material thickness, kerf and assembly sequence</td><td>Concrete file trolley export</td></tr><tr><td>CNC</td><td>Tool access, internal radii and workholding</td><td>References; general CAM workflow remains open</td></tr><tr><td>SLA / MSLA</td><td>Orientation, supports, finishing and resin</td><td>Uncalibrated starting profiles</td></tr></tbody></table></div>'
-    content.append('<section id="profiles" class="chapter">' + heading("04 / PROFILE", "One language. Several manufacturing paths.", "Design language, manufacturing process and protected interfaces each have their own role.") + profiles() + article("docs/design-languages/mosey.md", "Mosey — illustrated interpretation, references and CAD rules") + manufacturing + article("profiles/README.md", "How to use the profiles") + '</section>')
-
-    cases = []
-    for i, case in enumerate(DATA["cases"], 1):
-        gallery = picture(case["image"], case["title"], case["project"])
-        if case["id"] == "sparky":
-            gallery = '<div class="comparison">' + picture("site/assets/sparky-before.png", "Sparky R13 rear view", "R13 / BEFORE") + picture(case["image"], "Sparky R14 rear view, same camera", "R14 / AFTER") + '</div>'
-        extra = picture("site/assets/c2-page.png", "Page 4 of the C2 assembly guide", "FROM THE ACTUAL C2 MANUAL") if case["id"] == "c2" else ""
-        anchor = ' id="joints"' if case["id"] == "printed-joints" else ""
-        cases.append(f'<article class="case-study" id="{doc_id(case["document"])}"><span class="eyebrow accent">{i:02} / {esc(case["project"])}</span><h3{anchor}>{esc(case["title"])}</h3><p class="case-intro">{esc(case["summary"])}</p>{gallery}<div class="article">{fragment(case["document"])}</div>{extra}</article>')
-    content.append('<section id="examples" class="chapter">' + heading("05 / IN PRACTICE", "Lessons that carry a project forward.", "Images come from the documented project revisions. They were downsampled and compressed for this compact reading edition.") + "".join(cases) + '</section>')
+    manufacturing = '<div class="table-wrap"><table><thead><tr><th>Process</th><th>Key parameters</th><th>Status in the collection</th></tr></thead><tbody><tr><td>FDM</td><td>Print pose, material, layers, fit and support</td><td>Most extensively documented branch</td></tr><tr><td>Laser cutting</td><td>Material thickness, kerf and assembly sequence</td><td>Worked export example</td></tr><tr><td>CNC</td><td>Tool access, internal radii and workholding</td><td>References; general CAM workflow remains open</td></tr><tr><td>SLA / MSLA</td><td>Orientation, supports, finishing and resin</td><td>Uncalibrated starting profiles</td></tr></tbody></table></div>'
+    content.append('<section id="profiles" class="chapter">' + heading("04 / PROFILES", "One language. Several manufacturing paths.", "Design language, manufacturing process and protected interfaces each have their own role.") + profiles() + manufacturing + article("profiles/README.md", "How to use the profiles") + '</section>')
 
     rows = []
     for case in DATA["lab"]:
@@ -178,18 +168,32 @@ def main():
         SOURCES[case["report"]] = hashlib.sha256((ROOT / case["report"]).read_bytes()).hexdigest()
         findings = "<ul>" + "".join(f'<li>{esc(p)}</li>' for p in report["problems"]) + "</ul>" if report["problems"] else "No findings within the configured check scope."
         rows.append(f'<tr><td><strong>{esc(case["title"])}</strong></td><td><code>{esc(report["status"])}</code></td><td>{findings}</td></tr>')
-    lab = '<div class="table-wrap"><table><thead><tr><th>Test body</th><th>Result</th><th>Actual raw finding</th></tr></thead><tbody>' + "".join(rows) + '</tbody></table></div>'
-    content.append('<section id="evidence" class="chapter">' + heading("06 / VERIFICATION LAB", "What does a checker actually detect?", "Four locally generated test geometries with results from the consolidated mesh checker.") + lab + '<p class="edition-note">The helpers passed 31 regression tests. The checker combines Sparky body, orientation and failure checks with bounded rasterisation and edge-attachment checks from Distributor. These results establish neither physical fit nor load capacity.</p>' + article("knowledge/verification.md") + '</section>')
+    checker_table = '<div class="table-wrap"><table><thead><tr><th>Test body</th><th>Result</th><th>Actual raw finding</th></tr></thead><tbody>' + "".join(rows) + '</tbody></table></div>'
+    labs = []
+    for i, lab in enumerate(DATA["labs"], 1):
+        gallery = picture(lab["image"], lab["title"], lab["kind"]) if Path(lab["image"]).suffix == ".png" else ""
+        extra = checker_table if lab["id"] == "checker-lab" else ""
+        labs.append(f'<article class="lab-report" id="{doc_id(lab["document"])}-intro"><span class="eyebrow accent">{i:02} / {esc(lab["tag"])}</span><h3>{esc(lab["title"])}</h3><p class="lab-intro">{esc(lab["summary"])}</p>{gallery}{extra}<p class="edition-note">Run: <code>{esc(lab["runnable"])}</code></p>' + article(lab["document"]) + '</article>')
+    content.append('<section id="labs" class="chapter">' + heading("05 / LABS", "Reproducible experiments with their own evidence.", "A lab is a small, non-personal experiment that can be rebuilt from the repository. A lab result is evidence about geometry or a helper; it is never a physical acceptance.") + "".join(labs) + '</section>')
 
-    content.append('<section id="knowledge" class="chapter">' + heading("07 / KNOWLEDGE BASE", "The shared rules.", "Source, task selection and reusable construction patterns connect the different tools.") + "".join(article(p) for p in ["knowledge/joints.md", "docs/joints/additional-references.md", "knowledge/core.md", "knowledge/recipes.md", "knowledge/construction-patterns.md"]) + '</section>')
-    content.append('<section id="next" class="chapter">' + heading("08 / DEVELOPMENT", "A concrete foundation. Useful next questions.", "Use this foundation to discuss maintenance boundaries and the first complete pilot case.") + article("docs/consolidation.md", "What was consolidated and what we should decide") + article("docs/scope.md", "Scope, runtimes and maturity") + '<div class="closing"><h3>A starting point for discussion</h3><p>Start with the architecture and Sparky example. Then define maintenance boundaries, desired design languages and a small end-to-end CAD, FDM and manual pilot.</p><p>The local framework remains the maintained source. This page is a generated reading edition; it does not establish a public open-source licence.</p><a class="text-link" href="#overview">↑ Back to overview</a></div></section>')
+    knowledge = []
+    for section in DATA["knowledge"]["sections"]:
+        articles = [a for a in DATA["knowledge"]["articles"] if a["section"] == section["id"]]
+        if not articles:
+            continue
+        knowledge.append(f'<h3 class="knowledge-section">{esc(section["title"])}</h3><p class="edition-note">{esc(section["summary"])}</p>' + "".join(article(a["path"], a["title"]) for a in articles))
+    content.append('<section id="knowledge" class="chapter">' + heading("06 / KNOWLEDGE BASE", "The shared rules.", "Backend-independent knowledge in six sections. Skills link into it instead of repeating it.") + "".join(knowledge) + '</section>')
+
+    content.append('<section id="next" class="chapter">' + heading("07 / DEVELOPMENT", "A concrete foundation. Useful next questions.", "Use this foundation to discuss maintenance boundaries and the first complete pilot case.") + article("docs/history.md", "How the repository got its current shape") + article("docs/scope.md", "Scope, runtimes and maturity") + '<div class="closing"><h3>A starting point for discussion</h3><p>Start with the architecture and the Printed Joints Lab. Then define maintenance boundaries, desired design languages and a small end-to-end CAD, FDM and manual pilot.</p><p>The local repository remains the maintained source. This page is a generated reading edition; it does not establish a public open-source licence.</p><a class="text-link" href="#overview">\u2191 Back to overview</a></div></section>')
 
     css = (ROOT / "site/src/style.css").read_text() + (ROOT / "site/src/postplan.css").read_text()
-    result = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="CAD Skills Framework: architecture, ten skills and eight project examples."><title>CAD Skills Framework — Reading edition</title><style>' + css + '</style></head><body><a class="skip-link" href="#main">Skip to content</a><aside class="sidebar">' + brand + '<div class="edition"><span class="status-dot"></span> FRAMEWORK / 01</div>' + nav + '<div class="sidebar-bottom">READ · UNDERSTAND · DISCUSS<br>Working edition 0.1 / 10 September 2026</div></aside><div class="shell"><header class="topbar"><span class="breadcrumb">CAD Skills <span class="slash">/</span> Reading edition</span><span class="search-hint">Find: ⌘ F / Ctrl F</span></header><details class="mobile-nav"><summary>Open chapters</summary>' + nav + '</details><main id="main">' + "".join(content) + '</main><footer class="footer"><span>CAD SKILLS FRAMEWORK · 10 September 2026</span><span>Derived from real projects.</span></footer></div></body></html>'
+    result = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Toolroom: a CAD knowledge base and skill framework for AI-assisted design."><title>Toolroom \u2014 Reading edition</title><style>' + css + '</style></head><body><a class="skip-link" href="#main">Skip to content</a><aside class="sidebar">' + brand + '<div class="edition"><span class="status-dot"></span> TOOLROOM / 01</div>' + nav + '<div class="sidebar-bottom">READ \u00b7 UNDERSTAND \u00b7 DISCUSS<br>Working edition 0.1 / 10 September 2026</div></aside><div class="shell"><header class="topbar"><span class="breadcrumb">Toolroom <span class="slash">/</span> Reading edition</span><span class="search-hint">Find: \u2318 F / Ctrl F</span></header><details class="mobile-nav"><summary>Open chapters</summary>' + nav + '</details><main id="main">' + "".join(content) + '</main><footer class="footer"><span>TOOLROOM \u00b7 10 September 2026</span><span>A CAD knowledge base and skill framework.</span></footer></div></body></html>'
     validate(result)
     OUTPUT.write_text(result)
     report = {"status": "passed", "format": "script-free HTML with inline CSS, WebP images and own SVG illustration", "bytes": len(result.encode()), "max_bytes": MAX_BYTES,
-              "selected_documents": len(SELECTED), "skills": len(DATA["modules"]), "case_studies": len(DATA["cases"]), "sha256": hashlib.sha256(result.encode()).hexdigest(),
+              "selected_documents": len(SELECTED), "skills": len(DATA["modules"]),
+              "knowledge_articles": len(DATA["knowledge"]["articles"]), "labs": len(DATA["labs"]),
+              "sha256": hashlib.sha256(result.encode()).hexdigest(),
               "sources_sha256": SOURCES, "images": IMAGE_RECORDS}
     (ROOT / "validation/postplan-build.json").write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({k: v for k, v in report.items() if k not in {"sources_sha256", "images"}}, indent=2))
@@ -198,8 +202,11 @@ def main():
 def validate(document: str):
     if len(document.encode()) > MAX_BYTES:
         raise ValueError("Postplan HTML exceeds 512 KiB")
-    if re.search(r"/Users/|/home/|~/|https?://(?:localhost|127\.0\.0\.1)", document):
-        raise ValueError("Machine-specific path or private CAD URL in publication")
+    if re.search(r"/Users/|/home/", document):
+        raise ValueError("Machine-specific absolute path in publication")
+    prose = re.sub(r"<(code|pre)\b[^>]*>.*?</\1>", "", document, flags=re.S)
+    if re.search(r"~/|https?://(?:localhost|127\.0\.0\.1)", prose):
+        raise ValueError("Home-relative path or local server URL outside a code example")
 
     class Audit(HTMLParser):
         def __init__(self):
@@ -220,7 +227,7 @@ def validate(document: str):
                     else:
                         source = urlsplit(value)
                         allowed = source.netloc == "mosey.camera"
-                        allowed |= source.netloc == "www.youtube.com" and ((source.path == "/watch" and parse_qs(source.query).get("v", [""])[0] in {"fSISiR5XIbk", "zI8OgRRF5d8", "WY8yd191qVE", "E6BHts_ii8s"}) or source.path in {"/shorts/UUiE-b5xlbo", "/shorts/JXoMlPqsxLQ", "/shorts/ER19yHpgT30"})
+                        allowed |= source.netloc == "www.youtube.com" and ((source.path == "/watch" and parse_qs(source.query).get("v", [""])[0] in {"fSISiR5XIbk", "zI8OgRRF5d8", "WY8yd191qVE", "E6BHts_ii8s", "7aJ4dDyyf20"}) or source.path in {"/shorts/UUiE-b5xlbo", "/shorts/JXoMlPqsxLQ", "/shorts/ER19yHpgT30"})
                         allowed |= source.netloc == "cad.onshape.com" and source.path.startswith("/documents/e9f4df9ee8ab9bb13f4c372b/")
                         if source.scheme != "https" or not allowed:
                             raise ValueError(f"Unapproved external source reference: {value}")

@@ -1,0 +1,106 @@
+{
+  "file": "labs/checker-lab/results/thin.stl",
+  "profile": "checker-lab",
+  "up": "+Z",
+  "watertight": true,
+  "winding_consistent": true,
+  "positive_volume": true,
+  "connected_components": 1,
+  "volume": 57.6,
+  "faces": 12,
+  "bounds": {
+    "extents_xyz": [
+      12.0,
+      12.0,
+      0.4
+    ],
+    "fits_build_volume": true,
+    "min_xyz": [
+      -6.0,
+      -6.0,
+      0.0
+    ],
+    "max_xyz": [
+      6.0,
+      6.0,
+      0.4000000059604645
+    ],
+    "on_bed": true,
+    "scope": "oriented dimensions and bed height; XY placement/overlap checked separately",
+    "fits_after_z_quarter_turn": true,
+    "build_volume": [
+      30.0,
+      30.0,
+      30.0
+    ]
+  },
+  "limitations": [
+    "Thickness is sampled; convex-edge exclusions can hide thin details.",
+    "Overhang classification does not inspect generated support or layer toolpaths.",
+    "No material strength, fatigue, screw retention, assembly fit or motion test is performed."
+  ],
+  "thickness": {
+    "requested_samples": 1024,
+    "valid_fraction": 1.0,
+    "method": "deterministic surface sampling with a convex-edge exclusion heuristic",
+    "samples": 1024,
+    "min_thickness_found": 0.4,
+    "threshold_min": 1.26,
+    "threshold_hard": 0.84,
+    "thin_fraction": 0.7705,
+    "regions": [
+      {
+        "severity": "error",
+        "samples": 789,
+        "min_thickness": 0.4,
+        "median_thickness": 0.4,
+        "centre": [
+          0.05,
+          -0.01,
+          0.21
+        ],
+        "bbox_min": [
+          -5.47,
+          -5.45,
+          0.0
+        ],
+        "bbox_max": [
+          5.47,
+          5.48,
+          0.4
+        ]
+      }
+    ]
+  },
+  "overhangs": {
+    "threshold_angle": 45.0,
+    "max_bridge": 20.0,
+    "flagged_area": 0.0,
+    "total_area": 307.2,
+    "regions": []
+  },
+  "problems": [
+    "thin region 0.4 mm at [0.05, -0.01, 0.21]"
+  ],
+  "analysis_errors": [],
+  "analysis_complete": true,
+  "clean": false,
+  "status": "review",
+  "input_sha256": "40f21641182d7ac96df5f6d97a0236c7c580f5104689d806b3d06c2b70bbbb34",
+  "checker_sha256": "58b18dcb19bf62686104b8c693e9bc4dc492e96cc3426d48c04a7d31675050b6",
+  "manufacturing_profile": {
+    "id": "checker-lab",
+    "build_volume": [
+      30,
+      30,
+      30
+    ],
+    "walls": {
+      "hard_min": 0.84,
+      "min_thickness": 1.26
+    },
+    "expected_components": 1,
+    "require_bed_contact": true
+  },
+  "title": "Thin plate"
+}

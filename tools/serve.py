@@ -28,7 +28,7 @@ if __name__ == "__main__":
     parser.add_argument("--port", type=int, default=4176)
     args = parser.parse_args()
     server = ThreadingHTTPServer(("127.0.0.1", args.port), partial(Handler, directory=str(ROOT)))
-    print(f"CAD Skills Framework: http://127.0.0.1:{args.port}", flush=True)
+    print(f"Toolroom: http://127.0.0.1:{args.port}", flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

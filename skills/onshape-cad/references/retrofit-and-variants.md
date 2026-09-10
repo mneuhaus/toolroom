@@ -21,7 +21,7 @@ gap and misaligned holes.
 Preserve the real purchased servo, horn and bearing envelopes. Modify a printed
 housing's oversized chamfer if needed; do not remove geometry from the reference
 servo to make a test pass. Include both serial-servo plugs and cable access, not
-just the case. Apply the [assembly review](../../../knowledge/assembly-review.md)
+just the case. Apply the [assembly review](../../../knowledge/construction/assembly-review.md)
 to the complete installed context.
 
 For “same flap except for the adapter”, use the user's current finished shape,
@@ -42,7 +42,7 @@ Place **two instances of the same part ID** using the intended proper rotations.
 Check both sets of hole axes, seating contacts, insertion/access paths, nearby
 clearance and print orientation. A left-hand geometry mirrored into a right-hand
 one is not yet proof that a single manufactured part can serve both positions.
-For elastic guides also use the [fit and snap review](../../../knowledge/fits-and-retention.md).
+For elastic guides also use the [fit and snap review](../../../knowledge/construction/fits-and-retention.md).
 
 Native symmetric curved faces can have different triangulations. Do not require
 identical triangle arrays or exactly zero mesh Boolean difference. Use native

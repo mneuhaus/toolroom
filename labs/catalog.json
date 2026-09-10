@@ -1,0 +1,35 @@
+[
+  {
+    "id": "printed-joints",
+    "title": "How two printed parts hold together",
+    "kind": "Native CAD lab",
+    "tag": "Joints",
+    "image": "site/assets/joints-J06-separate.png",
+    "summary": "Eight native joint principles with assembly paths, parametric clearance and traceable geometry verification.",
+    "skills": [
+      "cad-joints",
+      "onshape-cad",
+      "cad-fdm-design"
+    ],
+    "document": "labs/printed-joints/README.md",
+    "runnable": "node labs/printed-joints/onshape.mjs (live Onshape) · uv run python labs/printed-joints/verify.py",
+    "source": "NeedItMakeIt · three videos and independent native reconstructions",
+    "source_sha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a"
+  },
+  {
+    "id": "checker-lab",
+    "title": "What a mesh checker actually detects",
+    "kind": "Local checker lab",
+    "tag": "Verification",
+    "image": "site/assets/favicon.svg",
+    "summary": "Four generated test geometries and the real reports of the consolidated mesh checker: closed block, thin plate, wrong print pose and detached island.",
+    "skills": [
+      "cad-fdm-design",
+      "cad-design-system"
+    ],
+    "document": "labs/checker-lab/README.md",
+    "runnable": "uv run python labs/checker-lab/build.py",
+    "source": "labs/checker-lab/build.py",
+    "source_sha256": ""
+  }
+]

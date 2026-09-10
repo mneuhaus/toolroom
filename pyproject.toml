@@ -1,7 +1,7 @@
 [project]
-name = "cad-skills-framework"
+name = "toolroom"
 version = "0.1.0.dev0"
-description = "A local CAD skill workbench, documentation and verification tools"
+description = "Toolroom: a CAD knowledge base and skill framework for AI-assisted design, with offline documentation and verification helpers"
 requires-python = ">=3.12,<3.13"
 dependencies = [
   "numpy>=2,<3", "scipy>=1.14,<2", "trimesh>=4.5,<5", "pyyaml>=6,<7",

@@ -1,0 +1,138 @@
+{
+  "sections": [
+    {
+      "id": "foundations",
+      "title": "Foundations",
+      "summary": "Source authority, identity, units, rule precedence and what a check establishes. Read first."
+    },
+    {
+      "id": "workflow",
+      "title": "Workflow",
+      "summary": "How tasks combine skills, and how a longer project keeps sources, state and exports apart."
+    },
+    {
+      "id": "construction",
+      "title": "Construction",
+      "summary": "Assembly access, fits and retention, joints and reusable construction patterns."
+    },
+    {
+      "id": "manufacturing",
+      "title": "Manufacturing",
+      "summary": "Process knowledge for FDM, laser cutting, CNC and SLA, and slicer preparation."
+    },
+    {
+      "id": "design",
+      "title": "Design languages",
+      "summary": "Illustrated studies behind the design-language profiles."
+    },
+    {
+      "id": "lessons",
+      "title": "Lessons",
+      "summary": "Transferable rules distilled from real projects, without the project narrative."
+    }
+  ],
+  "articles": [
+    {
+      "path": "knowledge/foundations/core.md",
+      "title": "The shared core",
+      "summary": "Authoritative source, identity, units, pose and rule precedence.",
+      "section": "foundations"
+    },
+    {
+      "path": "knowledge/foundations/verification.md",
+      "title": "What a check establishes",
+      "summary": "Evidence types, result states, traceable reports and known failure cases.",
+      "section": "foundations"
+    },
+    {
+      "path": "knowledge/workflow/recipes.md",
+      "title": "Combining tasks",
+      "summary": "Seven paths from a task to the skills and evidence it needs.",
+      "section": "workflow"
+    },
+    {
+      "path": "knowledge/workflow/project-layout.md",
+      "title": "Project layout and revisions",
+      "summary": "Predictable directories, durable state, caches, exports and reorganisation.",
+      "section": "workflow"
+    },
+    {
+      "path": "knowledge/construction/assembly-review.md",
+      "title": "Assembly, access and load paths",
+      "summary": "Screws, purchased parts, tool corridors and retrofits before detailing.",
+      "section": "construction"
+    },
+    {
+      "path": "knowledge/construction/fits-and-retention.md",
+      "title": "Fits, preload and one-piece latches",
+      "summary": "Rigid location and elastic retention designed and verified separately.",
+      "section": "construction"
+    },
+    {
+      "path": "knowledge/construction/joints.md",
+      "title": "Joints: how connections hold",
+      "summary": "Interlocking, assembly paths, clearance ownership and print coupons.",
+      "section": "construction"
+    },
+    {
+      "path": "knowledge/construction/joints-panels-and-clips.md",
+      "title": "Panels and elastic clips",
+      "summary": "Thin panels, snap pegs and the limits of rigid assembly checks.",
+      "section": "construction"
+    },
+    {
+      "path": "knowledge/construction/patterns.md",
+      "title": "Reusable construction patterns",
+      "summary": "Sliding guides, crush ribs, printed threads, split assemblies and shared parts.",
+      "section": "construction"
+    },
+    {
+      "path": "knowledge/manufacturing/print-preparation.md",
+      "title": "Slicer preparation and review",
+      "summary": "Machine profiles, geometry provenance, support and bridge evidence in OrcaSlicer and Bambu Studio.",
+      "section": "manufacturing"
+    },
+    {
+      "path": "knowledge/manufacturing/fdm.md",
+      "title": "FDM process knowledge",
+      "summary": "Orientation, walls, overhangs, holes and tolerances for fused filament parts.",
+      "section": "manufacturing"
+    },
+    {
+      "path": "knowledge/manufacturing/print-orientation.md",
+      "title": "Print orientation for FDM parts",
+      "summary": "Anisotropy, angled poses, support release and split-instead-of-tilt, derived from a reviewed external test series.",
+      "section": "manufacturing"
+    },
+    {
+      "path": "knowledge/manufacturing/laser.md",
+      "title": "Laser cutting",
+      "summary": "Material thickness, kerf ownership, tab-and-slot joints and sheet layout.",
+      "section": "manufacturing"
+    },
+    {
+      "path": "knowledge/manufacturing/cnc.md",
+      "title": "CNC machining",
+      "summary": "Tool access, internal radii, workholding and finishing allowances.",
+      "section": "manufacturing"
+    },
+    {
+      "path": "knowledge/manufacturing/sla.md",
+      "title": "SLA and MSLA",
+      "summary": "Orientation, supports, drainage and post-processing for resin parts.",
+      "section": "manufacturing"
+    },
+    {
+      "path": "knowledge/design/mosey.md",
+      "title": "Mosey: form and handling",
+      "summary": "Reference study, three form variants and proposed CAD values for the Mosey profile.",
+      "section": "design"
+    },
+    {
+      "path": "knowledge/lessons/project-lessons.md",
+      "title": "Lessons from projects",
+      "summary": "Transferable rules from design-system, manual, simulation, scan, joint and laser projects.",
+      "section": "lessons"
+    }
+  ]
+}

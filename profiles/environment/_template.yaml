@@ -1,0 +1,75 @@
+# Environment profile template. Copy to <machine>.yaml and describe your own
+# workstation. Delete the sections you do not use; do not keep a value you have
+# not verified on this machine.
+#
+# Rules of this layer:
+# - Only local facts: paths, endpoints, ports, installed runtimes, default profiles.
+# - No design rules, no tolerances, no process reasoning — those live in knowledge/.
+# - Use ~ for the home directory, never an absolute /Users or /home path.
+# - Every entry carries a `note` (what it is) and a `source` (where the value
+#   was established: a field-notes file, a setup document, or "measured <date>").
+
+meta:
+  id: <machine-slug>
+  platform: macOS | Linux | Windows
+  workspace_root: ~/<where CAD projects live>
+  recorded: <YYYY-MM-DD>
+  note: <how projects are laid out on this machine>
+  source: <file or "observed <date>">
+
+onshape:                                # delete if Onshape is not used
+  transport:
+    value: session-bridge | api-key | none
+    note: <how Onshape calls leave this machine>
+    source:
+  base_url:
+    value: http://127.0.0.1:<port>
+    note: <what listens there>
+    source:
+  health_path:
+    value: /<path>
+    note: <liveness probe>
+    source:
+  app_path:
+    value: ~/<path>
+    note: <the signed-in app or client>
+    source:
+  start_command:
+    value: <command>
+    note: <how to bring it up>
+    source:
+  mcp_adapter:
+    value: <adapter name>
+    note: <which copy actually runs, and the env var pointing it at base_url>
+    source:
+
+fusion:                                 # delete if Fusion is not used
+  mcp_endpoint: {value: , note: , source: }
+  library_path: {value: , note: , source: }
+
+build123d:                              # delete if build123d/cad-khana is not used
+  cad_khana_path: {value: , note: , source: }
+  viewer: {value: , note: , source: }
+
+scanning:                               # delete if no scan workflow
+  toolkit_path: {value: , note: , source: }
+
+manufacturing:
+  printer:
+    value: <make, model, nozzle>
+    note: <default machine when the task names none>
+    source:
+  slicers:
+    value: []
+    note: <what prepares the print files>
+    source:
+  default_profile:
+    value: profiles/manufacturing/<id>.yaml
+    note: <the profile the screening scripts get by default>
+    source:
+
+design:
+  default_language_profile:
+    value: profiles/design-language/<id>.yaml
+    note: <house style; a preference, not a process rule>
+    source:

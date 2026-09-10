@@ -1,22 +1,22 @@
 {
   "status": "passed",
   "date": "2026-09-10",
-  "command": "unittest discovery under uv (dependency declaration updated)",
+  "command": "uv run python -m unittest discover -s tests -v",
   "tests_run": 31,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
-  "observed_output": "...............................\n----------------------------------------------------------------------\nRan 31 tests in 0.814s\n\nOK\n",
-  "elapsed_seconds": 3.752,
+  "observed_output": "...............................\n----------------------------------------------------------------------\nRan 31 tests in 0.534s\n\nOK\n",
+  "elapsed_seconds": 2.073,
   "inputs_sha256": {
     "skills/cad-design-system/scripts/check_mesh.py": "58b18dcb19bf62686104b8c693e9bc4dc492e96cc3426d48c04a7d31675050b6",
     "skills/cad-design-system/scripts/check_step.py": "35bd7302be0c25037989a2b9f64a8b2f129e7a841d927daab14e3ed109e5c62d",
     "skills/cad-design-system/scripts/render_views.py": "eaeffd3b4bcf7c8cc4f9af2ee3f8b8f0f24ddcb7a62d1a16d20c8a2b826cab75",
     "skills/cad-design-system/scripts/style_tile.py": "6e874b312c69e8cdba9014c4598d0d0a05587da121de54fdb73a89201c2d5e16",
     "skills/cad-fdm-design/scripts/resolve_profiles.py": "59bd1ac1ea27cf507eeb8d472e8d46afd82983070e2be8e32a58fb0765c67b68",
-    "tests/test_checkers.py": "a6a5dcbc46e9d4ac5f27ff68b2ad443fe263e0d4b4298b563d2c6e680c112b25",
-    "tests/test_distributor_regressions.py": "119278d655da8e501ee9584d67e66724a99f6eb78fef347006097d40ce0a50f2",
+    "tests/test_checkers.py": "5ebdf33baae5c96c73fb9618f943637654a21e4c08babcef0aee76643c1d92fa",
+    "tests/test_checker_regressions.py": "119278d655da8e501ee9584d67e66724a99f6eb78fef347006097d40ce0a50f2",
     "tests/test_profile_resolution.py": "b5ce71471ec03e8a51fd1b2c4f42a7207114958023fa1831bbe01f53e7e6a38c",
-    "uv.lock": "17733f3a109d9772280250e1bef4199b69f8fa64d908a1a5a6aa1af664730ed7"
+    "uv.lock": "2179ee6f02bd401bbc9e2973adc86bd28285bb229eb336f2bd073c3df9534d67"
   }
 }

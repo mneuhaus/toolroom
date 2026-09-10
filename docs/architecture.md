@@ -1,33 +1,43 @@
-# Framework architecture
+# Architecture
 
-The framework organises a shared CAD vocabulary and capabilities that can be combined as needed. Its smallest useful unit is a concrete task with defined inputs and a traceable result.
+Toolroom separates four kinds of content that are easy to mix up: reasoning, procedure, data and evidence. Each has one home, one catalog and one way of being verified.
 
-## Five layers
+## Layers
 
-| Layer | Responsibility | Prevents |
+| Layer | Directory | Responsibility | Prevents |
+| --- | --- | --- | --- |
+| Knowledge | `knowledge/` | Rules with their reasons, evidence and limits, independent of any CAD backend | Restating the same rule in five skills with five wordings |
+| Skills | `skills/` | Thin entrypoints: when to load which knowledge, and how to execute in Onshape, Build123d or Fusion | Loading every tool and every reference for every request |
+| Profiles | `profiles/` | Design languages, manufacturing processes, protected interfaces and the workstation profile | Presenting one person's printer or style as a universal rule |
+| Labs | `labs/` | Reproducible experiments with their own inputs, outputs and hashes | Documentation without anything that can be re-run |
+| Repository docs | `docs/`, `provenance/`, `validation/` | How Toolroom is organised, where content came from, what was actually checked | Losing track of origins after imports and moves |
+
+## How a task travels
+
+1. The agent matches a task to a skill entrypoint. The entrypoint states when it applies and when it does not.
+2. The entrypoint names the knowledge articles to read for this task, the profile to resolve, and the backend references it needs.
+3. The knowledge article states the rule and the evidence the result must carry. The profile supplies numbers with provenance.
+4. The result is bound to its inputs, revision and geometry hash. Verification states are `no_findings`, `review` or `incomplete`; "not run" is a separate state and never a success.
+
+A layout change of a manual does not require a CAD rebuild. A different design language does not authorise moving a screw. A larger print bed does not merge parts the user wants modular. The layers make such non-consequences explicit.
+
+## Three independent profile roles
+
+The design language defines colour roles, selected edges, labelling and form families. The manufacturing profile describes the actual process and, separately, provisional screening thresholds. The interface profile protects fastenings, fits, motion envelopes and load paths. The workstation profile describes endpoints, library locations and defaults of one specific setup. A change in one role does not change another.
+
+## Where does a new piece of content go?
+
+| You have | Put it in | And register it in |
 | --- | --- | --- |
-| Core | Source, revision, units, identity and evidence | Confusing an old generator with the current native model |
-| Skills | Selecting and executing the appropriate workflow | Loading every tool for every request |
-| Adapters | Backend operations and error handling | Mixing transport details into general design rules |
-| Profiles | Design and manufacturing parameters with provenance | Presenting personal settings as universal material rules |
-| Examples and checks | Observable behaviour and known failure cases | Documentation without verifiable applications |
+| A rule and its reason | `knowledge/<section>/` | `knowledge/catalog.json` |
+| A procedure for one backend | `skills/<name>/references/` | The skill's `SKILL.md` |
+| A number that describes a machine, material, style or setup | `profiles/` | The profile's own YAML |
+| An experiment others can re-run | `labs/<name>/` | `labs/catalog.json` |
+| Something learned from a project | `knowledge/lessons/` as a generic rule with a one-line origin | `knowledge/catalog.json` |
+| A change to the repository layout | `provenance/` record with the old and new paths | `docs/history.md` |
 
-## Three independent profiles
+## Kept out of scope
 
-The design language defines colour roles, selected edges, labelling and form families. The manufacturing profile describes the actual process and, separately, provisional screening thresholds. The interface profile protects fastenings, fits, motion envelopes and load paths.
+Toolroom adds no CAD kernel, no workflow execution engine and no cloud synchronisation. Native applications keep their APIs. The bundled helpers are the consolidated mesh and STEP screeners, the profile resolver, the joints verifier and the documentation tools. Cloud adapters and CAD runtimes are separately installed; see [scope](scope.md).
 
-A profile change affects only its own responsibility. A different colour must not change a screw's insertion direction. A larger print bed does not authorise silently merging parts that the user wants to keep modular.
-
-## One maintained source per rule
-
-Shared assembly, fit, project layout and print preparation rules live in `knowledge/`. Backend details stay with their skill. Imported field notes are identified as historical sources; their personal defaults do not automatically become requirements.
-
-This workbench does not overwrite the previously installed skills. Future framework changes are maintained in this repository. Installation into an agent host is a separate, later step.
-
-Until then, use the framework as a complete directory. Individual skill folders are not independent installation packages because they refer to `knowledge/`, `profiles/` and other skills. A future installer must include those shared resources and preserve or resolve their references.
-
-## Keeping the scope focused
-
-The framework adds no CAD kernel, general workflow execution engine or automatic cloud synchronisation. Native applications retain their existing APIs and capabilities. Concrete helpers cover the consolidated checkers, profile resolution, the native joints example and local documentation.
-
-The website obtains its content from Markdown and the catalogues. Text is included in the static build, so viewing it requires neither a build server nor an internet connection.
+The website reads only Markdown and the catalogs. Viewing it needs neither a build server nor an internet connection.

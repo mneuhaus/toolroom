@@ -1,12 +1,12 @@
 {
   "status": "passed",
-  "checks_run": 128,
+  "checks_run": 131,
   "errors": [],
   "checks": [
     {
       "check": "markdown links and headings",
       "passed": true,
-      "detail": "192"
+      "detail": "304"
     },
     {
       "check": "unique module identifiers",
@@ -114,92 +114,102 @@
       "detail": ""
     },
     {
-      "check": "case references: sparky",
+      "check": "unique knowledge sections",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "case references: c2",
+      "check": "knowledge article: knowledge/foundations/core.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "case references: distributor",
+      "check": "knowledge article: knowledge/foundations/verification.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "case references: linak",
+      "check": "knowledge article: knowledge/workflow/recipes.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "case references: unifi",
+      "check": "knowledge article: knowledge/workflow/project-layout.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "case references: laser",
+      "check": "knowledge article: knowledge/construction/assembly-review.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "case references: bristlebot",
+      "check": "knowledge article: knowledge/construction/fits-and-retention.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "case references: printed-joints",
+      "check": "knowledge article: knowledge/construction/joints.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "recorded image bytes: site/assets/sparky-after.png",
+      "check": "knowledge article: knowledge/construction/joints-panels-and-clips.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "recorded image bytes: site/assets/sparky-before.png",
+      "check": "knowledge article: knowledge/construction/patterns.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "recorded image bytes: site/assets/sparky-front.png",
+      "check": "knowledge article: knowledge/manufacturing/print-preparation.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "recorded image bytes: site/assets/c2-guide.png",
+      "check": "knowledge article: knowledge/manufacturing/fdm.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "recorded image bytes: site/assets/c2-page.png",
+      "check": "knowledge article: knowledge/manufacturing/print-orientation.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "recorded image bytes: site/assets/distributor-fem-en.png",
+      "check": "knowledge article: knowledge/manufacturing/laser.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "recorded image bytes: site/assets/linak-sections.png",
+      "check": "knowledge article: knowledge/manufacturing/cnc.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "recorded image bytes: site/assets/laser-assembly.png",
+      "check": "knowledge article: knowledge/manufacturing/sla.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "recorded image bytes: site/assets/unifi-assembly.png",
+      "check": "knowledge article: knowledge/design/mosey.md",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "recorded image bytes: site/assets/bristlebot-family-en.png",
+      "check": "knowledge article: knowledge/lessons/project-lessons.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab references: printed-joints",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab references: checker-lab",
       "passed": true,
       "detail": ""
     },
@@ -280,6 +290,11 @@
     },
     {
       "check": "recorded image bytes: site/assets/joints-J08-separate.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/print-orientation/7aJ4dDyyf20-contact.png",
       "passed": true,
       "detail": ""
     },
@@ -629,7 +644,7 @@
       "detail": ""
     },
     {
-      "check": "test evidence current: tests/test_distributor_regressions.py",
+      "check": "test evidence current: tests/test_checker_regressions.py",
       "passed": true,
       "detail": ""
     },

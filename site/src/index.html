@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f3ef">
-  <meta name="description" content="A shared CAD toolkit: skills, design languages, manufacturing knowledge and real project examples.">
-  <title>CAD Skills — A shared toolkit</title>
+  <meta name="description" content="Toolroom: a CAD knowledge base and skill framework for AI-assisted design — skills, knowledge, profiles and reproducible labs.">
+  <title>Toolroom — CAD knowledge base and skills</title>
   <link rel="icon" href="site/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="site/style.css">
   <script src="site/data.js" defer></script>
@@ -14,42 +14,41 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <aside class="sidebar" id="sidebar" aria-label="Main navigation">
-    <a href="#overview" class="brand" aria-label="CAD Skills home">
+    <a href="#overview" class="brand" aria-label="Toolroom home">
       <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 35 12v17l-15 9L5 29V12Z M5 12l15 9 15-9 M20 21v17" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="m13 16 14-8M12 25l8 5 8-5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
-      <span>cad<span class="brand-dot">.</span><br>skills</span>
+      <span>tool<span class="brand-dot">·</span><br>room</span>
     </a>
-    <div class="edition"><span class="status-dot"></span> FRAMEWORK / 01</div>
+    <div class="edition"><span class="status-dot"></span> TOOLROOM / 01</div>
     <div class="nav-label">EXPLORE</div>
     <nav>
       <a href="#overview" data-nav="overview"><span class="nav-number">01</span> Overview</a>
       <a href="#architecture" data-nav="architecture"><span class="nav-number">02</span> Architecture</a>
-      <a href="#skills" data-nav="skills"><span class="nav-number">03</span> Skill library <span class="nav-count">10</span></a>
-      <a href="#examples" data-nav="examples"><span class="nav-number">04</span> In practice</a>
-      <a href="#profiles" data-nav="profiles"><span class="nav-number">05</span> Profile workbench</a>
-      <a href="#evidence" data-nav="evidence"><span class="nav-number">06</span> Verification lab</a>
+      <a href="#skills" data-nav="skills"><span class="nav-number">03</span> Skills <span class="nav-count">10</span></a>
+      <a href="#knowledge" data-nav="knowledge"><span class="nav-number">04</span> Knowledge base</a>
+      <a href="#profiles" data-nav="profiles"><span class="nav-number">05</span> Profiles</a>
+      <a href="#labs" data-nav="labs"><span class="nav-number">06</span> Labs</a>
     </nav>
     <div class="nav-label second">REFERENCE</div>
     <nav>
-      <a href="#knowledge" data-nav="knowledge"><span class="nav-symbol">≡</span> Knowledge base</a>
       <a href="#roadmap" data-nav="roadmap"><span class="nav-symbol">↗</span> Development</a>
       <a href="#read/docs/provenance.md" data-nav="provenance"><span class="nav-symbol">⊙</span> Provenance & sources</a>
     </nav>
-    <div class="sidebar-bottom"><span>A growing toolkit.</span><span>Derived from real projects.</span><a href="#read/docs/scope.md">Working edition 0.1 <span>↗</span></a></div>
+    <div class="sidebar-bottom"><span>A growing toolkit.</span><span>Rules, profiles and evidence.</span><a href="#read/docs/scope.md">Working edition 0.1 <span>↗</span></a></div>
   </aside>
   <button class="nav-scrim" id="nav-scrim" aria-label="Close navigation" hidden></button>
   <div class="shell">
     <header class="topbar">
       <button class="icon-button menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="sidebar" aria-label="Open navigation">☰</button>
-      <div class="breadcrumb"><span>Toolkit</span><span class="slash">/</span><span id="breadcrumb">Overview</span></div>
+      <div class="breadcrumb"><span>Toolroom</span><span class="slash">/</span><span id="breadcrumb">Overview</span></div>
       <div class="top-actions"><button class="search-trigger" id="search-open" aria-label="Search the knowledge base"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg><span>Search the knowledge base</span><kbd>⌘ K</kbd></button><button class="notes-trigger" id="notes-open" aria-label="Open discussion notes" title="Discussion notes">Notes <span>↗</span></button></div>
     </header>
-    <main id="main" tabindex="-1"><noscript><div class="page-heading"><h1>CAD Skills Framework</h1><p>The interactive documentation requires JavaScript. All texts are also available as Markdown.</p><p><a href="README.md">Open README</a> · <a href="knowledge/core.md">Shared core</a> · <a href="docs/architecture.md">Architecture</a></p></div></noscript></main>
-    <footer class="footer"><span>CAD SKILLS FRAMEWORK <span class="footer-dot">·</span> 10 September 2026</span><a href="#read/docs/scope.md">Scope & maturity ↗</a></footer>
+    <main id="main" tabindex="-1"><noscript><div class="page-heading"><h1>Toolroom</h1><p>The interactive documentation requires JavaScript. All texts are also available as Markdown.</p><p><a href="README.md">Open README</a> · <a href="knowledge/foundations/core.md">Shared core</a> · <a href="docs/architecture.md">Architecture</a></p></div></noscript></main>
+    <footer class="footer"><span>TOOLROOM <span class="footer-dot">·</span> 10 September 2026</span><a href="#read/docs/scope.md">Scope & maturity ↗</a></footer>
   </div>
   <dialog id="search-dialog" aria-labelledby="search-title">
     <div class="dialog-top"><h2 id="search-title">Search the knowledge base</h2><button class="icon-button" data-close="search-dialog" aria-label="Close search">×</button></div>
     <label class="sr-only" for="search-input">Search term</label><input id="search-input" type="search" placeholder="For example: fit, FeatureScript, support …" autocomplete="off">
-    <div id="search-results" aria-live="polite"></div><div class="dialog-foot">Skills, technical references and case studies. <kbd>ESC</kbd> closes search.</div>
+    <div id="search-results" aria-live="polite"></div><div class="dialog-foot">Knowledge articles, skills, profiles and labs. <kbd>ESC</kbd> closes search.</div>
   </dialog>
   <dialog id="notes-dialog" aria-labelledby="notes-title">
     <div class="dialog-top"><div><span class="eyebrow">FOR OUR DISCUSSION</span><h2 id="notes-title">Capture thoughts</h2></div><button class="icon-button" data-close="notes-dialog" aria-label="Close notes">×</button></div>

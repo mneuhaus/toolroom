@@ -19,7 +19,7 @@
     ],
     "tests": [
       "tests/test_checkers.py",
-      "tests/test_distributor_regressions.py"
+      "tests/test_checker_regressions.py"
     ]
   },
   "profile_resolver": {

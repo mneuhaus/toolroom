@@ -7,7 +7,7 @@ id: <process>-<machine>-<variant>
 process: fdm | sla | laser | cnc
 machine: <name>
 units: mm
-source: default | measured <date>     # "measured" after the calibration coupon in references/manufacturing/<process>.md
+source: default | measured <date>     # "measured" after the calibration coupon in knowledge/manufacturing/<process>.md
 
 build_volume: [x, y, z]               # laser/cnc: [x, y, max_thickness]
 

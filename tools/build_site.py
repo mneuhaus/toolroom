@@ -12,7 +12,7 @@ from urllib.parse import unquote, urlsplit
 from markdown_it import MarkdownIt
 
 ROOT = Path(__file__).resolve().parents[1]
-CONTENT_DIRS = ("skills", "knowledge", "profiles", "docs", "examples")
+CONTENT_DIRS = ("skills", "knowledge", "profiles", "docs", "labs")
 TEXT_SUFFIXES = {".md", ".py", ".yaml", ".yml", ".json", ".toml", ".fs", ".mjs"}
 
 
@@ -106,11 +106,12 @@ def build_data() -> tuple[dict, list[dict]]:
             if link["anchor"] not in anchors:
                 raise ValueError(f"Missing heading: {link['from']} -> {link['href']}")
     catalog = json.loads((ROOT / "catalog.json").read_text())
-    lab = json.loads((ROOT / "examples/checker-lab/results/summary.json").read_text())
+    lab = json.loads((ROOT / "labs/checker-lab/results/summary.json").read_text())
     return {
         "modules": catalog["modules"],
-        "joints": json.loads((ROOT / "examples/printed-joints/catalog.json").read_text()),
-        "cases": json.loads((ROOT / "examples/catalog.json").read_text()),
+        "knowledge": json.loads((ROOT / "knowledge/catalog.json").read_text()),
+        "labs": json.loads((ROOT / "labs/catalog.json").read_text()),
+        "joints": json.loads((ROOT / "labs/printed-joints/catalog.json").read_text()),
         "assets": json.loads((ROOT / "provenance/assets.json").read_text()),
         "documents": documents, "sources": sources, "lab": lab,
         "reports": {s["report"]: json.loads((ROOT / s["report"]).read_text()) for s in lab},
@@ -134,7 +135,10 @@ def main():
         (ROOT / name).write_text(content)
     report = {"status": "passed", "documents": len(data["documents"]),
               "source_files": len(data["sources"]), "local_links": len(links),
-              "modules": len(data["modules"]), "case_studies": len(data["cases"]),
+              "modules": len(data["modules"]),
+              "knowledge_sections": len(data["knowledge"]["sections"]),
+              "knowledge_articles": len(data["knowledge"]["articles"]),
+              "labs": len(data["labs"]),
               "lab_cases": len(data["lab"]), "network_required": False,
               "outputs": {name: digest(ROOT / name) for name in generated_files(data)}}
     (ROOT / "validation").mkdir(exist_ok=True)

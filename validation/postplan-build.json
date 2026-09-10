@@ -1,177 +1,65 @@
 {
   "status": "passed",
   "format": "script-free HTML with inline CSS, WebP images and own SVG illustration",
-  "bytes": 517535,
+  "bytes": 440780,
   "max_bytes": 524288,
-  "selected_documents": 29,
+  "selected_documents": 34,
   "skills": 10,
-  "case_studies": 8,
-  "sha256": "596dbd39fc8d7b123e4a66ee5238a9ff7f856c1773a0977c13c590c62728f3b4",
+  "knowledge_articles": 17,
+  "labs": 2,
+  "sha256": "3c4f65a9104aae347796e35c62f9f9bcb6d0a8eaba958871677fdd6e05422058",
   "sources_sha256": {
-    "docs/architecture.md": "d802b7f2c678e29c128dd8d43fbe72be8eaef7b7805ecdc78e2870938ea3bd43",
-    "skills/cad-workflow/SKILL.md": "e521af61357dfb89b1fa6d226bd8cda140c9bba80b94a6c0b50356ab73b8f460",
-    "skills/onshape-cad/SKILL.md": "0b986d8bbf39a10b005beecef10446d625479f6d5b5388069dc02f28e310b0d2",
-    "skills/onshape-bridge/SKILL.md": "4a2768e10acc5de4b7579edc145ebd35c0e8c51f1c416427286c8204061dc19a",
-    "skills/cad-khana/SKILL.md": "ecc07c45a82aee2f142184820888777618e7f471a77e6938e771326b17d9817a",
-    "skills/cad-fdm-design/SKILL.md": "58f84124d2071654347354751daccf23c05e2b83a37a5b9ac7bc680958ef6d7c",
-    "skills/cad-joints/SKILL.md": "30519c067147cdcc9f8abb618345cee4abf3126889bedf1f000d09452f4045c7",
-    "skills/cad-design-system/SKILL.md": "a22fe2a334e292ecd2ef2d818ec1a9ee46f58fd65b28b2460fb9bc097fe773d3",
-    "skills/onshape-build-manuals/SKILL.md": "550a1ee4acdf2a32ebff83db021d30e85bd0fc60e84d8b3ccc957c842ddbbe42",
-    "skills/fusion360/SKILL.md": "18820fe3f2faf70826f5894cbaea423098f8a7347a17dfc81f4ad1987ef397a2",
-    "skills/scan-reverse-engineering/SKILL.md": "006ef9a34619cce11086127d26fcd5e44544d9fe4958ca1f37eb0d1eca264442",
+    "README.md": "73cdce03f3df4c610593c4fe5386c75ec23e10dd80a3c96296855ebb13f80f59",
+    "docs/architecture.md": "288e237d0fa5ddfc77df1689546dd64b013c6424aa42297b598f492be1f790d5",
+    "skills/cad-workflow/SKILL.md": "4b845702d8149d2c0d5286de9f65c96c89c2e8b429e4bba120a63e64814e4e05",
+    "skills/onshape-cad/SKILL.md": "0f0e29db95e365a78c842ba9bb5166eb02cbf77adc064873daa653be538d4c06",
+    "skills/onshape-bridge/SKILL.md": "c6e871752349d63fb040f01d37191b570fda98a1226842b90691c4a3206dee5a",
+    "skills/cad-khana/SKILL.md": "ab3e67819ccb50f7d52190bc9631247be470db149ed78d356a972840b7249d17",
+    "skills/cad-fdm-design/SKILL.md": "091caaad921873b63cf5a3658d7703f9e060376678653f9ca6dbd973e63640e0",
+    "skills/cad-joints/SKILL.md": "eabc72ada74816edc4ceeaa7d5fbf6e9115abf7f49ab1cddfda82eb8ad145832",
+    "skills/cad-design-system/SKILL.md": "56ebcfe01dbea63874f91a627df4f3f864df206bc658f6d2c1648bd32ee3d360",
+    "skills/onshape-build-manuals/SKILL.md": "ebe428a648f368841f01649e6521810c3048240ce9f79963ce30b92131c6f2c4",
+    "skills/fusion360/SKILL.md": "45c0bdc7fb9eaeb4c04eef1e1fe02b920709db883906afdf5bb9249ce6e2de65",
+    "skills/scan-reverse-engineering/SKILL.md": "e463254fe9a744110a7eea790fce3a51c1dcfdc844be338d267f09ef345cd93f",
     "profiles/design-language/te-like.yaml": "e0c04090275a3508d09eb9073ac2edb1bc011dda8b5e2d3a0b9c0d19288fb599",
     "profiles/design-language/soft-consumer.yaml": "f68ce668da06201792654287c52319450f34854e0e69607ce68ba50232d3bba9",
     "profiles/design-language/rugged-industrial.yaml": "e0e5320e69903d0d8237c859dbdf43ed97ad11226279ba5f2d564ec4123984da",
     "profiles/design-language/workshop-042.yaml": "156e6af29c6d5c1ea40376fc11e37c28df5535783491cfe55beba4a5db72ad2b",
     "profiles/design-language/mosey.yaml": "4dae729e0f91c41f821d085aba7d852772e469c648a4949eaa964836bd9abe2c",
-    "docs/design-languages/mosey.md": "68dbd6fa040b26063b166ed85bf22bca6652580e331685ed481ef518e1b82b6b",
-    "profiles/README.md": "eac981b4dab62a5236cf68f875c0592945290115bcccfae1f65afbb9b9e8d8c1",
-    "examples/sparky/README.md": "4fc845e46c1b5e84bde248f8565585eab6dc49e01672abb34cd6ff03216aa779",
-    "examples/c2/README.md": "9af7213e8d345b848f45cab0f49305d4b71294ea24cee945c69fa9ae3176cb2f",
-    "examples/distributor/README.md": "63f465ab54633a38a6a92164b28223f86b7a97dcc82731b8263a433edbfeedba",
-    "examples/linak/README.md": "39b2a2dffb122516be698f69f29a57aad099941575a862ea422fcc0f65d47dbf",
-    "examples/unifi/README.md": "c0339685ed99549425725fbb8d80cd1b6706e31a6b17b4875a8c83505198980e",
-    "examples/laser/README.md": "9721136aa46fc8e8a41c82fe62c4b191b08b7f48045e1d2c2e7178c8a1fd3319",
-    "examples/bristlebot/README.md": "b230da734797901bd43a65bbff22e86fda98aedd1cc0695815f6a9f99c704448",
-    "examples/printed-joints/README.md": "0028a7925dc2a6499f4b08c2d37b417195ba94a2ffccc255b3caa25037923fa7",
-    "examples/checker-lab/results/solid.json": "a098a94388e1761fd8e98ee152168a1b406019c6ca0c872db0873f009653dd24",
-    "examples/checker-lab/results/thin.json": "325143fcc03d34adec43fb5f92d330ecd5b791fb3d9a931c8b02119eca6e97e2",
-    "examples/checker-lab/results/orientation.json": "f08e779120f905736a7b331bec0fa18c59e973a068acb5c51982e5ccfdedd1fa",
-    "examples/checker-lab/results/island.json": "e02694f70c92d7489ea8b5c4e6b67625d82ff3b77e962d5af28a03e01eb50e82",
-    "knowledge/verification.md": "8547dd147a0ac4cb5b5295b963776ea989fc762769639c3fbeca7d0e6e62c71a",
-    "knowledge/joints.md": "ccebdd18088bc8d196d05324002e8fd4a7ef30b679151cbaea741551986f6bf9",
-    "docs/joints/additional-references.md": "28ff24259c59e2484b5a8b5382b74281a64697e87a5773a67e28ee3588742b2d",
-    "knowledge/core.md": "7db201adfa2ae7e2a31d8047cec37d9e68fca2e9239ed19bdc7f0606535f5ccc",
-    "knowledge/recipes.md": "bfff172b9495d3200d4643424f5e253702c10abb2b1bbe063b3ae238bcb0a335",
-    "knowledge/construction-patterns.md": "f231dbc470abae91860ead6924d5261fa4bdfbbd659b765874ca9483efb2fd36",
-    "docs/consolidation.md": "a4d72cb885fd831226b8feffc6d0ce10060e5bdeb791024023f67923107705cd",
-    "docs/scope.md": "4782f1cc7540f5cc2c8f1fa0b102a2e36f3bf48f4c33b14e8024ed6f8329b9b8"
+    "profiles/README.md": "8da6362781d857b7de11bfff22790e4fdc499f30bfa32b388e0080bc853336cf",
+    "labs/checker-lab/results/solid.json": "ecfe3efa4634082f3ddf27724e580fbcbd284c8e99a61093b6f27ad208b60649",
+    "labs/checker-lab/results/thin.json": "e1407d3df321447bbf96b0e9e393b16522a6c61f45ac22cc1253e248f25d24d1",
+    "labs/checker-lab/results/orientation.json": "f123359409a410f5f4520fb5114c9a9bb27dac554a492f4eafe092b556471f82",
+    "labs/checker-lab/results/island.json": "00e5623f7fd6c737826e6272955ce01d7bc95febf60fdf9cf6e0363133e88e96",
+    "labs/printed-joints/README.md": "a4fdd76d917b3dd451a7ab60c2c6e3a7d8ad0efcb53ca2667ef64b1a25d95d4b",
+    "labs/checker-lab/README.md": "7e7057b1b222806c9832fddd3e8837c65b0131fd188d48201e2eaa36cf6dc263",
+    "knowledge/foundations/core.md": "3889c3ca6aaff9932df9f7a80ef116880012c5ab2e905ead281a336d6e4958c6",
+    "knowledge/foundations/verification.md": "2d42f04a8602001faf26304d882220e01df1c9a889b94da9fa15c8d4445050cc",
+    "knowledge/workflow/recipes.md": "c6a98fd3395ba8a65002588a327c0f5d2a13ebfeafedb60cd3509f545df10cdb",
+    "knowledge/workflow/project-layout.md": "15ca062523b6905fdd6b37abf874e2276dd5c7a1ecffe80924fa348077667ff2",
+    "knowledge/construction/assembly-review.md": "8fcf006b2993ce2a388ecf1af75a4f00513f7f923854fdb5b4905e8ae7d69765",
+    "knowledge/construction/fits-and-retention.md": "94bf6c38fc8561b0734aaba1056295aabf103b0dee5f749c6a63525f6d688bba",
+    "knowledge/construction/joints.md": "028b49e4c560b80139345bf2aac4541c69508cb6ab07ea435f51ddd99007a047",
+    "knowledge/construction/joints-panels-and-clips.md": "bd1695d044231bdda6fa7b90cbb422f239020f4b20325757a0ed9ddb43468e68",
+    "knowledge/construction/patterns.md": "f60b6c8bc7a91b21fecdf33dae898e85a5be046eadc3f39ccf50254da74511c1",
+    "knowledge/manufacturing/print-preparation.md": "4d5740a1ac4837f28759cedbe79a0c624a0371fdae33e25db3bd3ae9a37929fe",
+    "knowledge/manufacturing/fdm.md": "09bd2572bb53e6363bacf35eb60215c3a718739239be6e5e7f5b64bf2d581233",
+    "knowledge/manufacturing/print-orientation.md": "18769c14f414f786cd135576e4a9ad33126deb289e56560f5d51fea852ead00c",
+    "knowledge/manufacturing/laser.md": "fa70657f66bcda20a15cef8e59e2033046f729046c53a0a1ce363c71d20005ca",
+    "knowledge/manufacturing/cnc.md": "de59eb13b5ef20c87697dd079718322c788abcdb4902878620a7d0a9a4230c8e",
+    "knowledge/manufacturing/sla.md": "b6674f654546549f618277c385721d118c186d5b4504531f843871128c63b5f3",
+    "knowledge/design/mosey.md": "68dbd6fa040b26063b166ed85bf22bca6652580e331685ed481ef518e1b82b6b",
+    "knowledge/lessons/project-lessons.md": "4771742c28038ad69be2a0bc222263cecc57b1dde535853e74f7663106ef9b2f",
+    "docs/history.md": "e4a20fb504c676a4873092b41562bf9d8c3b5e1b66887bcec0c10277545c92c1",
+    "docs/scope.md": "bf3e48823fa9d7dc88f1d1d99769dec16d503645a83296d2b31ff8aa6e4066b3"
   },
   "images": {
-    "site/assets/sparky-after.png": {
-      "source_sha256": "3162ed6d9701325d942bbfd7454ee7fcfd2c730aea1276c748bde7c36fd4210b",
-      "embedded_sha256": "e6370eb2adfd3c758ab05f2597decef9af42cf68ae09ec9f27a5b19e27d846d9",
-      "width": 600,
-      "height": 450,
-      "bytes": 7982,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "site/assets/mosey-family.svg": {
-      "source_sha256": "2811a3ba1dc79785311a8c0f6dc5b7a97704eb82853e7abf6f75e7887b6b662c",
-      "embedded_sha256": "2811a3ba1dc79785311a8c0f6dc5b7a97704eb82853e7abf6f75e7887b6b662c",
-      "bytes": 3527,
-      "processing": "Own vector illustration, embedded unchanged as SVG"
-    },
-    "provenance/references/mosey/images/p4-07-clamp-thumbnail.webp": {
-      "source_sha256": "10ef5189a198f95cae9dd05217acc379e3d783ac519a87e8f11c9270c29a325e",
-      "embedded_sha256": "103c7868dd290d5eca96de2e517603a5a2ad4d12dc8793e66fd910829ac6baef",
-      "width": 600,
-      "height": 450,
-      "bytes": 7018,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "provenance/references/mosey/images/p5-02-cairn-thumbnail.webp": {
-      "source_sha256": "225c5c1f749b8d25e8d4381a5b55030c6d0f29649af3059d7be1c3b1655798a7",
-      "embedded_sha256": "0d656f7fa48ffb8acd3801fb46f57e67cd9b3d37fcc209784ad36806df577802",
-      "width": 600,
-      "height": 450,
-      "bytes": 2940,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "provenance/references/mosey/images/p6-01-saddle-thumbnail.webp": {
-      "source_sha256": "ae4154dbba0303c3d20ee9e3950136610abf6fd977e3f958910269e044249c1f",
-      "embedded_sha256": "117920eef67be7f24453f1f7a70d6d4678ea94d2515616b576a72f7f8420b5bf",
-      "width": 600,
-      "height": 450,
-      "bytes": 4858,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "provenance/references/mosey/images/p7-04-chamfer-thumbnail.webp": {
-      "source_sha256": "419c482efca9389c58a97766302884caf19a090cac75fcdfed3976aa626dbbd2",
-      "embedded_sha256": "7f72cbf97d76a739c3ca69807733c738024520387fcfa9fb87bddd1ca6ba4686",
-      "width": 600,
-      "height": 450,
-      "bytes": 4838,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "provenance/references/mosey/images/p8-02-sling-thumbnail.webp": {
-      "source_sha256": "5461e3fff3286b8260076909f8b6fd0dc0a463ba0f306ed4802c0be8343fc409",
-      "embedded_sha256": "e91f0bd6ef8bf86fe2e0f114a3a1645db27174d6d12c523b8d5ca6eca56081aa",
-      "width": 600,
-      "height": 450,
-      "bytes": 9062,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "provenance/references/mosey/images/p9-08-duo-thumbnail.webp": {
-      "source_sha256": "784dd6d6c95f908bb90db2c4bc4c67d3e149101e80d2189723ab538438a7e0c2",
-      "embedded_sha256": "86d358052ae82b8ee3ec614bd7ffacb3bdbc484ee3f14e990bcbd902710fa75b",
-      "width": 600,
-      "height": 450,
-      "bytes": 4270,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "site/assets/sparky-before.png": {
-      "source_sha256": "805dc5e506ed1a05f2730dbf74a7d9a8375596502a43eee159aeb34a2c97c630",
-      "embedded_sha256": "e98c5a7d6a9b7420a810c3d1d4e71d99b83b75fdfd37079cccf82c92ec42e759",
-      "width": 600,
-      "height": 450,
-      "bytes": 7966,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "site/assets/c2-guide.png": {
-      "source_sha256": "7eefc8abdc21d6f812dc936c7570270853c4b6c7834adeb7b2ff5a076e17c3c8",
-      "embedded_sha256": "c6535e25929523e2d28cba02615857f3f174104bdd8a119c491aad97fd604ace",
-      "width": 600,
-      "height": 500,
-      "bytes": 10970,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "site/assets/c2-page.png": {
-      "source_sha256": "cd0c27794a8409f22d8fa44ddf37cb4caf8ca2bc8c11441262e9b8a35e8214bc",
-      "embedded_sha256": "5832cef255119978d99f07443f172f549d343da14a56a0bc81666d9736059de5",
-      "width": 600,
-      "height": 425,
-      "bytes": 10972,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "site/assets/distributor-fem-en.png": {
-      "source_sha256": "991f3517c7899da0c04bf39f24c8f5ab010e99db0136e5a0065429140fc24de7",
-      "embedded_sha256": "de6a8d7eacef74d5d02eee9637ee679cba1f2d66890c5ffa0381266272f24ee4",
-      "width": 558,
-      "height": 520,
-      "bytes": 22440,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "site/assets/linak-sections.png": {
-      "source_sha256": "086498aeef757f0ca29021dbb55c2f749149e8e195453d1a45a67ebaa58454c1",
-      "embedded_sha256": "d9621383eb41bc648c763379c6068b51a228fedcc301a55c7da846fdfd88aec4",
-      "width": 600,
-      "height": 355,
-      "bytes": 13154,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "site/assets/unifi-assembly.png": {
-      "source_sha256": "e92692cdc2efe571f7c6a524ac13e4f7878f4a8aaaeed27429119baf89c41dad",
-      "embedded_sha256": "30285525ffee4967e19db644018f9607041c89ed5d9a58f3ea1e54f2b47f7021",
-      "width": 520,
-      "height": 520,
-      "bytes": 14324,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "site/assets/laser-assembly.png": {
-      "source_sha256": "7206e30142cf6bb6dc2f0a3a1ff5e7ce2c1f8ea646e1731d10006080126baa13",
-      "embedded_sha256": "cb85cfc42a34dda79e54d96c637734b958bf59eb7f72e117638b78e03a0547c4",
-      "width": 520,
-      "height": 520,
-      "bytes": 9132,
-      "processing": "Downsampled and compressed as WebP; no semantic editing"
-    },
-    "site/assets/bristlebot-family-en.png": {
-      "source_sha256": "d199ba4a469c8629dfeed89b9f24919986b557f60027725b99fbf130d07b6195",
-      "embedded_sha256": "f4a3d95b637da522d2dfcfdf40180de64112ee7ab4b38703d806e1a152ee95df",
-      "width": 600,
-      "height": 505,
-      "bytes": 17132,
+    "site/assets/joints-J06-assembled.png": {
+      "source_sha256": "a75995c392ce98eac74caa97f2050dacd750f8bd6792e52796e860a48b661699",
+      "embedded_sha256": "575adcbaa60902813d9332e2857c327e99919a7a546096da9f60d67ec900a55f",
+      "width": 540,
+      "height": 319,
+      "bytes": 8780,
       "processing": "Downsampled and compressed as WebP; no semantic editing"
     },
     "site/assets/joints-J06-separate.png": {
@@ -236,6 +124,60 @@
       "width": 540,
       "height": 319,
       "bytes": 16090,
+      "processing": "Downsampled and compressed as WebP; no semantic editing"
+    },
+    "site/assets/mosey-family.svg": {
+      "source_sha256": "2811a3ba1dc79785311a8c0f6dc5b7a97704eb82853e7abf6f75e7887b6b662c",
+      "embedded_sha256": "2811a3ba1dc79785311a8c0f6dc5b7a97704eb82853e7abf6f75e7887b6b662c",
+      "bytes": 3527,
+      "processing": "Own vector illustration, embedded unchanged as SVG"
+    },
+    "provenance/references/mosey/images/p4-07-clamp-thumbnail.webp": {
+      "source_sha256": "10ef5189a198f95cae9dd05217acc379e3d783ac519a87e8f11c9270c29a325e",
+      "embedded_sha256": "103c7868dd290d5eca96de2e517603a5a2ad4d12dc8793e66fd910829ac6baef",
+      "width": 600,
+      "height": 450,
+      "bytes": 7018,
+      "processing": "Downsampled and compressed as WebP; no semantic editing"
+    },
+    "provenance/references/mosey/images/p5-02-cairn-thumbnail.webp": {
+      "source_sha256": "225c5c1f749b8d25e8d4381a5b55030c6d0f29649af3059d7be1c3b1655798a7",
+      "embedded_sha256": "0d656f7fa48ffb8acd3801fb46f57e67cd9b3d37fcc209784ad36806df577802",
+      "width": 600,
+      "height": 450,
+      "bytes": 2940,
+      "processing": "Downsampled and compressed as WebP; no semantic editing"
+    },
+    "provenance/references/mosey/images/p6-01-saddle-thumbnail.webp": {
+      "source_sha256": "ae4154dbba0303c3d20ee9e3950136610abf6fd977e3f958910269e044249c1f",
+      "embedded_sha256": "117920eef67be7f24453f1f7a70d6d4678ea94d2515616b576a72f7f8420b5bf",
+      "width": 600,
+      "height": 450,
+      "bytes": 4858,
+      "processing": "Downsampled and compressed as WebP; no semantic editing"
+    },
+    "provenance/references/mosey/images/p7-04-chamfer-thumbnail.webp": {
+      "source_sha256": "419c482efca9389c58a97766302884caf19a090cac75fcdfed3976aa626dbbd2",
+      "embedded_sha256": "7f72cbf97d76a739c3ca69807733c738024520387fcfa9fb87bddd1ca6ba4686",
+      "width": 600,
+      "height": 450,
+      "bytes": 4838,
+      "processing": "Downsampled and compressed as WebP; no semantic editing"
+    },
+    "provenance/references/mosey/images/p8-02-sling-thumbnail.webp": {
+      "source_sha256": "5461e3fff3286b8260076909f8b6fd0dc0a463ba0f306ed4802c0be8343fc409",
+      "embedded_sha256": "e91f0bd6ef8bf86fe2e0f114a3a1645db27174d6d12c523b8d5ca6eca56081aa",
+      "width": 600,
+      "height": 450,
+      "bytes": 9062,
+      "processing": "Downsampled and compressed as WebP; no semantic editing"
+    },
+    "provenance/references/mosey/images/p9-08-duo-thumbnail.webp": {
+      "source_sha256": "784dd6d6c95f908bb90db2c4bc4c67d3e149101e80d2189723ab538438a7e0c2",
+      "embedded_sha256": "86d358052ae82b8ee3ec614bd7ffacb3bdbc484ee3f14e990bcbd902710fa75b",
+      "width": 600,
+      "height": 450,
+      "bytes": 4270,
       "processing": "Downsampled and compressed as WebP; no semantic editing"
     }
   }

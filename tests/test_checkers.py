@@ -15,7 +15,6 @@ import numpy as np
 import trimesh
 from build123d import Align, Box, export_step
 
-P = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'skills/cad-design-system/scripts'))
 import check_mesh
 import check_step

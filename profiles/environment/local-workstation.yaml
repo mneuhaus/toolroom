@@ -1,0 +1,126 @@
+# Environment profile — the framework owner's workstation.
+#
+# This file is data about one machine, not knowledge. It answers "where does the
+# runtime live, which endpoint does it listen on, which profile does this machine
+# default to". Nothing here is a rule; a skill reads it instead of hard-coding a
+# path or a port into its entrypoint.
+#
+# Every value was extracted from the imported field notes on 2026-09-10 and the
+# `source` field names the file it came from. Re-verify before relying on one:
+# ports, plugin versions and installed slicer profiles drift.
+#
+# Another user copies `_template.yaml` and describes their own machine instead.
+
+meta:
+  id: local-workstation
+  platform: macOS
+  workspace_root: ~/Workspace/cad
+  recorded: 2026-09-10
+  note: >
+    Per-design uv projects live under ~/Workspace/cad/<project>/ with out/ for
+    slicer files and outputs/ for diagnostics.
+  source: skills/cad-fdm-design/references/field-notes.md
+
+onshape:
+  transport:
+    value: session-bridge
+    note: >
+      Every Onshape request goes through the local bridge. If the bridge is down
+      the call must fail; it must never fall back to the metered API key.
+    source: skills/onshape-bridge/references/field-notes.md
+  base_url:
+    value: http://127.0.0.1:8317
+    note: Proxy exposed by the local signed-in app; relays GET/POST/DELETE and binary.
+    source: skills/onshape-bridge/references/field-notes.md
+  health_path:
+    value: /_bridge/health
+    note: Local liveness probe. Check it before starting live work.
+    source: skills/onshape-bridge/references/field-notes.md
+  limits_path:
+    value: /_bridge/limits
+    note: sessioninfo probe plus lastSeen; read endpoint budgets before a batch.
+    source: skills/onshape-bridge/references/field-notes.md
+  session_probe:
+    value: /api/users/sessioninfo
+    note: isGuest false and a user name mean the app tab is signed in.
+    source: skills/onshape-bridge/references/field-notes.md
+  metering_probe:
+    value: /api/v14/metrics/api/summary
+    note: >
+      Authoritative key/client counters. Note them before and after a session and
+      compare the same reporting window.
+    source: skills/onshape-bridge/references/field-notes.md
+  app_path:
+    value: ~/Workspace/onshape-app
+    note: Electron app holding the signed-in cad.onshape.com tab; src/main.js runs the proxy.
+    source: skills/onshape-bridge/references/field-notes.md
+  start_command:
+    value: cd ~/Workspace/onshape-app && npm start
+    note: Launch from a persistent terminal and keep it open for the session.
+    source: skills/onshape-bridge/references/field-notes.md
+  mcp_adapter:
+    value: jarvis-onshape-mcp (Claude Code plugin)
+    note: >
+      Python MCP server whose base_url must point at the bridge. It runs from the
+      plugin cache copy (~/.claude/plugins/cache/jarvis-onshape-mcp/...), not the
+      marketplace copy; set ONSHAPE_BASE_URL there.
+    source: skills/onshape-bridge/references/field-notes.md
+
+fusion:
+  mcp_endpoint:
+    value: http://127.0.0.1:27182/mcp
+    note: Streamable HTTP MCP server "fusion"; the Fusion desktop app must be running.
+    source: skills/fusion360/references/field-notes.md
+  library_path:
+    value: ~/Workspace/cad/fusion-khana
+    note: >
+      fusion_khana/ is the library, parts/<part>.py the source programs. Separate
+      git repository, not vendored into this framework.
+    source: skills/fusion360/references/field-notes.md
+
+build123d:
+  cad_khana_path:
+    value: ~/Workspace/cad/cad-khana
+    note: >
+      Editable checkout of the khana CLI and library; paper-cuts are logged to its
+      own field-notes.md.
+    source: skills/cad-fdm-design/references/field-notes.md
+  viewer:
+    value: ocp_vscode on port 3939
+    note: Started once per session together with watch.py; review uses topology indices.
+    source: skills/cad-fdm-design/references/field-notes.md
+
+scanning:
+  toolkit_path:
+    value: ~/Workspace/cad/scan-toolkit
+    note: >
+      Flat modules rather than a package; consuming scripts prepend it to sys.path.
+      The recorded environment pinned Python 3.12 for open3d wheels.
+    source: skills/scan-reverse-engineering/references/field-notes.md
+
+manufacturing:
+  printer:
+    value: Bambu Lab A1, 0.4 mm nozzle
+    note: Default machine when the task names none. AMS is not assumed.
+    source: skills/cad-fdm-design/references/field-notes.md
+  slicers:
+    value: [OrcaSlicer, Bambu Studio]
+    note: >
+      Used for preparation and profile resolution. Verify the exported 3MF, not the
+      UI dropdown; machine identity stays under the slicer's control.
+    source: skills/cad-fdm-design/references/field-notes.md
+  default_profile:
+    value: profiles/manufacturing/fdm-bambu-a1-0.4.yaml
+    note: >
+      Passed to the screening scripts as --mfg. Applies only while that machine and
+      nozzle are the ones actually used.
+    source: skills/cad-design-system/references/field-notes.md
+
+design:
+  default_language_profile:
+    value: profiles/design-language/workshop-042.yaml
+    note: >
+      The owner's house style (rising edges R4.2, other non-critical edges 0.42
+      chamfer, dimension-critical edges sharp). A preference, never a process rule,
+      and never applied to functional or load-bearing edges.
+    source: skills/cad-fdm-design/references/field-notes.md

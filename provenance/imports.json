@@ -12,10 +12,10 @@
     {
       "source": "home/.claude/skills/onshape-cad/SKILL.md",
       "source_sha256": "65928c4a7eb7723cf0f37afe87193828281c3f7e48a453725d0154eac5acca8a",
-      "destination": "skills/onshape-cad/references/source-guide.md",
+      "destination": "skills/onshape-cad/references/field-notes.md",
       "import_sha256": "051a420a315e4e4d2460df58a2df8fc17e31d65b14d8bd36871da24c0fbcb8f9",
       "change": "Imported detailed guide; entrypoint will be curated separately",
-      "disposition": "Curated after import; see docs/consolidation.md"
+      "disposition": "Curated after import; see docs/history.md"
     },
     {
       "source": "home/.claude/skills/onshape-cad/references/retrofit-and-variants.md",
@@ -23,7 +23,7 @@
       "destination": "skills/onshape-cad/references/retrofit-and-variants.md",
       "import_sha256": "ba3ccdd1184a19eba83ad7c1a63b8aef7fed9a2bbbf330d01a3e6657ec1abaff",
       "change": "Imported supporting resource; home path normalized",
-      "disposition": "Curated after import; see docs/consolidation.md"
+      "disposition": "Curated after import; see docs/history.md"
     },
     {
       "source": "home/.claude/skills/onshape-cad/references/revision-workflow.md",
@@ -49,10 +49,10 @@
     {
       "source": "home/.claude/skills/onshape-bridge/SKILL.md",
       "source_sha256": "9986362828b47970358c370321694bafa1d2c295ca25afd4ddda162473b28bc3",
-      "destination": "skills/onshape-bridge/references/source-guide.md",
+      "destination": "skills/onshape-bridge/references/field-notes.md",
       "import_sha256": "28ddc7a66fb9a0e28e97e51df6895c0df07f3abcf403f9e0b6170c0dec2aaade",
       "change": "Imported detailed guide; entrypoint will be curated separately",
-      "disposition": "Curated after import; see docs/consolidation.md"
+      "disposition": "Curated after import; see docs/history.md"
     },
     {
       "source": "home/.claude/skills/onshape-bridge/references/recovery-and-sharing.md",
@@ -71,10 +71,10 @@
     {
       "source": "home/.claude/skills/cad-fdm-design/SKILL.md",
       "source_sha256": "8f37ed6835b913449a944cc386a3f92923065286b98b0079e869792b12bfb705",
-      "destination": "skills/cad-fdm-design/references/source-guide.md",
+      "destination": "skills/cad-fdm-design/references/field-notes.md",
       "import_sha256": "98df885b8265a16fbd716fb06d1e00caa986d5f64de891f85b1f5c9e086f6479",
       "change": "Imported detailed guide; entrypoint will be curated separately",
-      "disposition": "Curated after import; see docs/consolidation.md"
+      "disposition": "Curated after import; see docs/history.md"
     },
     {
       "source": "home/.claude/skills/cad-fdm-design/references/assembly-review.md",
@@ -82,7 +82,7 @@
       "destination": "skills/cad-fdm-design/references/assembly-review.md",
       "import_sha256": "8fcf006b2993ce2a388ecf1af75a4f00513f7f923854fdb5b4905e8ae7d69765",
       "change": "Imported supporting resource; home path normalized",
-      "disposition": "Relocated into shared knowledge; original import path retired"
+      "disposition": "Consolidated into knowledge/construction/assembly-review.md; original import path retired"
     },
     {
       "source": "home/.claude/skills/cad-fdm-design/references/bambu-preparation.md",
@@ -90,7 +90,7 @@
       "destination": "skills/cad-fdm-design/references/bambu-preparation.md",
       "import_sha256": "c31df1af8242729ff318c9c4993af61ef13253f8475dd7e49f7566f4b8307cb2",
       "change": "Imported supporting resource; home path normalized",
-      "disposition": "Relocated into shared knowledge; original import path retired"
+      "disposition": "Consolidated into knowledge/manufacturing/print-preparation.md; original import path retired"
     },
     {
       "source": "home/.claude/skills/cad-fdm-design/references/fit-and-snap-review.md",
@@ -98,7 +98,7 @@
       "destination": "skills/cad-fdm-design/references/fit-and-snap-review.md",
       "import_sha256": "283a5780b556b64898b9fb276e5d9bffe9b44075eaaff22acb9f757f9e8a9ab5",
       "change": "Imported supporting resource; home path normalized",
-      "disposition": "Relocated into shared knowledge; original import path retired"
+      "disposition": "Consolidated into knowledge/construction/fits-and-retention.md; original import path retired"
     },
     {
       "source": "home/.claude/skills/cad-fdm-design/references/project-layout.md",
@@ -106,7 +106,7 @@
       "destination": "skills/cad-fdm-design/references/project-layout.md",
       "import_sha256": "15ca062523b6905fdd6b37abf874e2276dd5c7a1ecffe80924fa348077667ff2",
       "change": "Imported supporting resource; home path normalized",
-      "disposition": "Relocated into shared knowledge; original import path retired"
+      "disposition": "Consolidated into knowledge/workflow/project-layout.md; original import path retired"
     },
     {
       "source": "home/.claude/skills/cad-fdm-design/references/pyproject.toml",
@@ -132,10 +132,10 @@
     {
       "source": "home/.claude/skills/cad-khana/SKILL.md",
       "source_sha256": "e744a41c4fab84a9520aab35ba148a58a26beee81c58b3497dd16dd10a88b462",
-      "destination": "skills/cad-khana/references/source-guide.md",
+      "destination": "skills/cad-khana/references/field-notes.md",
       "import_sha256": "bd1edad9711326a5ca8fe3917060de8e4f15a2dd269ea4b7a4a404549657782e",
       "change": "Imported detailed guide; entrypoint will be curated separately",
-      "disposition": "Curated after import; see docs/consolidation.md"
+      "disposition": "Curated after import; see docs/history.md"
     },
     {
       "source": "home/.claude/skills/cad-khana/references/build123d_quickref.md",
@@ -189,10 +189,10 @@
     {
       "source": "home/.claude/skills/fusion360/SKILL.md",
       "source_sha256": "af3ca219542b31e85a74e5da22d5e41be84ada65769d4cf78f1bfbb0d05793ac",
-      "destination": "skills/fusion360/references/source-guide.md",
+      "destination": "skills/fusion360/references/field-notes.md",
       "import_sha256": "6757736ba9280ef51deaef270eac267d58d02be596175559eb8af458ac91fc6b",
       "change": "Imported detailed guide; entrypoint will be curated separately",
-      "disposition": "Curated after import; see docs/consolidation.md"
+      "disposition": "Curated after import; see docs/history.md"
     },
     {
       "source": "home/.claude/skills/scan-reverse-engineering/SKILL.md",
@@ -204,10 +204,10 @@
     {
       "source": "home/.claude/skills/scan-reverse-engineering/SKILL.md",
       "source_sha256": "95cedabddd377e9b15f7f8a01021a5dad79c4e5bf40481beba10223a87b3368e",
-      "destination": "skills/scan-reverse-engineering/references/source-guide.md",
+      "destination": "skills/scan-reverse-engineering/references/field-notes.md",
       "import_sha256": "419e4af8db2494f3649b031717833609f52769c33586e82c98d9110309ae75cb",
       "change": "Imported detailed guide; entrypoint will be curated separately",
-      "disposition": "Curated after import; see docs/consolidation.md"
+      "disposition": "Curated after import; see docs/history.md"
     },
     {
       "source": "home/.codex/skills/cad-design-system/SKILL.md",
@@ -219,10 +219,10 @@
     {
       "source": "home/.codex/skills/cad-design-system/SKILL.md",
       "source_sha256": "d0dc40b4d0695976b1347c58058f4e930ada2b151219caccb70f9f517cff55f7",
-      "destination": "skills/cad-design-system/references/source-guide.md",
+      "destination": "skills/cad-design-system/references/field-notes.md",
       "import_sha256": "50eccd8a7ca801f5dd4f359f01aa632921f0e161d5edda2642d592fb477c0cda",
       "change": "Imported detailed guide; entrypoint will be curated separately",
-      "disposition": "Curated after import; see docs/consolidation.md"
+      "disposition": "Curated after import; see docs/history.md"
     },
     {
       "source": "home/.codex/skills/cad-design-system/agents/openai.yaml",
@@ -323,30 +323,30 @@
       "change": "Imported supporting resource; home path normalized"
     },
     {
-      "source": "home/.codex/skills/cad-design-system/references/manufacturing/cnc.md",
+      "source": "home/.codex/knowledge/manufacturing/cnc.md",
       "source_sha256": "de59eb13b5ef20c87697dd079718322c788abcdb4902878620a7d0a9a4230c8e",
-      "destination": "skills/cad-design-system/references/manufacturing/cnc.md",
+      "destination": "knowledge/manufacturing/cnc.md",
       "import_sha256": "de59eb13b5ef20c87697dd079718322c788abcdb4902878620a7d0a9a4230c8e",
       "change": "Imported supporting resource; home path normalized"
     },
     {
-      "source": "home/.codex/skills/cad-design-system/references/manufacturing/fdm.md",
+      "source": "home/.codex/knowledge/manufacturing/fdm.md",
       "source_sha256": "755cd89a338886bd07c1cc28e0fa552ad9d47b9799b3ace485cfd11ca6093e0a",
-      "destination": "skills/cad-design-system/references/manufacturing/fdm.md",
+      "destination": "knowledge/manufacturing/fdm.md",
       "import_sha256": "755cd89a338886bd07c1cc28e0fa552ad9d47b9799b3ace485cfd11ca6093e0a",
       "change": "Imported supporting resource; home path normalized"
     },
     {
-      "source": "home/.codex/skills/cad-design-system/references/manufacturing/laser.md",
+      "source": "home/.codex/knowledge/manufacturing/laser.md",
       "source_sha256": "fa70657f66bcda20a15cef8e59e2033046f729046c53a0a1ce363c71d20005ca",
-      "destination": "skills/cad-design-system/references/manufacturing/laser.md",
+      "destination": "knowledge/manufacturing/laser.md",
       "import_sha256": "fa70657f66bcda20a15cef8e59e2033046f729046c53a0a1ce363c71d20005ca",
       "change": "Imported supporting resource; home path normalized"
     },
     {
-      "source": "home/.codex/skills/cad-design-system/references/manufacturing/sla.md",
+      "source": "home/.codex/knowledge/manufacturing/sla.md",
       "source_sha256": "b6674f654546549f618277c385721d118c186d5b4504531f843871128c63b5f3",
-      "destination": "skills/cad-design-system/references/manufacturing/sla.md",
+      "destination": "knowledge/manufacturing/sla.md",
       "import_sha256": "b6674f654546549f618277c385721d118c186d5b4504531f843871128c63b5f3",
       "change": "Imported supporting resource; home path normalized"
     },
@@ -377,7 +377,7 @@
       "destination": "skills/cad-design-system/scripts/check_mesh.py",
       "import_sha256": "5ddbb29ef1dbfd946390c17ab9ca583b436e85205e2757d8d60e09a31fcf9334",
       "change": "Imported supporting resource; home path normalized",
-      "disposition": "Curated after import; see docs/consolidation.md"
+      "disposition": "Curated after import; see docs/history.md"
     },
     {
       "source": "home/.codex/skills/cad-design-system/scripts/check_step.py",
@@ -418,10 +418,10 @@
     {
       "source": "home/.codex/skills/onshape-build-manuals/SKILL.md",
       "source_sha256": "77790e2575c1154abe1688ca1d4992f1d4477305997b73f6381e15d96226b562",
-      "destination": "skills/onshape-build-manuals/references/source-guide.md",
+      "destination": "skills/onshape-build-manuals/references/field-notes.md",
       "import_sha256": "d45334353ca0f2317b421bc39e9a55ce803113feed3c01491bd85b1cc27baf39",
       "change": "Imported detailed guide; entrypoint will be curated separately",
-      "disposition": "Curated after import; see docs/consolidation.md"
+      "disposition": "Curated after import; see docs/history.md"
     },
     {
       "source": "home/.codex/skills/onshape-build-manuals/agents/openai.yaml",
@@ -482,29 +482,29 @@
     {
       "source": "home/.claude/skills/cad-fdm-design/references/assembly-review.md",
       "source_sha256": "8fcf006b2993ce2a388ecf1af75a4f00513f7f923854fdb5b4905e8ae7d69765",
-      "destination": "knowledge/assembly-review.md",
+      "destination": "knowledge/construction/assembly-review.md",
       "import_sha256": "8fcf006b2993ce2a388ecf1af75a4f00513f7f923854fdb5b4905e8ae7d69765",
       "change": "Shared knowledge extracted from cad-fdm-design"
     },
     {
       "source": "home/.claude/skills/cad-fdm-design/references/fit-and-snap-review.md",
       "source_sha256": "283a5780b556b64898b9fb276e5d9bffe9b44075eaaff22acb9f757f9e8a9ab5",
-      "destination": "knowledge/fits-and-retention.md",
+      "destination": "knowledge/construction/fits-and-retention.md",
       "import_sha256": "283a5780b556b64898b9fb276e5d9bffe9b44075eaaff22acb9f757f9e8a9ab5",
       "change": "Shared knowledge extracted from cad-fdm-design",
-      "disposition": "Curated after import; see docs/consolidation.md"
+      "disposition": "Curated after import; see docs/history.md"
     },
     {
       "source": "home/.claude/skills/cad-fdm-design/references/project-layout.md",
       "source_sha256": "15ca062523b6905fdd6b37abf874e2276dd5c7a1ecffe80924fa348077667ff2",
-      "destination": "knowledge/project-layout.md",
+      "destination": "knowledge/workflow/project-layout.md",
       "import_sha256": "15ca062523b6905fdd6b37abf874e2276dd5c7a1ecffe80924fa348077667ff2",
       "change": "Shared knowledge extracted from cad-fdm-design"
     },
     {
       "source": "home/.claude/skills/cad-fdm-design/references/bambu-preparation.md",
       "source_sha256": "c31df1af8242729ff318c9c4993af61ef13253f8475dd7e49f7566f4b8307cb2",
-      "destination": "knowledge/print-preparation.md",
+      "destination": "knowledge/manufacturing/print-preparation.md",
       "import_sha256": "c31df1af8242729ff318c9c4993af61ef13253f8475dd7e49f7566f4b8307cb2",
       "change": "Shared knowledge extracted from cad-fdm-design"
     },
@@ -518,9 +518,10 @@
     {
       "source": "workspace/cad/distributor-printed-layer/design-system/tests/test_check_mesh.py",
       "source_sha256": "1778d9580ba8a972d7de5d61a06fd3bdd3f4b80f0869ccce6febf001d92e722f",
-      "destination": "tests/test_distributor_regressions.py",
+      "destination": "tests/test_checker_regressions.py",
       "import_sha256": "119278d655da8e501ee9584d67e66724a99f6eb78fef347006097d40ce0a50f2",
       "change": "Tests use shared checker and canonical no_findings status"
     }
-  ]
+  ],
+  "restructure": "Destinations reflect the 10 September 2026 restructure; see restructure-2026-09-10.json for the path map."
 }

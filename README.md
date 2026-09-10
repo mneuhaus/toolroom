@@ -1,59 +1,53 @@
-# CAD Skills Framework
+# Toolroom
 
-A shared workbench for CAD with AI assistants: maintained skills, common technical knowledge, profiles, traceable examples and searchable HTML documentation.
+A CAD knowledge base and skill framework for AI-assisted design. Toolroom keeps the reusable know-how of designing, checking and manufacturing parts in one place so that an agent loads the right rules for the task instead of guessing.
 
-**Start:** [Open the documentation](index.html). The generated website works directly from local files and entirely offline. To run a local preview:
+The name is the workshop metaphor: a toolroom is where the jigs, gauges and fixtures live that make the shop's work repeatable. Here the jigs are **skills**, the gauges are the **knowledge base** with its verification rules, and the fixtures are **profiles** that describe a machine, a style or a workstation. Toolroom is not a CAD kernel and does not run machines. It tells an agent what to do, where the reasoning is, and which evidence counts.
+
+**Start:** open [`index.html`](index.html) for the offline documentation, or read [the architecture](docs/architecture.md). Local preview:
 
 ```sh
-python3 tools/serve.py
+uv run python tools/serve.py
 ```
 
-Then open `http://127.0.0.1:4176`. The server serves only this framework.
+Then open `http://127.0.0.1:4176`.
 
-## Contents
+## Map
 
-| Directory | Purpose |
-| --- | --- |
-| `skills/` | Ten concise skill entrypoints with references and helpers loaded as needed |
-| `knowledge/` | Shared rules for source authority, assembly, fits, manufacturing and evidence |
-| `profiles/` | Design and manufacturing profiles; example values are explicitly uncalibrated |
-| `examples/` | Case studies and an executable local checker lab |
-| `site/` | Website sources and actual CAD images from the case studies |
-| `tests/` | Consolidated checker regressions and profile resolution tests |
-| `provenance/` | Origins, import hashes and recorded changes |
-| `validation/` | Results of checks that were actually run |
+| Directory | Holds | Answers |
+| --- | --- | --- |
+| [`knowledge/`](knowledge/README.md) | Backend-independent rules in six sections: foundations, workflow, construction, manufacturing, design languages, lessons | Why a rule exists and what evidence it needs |
+| [`skills/`](skills/README.md) | Ten thin entrypoints with backend-specific references and helper scripts | When to load what, and how to do it in Onshape, Build123d or Fusion |
+| [`profiles/`](profiles/README.md) | Design-language, manufacturing, interface and workstation data in YAML | Which numbers apply to this machine, style or setup |
+| [`labs/`](labs/README.md) | Two reproducible experiments with their own evidence: the Printed Joints Lab and the checker lab | What a helper or a joint principle actually demonstrates |
+| [`docs/`](docs/architecture.md) | Architecture, scope, history and provenance of this repository | How Toolroom itself is organised and why |
+| `tools/`, `tests/` | Site builder, validator, reading-edition builder and regression tests | How to rebuild and check the repository |
+| `provenance/`, `validation/` | Import hashes, original skill snapshots, reference manifests and the results of checks that were actually run | Where content came from and what was verified |
 
-## Rebuild the documentation and run tests
+The rule of thumb: a **why** goes into `knowledge/`, a **when and how** into `skills/`, a **number** into `profiles/`, an **experiment** into `labs/`, and anything about the repository itself into `docs/`.
+
+## Using it with an agent
+
+Skill folders are entrypoints, not standalone packages: they link into `../../knowledge` and `../../profiles`. Install them by symlinking the folder from a checkout, for example `ln -s "$PWD/skills/cad-fdm-design" ~/.claude/skills/cad-fdm-design`, so the links keep resolving. The older skills already installed under `~/.claude/skills` stay independent until they are replaced; `provenance/originals/` preserves their entrypoints for comparison.
+
+The workstation profile in `profiles/environment/` describes one specific setup (endpoints, default printer, library paths). Another user replaces it with their own copy of the template.
+
+## Rebuild the documentation and run the checks
 
 ```sh
 uv sync
+uv run python labs/checker-lab/build.py
 uv run python tools/build_site.py
 uv run python tools/validate.py
 uv run python -m unittest discover -s tests -v
-uv run python examples/checker-lab/build.py
 ```
 
-The HTML is generated from Markdown, catalogues and example reports. Edit those sources, rather than the generated `site/data.js`.
+The HTML is generated from Markdown and the three catalogs (`catalog.json`, `knowledge/catalog.json`, `labs/catalog.json`). Edit those sources, never `site/data.js`. The validator checks every local link and heading anchor, the catalog contracts, image and evidence hashes, and that the generated files are current.
 
-## Printed Joints Lab
+## Reading edition
 
-[Eight native connections](examples/printed-joints/README.md) add the `cad-joints` skill to the framework: dovetail variants, Echo-Lock, Drop-Lock and a keyed scarf. The local website offers assembled and separated views, with corresponding native Onshape links, STEP files and the assembly inspection report. [Four additional video references](docs/joints/additional-references.md) cover thin panels and elastic clips; they are reviewed references, not additional native models.
+`tools/build_postplan.py` produces a single-file, script-free reading edition under 512 KiB. Uploading it to Postplan is a separate, public step and is not part of the build. The edition published on 10 September 2026 at `https://hn0ai0tcfhrd.postplan.dev` predates the restructure and shows the earlier layout with case studies.
 
-## Mosey design language
+## Status
 
-The [illustrated Mosey study](docs/design-languages/mosey.md) presents references, three form variants and applications to other objects. The versioned [Mosey profile](profiles/design-language/mosey.yaml) distinguishes observed features from our proposed CAD values. It is available in the profile workbench.
-
-## Postplan reading edition
-
-[Open the published reading edition](https://hn0ai0tcfhrd.postplan.dev).
-
-```sh
-uv run python tools/build_postplan.py
-npx --yes postplan@0.0.4 upload site/postplan.html --api-url https://postplan.dev --description "CAD Skills Framework — architecture, skills and eight case studies"
-```
-
-The export contains 29 selected documents, ten skill entrypoints and eight case studies in a single HTML file below 512 KiB. Reference and project images are embedded as WebP; our vector illustrations remain SVG. Chapter links and expandable sections work without JavaScript. The interactive workbench, full-text search and notes belong to the complete local edition. Postplan uploads are public. Building creates only the local file; the separate upload command publishes it.
-
-This repository is a local discussion and development edition. The bundled helpers have their own validation reports. The Printed Joints Lab was newly constructed in Onshape and checked geometrically. The other imported project examples were not rerun in their CAD applications or slicers; physical trials are outside this documentation update. Installed skills and existing project sources remain independent active work until an explicit migration. See [scope](docs/scope.md), [consolidation](docs/consolidation.md) and [provenance](docs/provenance.md).
-
-The old handoff package dated 7 September was removed on request on 10 September. This repository is built from the current sources.
+This is a local working edition, version 0.1. The helpers have validation reports. The Printed Joints Lab was built natively in Onshape and checked geometrically. Nothing here is a physical acceptance result. Design and manufacturing profiles marked generic are uncalibrated starting values. See [scope](docs/scope.md), [history](docs/history.md) and [provenance](docs/provenance.md).

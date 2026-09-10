@@ -1,27 +1,36 @@
 # Provenance and maintenance
 
-This workbench uses current local skills and selected project sources. The old handoff package dated 7 September was removed at the user's explicit request and is not an import source.
+Toolroom was built from the previously installed skills and selected project sources. An older handoff package dated 7 September 2026 was removed at the owner's request and is not an import source.
 
-`provenance/imports.json` records the origins and SHA-256 hashes of copied resources. `provenance/assets.json` describes imported project images. `provenance/originals/` preserves the original skill entrypoints for comparison; they are not selected as additional active skills.
+## Records
 
-Import hashes describe the moment of import; curated versions may differ. `provenance/consolidation.json` records the two source versions and the specific checker consolidation. Hashes in `validation/tests.json` identify the helper revisions that were actually tested.
+| Record | Contents |
+| --- | --- |
+| `provenance/imports.json` | Origin paths and SHA-256 hashes of every copied resource, with its current destination |
+| `provenance/originals/` | The original skill entrypoints, preserved unchanged for comparison; not active skills |
+| `provenance/consolidation.json` | The two checker source versions and the specific consolidation |
+| `provenance/assets.json` | Every image under `site/assets/` with its source and hash |
+| `provenance/references/` | Manifests of external reference material: the Mosey render thumbnails and video-derived sources, each with hashes |
+| `provenance/restructure-2026-09-10.json` | The old-to-new path map and the list of removed files from the restructure |
+| `provenance/workspace-inventory.json` | The project directories that were surveyed for the consolidation |
+| `validation/` | Results of checks that were actually run: site build, content checks, unit tests and the published reading edition |
 
-Paths in provenance records use logical labels such as `workspace/cad` and `home`. Personal credentials, browser profiles, API response collections and slicer projects are not part of the documentation import.
+Import hashes describe the moment of import; curated versions differ. Hashes in `validation/tests.json` identify the helper revisions that were actually tested. Paths in provenance records use logical labels such as `workspace/cad` and `home`. Credentials, browser profiles, API response collections and slicer projects are not part of the import.
 
-## Existing attribution
+## Removed project material
 
-cad-khana identifies Apache-2.0 as its licence; the Jarvis adapter is based on an MIT-licensed project. This workbench does not import those runtime packages in full. Existing author and source credits in skill references are retained.
+The restructure removed seven project case studies and twelve project images. Their transferable rules live in [Lessons from projects](../knowledge/lessons/project-lessons.md); the originating project directories remain untouched outside this repository. Removed paths are listed in the restructure record, and the previous edition remains in git history.
 
-No blanket public licence has yet been assigned to original framework text, helpers, imported design-system templates or project images. The repository remains a local workbench. Its [Postplan reading edition](https://hn0ai0tcfhrd.postplan.dev) contains 28 selected documents, ten skill entrypoints and eight case studies. The verified publication is recorded in `validation/postplan-publish.json`.
+## Attribution
+
+cad-khana identifies Apache-2.0 as its licence; the Onshape adapter is based on an MIT-licensed project. Toolroom does not import those runtime packages in full. Existing author and source credits in field notes are retained.
+
+The Mosey design language was derived from the public Mosey concept gallery on 10 September 2026; `provenance/references/mosey/manifest.json` records 18 unchanged render thumbnails with direct sources and hashes. They remain identified as AI-assisted reference images. `site/assets/mosey-family.svg` is our own schematic illustration.
+
+The Printed Joints Lab reconstructs principles from three NeedItMakeIt videos using transcripts and selected frames; `labs/printed-joints/sources.json` and `additional-sources.json` record metadata and hashes. No original CAD files or full transcripts are redistributed. The same rule applies to any further video-derived article: short quotations at most, a source record with hashes, and an explicit statement that nothing was physically verified here.
+
+No blanket public licence has been assigned to original Toolroom text, helpers, imported design-system templates or lab images. The repository is a local working edition. The reading edition published on 10 September 2026 at `https://hn0ai0tcfhrd.postplan.dev` reflects the earlier layout; `validation/postplan-publish.json` records that upload.
 
 ## Maintenance
 
-The [Mosey design language](design-languages/mosey.md) was derived from the public Mosey concept gallery on 10 September 2026. `provenance/references/mosey/manifest.json` records 18 unchanged render thumbnails with direct sources and hashes. They remain identified as AI-assisted reference images. `site/assets/mosey-family.svg` is our own schematic illustration; the YAML explicitly contains proposed geometry and colour values.
-
-All maintained documentation and website text use English. Original source snapshots, filenames, proper names and historical evidence retain their original identity. Translating an explanation does not change the underlying CAD revision or establish a new physical result.
-
-Changes to entrypoints, shared rules and helpers are maintained here. Existing active project directories and installed skills are not automatically synchronised back. A later migration must compare their then-current changes again.
-
-The [additional joint reference review](joints/additional-references.md) covers four further videos. `examples/printed-joints/additional-sources.json` records metadata, sampled-frame analysis and evidence hashes. These references have not been reconstructed as native CAD or physically tested.
-
-The Distributor illustration uses the existing English R8 project figure. The Bristlebot comparison was regenerated from its frozen CAD inputs with the original camera, scale and renderer; the verification found zero changed pixels outside the label bands. Original German figures remain preserved as historical evidence. `validation/bristlebot-english-figure.json` binds the English output to the frozen source hashes and the [optional regeneration helper](../examples/bristlebot/render_english.py).
+Changes to entrypoints, shared rules and helpers are maintained here. Installed skills and active project directories are not synchronised back automatically; a later migration must compare their then-current state again. When files move, add the mapping to a provenance record and update the destinations in `provenance/imports.json`.
