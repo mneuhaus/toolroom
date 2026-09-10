@@ -1,0 +1,39 @@
+{
+  "status": "independent-reconstructions",
+  "sources": [
+    {
+      "url": "https://www.youtube.com/watch?v=fSISiR5XIbk",
+      "title": "Strong 3D Printed Connections on BIG parts",
+      "creator": "NeedItMakeIt",
+      "upload_date": "20240120",
+      "duration_seconds": 1222,
+      "accessed": "2026-09-10",
+      "method": "Automatic English transcript and selected video frames; no claim of complete visual review.",
+      "metadata_sha256": "3955bce627a89df55edfc5ba5f6ac4aac3a61dbcfe4902f24c1a46cd61348869",
+      "transcript_sha256": "20215da707a1a7e420d59684446dc63d8c023abb7d4c1598ad78d2b64fdf49bb"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=zI8OgRRF5d8",
+      "title": "Modernizing the best Woodworking Joint to use for 3D Printing",
+      "creator": "NeedItMakeIt",
+      "upload_date": "20240420",
+      "duration_seconds": 670,
+      "accessed": "2026-09-10",
+      "method": "Automatic English transcript and selected video frames; no claim of complete visual review.",
+      "metadata_sha256": "982285cbd8e0bbe3b777ae91757b76f6c548218f86271fc973ab0dccb2a27242",
+      "transcript_sha256": "9de59e9a20349c384d16ec1753b92e5c855bf5ef8edae8fcdd4eee4ae3bc77e1"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=WY8yd191qVE",
+      "title": "Adapting the BEST Woodworking Joints for 3D Printing",
+      "creator": "NeedItMakeIt",
+      "upload_date": "20240504",
+      "duration_seconds": 758,
+      "accessed": "2026-09-10",
+      "method": "Automatic English transcript and selected video frames; no claim of complete visual review.",
+      "metadata_sha256": "9fd9c38a4d955111c03f92eb7b1b035866167cdb56d79fed1aee8fa767d58363",
+      "transcript_sha256": "f50c76b8a2c18ccbc21e00dbf3ff50af060f7f87f9e8224f530b7b3662bbc9be"
+    }
+  ],
+  "copyright": "Original videos and Fusion files remain with their respective authors. No original CAD or full transcript redistributed."
+}

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "url": "https://hn0ai0tcfhrd.postplan.dev/",
+  "raw_url": "https://postplan.dev/d/hn0ai0tcfhrd/raw",
+  "draft_id": "hn0ai0tcfhrd",
+  "version": 4,
+  "previous_version": 3,
+  "date": "2026-09-10",
+  "language": "en",
+  "bytes": 517535,
+  "sha256": "596dbd39fc8d7b123e4a66ee5238a9ff7f856c1773a0977c13c590c62728f3b4",
+  "remote_bytes_match": true,
+  "selected_documents": 29,
+  "skills": 10,
+  "case_studies": 8,
+  "additional_video_references": 4,
+  "browser_validation": "validation/english-documentation.json"
+}

@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "scope": [
+    "Mosey YAML structure, three variants, no calibrated filament claims",
+    "81 framework content checks include all 18 reference image hashes",
+    "Postplan embeds Markdown images and handles self-closing void elements",
+    "Postplan accepts primary-source HTTPS links and rejects deceptive or unsafe URLs"
+  ],
+  "inputs_sha256": {
+    "profiles/design-language/mosey.yaml": "4dae729e0f91c41f821d085aba7d852772e469c648a4949eaa964836bd9abe2c",
+    "docs/design-languages/mosey.md": "9307f360ee82e1d01c63f0b02bdbc23c26d995d72816f1939359249a61b4be1e",
+    "provenance/references/mosey/manifest.json": "4cbb5f3e4e66f8bc18186fbbbd6f9b869fdf77242f6296565ae2619e8e2b3b05",
+    "site/assets/mosey-family.svg": "4c2d9f64c86d741bd9e295c33bbf3289eec6677cd8d86f6833a58b4b4392f895",
+    "site/src/app.js": "bc8d7beb6d26e5dd93d91ffe5bd9eb991ca5c0161fda066e09c306664463236e",
+    "site/src/style.css": "77fcf9de37642c52f1005060c630601518f37b3cffaae4e8607a85b38b7f44e2",
+    "tools/build_postplan.py": "4511e6e2ee6e11b53e0afb04e0e4d8a3ed0407470a1e4f6b61d6654be5953230",
+    "tools/validate.py": "5f90182a2d21cc50380aa1c993f4977d5a50b91134e9832f52438530f0c51f43"
+  },
+  "browser": {
+    "desktop_viewport": [
+      1440,
+      1000
+    ],
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "profile_process_combinations": 4,
+    "fixed_interfaces_unchanged": true,
+    "document_images_loaded": 7,
+    "search_finds_mosey": true,
+    "mobile_sidebar_hidden_and_inert": true,
+    "horizontal_overflow": false,
+    "runtime_errors": [],
+    "postplan_reference_images_loaded": 6,
+    "postplan_own_svg_visible": true,
+    "postplan_fragment_opens_details": true,
+    "postplan_remote_bytes_identical": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-10",
+  "removed": [
+    {
+      "path": "exports/CAD-Onshape-Workflow-2026-09-07",
+      "files": 2539,
+      "reason": "User requested removal of obsolete handover package on 2026-09-10"
+    },
+    {
+      "path": "exports/CAD-Onshape-Workflow-2026-09-07.zip",
+      "files": 1,
+      "reason": "User requested removal of obsolete handover package on 2026-09-10"
+    },
+    {
+      "path": "exports/CAD-Onshape-Workflow-2026-09-07.zip.sha256",
+      "files": 1,
+      "reason": "User requested removal of obsolete handover package on 2026-09-10"
+    },
+    {
+      "path": "package-tools/build_workflow_package.py",
+      "files": 1,
+      "reason": "User requested removal of obsolete handover package on 2026-09-10"
+    },
+    {
+      "path": "package-tools/finalize_workflow_package.py",
+      "files": 1,
+      "reason": "User requested removal of obsolete handover package on 2026-09-10"
+    }
+  ]
+}

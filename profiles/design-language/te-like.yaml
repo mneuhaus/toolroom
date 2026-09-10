@@ -1,0 +1,149 @@
+# Generic visual-language example. All numerical values are derived and uncalibrated.
+meta:
+  id: te-like
+  name: hard-edged colour-coded instrument (Teenage-Engineering-inspired)
+  intent: Flat geometric surfaces, restrained selected edge breaks, visible standard
+    hardware and a limited functional palette. Define project-specific exceptions
+    for fits, loads and purchased components.
+  references:
+  - OP-1 / OP-1 field (aluminium body, colour-coded encoders)
+  - Pocket Operator series (bare PCB, 4x4 button grid, colour LCD)
+  - EP-133 K.O. II (ABS body, chamfered edges, big grey keys)
+  - IKEA FREKVENS (RAL 1003 / 3020 / 6016 / 5017 named by TE)
+  - Computer-1 (sheet metal, visible screws, kit assembly)
+  status: Uncalibrated generic enclosure example; project interfaces and user requirements
+    take precedence
+edges:
+  policy: chamfer
+  edge_treatment:
+    type: chamfer
+    size: 0.6
+    angle: 45
+  outer_corner_radius: 2.0
+  radius_family:
+  - 0.5
+  - 1.0
+  - 2.0
+  max_radius: 3.0
+  inner_corner_radius: 1.0
+  bottom_edge:
+    type: chamfer
+    size: 0.6
+  hierarchy: Apply only to deliberately selected cosmetic edges; preserve stress relief,
+    fits and contact faces
+proportions:
+  grid: 5.0
+  sub_grid: 2.5
+  control_pitch: 10.0
+  preferred_aspect_ratios:
+  - '1:1'
+  - '3:2'
+  - '16:10'
+  plate_thickness: 2.0
+  layering:
+  - front_plate
+  - body
+  - back_plate
+  reveal:
+    width: 0.6
+    depth: 0.6
+  nesting_offset: 0.0
+  snap_positions_to_grid: false
+  grid_scope: New unconstrained graphics/control layout; never force hardware interfaces
+    onto this grid
+surfaces:
+  finish: matte
+  texture_zones: []
+  visible_face_rule: top and vertical faces only; textured bed face acceptable for
+    back plates
+  parting_lines: celebrated
+fasteners:
+  visible: true
+  type: M3 socket head cap, black
+  pattern:
+    rule: four corners
+    inset_grid_units: 2
+  method: heat-set inserts
+  head_treatment: flush counterbore, head visible
+  scope: Insert-based enclosure demonstration only; actual projects choose appropriate
+    existing connections
+color:
+  base:
+  - light grey
+  - off-white
+  - charcoal
+  accents:
+  - orange
+  - red
+  - signal yellow
+  - blue
+  - green
+  max_colors_per_object: 3
+  accent_rule: functional parts only (knob caps, buttons, one signature element, one
+    label)
+  semantics:
+    record: orange/red in the supplied audio-product reference
+    project: Define one stable meaning per accent for the actual mechanism
+  filament_map:
+    selection: Compare physical matte samples; no official RAL match or current product
+      availability is asserted
+typography:
+  font: One available legible sans-serif family; bold for FDM specimens, not a claim
+    about the reference brand font weight
+  case: lowercase
+  method: multicolor_inlay
+  min_height: 5.0
+  placement: left of or below the control, baseline on the sub-grid
+  density: sparse (function labels only; a full TE label set needs a laser plate)
+  color: base black on grey, base grey on black; accents only for the semantic map
+controls:
+  knob_cap:
+    shape: cylinder
+    dia: 12.0
+    height: 9.0
+    top: flat
+    chamfer: 0.6
+    indicator: 1 mm inlay line
+    shaft: D 6.0
+    color: accent
+  button:
+    footprint: 9.0
+    corner_radius: 1.0
+    gap_to_bezel: 0.4
+    pitch: 10.0
+    material: PLA on tact switch or TPU cap
+  display:
+    mount: flush
+    bezel: black
+    window_corner_radius: 1.0
+  ports: framed (rectangular cut-out with 0.4 chamfer, no decoration)
+grilles:
+  pattern:
+    type: round_holes
+    dia: 2.0
+    pitch: 3.5
+    arrangement: square
+  alt_pattern:
+    type: slots
+    w: 1.5
+    l: 10.0
+    pitch: 3.0
+  alignment: field on grid, symmetric about the body centreline
+  edge_margin: 2.0
+feet_and_handles:
+  feet: TPU pads Ø8 × 1.5 in corner recesses, or none
+  handles: none
+signature:
+  playfulness: one element
+  element_examples:
+  - a character icon inlaid on the back plate
+  - one absurd label ("do not press")
+  - a colour easter egg inside
+  humour_in_labels: true, once
+anti_patterns:
+- Decorative features that obstruct assembly or motion
+- Unexplained colour changes between related parts
+- Uncalibrated or illegible labels used as the sole instruction cue
+- Grid snapping that moves existing hardware interfaces
+- Cosmetic cuts that weaken a load path
+- Assuming a screen colour is a measured filament/RAL match

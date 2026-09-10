@@ -1,0 +1,39 @@
+# Manufacturing profile — small hobby router, 1/8" tooling; plastics, plywood, aluminium plate
+# Plates with pockets, aluminium front panels, dimensionally exact parts.
+
+id: cnc-small-hobby
+process: cnc
+machine: desktop router (Cubiko / Stepcraft class)
+units: mm
+source: default
+
+build_volume: [150, 200, 30]          # [x, y, max stock height]; set to the actual machine
+
+tools:
+  - {name: em3, dia: 3.175, flutes: 2, max_depth: 9.0, use: profiles, pockets}
+  - {name: em1, dia: 1.0, flutes: 2, max_depth: 3.0, use: corner passes, small slots}
+  - {name: v90, dia: 0.1, angle: 90, use: engraving, chamfers}
+
+inner_corner_radius_min: 1.7          # em3 radius + 0.1
+corner_relief: dogbone                # or tbone / small_tool
+min_wall: {plastic: 1.5, wood: 2.0, aluminium: 1.0}
+min_slot: 3.3                         # em3 + 0.1
+max_pocket_depth_per_tool: 3x tool dia
+clearance: {fitted: 0.05, slip: 0.1}
+stock_margin: 3.0                     # around the outline for clamps/tabs
+holding: [tabs 3x1, double-sided tape, clamps]
+
+engraving:
+  tool: v90
+  min_text: 2.0
+  depth: 0.2
+
+edges:
+  chamfer_tool: v90
+  front_plate_chamfer: 0.4            # the "instrument" edge on aluminium plates
+
+materials:
+  options: [acrylic, POM, HDPE, birch plywood, MDF, aluminium 5754/6061 (2–3 mm plate), FR4]
+  aluminium_notes: single flute or 2-flute, mist/IPA lube, 0.3 mm DOC on light machines
+
+accuracy: 0.1                         # ± positional on a light gantry; 0.05 rigid

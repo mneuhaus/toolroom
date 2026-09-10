@@ -1,0 +1,526 @@
+{
+  "imported_at": "2026-09-10",
+  "policy": "Current sources selected explicitly. Installed skills and original projects are preserved. Curated files may differ; source hashes identify their origins.",
+  "files": [
+    {
+      "source": "home/.claude/skills/onshape-cad/SKILL.md",
+      "source_sha256": "65928c4a7eb7723cf0f37afe87193828281c3f7e48a453725d0154eac5acca8a",
+      "destination": "provenance/originals/onshape-cad/source.md",
+      "import_sha256": "65928c4a7eb7723cf0f37afe87193828281c3f7e48a453725d0154eac5acca8a",
+      "change": "Original entrypoint preserved for comparison; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/onshape-cad/SKILL.md",
+      "source_sha256": "65928c4a7eb7723cf0f37afe87193828281c3f7e48a453725d0154eac5acca8a",
+      "destination": "skills/onshape-cad/references/source-guide.md",
+      "import_sha256": "051a420a315e4e4d2460df58a2df8fc17e31d65b14d8bd36871da24c0fbcb8f9",
+      "change": "Imported detailed guide; entrypoint will be curated separately",
+      "disposition": "Curated after import; see docs/consolidation.md"
+    },
+    {
+      "source": "home/.claude/skills/onshape-cad/references/retrofit-and-variants.md",
+      "source_sha256": "ba3ccdd1184a19eba83ad7c1a63b8aef7fed9a2bbbf330d01a3e6657ec1abaff",
+      "destination": "skills/onshape-cad/references/retrofit-and-variants.md",
+      "import_sha256": "ba3ccdd1184a19eba83ad7c1a63b8aef7fed9a2bbbf330d01a3e6657ec1abaff",
+      "change": "Imported supporting resource; home path normalized",
+      "disposition": "Curated after import; see docs/consolidation.md"
+    },
+    {
+      "source": "home/.claude/skills/onshape-cad/references/revision-workflow.md",
+      "source_sha256": "81c1862025740c3e395fa629705b099497cfe974b0661fa5b7d090f3d63a58f9",
+      "destination": "skills/onshape-cad/references/revision-workflow.md",
+      "import_sha256": "81c1862025740c3e395fa629705b099497cfe974b0661fa5b7d090f3d63a58f9",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/onshape-cad/references/sharing-views.md",
+      "source_sha256": "d9d7094eedca68cd63c2c3736c17e0bec4fdba4213037ddaa8245551919bdbdb",
+      "destination": "skills/onshape-cad/references/sharing-views.md",
+      "import_sha256": "d9d7094eedca68cd63c2c3736c17e0bec4fdba4213037ddaa8245551919bdbdb",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/onshape-bridge/SKILL.md",
+      "source_sha256": "9986362828b47970358c370321694bafa1d2c295ca25afd4ddda162473b28bc3",
+      "destination": "provenance/originals/onshape-bridge/source.md",
+      "import_sha256": "9986362828b47970358c370321694bafa1d2c295ca25afd4ddda162473b28bc3",
+      "change": "Original entrypoint preserved for comparison; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/onshape-bridge/SKILL.md",
+      "source_sha256": "9986362828b47970358c370321694bafa1d2c295ca25afd4ddda162473b28bc3",
+      "destination": "skills/onshape-bridge/references/source-guide.md",
+      "import_sha256": "28ddc7a66fb9a0e28e97e51df6895c0df07f3abcf403f9e0b6170c0dec2aaade",
+      "change": "Imported detailed guide; entrypoint will be curated separately",
+      "disposition": "Curated after import; see docs/consolidation.md"
+    },
+    {
+      "source": "home/.claude/skills/onshape-bridge/references/recovery-and-sharing.md",
+      "source_sha256": "3b455936c4fb1172904f437c03e6752918783387b814de34ae3bf5419593338a",
+      "destination": "skills/onshape-bridge/references/recovery-and-sharing.md",
+      "import_sha256": "3b455936c4fb1172904f437c03e6752918783387b814de34ae3bf5419593338a",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/SKILL.md",
+      "source_sha256": "8f37ed6835b913449a944cc386a3f92923065286b98b0079e869792b12bfb705",
+      "destination": "provenance/originals/cad-fdm-design/source.md",
+      "import_sha256": "8f37ed6835b913449a944cc386a3f92923065286b98b0079e869792b12bfb705",
+      "change": "Original entrypoint preserved for comparison; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/SKILL.md",
+      "source_sha256": "8f37ed6835b913449a944cc386a3f92923065286b98b0079e869792b12bfb705",
+      "destination": "skills/cad-fdm-design/references/source-guide.md",
+      "import_sha256": "98df885b8265a16fbd716fb06d1e00caa986d5f64de891f85b1f5c9e086f6479",
+      "change": "Imported detailed guide; entrypoint will be curated separately",
+      "disposition": "Curated after import; see docs/consolidation.md"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/references/assembly-review.md",
+      "source_sha256": "8fcf006b2993ce2a388ecf1af75a4f00513f7f923854fdb5b4905e8ae7d69765",
+      "destination": "skills/cad-fdm-design/references/assembly-review.md",
+      "import_sha256": "8fcf006b2993ce2a388ecf1af75a4f00513f7f923854fdb5b4905e8ae7d69765",
+      "change": "Imported supporting resource; home path normalized",
+      "disposition": "Relocated into shared knowledge; original import path retired"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/references/bambu-preparation.md",
+      "source_sha256": "c31df1af8242729ff318c9c4993af61ef13253f8475dd7e49f7566f4b8307cb2",
+      "destination": "skills/cad-fdm-design/references/bambu-preparation.md",
+      "import_sha256": "c31df1af8242729ff318c9c4993af61ef13253f8475dd7e49f7566f4b8307cb2",
+      "change": "Imported supporting resource; home path normalized",
+      "disposition": "Relocated into shared knowledge; original import path retired"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/references/fit-and-snap-review.md",
+      "source_sha256": "283a5780b556b64898b9fb276e5d9bffe9b44075eaaff22acb9f757f9e8a9ab5",
+      "destination": "skills/cad-fdm-design/references/fit-and-snap-review.md",
+      "import_sha256": "283a5780b556b64898b9fb276e5d9bffe9b44075eaaff22acb9f757f9e8a9ab5",
+      "change": "Imported supporting resource; home path normalized",
+      "disposition": "Relocated into shared knowledge; original import path retired"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/references/project-layout.md",
+      "source_sha256": "15ca062523b6905fdd6b37abf874e2276dd5c7a1ecffe80924fa348077667ff2",
+      "destination": "skills/cad-fdm-design/references/project-layout.md",
+      "import_sha256": "15ca062523b6905fdd6b37abf874e2276dd5c7a1ecffe80924fa348077667ff2",
+      "change": "Imported supporting resource; home path normalized",
+      "disposition": "Relocated into shared knowledge; original import path retired"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/references/pyproject.toml",
+      "source_sha256": "2a28b16839af42db431856fd9cd7f79380a1b85ce9c9ecab21eac47f06bb3dc9",
+      "destination": "skills/cad-fdm-design/references/pyproject.toml",
+      "import_sha256": "2a28b16839af42db431856fd9cd7f79380a1b85ce9c9ecab21eac47f06bb3dc9",
+      "change": "Copied from current local source; not the removed handover package"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/references/watch.py",
+      "source_sha256": "8864b75bbcdebc58fdd9cf8629712bc56a8eef66029c5d06eb770e4eeb49483c",
+      "destination": "skills/cad-fdm-design/references/watch.py",
+      "import_sha256": "8864b75bbcdebc58fdd9cf8629712bc56a8eef66029c5d06eb770e4eeb49483c",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/cad-khana/SKILL.md",
+      "source_sha256": "e744a41c4fab84a9520aab35ba148a58a26beee81c58b3497dd16dd10a88b462",
+      "destination": "provenance/originals/cad-khana/source.md",
+      "import_sha256": "e744a41c4fab84a9520aab35ba148a58a26beee81c58b3497dd16dd10a88b462",
+      "change": "Original entrypoint preserved for comparison; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/cad-khana/SKILL.md",
+      "source_sha256": "e744a41c4fab84a9520aab35ba148a58a26beee81c58b3497dd16dd10a88b462",
+      "destination": "skills/cad-khana/references/source-guide.md",
+      "import_sha256": "bd1edad9711326a5ca8fe3917060de8e4f15a2dd269ea4b7a4a404549657782e",
+      "change": "Imported detailed guide; entrypoint will be curated separately",
+      "disposition": "Curated after import; see docs/consolidation.md"
+    },
+    {
+      "source": "home/.claude/skills/cad-khana/references/build123d_quickref.md",
+      "source_sha256": "24a27c7a8d120ddb7acd479c4627cb8198648e2b4ce82d5eb48889eebc1c6cff",
+      "destination": "skills/cad-khana/references/build123d_quickref.md",
+      "import_sha256": "24a27c7a8d120ddb7acd479c4627cb8198648e2b4ce82d5eb48889eebc1c6cff",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/cad-khana/references/examples/pin_hinge/README.md",
+      "source_sha256": "9aa1ddd65eefa8a66ff933e75c48b4fc58121866c57120057a660111ebcbe924",
+      "destination": "skills/cad-khana/references/examples/pin_hinge/README.md",
+      "import_sha256": "9aa1ddd65eefa8a66ff933e75c48b4fc58121866c57120057a660111ebcbe924",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/cad-khana/references/examples/pin_hinge/assembly.py",
+      "source_sha256": "c70f71085c21be9d19ed6f0fc0bbf024cfeb5c9257a1d2e63698a7369a07519f",
+      "destination": "skills/cad-khana/references/examples/pin_hinge/assembly.py",
+      "import_sha256": "c70f71085c21be9d19ed6f0fc0bbf024cfeb5c9257a1d2e63698a7369a07519f",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/cad-khana/references/install.md",
+      "source_sha256": "afacca352101f250aa558dc9787b88d8a88ef792f79111b40f5c8998b6122003",
+      "destination": "skills/cad-khana/references/install.md",
+      "import_sha256": "afacca352101f250aa558dc9787b88d8a88ef792f79111b40f5c8998b6122003",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/cad-khana/references/printability.md",
+      "source_sha256": "2f0cbf736eb02894e9a8b0fb856c14e8f9c6a2fe5136a687841b46b8f194b1ad",
+      "destination": "skills/cad-khana/references/printability.md",
+      "import_sha256": "2f0cbf736eb02894e9a8b0fb856c14e8f9c6a2fe5136a687841b46b8f194b1ad",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/cad-khana/references/standard_parts.md",
+      "source_sha256": "3996c9fe642f8ad253cf02750b63b55acdd40fdcb05a9616c75ef7bf1c2700aa",
+      "destination": "skills/cad-khana/references/standard_parts.md",
+      "import_sha256": "3996c9fe642f8ad253cf02750b63b55acdd40fdcb05a9616c75ef7bf1c2700aa",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/fusion360/SKILL.md",
+      "source_sha256": "af3ca219542b31e85a74e5da22d5e41be84ada65769d4cf78f1bfbb0d05793ac",
+      "destination": "provenance/originals/fusion360/source.md",
+      "import_sha256": "af3ca219542b31e85a74e5da22d5e41be84ada65769d4cf78f1bfbb0d05793ac",
+      "change": "Original entrypoint preserved for comparison; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/fusion360/SKILL.md",
+      "source_sha256": "af3ca219542b31e85a74e5da22d5e41be84ada65769d4cf78f1bfbb0d05793ac",
+      "destination": "skills/fusion360/references/source-guide.md",
+      "import_sha256": "6757736ba9280ef51deaef270eac267d58d02be596175559eb8af458ac91fc6b",
+      "change": "Imported detailed guide; entrypoint will be curated separately",
+      "disposition": "Curated after import; see docs/consolidation.md"
+    },
+    {
+      "source": "home/.claude/skills/scan-reverse-engineering/SKILL.md",
+      "source_sha256": "95cedabddd377e9b15f7f8a01021a5dad79c4e5bf40481beba10223a87b3368e",
+      "destination": "provenance/originals/scan-reverse-engineering/source.md",
+      "import_sha256": "ea7746bb38db9328b3860066c9ad567a8db32bbd44b9f2c5fc5e45e7568bc7b8",
+      "change": "Original entrypoint preserved for comparison; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/scan-reverse-engineering/SKILL.md",
+      "source_sha256": "95cedabddd377e9b15f7f8a01021a5dad79c4e5bf40481beba10223a87b3368e",
+      "destination": "skills/scan-reverse-engineering/references/source-guide.md",
+      "import_sha256": "419e4af8db2494f3649b031717833609f52769c33586e82c98d9110309ae75cb",
+      "change": "Imported detailed guide; entrypoint will be curated separately",
+      "disposition": "Curated after import; see docs/consolidation.md"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/SKILL.md",
+      "source_sha256": "d0dc40b4d0695976b1347c58058f4e930ada2b151219caccb70f9f517cff55f7",
+      "destination": "provenance/originals/cad-design-system/source.md",
+      "import_sha256": "d0dc40b4d0695976b1347c58058f4e930ada2b151219caccb70f9f517cff55f7",
+      "change": "Original entrypoint preserved for comparison; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/SKILL.md",
+      "source_sha256": "d0dc40b4d0695976b1347c58058f4e930ada2b151219caccb70f9f517cff55f7",
+      "destination": "skills/cad-design-system/references/source-guide.md",
+      "import_sha256": "50eccd8a7ca801f5dd4f359f01aa632921f0e161d5edda2642d592fb477c0cda",
+      "change": "Imported detailed guide; entrypoint will be curated separately",
+      "disposition": "Curated after import; see docs/consolidation.md"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/agents/openai.yaml",
+      "source_sha256": "60139393ca2f1b9e193cbb9d610f35164b50d06988fd274d017fcf925bad5d29",
+      "destination": "skills/cad-design-system/agents/openai.yaml",
+      "import_sha256": "60139393ca2f1b9e193cbb9d610f35164b50d06988fd274d017fcf925bad5d29",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/profiles/design-language/_template.yaml",
+      "source_sha256": "ac004541a138c53f0118927f3e14360c8f7c9052642b4df09c3e6738da3399d8",
+      "destination": "profiles/design-language/_template.yaml",
+      "import_sha256": "ac004541a138c53f0118927f3e14360c8f7c9052642b4df09c3e6738da3399d8",
+      "change": "Copied from current local source; not the removed handover package"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/profiles/design-language/rugged-industrial.yaml",
+      "source_sha256": "e0e5320e69903d0d8237c859dbdf43ed97ad11226279ba5f2d564ec4123984da",
+      "destination": "profiles/design-language/rugged-industrial.yaml",
+      "import_sha256": "e0e5320e69903d0d8237c859dbdf43ed97ad11226279ba5f2d564ec4123984da",
+      "change": "Copied from current local source; not the removed handover package"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/profiles/design-language/soft-consumer.yaml",
+      "source_sha256": "c2a0ffedf119099228601ec308732cd3712ef7f1875bf9574db7aa807985fac5",
+      "destination": "profiles/design-language/soft-consumer.yaml",
+      "import_sha256": "c2a0ffedf119099228601ec308732cd3712ef7f1875bf9574db7aa807985fac5",
+      "change": "Copied from current local source; not the removed handover package"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/profiles/design-language/te-like.yaml",
+      "source_sha256": "e0c04090275a3508d09eb9073ac2edb1bc011dda8b5e2d3a0b9c0d19288fb599",
+      "destination": "profiles/design-language/te-like.yaml",
+      "import_sha256": "e0c04090275a3508d09eb9073ac2edb1bc011dda8b5e2d3a0b9c0d19288fb599",
+      "change": "Copied from current local source; not the removed handover package"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/profiles/manufacturing/_template.yaml",
+      "source_sha256": "63f22be4c372e001401b448a9d55e54bed98edefc5a445dc25cf77af3674a8df",
+      "destination": "profiles/manufacturing/_template.yaml",
+      "import_sha256": "63f22be4c372e001401b448a9d55e54bed98edefc5a445dc25cf77af3674a8df",
+      "change": "Copied from current local source; not the removed handover package"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/profiles/manufacturing/cnc-small-hobby.yaml",
+      "source_sha256": "3658f9101479e3516b3c3b24b6069e6e61f11c07138365fab98e2753c2744ce3",
+      "destination": "profiles/manufacturing/cnc-small-hobby.yaml",
+      "import_sha256": "3658f9101479e3516b3c3b24b6069e6e61f11c07138365fab98e2753c2744ce3",
+      "change": "Copied from current local source; not the removed handover package"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/profiles/manufacturing/fdm-bambu-a1-0.4.yaml",
+      "source_sha256": "89ae02614f1d52af9fbdb24fc2fa113a80be836f83b8e8ccd3282cdc550f8bff",
+      "destination": "profiles/manufacturing/fdm-bambu-a1-0.4.yaml",
+      "import_sha256": "89ae02614f1d52af9fbdb24fc2fa113a80be836f83b8e8ccd3282cdc550f8bff",
+      "change": "Copied from current local source; not the removed handover package"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/profiles/manufacturing/laser-diode-3mm.yaml",
+      "source_sha256": "960ef39b71e6e76dc771cd6238e55ce75c381422ed413e70bc97a0703e0f7e01",
+      "destination": "profiles/manufacturing/laser-diode-3mm.yaml",
+      "import_sha256": "960ef39b71e6e76dc771cd6238e55ce75c381422ed413e70bc97a0703e0f7e01",
+      "change": "Copied from current local source; not the removed handover package"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/profiles/manufacturing/sla-generic.yaml",
+      "source_sha256": "dbda776e6cc1690037fffaa3d408b2347ac6816cd96fbcf830141cebd2579184",
+      "destination": "profiles/manufacturing/sla-generic.yaml",
+      "import_sha256": "dbda776e6cc1690037fffaa3d408b2347ac6816cd96fbcf830141cebd2579184",
+      "change": "Copied from current local source; not the removed handover package"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/references/adaptation.md",
+      "source_sha256": "f75cfe269c1415f2af16f93fbc2b40220064d808cb3608c2dad038257d8c825a",
+      "destination": "skills/cad-design-system/references/adaptation.md",
+      "import_sha256": "f75cfe269c1415f2af16f93fbc2b40220064d808cb3608c2dad038257d8c825a",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/references/checker-limitations.md",
+      "source_sha256": "93a939674f0ee432ed34540aeed35152eb48c30707d6bf405adb4aa2ccb206b2",
+      "destination": "skills/cad-design-system/references/checker-limitations.md",
+      "import_sha256": "93a939674f0ee432ed34540aeed35152eb48c30707d6bf405adb4aa2ccb206b2",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/references/design-language-schema.md",
+      "source_sha256": "807f74d62d04c62f9c0706caf97e76bf7558ebe40b63de5c55a24a0c4ac4aac3",
+      "destination": "skills/cad-design-system/references/design-language-schema.md",
+      "import_sha256": "807f74d62d04c62f9c0706caf97e76bf7558ebe40b63de5c55a24a0c4ac4aac3",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/references/functional-colour.md",
+      "source_sha256": "027eb672f253f5b1639f20e6d20b31b7e7cde74b63a7949cf82ffb07052a2b97",
+      "destination": "skills/cad-design-system/references/functional-colour.md",
+      "import_sha256": "027eb672f253f5b1639f20e6d20b31b7e7cde74b63a7949cf82ffb07052a2b97",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/references/manufacturing/cnc.md",
+      "source_sha256": "de59eb13b5ef20c87697dd079718322c788abcdb4902878620a7d0a9a4230c8e",
+      "destination": "skills/cad-design-system/references/manufacturing/cnc.md",
+      "import_sha256": "de59eb13b5ef20c87697dd079718322c788abcdb4902878620a7d0a9a4230c8e",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/references/manufacturing/fdm.md",
+      "source_sha256": "755cd89a338886bd07c1cc28e0fa552ad9d47b9799b3ace485cfd11ca6093e0a",
+      "destination": "skills/cad-design-system/references/manufacturing/fdm.md",
+      "import_sha256": "755cd89a338886bd07c1cc28e0fa552ad9d47b9799b3ace485cfd11ca6093e0a",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/references/manufacturing/laser.md",
+      "source_sha256": "fa70657f66bcda20a15cef8e59e2033046f729046c53a0a1ce363c71d20005ca",
+      "destination": "skills/cad-design-system/references/manufacturing/laser.md",
+      "import_sha256": "fa70657f66bcda20a15cef8e59e2033046f729046c53a0a1ce363c71d20005ca",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/references/manufacturing/sla.md",
+      "source_sha256": "b6674f654546549f618277c385721d118c186d5b4504531f843871128c63b5f3",
+      "destination": "skills/cad-design-system/references/manufacturing/sla.md",
+      "import_sha256": "b6674f654546549f618277c385721d118c186d5b4504531f843871128c63b5f3",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/references/project-integration.md",
+      "source_sha256": "645188258135c6d7c4b39a4e9b990201aaac46ff52a515d3d5f72a7587e35ff6",
+      "destination": "skills/cad-design-system/references/project-integration.md",
+      "import_sha256": "645188258135c6d7c4b39a4e9b990201aaac46ff52a515d3d5f72a7587e35ff6",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/references/reverse-engineering.md",
+      "source_sha256": "e1486e9eca38782c2f679dea4f51c35b52f03432734c253ffdb1e9d5e558e611",
+      "destination": "skills/cad-design-system/references/reverse-engineering.md",
+      "import_sha256": "e1486e9eca38782c2f679dea4f51c35b52f03432734c253ffdb1e9d5e558e611",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/references/tooling.md",
+      "source_sha256": "e4494ab4c636fc53870d05b05710dc1b8e052a0c970fd50ac3f3f131f0609245",
+      "destination": "skills/cad-design-system/references/tooling.md",
+      "import_sha256": "e4494ab4c636fc53870d05b05710dc1b8e052a0c970fd50ac3f3f131f0609245",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/scripts/check_mesh.py",
+      "source_sha256": "5ddbb29ef1dbfd946390c17ab9ca583b436e85205e2757d8d60e09a31fcf9334",
+      "destination": "skills/cad-design-system/scripts/check_mesh.py",
+      "import_sha256": "5ddbb29ef1dbfd946390c17ab9ca583b436e85205e2757d8d60e09a31fcf9334",
+      "change": "Imported supporting resource; home path normalized",
+      "disposition": "Curated after import; see docs/consolidation.md"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/scripts/check_step.py",
+      "source_sha256": "35bd7302be0c25037989a2b9f64a8b2f129e7a841d927daab14e3ed109e5c62d",
+      "destination": "skills/cad-design-system/scripts/check_step.py",
+      "import_sha256": "35bd7302be0c25037989a2b9f64a8b2f129e7a841d927daab14e3ed109e5c62d",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/scripts/render_views.py",
+      "source_sha256": "eaeffd3b4bcf7c8cc4f9af2ee3f8b8f0f24ddcb7a62d1a16d20c8a2b826cab75",
+      "destination": "skills/cad-design-system/scripts/render_views.py",
+      "import_sha256": "eaeffd3b4bcf7c8cc4f9af2ee3f8b8f0f24ddcb7a62d1a16d20c8a2b826cab75",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/cad-design-system/scripts/style_tile.py",
+      "source_sha256": "6e874b312c69e8cdba9014c4598d0d0a05587da121de54fdb73a89201c2d5e16",
+      "destination": "skills/cad-design-system/scripts/style_tile.py",
+      "import_sha256": "6e874b312c69e8cdba9014c4598d0d0a05587da121de54fdb73a89201c2d5e16",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/onshape-build-manuals/.DS_Store",
+      "source_sha256": "68f563cb15aada7e0ebe4624aa34765b4957ee4a8311fc9c8f19e513270f483c",
+      "destination": "skills/onshape-build-manuals/.DS_Store",
+      "import_sha256": "68f563cb15aada7e0ebe4624aa34765b4957ee4a8311fc9c8f19e513270f483c",
+      "change": "Copied from current local source; not the removed handover package",
+      "disposition": "Excluded: operating-system metadata"
+    },
+    {
+      "source": "home/.codex/skills/onshape-build-manuals/SKILL.md",
+      "source_sha256": "77790e2575c1154abe1688ca1d4992f1d4477305997b73f6381e15d96226b562",
+      "destination": "provenance/originals/onshape-build-manuals/source.md",
+      "import_sha256": "77790e2575c1154abe1688ca1d4992f1d4477305997b73f6381e15d96226b562",
+      "change": "Original entrypoint preserved for comparison; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/onshape-build-manuals/SKILL.md",
+      "source_sha256": "77790e2575c1154abe1688ca1d4992f1d4477305997b73f6381e15d96226b562",
+      "destination": "skills/onshape-build-manuals/references/source-guide.md",
+      "import_sha256": "d45334353ca0f2317b421bc39e9a55ce803113feed3c01491bd85b1cc27baf39",
+      "change": "Imported detailed guide; entrypoint will be curated separately",
+      "disposition": "Curated after import; see docs/consolidation.md"
+    },
+    {
+      "source": "home/.codex/skills/onshape-build-manuals/agents/openai.yaml",
+      "source_sha256": "c26a52126453b5d473c1f777e3c93ee19e7541e377f38301b0ada9dccaa123ef",
+      "destination": "skills/onshape-build-manuals/agents/openai.yaml",
+      "import_sha256": "c26a52126453b5d473c1f777e3c93ee19e7541e377f38301b0ada9dccaa123ef",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/onshape-build-manuals/assets/layout-defaults.json",
+      "source_sha256": "a80ee5ed9fa76f70034e5dd92540b5fde955b12c3d6d7a3a0d9f6b9e50457c13",
+      "destination": "skills/onshape-build-manuals/assets/layout-defaults.json",
+      "import_sha256": "a80ee5ed9fa76f70034e5dd92540b5fde955b12c3d6d7a3a0d9f6b9e50457c13",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/onshape-build-manuals/assets/render-style-presets.json",
+      "source_sha256": "74071376a20c4d8e6918b2c58adfd1b97528f31a3af102a941f5a1be2adf5c22",
+      "destination": "skills/onshape-build-manuals/assets/render-style-presets.json",
+      "import_sha256": "74071376a20c4d8e6918b2c58adfd1b97528f31a3af102a941f5a1be2adf5c22",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/onshape-build-manuals/references/assembly-process-and-data.md",
+      "source_sha256": "14378607e4b6e31ed5d37f34ddda6d20585cfdb535a85ff1deb6e3492994811c",
+      "destination": "skills/onshape-build-manuals/references/assembly-process-and-data.md",
+      "import_sha256": "14378607e4b6e31ed5d37f34ddda6d20585cfdb535a85ff1deb6e3492994811c",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/onshape-build-manuals/references/illustration-and-layout.md",
+      "source_sha256": "51cebde5e6dbc8708ffd6ac7cead65218a97d05d87e094645dcf86589169f957",
+      "destination": "skills/onshape-build-manuals/references/illustration-and-layout.md",
+      "import_sha256": "51cebde5e6dbc8708ffd6ac7cead65218a97d05d87e094645dcf86589169f957",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/onshape-build-manuals/references/local-tooling-and-example.md",
+      "source_sha256": "f0720962e6236a141263d6b0253b30e4a102fe64fe336424b7f335c69ced371a",
+      "destination": "skills/onshape-build-manuals/references/local-tooling-and-example.md",
+      "import_sha256": "f0720962e6236a141263d6b0253b30e4a102fe64fe336424b7f335c69ced371a",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/onshape-build-manuals/references/rendering-styles-and-colour.md",
+      "source_sha256": "d2e7f5434fe3cafe39210c412674af159f469d194f903c260483ad951f86fc26",
+      "destination": "skills/onshape-build-manuals/references/rendering-styles-and-colour.md",
+      "import_sha256": "d2e7f5434fe3cafe39210c412674af159f469d194f903c260483ad951f86fc26",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.codex/skills/onshape-build-manuals/scripts/make_pdf_transport_safe.py",
+      "source_sha256": "07197eaa6b13820abd0d68319a8866eb5fedcac9edd19566bf9c734c3f94733d",
+      "destination": "skills/onshape-build-manuals/scripts/make_pdf_transport_safe.py",
+      "import_sha256": "07197eaa6b13820abd0d68319a8866eb5fedcac9edd19566bf9c734c3f94733d",
+      "change": "Imported supporting resource; home path normalized"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/references/assembly-review.md",
+      "source_sha256": "8fcf006b2993ce2a388ecf1af75a4f00513f7f923854fdb5b4905e8ae7d69765",
+      "destination": "knowledge/assembly-review.md",
+      "import_sha256": "8fcf006b2993ce2a388ecf1af75a4f00513f7f923854fdb5b4905e8ae7d69765",
+      "change": "Shared knowledge extracted from cad-fdm-design"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/references/fit-and-snap-review.md",
+      "source_sha256": "283a5780b556b64898b9fb276e5d9bffe9b44075eaaff22acb9f757f9e8a9ab5",
+      "destination": "knowledge/fits-and-retention.md",
+      "import_sha256": "283a5780b556b64898b9fb276e5d9bffe9b44075eaaff22acb9f757f9e8a9ab5",
+      "change": "Shared knowledge extracted from cad-fdm-design",
+      "disposition": "Curated after import; see docs/consolidation.md"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/references/project-layout.md",
+      "source_sha256": "15ca062523b6905fdd6b37abf874e2276dd5c7a1ecffe80924fa348077667ff2",
+      "destination": "knowledge/project-layout.md",
+      "import_sha256": "15ca062523b6905fdd6b37abf874e2276dd5c7a1ecffe80924fa348077667ff2",
+      "change": "Shared knowledge extracted from cad-fdm-design"
+    },
+    {
+      "source": "home/.claude/skills/cad-fdm-design/references/bambu-preparation.md",
+      "source_sha256": "c31df1af8242729ff318c9c4993af61ef13253f8475dd7e49f7566f4b8307cb2",
+      "destination": "knowledge/print-preparation.md",
+      "import_sha256": "c31df1af8242729ff318c9c4993af61ef13253f8475dd7e49f7566f4b8307cb2",
+      "change": "Shared knowledge extracted from cad-fdm-design"
+    },
+    {
+      "source": "workspace/cad/spar-key-z-axis/scripts/design-system/test-checkers.py",
+      "source_sha256": "0ee3a711d4b4147b07a420648edf477f30bf0bee5da0fd778c35094252537308",
+      "destination": "tests/test_checkers.py",
+      "import_sha256": "a6a5dcbc46e9d4ac5f27ff68b2ad443fe263e0d4b4298b563d2c6e680c112b25",
+      "change": "Tests relocated; removed project-specific report output"
+    },
+    {
+      "source": "workspace/cad/distributor-printed-layer/design-system/tests/test_check_mesh.py",
+      "source_sha256": "1778d9580ba8a972d7de5d61a06fd3bdd3f4b80f0869ccce6febf001d92e722f",
+      "destination": "tests/test_distributor_regressions.py",
+      "import_sha256": "119278d655da8e501ee9584d67e66724a99f6eb78fef347006097d40ce0a50f2",
+      "change": "Tests use shared checker and canonical no_findings status"
+    }
+  ]
+}

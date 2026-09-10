@@ -1,0 +1,647 @@
+{
+  "status": "passed",
+  "checks_run": 128,
+  "errors": [],
+  "checks": [
+    {
+      "check": "markdown links and headings",
+      "passed": true,
+      "detail": "192"
+    },
+    {
+      "check": "unique module identifiers",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill metadata: cad-workflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill entrypoint length: cad-workflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill metadata: onshape-cad",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill entrypoint length: onshape-cad",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill metadata: onshape-bridge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill entrypoint length: onshape-bridge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill metadata: cad-khana",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill entrypoint length: cad-khana",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill metadata: cad-fdm-design",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill entrypoint length: cad-fdm-design",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill metadata: cad-joints",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill entrypoint length: cad-joints",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill metadata: cad-design-system",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill entrypoint length: cad-design-system",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill metadata: onshape-build-manuals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill entrypoint length: onshape-build-manuals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill metadata: fusion360",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill entrypoint length: fusion360",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill metadata: scan-reverse-engineering",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill entrypoint length: scan-reverse-engineering",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "case references: sparky",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "case references: c2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "case references: distributor",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "case references: linak",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "case references: unifi",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "case references: laser",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "case references: bristlebot",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "case references: printed-joints",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/sparky-after.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/sparky-before.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/sparky-front.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/c2-guide.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/c2-page.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/distributor-fem-en.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/linak-sections.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/laser-assembly.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/unifi-assembly.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/bristlebot-family-en.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J01-assembled.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J01-separate.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J02-assembled.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J02-separate.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J03-assembled.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J03-separate.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J04-assembled.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J04-separate.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J05-assembled.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J05-separate.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J06-assembled.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J06-separate.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J07-assembled.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J07-separate.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J08-assembled.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "recorded image bytes: site/assets/joints-J08-separate.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p4-01-sweep-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p4-07-clamp-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p4-09-stone-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p5-01-plinth-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p5-02-cairn-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p5-07-bail-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p5-25-flute-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p5-30-crease-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p6-01-saddle-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p6-09-mantle-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p7-04-chamfer-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p7-06-lentil-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p8-02-sling-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p8-05-dock-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p9-01-dial-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p9-04-crown-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p9-05-toggle-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference image bytes: provenance/references/mosey/images/p9-08-duo-thumbnail.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joints native source current",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joints frozen native checks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joints verifier current",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joints complete geometry checks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J01-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint STEP evidence: J01-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J01-separate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J02-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint STEP evidence: J02-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J02-separate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J03-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint STEP evidence: J03-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J03-separate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J04-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint STEP evidence: J04-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J04-separate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J05-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint STEP evidence: J05-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J05-separate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J06-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint STEP evidence: J06-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J06-separate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J07-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint STEP evidence: J07-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J07-separate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J08-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint STEP evidence: J08-assembled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "joint native source consumed: J08-separate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab input bytes: solid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab checker revision: solid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab status: solid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab input bytes: thin",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab checker revision: thin",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab status: thin",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab input bytes: orientation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab checker revision: orientation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab status: orientation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab input bytes: island",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab checker revision: island",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab status: island",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Python and YAML parse",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "generated file current: index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "generated file current: site/style.css",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "generated file current: site/app.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "generated file current: site/data.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: skills/cad-design-system/scripts/check_mesh.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: skills/cad-design-system/scripts/check_step.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: skills/cad-design-system/scripts/render_views.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: skills/cad-design-system/scripts/style_tile.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: skills/cad-fdm-design/scripts/resolve_profiles.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: tests/test_checkers.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: tests/test_distributor_regressions.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: tests/test_profile_resolution.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: uv.lock",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

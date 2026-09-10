@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD Design System"
+  short_description: "Define product rules and screen real CAD parts"
+  default_prompt: "Use $cad-design-system to define and apply a functional design language with manufacturing and interface constraints."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onshape Build Manuals"
+  short_description: "Reusable illustrated assembly guides from Onshape"
+  default_prompt: "Use $onshape-build-manuals to create or update an illustrated assembly PDF from this Onshape document, with reusable step assemblies and per-step parts quantities."

@@ -1,0 +1,198 @@
+# Mosey 0.1.0 — a framework interpretation of the MOSEY 35 form studies.
+# All lengths are mm. All numeric geometry values below are DERIVED proposals,
+# not measurements of the reference images. No manufacturing process is implied.
+
+meta:
+  id: mosey
+  name: Mosey
+  version: 0.1.0
+  status: reference-derived, uncalibrated
+  intent: >
+    A small, tactile object with a clear sculptural silhouette and calm colour blocks.
+    A generous wheel, cradle, hollow or folded shell makes its use visible in the form.
+    Keep visual complexity low while allowing soft volumes, broad facets and useful frames.
+  references:
+    - https://mosey.camera/
+    - https://mosey.camera/#p4-07-clamp
+    - https://mosey.camera/#p5-02-cairn
+    - https://mosey.camera/#p6-01-saddle
+    - https://mosey.camera/#p7-04-chamfer
+    - https://mosey.camera/#p8-02-sling
+    - https://mosey.camera/#p9-08-duo
+  accessed: '2026-09-10'
+  source_kind: AI-assisted concept renders and sketches, not validated products
+  source_manifest: provenance/references/mosey/manifest.json
+  interpretation: Our reusable CAD rules; not an official specification from the source.
+  value_status:
+    visual_traits: observed in 18 selected renders across all six gallery sections
+    functional_intent: stated in concept descriptions; mechanisms remain unverified
+    dimensions: derived starting values; no reference dimensions adopted
+    palette_hex: estimated screen colours, not sampled material specifications
+    colour_roles: derived mapping for each project, not a universal code in the references
+
+scope:
+  starting_scale: handheld objects with a main body about 100–180 mm across # derived
+  default_form: soft_volume
+  use: controls, small instruments, enclosures, fixtures and supporting accessories
+  protected:
+    - purchased parts, axes, mounting locations and mating surfaces
+    - motion envelopes, access, assembly paths and service openings
+    - load paths, clamp roots, retention, contact pads and minimum structural sections
+    - seals, optical paths, film corridors and light barriers when present
+  application: >
+    Choose one dominant form variant and one useful gesture. Apply cosmetic values only
+    to named visible faces. Record local exceptions before changing geometry.
+  scaling: >
+    Recompose the silhouette for another size; do not scale threads, fits, labels,
+    clearances, wall sections or control ergonomics by the same factor.
+
+edges:
+  policy: mixed # observed: rounded bodies, broad facets and folded shells coexist
+  edge_treatment: {type: fillet, size: 2.0} # derived, cosmetic contact edges only
+  outer_corner_radius: 12.0 # derived, default soft_volume branch
+  radius_family: [1.0, 2.0, 4.0, 8.0, 12.0] # derived, local cosmetic fillets only
+  max_radius: 12.0 # derived, not a ceiling for primary curved surfaces or working geometry
+  inner_corner_radius: 2.0 # derived, cosmetic pockets; tool and interface requirements win
+  bottom_edge: {type: chamfer, size: 0.4} # derived, optional hidden edge; process decides
+  hierarchy: >
+    Large curves or facets define the silhouette. Small fillets soften selected hand
+    contacts. Seams and openings are quieter. Never fillet every edge automatically.
+  exceptions: >
+    Primary domes, arches, cylinders, grip hollows, mating radii and reliefs are not
+    restricted to the cosmetic radius family. Preserve their functional geometry.
+
+form_variants: # derived branches; select one explicitly, not an automatic overlay mechanism
+  soft_volume:
+    references: [Stone, Sweep, Saddle, Lentil]
+    grammar: broad lobes, calm front face, one useful hollow or waist
+    construction: shaped main envelope plus a restrained service seam
+  broad_facet:
+    references: [Cairn, Chamfer]
+    grammar: a few large planar cuts, clipped corners and softened hand contacts
+    construction: intentional facet boundaries, with full internal clearance preserved
+    primary_facet_width: 8.0 # derived visual starting value, not stock removal permission
+  useful_shell:
+    references: [Clamp, Bail, Mantle, Crease, Dock]
+    grammar: an open frame, folded mantle or cradle also carries, supports or protects
+    construction: independent functional core and verified structural support
+    section_rule: determine thickness, root fillets and bend radii from loads and process
+
+proportions:
+  grid: 0.0 # derived: compose around function, no visible universal grid
+  sub_grid: 0.0
+  control_pitch: 0.0 # no automatic repositioning
+  preferred_aspect_ratios: [] # the source includes landscape, portrait and round bodies
+  layering: [functional_core, main_body, optional_support]
+  reveal: {width: 0.6, depth: 0.4} # derived cosmetic shadow line, never a fit or seal clearance
+  nesting_offset: 0.0 # derived, flush as the quiet default
+  snap_positions_to_grid: false
+  composition: one dominant silhouette and one primary tactile gesture
+
+surfaces:
+  finish: matte # observed render appearance; satin and exposed metal are allowed exceptions
+  texture_zones:
+    - {zone: control_rim, type: broad_flutes_or_knurl, status: observed, dimensions: process_and_grip_dependent}
+    - {zone: optional_grip, type: broad_flutes, status: observed_in_Flute, dimensions: ergonomic_design}
+  visible_face_rule: >
+    Keep broad cosmetic fields calm. Put grip texture where fingers need it. Select
+    manufacturing orientation after checking loads, supports and surface requirements.
+  parting_lines: hidden # quiet but legible; align with the envelope, rim or service door
+  exceptions: deliberate core/support separations; restrained exposed metal as in Crease
+
+fasteners:
+  visible: false # derived preference for the main face; working hardware may stay visible
+  type: project-selected hardware with its actual material appearance
+  pattern: {rule: follow service access and load paths, never add screws as decoration}
+  method: project-selected and verified; this style does not choose a joining technology
+  head_treatment: flush or recessed where compatible with the actual joint
+  exceptions: pivots, tripod sockets, clamps and accessible service fasteners
+
+color:
+  base: [mist_blue, sage, lilac, blush, butter, chalk] # alternatives, not simultaneous defaults
+  accents: [butter, lilac, sage, blush, cobalt, cocoa]
+  max_colors_per_object: 3 # derived default for designed colour blocks; explicit multi-role exception below
+  palette: # estimated visual swatches, not RAL, Pantone, filament IDs or measurements
+    mist_blue: '#ACC5CF'
+    sage: '#BDD1BA'
+    lilac: '#C6B6D7'
+    blush: '#E5B9AA'
+    butter: '#E9DA95'
+    chalk: '#F0EDDF'
+    cobalt: '#455D9A'
+    cocoa: '#65524A'
+    graphite: '#383D3A'
+  accent_rule: >
+    Assign contrasting blocks to distinct controls, supporting shells or contact parts.
+    A support may carry a large colour field. Keep the same role assignment within a
+    project; provide shape, position or a mark as an additional cue.
+  semantics:
+    body: one quiet dominant field
+    primary_action: a contrasting wheel, paddle or slider
+    support_or_secondary_action: one additional field when it clarifies assembly or use
+    graphite_or_bare_metal: actual pads, optical openings and purchased hardware as appropriate
+  colourways: # derived, deliberately small subsets of the shared palette
+    mist_butter: {body: mist_blue, primary_action: butter, support: mist_blue}
+    sage_lilac: {body: sage, primary_action: lilac, support: chalk}
+    chalk_cobalt: {body: chalk, primary_action: cobalt, support: lilac}
+  exceptions: >
+    Duo demonstrates more colour blocks. Permit extra colours only when separate roles
+    justify them; record the assignment. Real hardware and required safety marks retain
+    their actual appearance. Do not treat yellow as a universal shutter or warning code.
+  filament_map: {} # calibrate physical swatches with the selected material and process
+
+typography:
+  font: plain medium-weight sans serif # derived; no product typeface can be established
+  case: lowercase # derived friendly default, preserve proper names and required markings
+  method: debossed # derived option; choose another process when legibility requires it
+  min_height: 4.0 # derived actual glyph height target; not a printability threshold
+  placement: near its control or on a quiet service face, outside grips and interfaces
+  density: sparse # observed: most concept faces have very few or no labels
+  exceptions: required warnings, polarity, measured scales and readable accessibility labels
+
+controls:
+  knob_cap:
+    shape: broad_disc
+    dia: 28.0 # derived for a new handheld control, never a purchased-part override
+    height: 7.0 # derived
+    top: flat_or_shallow_dish
+    chamfer: 0.0
+    fillet: 1.0 # derived
+    rim: broad_flutes_or_knurl
+    shaft: preserve actual interface
+    color: primary_action
+  button: {shape: capsule_or_paddle, travel_and_gap: interface_and_process_defined}
+  display: {mount: optional, bezel: quiet_body_field, rule: no decorative display recess}
+  ports: recessed where access and working geometry allow
+  alternative_gestures: [thumb_hollow, petal_wheel, folding_bail, broad_paddle]
+  rule: select one distinctive gesture; verify grip, travel and snag clearance
+
+grilles:
+  pattern: {type: none} # derived, add openings only for an actual function
+  alignment: within a bounded field away from seals and primary hand contacts
+
+feet_and_handles:
+  feet: broad stable sole, cradle or actual pads as required by the task
+  handles: integrated hollow, structural loop or textile strap only when useful
+
+signature:
+  playfulness: one element # derived compositional discipline, not a count from every render
+  element_examples: [grippable_flower_wheel, thumb_saddle, useful_arch, coloured_support_shell]
+  humour_in_labels: false
+
+anti_patterns:
+  - a generic rounded box with pastel colours but no considered silhouette or tactile hierarchy
+  - forcing every body to be soft; broad facets and folded shells belong to this family too
+  - combining scallops, ribs, arches and many bold controls without a clear primary gesture
+  - decorative bolt patterns, fake vents or camera apertures on unrelated objects
+  - assigning a different colour to every CAD body without a functional reason
+  - glossy render effects or simulated brass treated as proof of a physical material
+  - shrinking sections or changing fits to achieve a photographic silhouette
+  - copying a camera mechanism, light seal, mounting detail or logo as a style requirement
+
+review:
+  required: [silhouette, useful_gesture, role_colours, selected_faces, protected_geometry, evidence_status]
+  checker_scope: >
+    This profile also contains semantic rules that existing helpers do not interpret.
+    The STEP checker can report radii without knowing their role. Keep raw findings and
+    classify protected geometry and primary surfaces separately; no automatic style approval.
+  physical_followup: compare an actual material swatch and a task-relevant specimen before calibration

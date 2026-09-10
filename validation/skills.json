@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "validator": "skill-creator/scripts/quick_validate.py",
+  "results": [
+    {
+      "skill": "cad-design-system",
+      "passed": true,
+      "message": "Skill is valid!"
+    },
+    {
+      "skill": "cad-fdm-design",
+      "passed": true,
+      "message": "Skill is valid!"
+    },
+    {
+      "skill": "cad-khana",
+      "passed": true,
+      "message": "Skill is valid!"
+    },
+    {
+      "skill": "cad-workflow",
+      "passed": true,
+      "message": "Skill is valid!"
+    },
+    {
+      "skill": "fusion360",
+      "passed": true,
+      "message": "Skill is valid!"
+    },
+    {
+      "skill": "onshape-bridge",
+      "passed": true,
+      "message": "Skill is valid!"
+    },
+    {
+      "skill": "onshape-build-manuals",
+      "passed": true,
+      "message": "Skill is valid!"
+    },
+    {
+      "skill": "onshape-cad",
+      "passed": true,
+      "message": "Skill is valid!"
+    },
+    {
+      "skill": "scan-reverse-engineering",
+      "passed": true,
+      "message": "Skill is valid!"
+    }
+  ]
+}

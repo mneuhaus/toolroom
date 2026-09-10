@@ -1,0 +1,2486 @@
+{
+  "method": "OpenCascade solid validity, pairwise common volume, sampled rigid paths. Sampling is not continuous collision certification.",
+  "volume_tolerance_mm3": 1e-05,
+  "script_sha256": "196766d4f2134965171fa1ca283fe33b872cc23823a6fdbf1d41b6ee989f211b",
+  "cases": [
+    {
+      "id": "J01",
+      "step_sha256": "277cefb7bab455aa8af94ec8666e5df5b09cbcd41a6d81fd39e97c30fca584e2",
+      "solid_count": 2,
+      "parts": [
+        {
+          "name": "J01_/_A_/_Straight_dovetail",
+          "valid": true,
+          "volume_mm3": 29936.618599999998,
+          "bounds_mm": [
+            -50.0,
+            -14.0,
+            0.0,
+            8.0,
+            14.0,
+            20.0
+          ]
+        },
+        {
+          "name": "J01_/_B_/_Straight_dovetail",
+          "valid": true,
+          "volume_mm3": 25965.415483524423,
+          "bounds_mm": [
+            0.05,
+            -14.0,
+            0.0,
+            50.0,
+            14.0,
+            20.0
+          ]
+        }
+      ],
+      "assembled_pairs": [
+        {
+          "a": "J01_/_A_/_Straight_dovetail",
+          "b": "J01_/_B_/_Straight_dovetail",
+          "overlap_mm3": 0.0
+        }
+      ],
+      "paths": [
+        {
+          "name": "A: translate from Z=-25 to 0",
+          "samples": [
+            {
+              "position": -25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "blocked_direction_control": {
+        "movement": "A translated -1 mm along X; geometric restraint expected",
+        "overlap_mm3": 45.72295658320371
+      },
+      "passed": true
+    },
+    {
+      "id": "J02",
+      "step_sha256": "266fd007cfa60ee6fe607bf3fcf1e43ad17d90f19f5032ef397cad4722a893c9",
+      "solid_count": 2,
+      "parts": [
+        {
+          "name": "J02_/_A_/_Tapered_dovetail",
+          "valid": true,
+          "volume_mm3": 29882.937811698073,
+          "bounds_mm": [
+            -50.0,
+            -14.0,
+            0.0,
+            8.000000000000005,
+            14.0,
+            20.0
+          ]
+        },
+        {
+          "name": "J02_/_B_/_Tapered_dovetail",
+          "valid": true,
+          "volume_mm3": 26019.55121717393,
+          "bounds_mm": [
+            0.049999999999996284,
+            -14.0,
+            0.0,
+            50.0,
+            14.0,
+            20.0
+          ]
+        }
+      ],
+      "assembled_pairs": [
+        {
+          "a": "J02_/_A_/_Tapered_dovetail",
+          "b": "J02_/_B_/_Tapered_dovetail",
+          "overlap_mm3": 0.0
+        }
+      ],
+      "paths": [
+        {
+          "name": "A: translate from Z=-25 to 0",
+          "samples": [
+            {
+              "position": -25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "blocked_direction_control": {
+        "movement": "A translated -1 mm along X; geometric restraint expected",
+        "overlap_mm3": 45.148829680892135
+      },
+      "passed": true
+    },
+    {
+      "id": "J03",
+      "step_sha256": "0b5d62aef7041bb082017a126c0a13fa2209c1d93dea9fb865ebfffa5b699842",
+      "solid_count": 2,
+      "parts": [
+        {
+          "name": "J03_/_A_/_Scarfed_dovetail",
+          "valid": true,
+          "volume_mm3": 29882.937811698062,
+          "bounds_mm": [
+            -65.0,
+            -14.0,
+            0.0,
+            22.825462644184807,
+            14.0,
+            20.000000000000046
+          ]
+        },
+        {
+          "name": "J03_/_B_/_Scarfed_dovetail",
+          "valid": true,
+          "volume_mm3": 26019.551217173914,
+          "bounds_mm": [
+            -14.950000000000033,
+            -14.0,
+            -1.988251930001871e-15,
+            65.0,
+            14.0,
+            20.000000000000046
+          ]
+        }
+      ],
+      "assembled_pairs": [
+        {
+          "a": "J03_/_A_/_Scarfed_dovetail",
+          "b": "J03_/_B_/_Scarfed_dovetail",
+          "overlap_mm3": 0.0
+        }
+      ],
+      "paths": [
+        {
+          "name": "A: translate from Z=-25 to 0 with X=1.5 Z",
+          "samples": [
+            {
+              "position": -25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "blocked_direction_control": {
+        "movement": "A translated -1 mm along X; geometric restraint expected",
+        "overlap_mm3": 45.14882968088893
+      },
+      "passed": true
+    },
+    {
+      "id": "J04",
+      "step_sha256": "023fb995e42dc7ca229d0a92e2cf9f8ea88856ea502304ce2381f0b0552356d1",
+      "solid_count": 2,
+      "parts": [
+        {
+          "name": "J04_/_B_/_Curved_tapered_dovetail",
+          "valid": true,
+          "volume_mm3": 28345.232411043038,
+          "bounds_mm": [
+            -6.5278599334922776,
+            -14.000000100084181,
+            -1e-07,
+            50.0000001,
+            14.0000001,
+            20.0000001
+          ]
+        },
+        {
+          "name": "J04_/_A_/_Curved_tapered_dovetail",
+          "valid": true,
+          "volume_mm3": 27555.425682092307,
+          "bounds_mm": [
+            -50.0000001,
+            -14.000000100080193,
+            -1e-07,
+            3.7539447082698034,
+            14.000000100000001,
+            20.0000001
+          ]
+        }
+      ],
+      "assembled_pairs": [
+        {
+          "a": "J04_/_B_/_Curved_tapered_dovetail",
+          "b": "J04_/_A_/_Curved_tapered_dovetail",
+          "overlap_mm3": 0.0
+        }
+      ],
+      "paths": [
+        {
+          "name": "A at -77 degrees: approach along X from -50 to 0 mm",
+          "samples": [
+            {
+              "position": -50,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -49,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -48,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -47,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -46,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -45,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -44,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -43,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -42,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -41,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -40,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -39,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -38,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -37,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -36,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -35,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -34,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -33,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -32,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -31,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -30,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -29,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -28,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -27,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -26,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "name": "A: rotate -77 to 0 degrees about Z at X=-radius",
+          "samples": [
+            {
+              "position": -77,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -76,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -75,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -74,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -73,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -72,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -71,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -70,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -69,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -68,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -67,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -66,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -65,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -64,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -63,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -62,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -61,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -60,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -59,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -58,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -57,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -56,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -55,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -54,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -53,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -52,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -51,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -50,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -49,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -48,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -47,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -46,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -45,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -44,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -43,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -42,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -41,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -40,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -39,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -38,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -37,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -36,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -35,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -34,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -33,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -32,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -31,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -30,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -29,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -28,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -27,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -26,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "blocked_direction_control": {
+        "movement": "A translated -1 mm along X; geometric restraint expected",
+        "overlap_mm3": 23.47655489089569
+      },
+      "passed": true
+    },
+    {
+      "id": "J05",
+      "step_sha256": "e7025bd2ed7e1968a7bf0b7c1a293bedb1fd70007e9a668779a8cb146b4845bc",
+      "solid_count": 2,
+      "parts": [
+        {
+          "name": "J05_/_B_/_Conical_curved_dovetail",
+          "valid": true,
+          "volume_mm3": 28206.34532336141,
+          "bounds_mm": [
+            -8.527859933492282,
+            -14.0000001045064,
+            -1.0000002945695234e-07,
+            50.0000001,
+            14.000000100000006,
+            20.0000001
+          ]
+        },
+        {
+          "name": "J05_/_A_/_Conical_curved_dovetail",
+          "valid": true,
+          "volume_mm3": 27694.866327437783,
+          "bounds_mm": [
+            -50.0000001,
+            -15.00531924834677,
+            -1.0000002309263891e-07,
+            4.523529243293686,
+            14.000000100000001,
+            20.0000001
+          ]
+        }
+      ],
+      "assembled_pairs": [
+        {
+          "a": "J05_/_B_/_Conical_curved_dovetail",
+          "b": "J05_/_A_/_Conical_curved_dovetail",
+          "overlap_mm3": 0.0
+        }
+      ],
+      "paths": [
+        {
+          "name": "A at -77 degrees: approach along X from -50 to 0 mm",
+          "samples": [
+            {
+              "position": -50,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -49,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -48,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -47,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -46,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -45,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -44,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -43,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -42,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -41,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -40,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -39,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -38,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -37,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -36,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -35,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -34,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -33,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -32,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -31,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -30,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -29,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -28,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -27,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -26,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "name": "A: rotate -77 to 0 degrees about Z at X=-radius",
+          "samples": [
+            {
+              "position": -77,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -76,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -75,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -74,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -73,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -72,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -71,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -70,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -69,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -68,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -67,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -66,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -65,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -64,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -63,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -62,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -61,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -60,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -59,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -58,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -57,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -56,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -55,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -54,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -53,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -52,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -51,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -50,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -49,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -48,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -47,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -46,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -45,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -44,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -43,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -42,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -41,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -40,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -39,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -38,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -37,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -36,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -35,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -34,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -33,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -32,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -31,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -30,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -29,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -28,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -27,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -26,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "blocked_direction_control": {
+        "movement": "A translated -1 mm along X; geometric restraint expected",
+        "overlap_mm3": 23.393775634688165
+      },
+      "passed": true
+    },
+    {
+      "id": "J06",
+      "step_sha256": "eefa2d64c19b97195f421f3412829dde06c5a84fed3d3bbf725501186e52f387",
+      "solid_count": 2,
+      "parts": [
+        {
+          "name": "J06_/_A_/_Echo-Lock_principle",
+          "valid": true,
+          "volume_mm3": 28648.467376919536,
+          "bounds_mm": [
+            -50.0,
+            -14.0,
+            -1.0690972665712339e-15,
+            8.000000000000007,
+            14.0,
+            20.0
+          ]
+        },
+        {
+          "name": "J06_/_B_/_Echo-Lock_principle",
+          "valid": true,
+          "volume_mm3": 27207.262965810347,
+          "bounds_mm": [
+            -5.023718431383743,
+            -14.0,
+            -5.187811609240455e-16,
+            50.0,
+            14.0,
+            20.0
+          ]
+        }
+      ],
+      "assembled_pairs": [
+        {
+          "a": "J06_/_A_/_Echo-Lock_principle",
+          "b": "J06_/_B_/_Echo-Lock_principle",
+          "overlap_mm3": 0.0
+        }
+      ],
+      "paths": [
+        {
+          "name": "A: translate from Z=-25 to 0",
+          "samples": [
+            {
+              "position": -25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "blocked_direction_control": {
+        "movement": "A translated -1 mm along X; geometric restraint expected",
+        "overlap_mm3": 77.58256947293364
+      },
+      "passed": true
+    },
+    {
+      "id": "J07",
+      "step_sha256": "c788ef82c60f96ecd5ee922d63e91206fa5a8b7d4e474330518356a5a3a03c03",
+      "solid_count": 2,
+      "parts": [
+        {
+          "name": "J07_/_B_/_Drop-Lock_principle",
+          "valid": true,
+          "volume_mm3": 27674.220695074895,
+          "bounds_mm": [
+            -6.74910129856435,
+            -14.0,
+            -1.0199406184268099e-15,
+            50.0,
+            14.0,
+            20.0
+          ]
+        },
+        {
+          "name": "J07_/_A_/_Drop-Lock_principle",
+          "valid": true,
+          "volume_mm3": 28140.779904907715,
+          "bounds_mm": [
+            -50.0,
+            -14.0,
+            -4.794681116713575e-16,
+            6.4,
+            14.0,
+            20.0
+          ]
+        }
+      ],
+      "assembled_pairs": [
+        {
+          "a": "J07_/_B_/_Drop-Lock_principle",
+          "b": "J07_/_A_/_Drop-Lock_principle",
+          "overlap_mm3": 0.0
+        }
+      ],
+      "paths": [
+        {
+          "name": "A: translate from Z=-25 to 0",
+          "samples": [
+            {
+              "position": -25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "blocked_direction_control": {
+        "movement": "A translated -1 mm along X; geometric restraint expected",
+        "overlap_mm3": 90.33377890027224
+      },
+      "passed": true
+    },
+    {
+      "id": "J08",
+      "step_sha256": "70074cb29b640de7bb140f53b8a4c5a96561eb4aeb58f280271cc36635bd8714",
+      "solid_count": 4,
+      "parts": [
+        {
+          "name": "J08_/_Key_1_/_Keyed_stopped_scarf",
+          "valid": true,
+          "volume_mm3": 725.2000000000097,
+          "bounds_mm": [
+            -4.8999999999999995,
+            -20.0,
+            8.1,
+            4.8999999999999995,
+            20.0,
+            10.648415389835002
+          ]
+        },
+        {
+          "name": "J08_/_B_/_Keyed_stopped_scarf",
+          "valid": true,
+          "volume_mm3": 32779.97227734191,
+          "bounds_mm": [
+            -29.9,
+            -14.0,
+            0.0,
+            60.0,
+            14.0,
+            20.0
+          ]
+        },
+        {
+          "name": "J08_/_Key_2_/_Keyed_stopped_scarf",
+          "valid": true,
+          "volume_mm3": 725.199999999991,
+          "bounds_mm": [
+            -4.8999999999999995,
+            -20.0,
+            9.351584610165046,
+            4.8999999999999995,
+            20.0,
+            11.9
+          ]
+        },
+        {
+          "name": "J08_/_A_/_Keyed_stopped_scarf",
+          "valid": true,
+          "volume_mm3": 33039.99999999998,
+          "bounds_mm": [
+            -60.0,
+            -14.0,
+            0.0,
+            30.0,
+            14.0,
+            20.0
+          ]
+        }
+      ],
+      "assembled_pairs": [
+        {
+          "a": "J08_/_Key_1_/_Keyed_stopped_scarf",
+          "b": "J08_/_B_/_Keyed_stopped_scarf",
+          "overlap_mm3": 0.0
+        },
+        {
+          "a": "J08_/_Key_1_/_Keyed_stopped_scarf",
+          "b": "J08_/_Key_2_/_Keyed_stopped_scarf",
+          "overlap_mm3": 0.0
+        },
+        {
+          "a": "J08_/_Key_1_/_Keyed_stopped_scarf",
+          "b": "J08_/_A_/_Keyed_stopped_scarf",
+          "overlap_mm3": 0.0
+        },
+        {
+          "a": "J08_/_B_/_Keyed_stopped_scarf",
+          "b": "J08_/_Key_2_/_Keyed_stopped_scarf",
+          "overlap_mm3": 0.0
+        },
+        {
+          "a": "J08_/_B_/_Keyed_stopped_scarf",
+          "b": "J08_/_A_/_Keyed_stopped_scarf",
+          "overlap_mm3": 0.0
+        },
+        {
+          "a": "J08_/_Key_2_/_Keyed_stopped_scarf",
+          "b": "J08_/_A_/_Keyed_stopped_scarf",
+          "overlap_mm3": 0.0
+        }
+      ],
+      "paths": [
+        {
+          "name": "Key 1: withdraw along +Y",
+          "samples": [
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 26,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 27,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 28,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 29,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 30,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 31,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 32,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 33,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 34,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 35,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "name": "Key 2: withdraw along -Y",
+          "samples": [
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 26,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 27,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 28,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 29,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 30,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 31,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 32,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 33,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 34,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 35,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "name": "After removing keys: A slides +Y",
+          "samples": [
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 1,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 2,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 3,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 4,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 6,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 7,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 8,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 9,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 11,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 12,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 13,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 14,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 16,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 17,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 18,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 19,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 21,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 22,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 23,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 24,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 26,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 27,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 28,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 29,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 30,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "blocked_direction_control": {
+        "movement": "A translated -1 mm along X; geometric restraint expected",
+        "overlap_mm3": 392.36846402589487
+      },
+      "passed": true
+    }
+  ],
+  "physical_print": "not performed",
+  "physical_fit": "not measured",
+  "strength": "not tested",
+  "status": "passed"
+}

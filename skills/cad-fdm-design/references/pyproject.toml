@@ -1,0 +1,14 @@
+# Template: uv project for a CAD design. Copy into
+# ~/Workspace/cad/<project>/pyproject.toml and adjust the name.
+[project]
+name = "CHANGE-ME"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "build123d>=0.10.0",
+    "cad-khana",
+    "ocp-vscode>=3.4.0",
+]
+
+[tool.uv.sources]
+cad-khana = { path = "../cad-khana", editable = true }

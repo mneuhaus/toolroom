@@ -1,0 +1,68 @@
+# Manufacturing profile template. Copy, rename to <process>-<machine>-<key>.yaml, fill every
+# field. Keep the comments — future edits need the reasoning. Units mm / degrees.
+# Values the scripts read: build_volume, walls.min_thickness, walls.hard_min,
+# overhang.max_angle_deg, overhang.max_bridge, features.min_hole_dia_*, edges.*, text.*
+
+id: <process>-<machine>-<variant>
+process: fdm | sla | laser | cnc
+machine: <name>
+units: mm
+source: default | measured <date>     # "measured" after the calibration coupon in references/manufacturing/<process>.md
+
+build_volume: [x, y, z]               # laser/cnc: [x, y, max_thickness]
+
+# --- 3D printing (fdm/sla) ---
+nozzle: 0.4                           # fdm only
+line_width: 0.42                      # fdm only
+layer_height: {default: 0.2, fine: 0.12}
+
+walls:
+  hard_min:                           # thinner than this = checker error
+  min_thickness:                      # minimum for parts that get handled
+  recommended:
+  around_insert_each_side:
+
+features:
+  min_positive:                       # pins, ribs, text strokes
+  min_negative:                       # slots, gaps
+  min_hole_dia_vertical:
+  min_hole_dia_horizontal:
+
+overhang:
+  max_angle_deg:                      # from vertical
+  max_bridge:
+  supports: avoid | allowed_hidden | required
+
+holes:
+  compensation_vertical:
+  compensation_horizontal:
+  horizontal_shape: teardrop | flat_top | round
+
+clearances: {press: , tight: , slip: , free: }
+
+edges:
+  bottom_chamfer:
+  min_chamfer:
+  min_fillet_vertical_edge:
+
+text: {min_height: , min_stroke: , inlay_depth: , emboss_height: , deboss_depth: }
+
+inserts: {}                           # thread: {od, hole, depth}
+screw_clearance: {}
+materials: {default: , options: []}
+orientation_rules: []
+
+# --- laser ---
+# sheet: {material: , nominal_thickness: , measured_thickness: }
+# kerf:
+# fits: {press: , firm: , slip: }     # slot width relative to measured thickness
+# min_feature: ; min_hole: ; min_cut_spacing:
+# engraving: {vector_min_text: , raster_min_text: , raster_min_stroke: }
+# joints: {tab_width_min: , finger_width: , t_slot: {screw: , slot: , nut_pocket: [w, d], edge_offset: }}
+
+# --- cnc ---
+# tools: [{name: , dia: , flutes: , max_depth: }]
+# inner_corner_radius_min:            # tool radius + 0.1
+# corner_relief: dogbone | tbone | small_tool
+# min_wall: ; min_slot: ; clearance:
+# engraving: {tool: v-bit 90, min_text: , depth: }

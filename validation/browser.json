@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "date": "2026-09-10",
+  "method": "Local Chromium browser checks using Playwright; screenshots visually inspected.",
+  "environment": {
+    "readerRoutes": 63,
+    "missing": [],
+    "caseImages": [
+      {
+        "path": "site/assets/sparky-after.png",
+        "loaded": true
+      },
+      {
+        "path": "site/assets/c2-guide.png",
+        "loaded": true
+      },
+      {
+        "path": "site/assets/distributor-fem.png",
+        "loaded": true
+      },
+      {
+        "path": "site/assets/linak-sections.png",
+        "loaded": true
+      },
+      {
+        "path": "site/assets/unifi-assembly.png",
+        "loaded": true
+      },
+      {
+        "path": "site/assets/laser-assembly.png",
+        "loaded": true
+      },
+      {
+        "path": "site/assets/bristlebot-family.png",
+        "loaded": true
+      }
+    ],
+    "errors": [],
+    "browser": "152.0.7977.83"
+  },
+  "desktop": {
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "routes_checked": 18,
+    "horizontal_overflow": false
+  },
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "routes_checked": 17,
+    "horizontal_overflow": false,
+    "navigation_opens": true,
+    "navigation_closes_after_selection": true,
+    "navigation_closes_on_same_page": true,
+    "navigation_closes_with_escape": true,
+    "closed_navigation_inert": true
+  },
+  "interactions": [
+    "Skill filters: 4 CAD entries and 9 total",
+    "German search alias Passung finds the shared fit reference",
+    "Search result opens its document; missing query shows an empty state",
+    "Escape closes search; Meta+K opens it",
+    "Architecture layer selection updates its detail",
+    "Style and process selections update the schematic and details",
+    "All three alternative styles preserve the four protected mounting interfaces",
+    "Sparky before/after slider updates at 75%",
+    "All four lab cases expose their corresponding report",
+    "JSON source reader opens the selected lab report",
+    "Notes persist across reload",
+    "Downloaded Markdown contains the test note and route context; test note restored to original text"
+  ],
+  "offline_file": {
+    "overview": true,
+    "image": true,
+    "profiles": true,
+    "search": true
+  },
+  "url_subdirectory": {
+    "path": "/cad-skills-framework/index.html",
+    "overview": true,
+    "image": true,
+    "profiles": true,
+    "source_reader": true
+  },
+  "screenshots": [
+    "desktop.png",
+    "mobile.png",
+    "profiles.png",
+    "mobile-profiles.png",
+    "lab.png",
+    "examples.png"
+  ],
+  "limits": [
+    "Browser checks cover Chromium on this local system, not every browser engine.",
+    "No cloud CAD session, slicer run, physical build or load test was performed."
+  ],
+  "tested_site_sha256": {
+    "index.html": "e9c33cec3ca13542f4d8a42aabca1613d1bd565be2ab3c0bec6424469aabb493",
+    "site/app.js": "ee25174ead5f2acf7b4745ae9fc86c7c59df0218bdd6fbb4445348763f31533e",
+    "site/style.css": "d0d6932a930b764e5f02e2e54cb4a15c5c763b64d9ae5bbdf1b50592a23c499c",
+    "site/data.js": "4a50cb4e393d19d9236d64eeb9b6d8a80722a831400f3c51709c8dc96e2066a2"
+  }
+}

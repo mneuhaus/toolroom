@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 410" role="img" aria-labelledby="title desc">
+  <title id="title">Mosey — three original application examples</title>
+  <desc id="desc">A sage hand controller with a large lilac wheel, a faceted blue desktop stand with a yellow adjuster, and a pink tray in a yellow supporting shell. Schematic illustration, not to scale or mechanically verified.</desc>
+  <rect width="1080" height="410" rx="20" fill="#F4F3EF"/>
+  <g stroke="#383D3A" stroke-opacity=".32" stroke-width="1.5" stroke-linejoin="round">
+    <rect x="14" y="14" width="342" height="382" rx="14" fill="#fff" stroke="none"/>
+    <rect x="369" y="14" width="342" height="382" rx="14" fill="#fff" stroke="none"/>
+    <rect x="724" y="14" width="342" height="382" rx="14" fill="#fff" stroke="none"/>
+    <path d="M99 112Q108 74 146 74H229Q264 74 273 110L291 238Q294 274 259 281H128Q91 279 89 244Z" fill="#94AD94"/>
+    <path d="M86 96Q95 58 133 58H216Q251 58 260 94L278 222Q281 258 246 265H115Q78 263 76 228Z" fill="#BDD1BA"/>
+    <path d="M94 202Q168 227 261 202" fill="none"/>
+    <circle cx="179" cy="136" r="48" fill="#9C89B0"/>
+    <circle cx="174" cy="129" r="48" fill="#C6B6D7"/>
+    <circle cx="174" cy="129" r="36" fill="none" stroke-opacity=".2"/>
+    <path d="M174 88v10" fill="none" stroke="#383D3A" stroke-width="3"/>
+    <rect x="119" y="185" width="48" height="8" rx="4" fill="#F0EDDF"/>
+    <path d="m198 188 8 0" stroke="#383D3A" stroke-width="2"/>
+    <path d="M436 247 464 78 577 66 626 105 601 251Z" fill="#8CA9B4"/>
+    <path d="M413 225 442 57 555 46 603 85 578 230Z" fill="#ACC5CF"/>
+    <path d="m442 57 21 23 77-8 15-26M463 80l-22 116 112 4 30-104 20-11M441 196l-28 29 165 5-25-30" fill="none"/>
+    <rect x="468" y="92" width="73" height="65" rx="8" transform="rotate(-4 504 124)" fill="#F0EDDF"/>
+    <path d="m400 251 24-24 176 5 45 28-18 24-207-5Z" fill="#ACC5CF"/>
+    <path d="m424 227 176 5 45 28-215-5Z" fill="#D8E3E5"/>
+    <circle cx="596" cy="185" r="23" fill="#BCAE65"/>
+    <circle cx="590" cy="180" r="23" fill="#E9DA95"/>
+    <path d="M590 162v11" stroke="#65524A" stroke-width="2"/>
+    <path d="M775 125 798 102H980L1011 128V273H953V250H835V273H775Z" fill="#BAAE6F"/>
+    <path d="M754 104 778 81H958L990 108V253H931V229H814V253H754Z" fill="#E9DA95"/>
+    <path d="M774 111H970V233H950V209H794V233H774Z" fill="#fff"/>
+    <path d="M785 130Q785 118 797 118H941Q959 118 959 136V177Q959 190 946 190H802Q785 190 785 177Z" fill="#C99283"/>
+    <path d="M782 119Q782 107 794 107H938Q956 107 956 125V166Q956 179 943 179H799Q782 179 782 166Z" fill="#E5B9AA"/>
+    <path d="M796 121H941V151Q941 162 930 162H807Q796 162 796 151Z" fill="#F0EDDF"/>
+    <path d="M778 81 798 102M958 81l22 21M990 253l21 20" fill="none"/>
+  </g>
+  <g fill="#383D3A" font-family="Arial, sans-serif">
+    <text x="38" y="325" font-size="23" font-weight="bold">01 / Hand controller</text>
+    <text x="38" y="352" font-size="17">Soft volume. One large control.</text>
+    <text x="393" y="325" font-size="23" font-weight="bold">02 / Desktop stand</text>
+    <text x="393" y="352" font-size="17">Broad facets. Clear controls.</text>
+    <text x="748" y="325" font-size="23" font-weight="bold">03 / Tray</text>
+    <text x="748" y="352" font-size="17">A shell supports and protects.</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="11" fill="#6F736C">
+    <text x="38" y="379">SOFT_VOLUME</text><text x="393" y="379">BROAD_FACET</text><text x="748" y="379">USEFUL_SHELL</text>
+  </g>
+</svg>

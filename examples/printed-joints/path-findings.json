@@ -1,0 +1,297 @@
+{
+  "description": "Rejected rotational overswing, retained as a geometry finding. The final path uses a separate approach stage at -77 degrees.",
+  "cases": [
+    {
+      "id": "J04",
+      "step_sha256": "8b6ec7a8f333f18c55afdb4303ba0e2c1016829b907b9f2cdea115230254d2ce",
+      "solid_count": 2,
+      "parts": [
+        {
+          "name": "J04_/_B_/_Curved_tapered_dovetail",
+          "valid": true,
+          "volume_mm3": 28345.232411043038,
+          "bounds_mm": [
+            -6.5278599334922776,
+            -14.000000100084181,
+            -1e-07,
+            50.0000001,
+            14.0000001,
+            20.0000001
+          ]
+        },
+        {
+          "name": "J04_/_A_/_Curved_tapered_dovetail",
+          "valid": true,
+          "volume_mm3": 27555.425682092307,
+          "bounds_mm": [
+            -50.0000001,
+            -14.000000100080193,
+            -1e-07,
+            3.7539447082698034,
+            14.000000100000001,
+            20.0000001
+          ]
+        }
+      ],
+      "assembled_pairs": [
+        {
+          "a": "J04_/_B_/_Curved_tapered_dovetail",
+          "b": "J04_/_A_/_Curved_tapered_dovetail",
+          "overlap_mm3": 0.0
+        }
+      ],
+      "paths": [
+        {
+          "name": "A: rotate -110 to 0 degrees about Z at X=-radius",
+          "samples": [
+            {
+              "position": -110,
+              "overlap_mm3": 544.7039570915524
+            },
+            {
+              "position": -105,
+              "overlap_mm3": 376.90743073182875
+            },
+            {
+              "position": -100,
+              "overlap_mm3": 238.83722491178602
+            },
+            {
+              "position": -95,
+              "overlap_mm3": 131.7170302406036
+            },
+            {
+              "position": -90,
+              "overlap_mm3": 59.68136417199706
+            },
+            {
+              "position": -85,
+              "overlap_mm3": 17.59322444323128
+            },
+            {
+              "position": -80,
+              "overlap_mm3": 0.7392346328042967
+            },
+            {
+              "position": -75,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -70,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -65,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -60,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -55,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -50,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -45,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -40,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -35,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -30,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 544.7039570915524,
+          "passed": false
+        }
+      ],
+      "blocked_direction_control": {
+        "movement": "A translated -1 mm along X; geometric restraint expected",
+        "overlap_mm3": 23.47655489089569
+      },
+      "passed": false
+    },
+    {
+      "id": "J05",
+      "step_sha256": "958bcbeb70a791b3fd33ea224d52b28a8186f9671ffd095194c9dede6d9dd2d0",
+      "solid_count": 2,
+      "parts": [
+        {
+          "name": "J05_/_B_/_Conical_curved_dovetail",
+          "valid": true,
+          "volume_mm3": 28206.34532336141,
+          "bounds_mm": [
+            -8.527859933492282,
+            -14.0000001045064,
+            -1.0000002945695234e-07,
+            50.0000001,
+            14.000000100000006,
+            20.0000001
+          ]
+        },
+        {
+          "name": "J05_/_A_/_Conical_curved_dovetail",
+          "valid": true,
+          "volume_mm3": 27694.866327437783,
+          "bounds_mm": [
+            -50.0000001,
+            -15.00531924834677,
+            -1.0000002309263891e-07,
+            4.523529243293686,
+            14.000000100000001,
+            20.0000001
+          ]
+        }
+      ],
+      "assembled_pairs": [
+        {
+          "a": "J05_/_B_/_Conical_curved_dovetail",
+          "b": "J05_/_A_/_Conical_curved_dovetail",
+          "overlap_mm3": 0.0
+        }
+      ],
+      "paths": [
+        {
+          "name": "A: rotate -110 to 0 degrees about Z at X=-radius",
+          "samples": [
+            {
+              "position": -110,
+              "overlap_mm3": 278.70367318030765
+            },
+            {
+              "position": -105,
+              "overlap_mm3": 155.33415969499336
+            },
+            {
+              "position": -100,
+              "overlap_mm3": 72.3052002437333
+            },
+            {
+              "position": -95,
+              "overlap_mm3": 28.409191079214256
+            },
+            {
+              "position": -90,
+              "overlap_mm3": 8.366256382992498
+            },
+            {
+              "position": -85,
+              "overlap_mm3": 1.295223525128689
+            },
+            {
+              "position": -80,
+              "overlap_mm3": 0.010808914472213531
+            },
+            {
+              "position": -75,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -70,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -65,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -60,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -55,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -50,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -45,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -40,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -35,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -30,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -25,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -20,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -15,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -10,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": -5,
+              "overlap_mm3": 0.0
+            },
+            {
+              "position": 0,
+              "overlap_mm3": 0.0
+            }
+          ],
+          "maximum_overlap_mm3": 278.70367318030765,
+          "passed": false
+        }
+      ],
+      "blocked_direction_control": {
+        "movement": "A translated -1 mm along X; geometric restraint expected",
+        "overlap_mm3": 23.393775634688165
+      },
+      "passed": false
+    }
+  ]
+}

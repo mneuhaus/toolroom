@@ -1,0 +1,61 @@
+# Manufacturing profile — MSLA resin printer, standard/ABS-like resin, 0.05 mm layers
+# Fine-parts process in this system: knob caps, buttons, bezels, small gears.
+
+id: sla-generic
+process: sla
+machine: desktop MSLA (Elegoo/Anycubic/Phrozen class)
+units: mm
+source: default
+
+build_volume: [140, 80, 160]          # set to the actual machine
+
+layer_height: {default: 0.05, fine: 0.03}
+pixel: 0.035
+
+walls:
+  hard_min: 0.6                       # supported walls
+  min_thickness: 1.0                  # free-standing
+  recommended: 1.5
+
+features:
+  min_positive: 0.3
+  min_negative: 0.4
+  min_hole_dia_vertical: 0.5
+  min_hole_dia_horizontal: 0.5
+  min_edge_break: 0.3                 # smaller fillets vanish
+
+overhang:
+  max_angle_deg: 30                   # unsupported; anything else gets supports
+  max_bridge: 5
+  supports: required
+  support_face: designate one hidden face; tilt 20–45°
+
+holes:
+  compensation_vertical: 0.1          # light bleed
+  compensation_horizontal: 0.1
+  horizontal_shape: round
+
+clearances: {tight: 0.1, slip: 0.2, free: 0.3}
+
+hollowing: {wall: 2.0, drain_holes: 2, drain_dia: 2.5}
+
+edges:
+  bottom_chamfer: 0.0                 # parts sit on supports, not the plate
+  min_chamfer: 0.3
+  min_fillet_vertical_edge: 0.3
+
+text: {min_height: 2.0, min_stroke: 0.3, deboss_depth: 0.25, emboss_height: 0.3}
+
+fasteners:
+  inserts: epoxy-set or press-fit pins; heat-set cracks resin
+  self_tapping: tough resin only
+
+materials:
+  default: ABS-like resin
+  options: [standard, ABS-like, tough, flexible]
+  shrinkage_pct: 0.3
+
+orientation_rules:
+  - cosmetic faces away from the plate and up
+  - supports only on the designated hidden face
+  - bores angled 20–45° so they drain and don't cup

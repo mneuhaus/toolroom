@@ -1,0 +1,90 @@
+# Design-language profile — "rugged-industrial": big chamfers, ribs, bumpers, safety colour
+# Third calibration point: workshop tools, field equipment, Pelican/DeWalt register.
+
+meta:
+  id: rugged-industrial
+  name: rugged workshop / field equipment
+  intent: >
+    Built to be dropped and read from across the room: heavy chamfers, ribs that show
+    where the strength is, soft bumpers at the corners, one safety colour on a dark body.
+    It refuses delicacy, thin plates and small text; every fastener is large, recessed and
+    reachable with the one tool in your pocket.
+  references: [Pelican cases, DeWalt/Bosch tool housings, industrial handhelds]   # estimated
+
+edges:
+  policy: mixed
+  edge_treatment: {type: chamfer, size: 2.5, angle: 45}
+  outer_corner_radius: 6.0
+  radius_family: [1.0, 2.0, 4.0]
+  max_radius: 8.0
+  inner_corner_radius: 2.0
+  bottom_edge: {type: chamfer, size: 1.0}
+  hierarchy: outer edges chamfer 2.5, rib edges fillet 1, bumper edges fillet 4
+
+proportions:
+  grid: 10.0
+  sub_grid: 5.0
+  control_pitch: 20.0
+  preferred_aspect_ratios: ["3:2", "2:1"]
+  plate_thickness: 3.0
+  layering: [shell, bumpers, ribs]
+  reveal: {width: 1.0, depth: 1.0}
+  nesting_offset: 1.0
+  snap_positions_to_grid: true
+
+surfaces:
+  finish: textured
+  texture_zones: [{zone: grip and bumpers, type: fuzzy_skin, point_distance: 0.3, thickness: 0.3}, {zone: side walls, type: ribs, pitch: 4.0, depth: 1.0}]
+  visible_face_rule: textured bed face acceptable everywhere; supports never
+  parting_lines: celebrated as a 1 mm reveal
+
+fasteners:
+  visible: true
+  type: M4 socket head cap, black, recessed 2 mm
+  pattern: {rule: four corners plus mid-edges over 120 mm, inset_grid_units: 1.5}
+  method: heat-set inserts in 10 mm bosses
+  head_treatment: counterbore 2 mm deep, chamfered mouth
+
+color:
+  base: [RAL 7016 anthrazitgrau, RAL 9005 tiefschwarz]
+  accents: [RAL 2004 reinorange, RAL 1023 verkehrsgelb]
+  max_colors_per_object: 2
+  accent_rule: bumpers, latches and one warning label
+  semantics: {caution: RAL 2004, stop: RAL 3020}
+  filament_map: {RAL 7016: Bambu ASA/PETG dark grey (near), RAL 2004: orange TPU 95A for bumpers}   # verify names
+
+typography:
+  font: bold grotesk or stencil
+  case: uppercase
+  method: debossed 0.8 or inlay
+  min_height: 6.0
+  placement: centred in a labelled field with a 1 mm border
+  density: sparse, warnings only
+
+controls:
+  knob_cap: {shape: cylinder, dia: 20.0, height: 14.0, top: flat, chamfer: 2.0, flutes: 12, shaft: D 6.0, color: base}
+  button: {footprint: 15.0, corner_radius: 3.0, gap_to_bezel: 0.6, pitch: 20.0, material: TPU cap 3 mm}
+  display: {mount: recessed 2.0 behind 2 mm acrylic, bezel: black, window_corner_radius: 3.0}
+  ports: recessed under a TPU flap
+
+grilles:
+  pattern: {type: slots, w: 2.0, l: 15.0, pitch: 4.0}
+  alignment: inside a chamfered field
+  edge_margin: 4.0
+
+feet_and_handles:
+  feet: TPU bumpers at all corners, Ø12 × 4
+  handles: bar handle 25 × 100 with 8 mm radius, or strap loops
+
+signature:
+  playfulness: none
+  element_examples: []
+  humour_in_labels: false
+
+anti_patterns:
+  - thin plates (< 3 mm) or walls at the manufacturing minimum
+  - fillets under 1 mm on outer edges (looks unfinished at this scale)
+  - small screws (M2/M2.5), hidden screws
+  - lowercase or light labels; text under 6 mm
+  - accent colour on the main shell
+  - gloss anywhere

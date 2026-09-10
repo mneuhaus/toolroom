@@ -1,0 +1,668 @@
+{
+  "documentId": "e9f4df9ee8ab9bb13f4c372b",
+  "workspaceId": "c403507093ac1f1bd0dbe33a",
+  "versionId": "6c1ed95a6e2e632392788108",
+  "versionMicroversion": "b49ad9d9638f8b229ccac6d3",
+  "sourceFeatureStudio": "886ee4a59a582b1ca495538a",
+  "sourceMicroversion": "4011cb8eed370ef44a79e7dd",
+  "source_file": "examples/printed-joints/joints.fs",
+  "source_sha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+  "public": true,
+  "date": "2026-09-10",
+  "authority": "Native Onshape Part Studios; STEP exports are derived geometry, PNGs are Onshape shaded views.",
+  "inspection": "16 feature trees checked in the frozen version; each consumes the listed FeatureScript source microversion.",
+  "artifacts": [
+    {
+      "name": "J01-assembled",
+      "elementId": "0006b1a71e89579b058dbede",
+      "featureId": "FNNWG32PxgB2DS9_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "cd2c7934c58d4ce40b9208e9",
+      "inspectionMicroversion": "c49ea92a7e05a8923360e9ca",
+      "parts": [
+        {
+          "partId": "JfD",
+          "name": "J01 / A / Straight dovetail",
+          "microversionId": "c49ea92a7e05a8923360e9ca"
+        },
+        {
+          "partId": "JkD",
+          "name": "J01 / B / Straight dovetail",
+          "microversionId": "c49ea92a7e05a8923360e9ca"
+        }
+      ],
+      "render": "site/assets/joints-J01-assembled.png",
+      "render_sha256": "d4d63812e7f3e7f54692a256214cfa57e748e23f06d2626124cd39daec6a3990",
+      "view_transform": {
+        "translation_mm": "identity",
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      },
+      "step": "examples/printed-joints/exports/J01-assembled.step",
+      "step_sha256": "277cefb7bab455aa8af94ec8666e5df5b09cbcd41a6d81fd39e97c30fca584e2"
+    },
+    {
+      "name": "J01-separate",
+      "elementId": "1cbbe6b4183960b82a859832",
+      "featureId": "FhZQyaXQVLG7eN1_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "c49ea92a7e05a8923360e9ca",
+      "inspectionMicroversion": "c49ea92a7e05a8923360e9ca",
+      "parts": [
+        {
+          "partId": "JfD",
+          "name": "J01 / A / Straight dovetail",
+          "microversionId": "c49ea92a7e05a8923360e9ca"
+        },
+        {
+          "partId": "JkD",
+          "name": "J01 / B / Straight dovetail",
+          "microversionId": "c49ea92a7e05a8923360e9ca"
+        }
+      ],
+      "render": "site/assets/joints-J01-separate.png",
+      "render_sha256": "4d5111e98c8afec174c4bec678bb8e10508be776eaa8fce40b748918568092cf",
+      "view_transform": {
+        "translation_mm": {
+          "A": [
+            -12,
+            -25,
+            0
+          ],
+          "B": [
+            12,
+            25,
+            0
+          ],
+          "Key 1": [
+            -9,
+            -55,
+            -8
+          ],
+          "Key 2": [
+            9,
+            -55,
+            -8
+          ]
+        },
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      }
+    },
+    {
+      "name": "J02-assembled",
+      "elementId": "013cfb751d89536fa3237cfb",
+      "featureId": "FrSDN72xWmxiMye_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "e30099719efd2d1380636eeb",
+      "inspectionMicroversion": "3ec9239eaac1c31deaf39b24",
+      "parts": [
+        {
+          "partId": "JfD",
+          "name": "J02 / A / Tapered dovetail",
+          "microversionId": "3ec9239eaac1c31deaf39b24"
+        },
+        {
+          "partId": "JkD",
+          "name": "J02 / B / Tapered dovetail",
+          "microversionId": "3ec9239eaac1c31deaf39b24"
+        }
+      ],
+      "render": "site/assets/joints-J02-assembled.png",
+      "render_sha256": "d02e813683f137f43f933d80ae9278a1dd606da9cf55332b4375316fe767076c",
+      "view_transform": {
+        "translation_mm": "identity",
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      },
+      "step": "examples/printed-joints/exports/J02-assembled.step",
+      "step_sha256": "266fd007cfa60ee6fe607bf3fcf1e43ad17d90f19f5032ef397cad4722a893c9"
+    },
+    {
+      "name": "J02-separate",
+      "elementId": "cdfae445a1f725c23398f75e",
+      "featureId": "FqivuG54NfcWX4T_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "3ec9239eaac1c31deaf39b24",
+      "inspectionMicroversion": "3ec9239eaac1c31deaf39b24",
+      "parts": [
+        {
+          "partId": "JfD",
+          "name": "J02 / A / Tapered dovetail",
+          "microversionId": "3ec9239eaac1c31deaf39b24"
+        },
+        {
+          "partId": "JkD",
+          "name": "J02 / B / Tapered dovetail",
+          "microversionId": "3ec9239eaac1c31deaf39b24"
+        }
+      ],
+      "render": "site/assets/joints-J02-separate.png",
+      "render_sha256": "f16328ea1ab938748425e1a2f483b89db1bff50e831681e91b61e8a1d5257907",
+      "view_transform": {
+        "translation_mm": {
+          "A": [
+            -12,
+            -25,
+            0
+          ],
+          "B": [
+            12,
+            25,
+            0
+          ],
+          "Key 1": [
+            -9,
+            -55,
+            -8
+          ],
+          "Key 2": [
+            9,
+            -55,
+            -8
+          ]
+        },
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      }
+    },
+    {
+      "name": "J03-assembled",
+      "elementId": "c856fe7d119ea93f30fd75a3",
+      "featureId": "F2KRLr6IKjtJFbg_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "c5dcab598bfcb70f18a0b70d",
+      "inspectionMicroversion": "3f14036fc89273226c67b9b9",
+      "parts": [
+        {
+          "partId": "JfD",
+          "name": "J03 / A / Scarfed dovetail",
+          "microversionId": "3f14036fc89273226c67b9b9"
+        },
+        {
+          "partId": "JkD",
+          "name": "J03 / B / Scarfed dovetail",
+          "microversionId": "3f14036fc89273226c67b9b9"
+        }
+      ],
+      "render": "site/assets/joints-J03-assembled.png",
+      "render_sha256": "092069f3338157cfa67809d5954ca3c23eaa48701720487ec2ca5a8c14a4b399",
+      "view_transform": {
+        "translation_mm": "identity",
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      },
+      "step": "examples/printed-joints/exports/J03-assembled.step",
+      "step_sha256": "0b5d62aef7041bb082017a126c0a13fa2209c1d93dea9fb865ebfffa5b699842"
+    },
+    {
+      "name": "J03-separate",
+      "elementId": "bb1901c9f07b4a5e0ea46773",
+      "featureId": "FfxFJZ2wKO6x3xY_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "3f14036fc89273226c67b9b9",
+      "inspectionMicroversion": "3f14036fc89273226c67b9b9",
+      "parts": [
+        {
+          "partId": "JfD",
+          "name": "J03 / A / Scarfed dovetail",
+          "microversionId": "3f14036fc89273226c67b9b9"
+        },
+        {
+          "partId": "JkD",
+          "name": "J03 / B / Scarfed dovetail",
+          "microversionId": "3f14036fc89273226c67b9b9"
+        }
+      ],
+      "render": "site/assets/joints-J03-separate.png",
+      "render_sha256": "0373b3802b6dc1998fb209064306aec6f2d753067a5c3ae38494e350451867b7",
+      "view_transform": {
+        "translation_mm": {
+          "A": [
+            -12,
+            -25,
+            0
+          ],
+          "B": [
+            12,
+            25,
+            0
+          ],
+          "Key 1": [
+            -9,
+            -55,
+            -8
+          ],
+          "Key 2": [
+            9,
+            -55,
+            -8
+          ]
+        },
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      }
+    },
+    {
+      "name": "J04-assembled",
+      "elementId": "1fbced9c4c32094f0219ca88",
+      "featureId": "FFZ4uBqQrWVssAC_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "5cca80f1e7f8f532589dad5d",
+      "inspectionMicroversion": "bbd41d57a373f922d579f69c",
+      "parts": [
+        {
+          "partId": "ReBD",
+          "name": "J04 / A / Curved tapered dovetail",
+          "microversionId": "bbd41d57a373f922d579f69c"
+        },
+        {
+          "partId": "RjBD",
+          "name": "J04 / B / Curved tapered dovetail",
+          "microversionId": "bbd41d57a373f922d579f69c"
+        }
+      ],
+      "render": "site/assets/joints-J04-assembled.png",
+      "render_sha256": "11e27ef3f28f6c660f5bfc04829c9767fad13bd03f8c9f4767f53613b914935f",
+      "view_transform": {
+        "translation_mm": "identity",
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      },
+      "step": "examples/printed-joints/exports/J04-assembled.step",
+      "step_sha256": "023fb995e42dc7ca229d0a92e2cf9f8ea88856ea502304ce2381f0b0552356d1"
+    },
+    {
+      "name": "J04-separate",
+      "elementId": "134426a7fa2e4534d1ec1105",
+      "featureId": "FE6Lxph1S8EeZrV_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "bbd41d57a373f922d579f69c",
+      "inspectionMicroversion": "bbd41d57a373f922d579f69c",
+      "parts": [
+        {
+          "partId": "ReBD",
+          "name": "J04 / A / Curved tapered dovetail",
+          "microversionId": "bbd41d57a373f922d579f69c"
+        },
+        {
+          "partId": "RjBD",
+          "name": "J04 / B / Curved tapered dovetail",
+          "microversionId": "bbd41d57a373f922d579f69c"
+        }
+      ],
+      "render": "site/assets/joints-J04-separate.png",
+      "render_sha256": "b099409ea276d4809bcc7ad3784e9eed53edb13527e5aa231c263ed75a0d06b2",
+      "view_transform": {
+        "translation_mm": {
+          "A": [
+            -12,
+            -25,
+            0
+          ],
+          "B": [
+            12,
+            25,
+            0
+          ],
+          "Key 1": [
+            -9,
+            -55,
+            -8
+          ],
+          "Key 2": [
+            9,
+            -55,
+            -8
+          ]
+        },
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      }
+    },
+    {
+      "name": "J05-assembled",
+      "elementId": "8d882151bd17f30daaf1244d",
+      "featureId": "FoKCf3pbVMYZIpM_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "ee92ec8a6261e3a1fecd4838",
+      "inspectionMicroversion": "49d0598419af487feca8d9cf",
+      "parts": [
+        {
+          "partId": "ReBD",
+          "name": "J05 / A / Conical curved dovetail",
+          "microversionId": "49d0598419af487feca8d9cf"
+        },
+        {
+          "partId": "RjBD",
+          "name": "J05 / B / Conical curved dovetail",
+          "microversionId": "49d0598419af487feca8d9cf"
+        }
+      ],
+      "render": "site/assets/joints-J05-assembled.png",
+      "render_sha256": "2fac786f6ca9e6c5d0a9860c89255a8cd124e1a265a1dcb23d77ec8615d3a06e",
+      "view_transform": {
+        "translation_mm": "identity",
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      },
+      "step": "examples/printed-joints/exports/J05-assembled.step",
+      "step_sha256": "e7025bd2ed7e1968a7bf0b7c1a293bedb1fd70007e9a668779a8cb146b4845bc"
+    },
+    {
+      "name": "J05-separate",
+      "elementId": "6f1a7733df71ba1a8bad9cc1",
+      "featureId": "FahGUEJwoILNz27_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "49d0598419af487feca8d9cf",
+      "inspectionMicroversion": "49d0598419af487feca8d9cf",
+      "parts": [
+        {
+          "partId": "ReBD",
+          "name": "J05 / A / Conical curved dovetail",
+          "microversionId": "49d0598419af487feca8d9cf"
+        },
+        {
+          "partId": "RjBD",
+          "name": "J05 / B / Conical curved dovetail",
+          "microversionId": "49d0598419af487feca8d9cf"
+        }
+      ],
+      "render": "site/assets/joints-J05-separate.png",
+      "render_sha256": "09c24e6fa181cf62227d4260b08c42a0531fdbe0e333a80af4dfd2f5c21addf5",
+      "view_transform": {
+        "translation_mm": {
+          "A": [
+            -12,
+            -25,
+            0
+          ],
+          "B": [
+            12,
+            25,
+            0
+          ],
+          "Key 1": [
+            -9,
+            -55,
+            -8
+          ],
+          "Key 2": [
+            9,
+            -55,
+            -8
+          ]
+        },
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      }
+    },
+    {
+      "name": "J06-assembled",
+      "elementId": "e4ce629a61cba42a392cecf8",
+      "featureId": "F9kFZgScVswEtrd_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "a34aecc426fc60d5e9413e33",
+      "inspectionMicroversion": "bb8aeb56aae00b64c06deb6e",
+      "parts": [
+        {
+          "partId": "J7D",
+          "name": "J06 / A / Echo-Lock principle",
+          "microversionId": "bb8aeb56aae00b64c06deb6e"
+        },
+        {
+          "partId": "RABD",
+          "name": "J06 / B / Echo-Lock principle",
+          "microversionId": "bb8aeb56aae00b64c06deb6e"
+        }
+      ],
+      "render": "site/assets/joints-J06-assembled.png",
+      "render_sha256": "a75995c392ce98eac74caa97f2050dacd750f8bd6792e52796e860a48b661699",
+      "view_transform": {
+        "translation_mm": "identity",
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      },
+      "step": "examples/printed-joints/exports/J06-assembled.step",
+      "step_sha256": "eefa2d64c19b97195f421f3412829dde06c5a84fed3d3bbf725501186e52f387"
+    },
+    {
+      "name": "J06-separate",
+      "elementId": "f208b0f8e4fe0103c8d68b4a",
+      "featureId": "FQWDXecopAxp4jG_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "bb8aeb56aae00b64c06deb6e",
+      "inspectionMicroversion": "bb8aeb56aae00b64c06deb6e",
+      "parts": [
+        {
+          "partId": "J7D",
+          "name": "J06 / A / Echo-Lock principle",
+          "microversionId": "bb8aeb56aae00b64c06deb6e"
+        },
+        {
+          "partId": "RABD",
+          "name": "J06 / B / Echo-Lock principle",
+          "microversionId": "bb8aeb56aae00b64c06deb6e"
+        }
+      ],
+      "render": "site/assets/joints-J06-separate.png",
+      "render_sha256": "e60c05a926edfd2172d9f649a3ae41869ee14b2ea518bab4409dfcdbb9f3b127",
+      "view_transform": {
+        "translation_mm": {
+          "A": [
+            -12,
+            -25,
+            0
+          ],
+          "B": [
+            12,
+            25,
+            0
+          ],
+          "Key 1": [
+            -9,
+            -55,
+            -8
+          ],
+          "Key 2": [
+            9,
+            -55,
+            -8
+          ]
+        },
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      }
+    },
+    {
+      "name": "J07-assembled",
+      "elementId": "07327da1691694e39f624c40",
+      "featureId": "FYKzRTyHAzlKH69_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "f6b346c07b3c1a79ef81bc01",
+      "inspectionMicroversion": "9594d34fc885f0545354ccb8",
+      "parts": [
+        {
+          "partId": "RXBD",
+          "name": "J07 / A / Drop-Lock principle",
+          "microversionId": "9594d34fc885f0545354ccb8"
+        },
+        {
+          "partId": "RcBD",
+          "name": "J07 / B / Drop-Lock principle",
+          "microversionId": "9594d34fc885f0545354ccb8"
+        }
+      ],
+      "render": "site/assets/joints-J07-assembled.png",
+      "render_sha256": "b675c14cb62a3595b10036149290cc08cfb0e05f73e7c12e11246c51bbce3357",
+      "view_transform": {
+        "translation_mm": "identity",
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      },
+      "step": "examples/printed-joints/exports/J07-assembled.step",
+      "step_sha256": "c788ef82c60f96ecd5ee922d63e91206fa5a8b7d4e474330518356a5a3a03c03"
+    },
+    {
+      "name": "J07-separate",
+      "elementId": "209da1bd336646d0e63eae10",
+      "featureId": "F06jEjoYU82FG9Z_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "9594d34fc885f0545354ccb8",
+      "inspectionMicroversion": "9594d34fc885f0545354ccb8",
+      "parts": [
+        {
+          "partId": "RXBD",
+          "name": "J07 / A / Drop-Lock principle",
+          "microversionId": "9594d34fc885f0545354ccb8"
+        },
+        {
+          "partId": "RcBD",
+          "name": "J07 / B / Drop-Lock principle",
+          "microversionId": "9594d34fc885f0545354ccb8"
+        }
+      ],
+      "render": "site/assets/joints-J07-separate.png",
+      "render_sha256": "91754a9a837f3dc657b6ac0b52d7e18314f548c800815cc8376cc3089d1615ff",
+      "view_transform": {
+        "translation_mm": {
+          "A": [
+            -12,
+            -25,
+            0
+          ],
+          "B": [
+            12,
+            25,
+            0
+          ],
+          "Key 1": [
+            -9,
+            -55,
+            -8
+          ],
+          "Key 2": [
+            9,
+            -55,
+            -8
+          ]
+        },
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      }
+    },
+    {
+      "name": "J08-assembled",
+      "elementId": "eb0657ef8e8f8cf92322b497",
+      "featureId": "Fn08TxYJk7j6BUM_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "092ce1575f136c2fe62f3ad4",
+      "inspectionMicroversion": "d900b179598e03d720a03682",
+      "parts": [
+        {
+          "partId": "JHD",
+          "name": "J08 / A / Keyed stopped scarf",
+          "microversionId": "d900b179598e03d720a03682"
+        },
+        {
+          "partId": "JLD",
+          "name": "J08 / B / Keyed stopped scarf",
+          "microversionId": "d900b179598e03d720a03682"
+        },
+        {
+          "partId": "JeD",
+          "name": "J08 / Key 1 / Keyed stopped scarf",
+          "microversionId": "d900b179598e03d720a03682"
+        },
+        {
+          "partId": "JiD",
+          "name": "J08 / Key 2 / Keyed stopped scarf",
+          "microversionId": "d900b179598e03d720a03682"
+        }
+      ],
+      "render": "site/assets/joints-J08-assembled.png",
+      "render_sha256": "2d92c0b47fd627f7f689e150beb1ebd7a4c05e5af89c4e7214ba01afc789d195",
+      "view_transform": {
+        "translation_mm": "identity",
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      },
+      "step": "examples/printed-joints/exports/J08-assembled.step",
+      "step_sha256": "70074cb29b640de7bb140f53b8a4c5a96561eb4aeb58f280271cc36635bd8714"
+    },
+    {
+      "name": "J08-separate",
+      "elementId": "00024c6ee3c794b44cbaf2cf",
+      "featureId": "FdNwkR4lNnofH6d_0",
+      "featureStatus": "OK",
+      "featureSourceMicroversion": "4011cb8eed370ef44a79e7dd",
+      "featureSourceSha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "buildMicroversion": "d900b179598e03d720a03682",
+      "inspectionMicroversion": "d900b179598e03d720a03682",
+      "parts": [
+        {
+          "partId": "JHD",
+          "name": "J08 / A / Keyed stopped scarf",
+          "microversionId": "d900b179598e03d720a03682"
+        },
+        {
+          "partId": "JLD",
+          "name": "J08 / B / Keyed stopped scarf",
+          "microversionId": "d900b179598e03d720a03682"
+        },
+        {
+          "partId": "JeD",
+          "name": "J08 / Key 1 / Keyed stopped scarf",
+          "microversionId": "d900b179598e03d720a03682"
+        },
+        {
+          "partId": "JiD",
+          "name": "J08 / Key 2 / Keyed stopped scarf",
+          "microversionId": "d900b179598e03d720a03682"
+        }
+      ],
+      "render": "site/assets/joints-J08-separate.png",
+      "render_sha256": "cf077fff514d27a696e661b952aca99d81ba64dd338bead236a2e0711e6bf76e",
+      "view_transform": {
+        "translation_mm": {
+          "A": [
+            -12,
+            -25,
+            0
+          ],
+          "B": [
+            12,
+            25,
+            0
+          ],
+          "Key 1": [
+            -9,
+            -55,
+            -8
+          ],
+          "Key 2": [
+            9,
+            -55,
+            -8
+          ]
+        },
+        "purpose": "Illustrative parts layout, not a print or assembly pose"
+      }
+    }
+  ]
+}

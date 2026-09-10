@@ -1,0 +1,644 @@
+{
+  "schemaVersion": 1,
+  "background": "#edf0ef",
+  "defaults": {
+    "resolution": [
+      1800,
+      1500
+    ],
+    "palette": {
+      "print": [
+        0.94,
+        0.4,
+        0.095,
+        1
+      ],
+      "dark": [
+        0.18,
+        0.235,
+        0.285,
+        1
+      ],
+      "hardware": [
+        0.67,
+        0.71,
+        0.74,
+        1
+      ],
+      "rubber": [
+        0.105,
+        0.135,
+        0.15,
+        1
+      ],
+      "pcb": [
+        0.09,
+        0.42,
+        0.24,
+        1
+      ],
+      "old": [
+        0.58,
+        0.64,
+        0.67,
+        1
+      ],
+      "blue": [
+        0.08,
+        0.48,
+        0.74,
+        1
+      ],
+      "white": [
+        0.87,
+        0.9,
+        0.91,
+        1
+      ],
+      "rail": [
+        0.35,
+        0.65,
+        0.82,
+        1
+      ],
+      "wagon": [
+        0.22,
+        0.47,
+        0.66,
+        1
+      ]
+    }
+  },
+  "styles": [
+    {
+      "id": "a-current",
+      "label": "A - Current CAD",
+      "description": "Workbench studio light, bright cavity edges and uniform surface shading.",
+      "mode": "existing"
+    },
+    {
+      "id": "b-illustrated",
+      "label": "B - Illustrated manual",
+      "description": "Matte surfaces, soft depth and dark contour lines.",
+      "mode": "illustrated",
+      "samples": 40,
+      "lines": true,
+      "lineThickness": 1.25,
+      "lineColor": [
+        0.055,
+        0.075,
+        0.085
+      ],
+      "worldStrength": 0.4,
+      "exposure": -2.7
+    },
+    {
+      "id": "c-studio",
+      "label": "C - Soft studio",
+      "description": "Material-specific metal and plastic, soft lighting and natural reflections.",
+      "mode": "studio",
+      "samples": 56,
+      "lines": false,
+      "worldStrength": 0.2,
+      "exposure": -2.7
+    },
+    {
+      "id": "d-technical",
+      "label": "D - Technical line art",
+      "description": "White surfaces and visible feature lines for a monochrome instruction style.",
+      "mode": "technical",
+      "samples": 8,
+      "lines": true,
+      "lineThickness": 1.3,
+      "lineColor": [
+        0.035,
+        0.045,
+        0.055
+      ],
+      "worldStrength": 0.0,
+      "exposure": 0.0
+    },
+    {
+      "id": "e-blueprint",
+      "label": "E - Blueprint",
+      "description": "Cyan feature lines on a deep blue drafting background.",
+      "mode": "blueprint",
+      "samples": 8,
+      "lines": true,
+      "lineThickness": 1.6,
+      "lineColor": [
+        0.24,
+        0.72,
+        1.0
+      ],
+      "worldStrength": 0.0,
+      "exposure": 0.0,
+      "background": "#102c46"
+    },
+    {
+      "id": "f-iridescent",
+      "label": "F - Iridescent concept",
+      "description": "Sculptural metal with angle-dependent colour shifts; a presentation treatment.",
+      "mode": "iridescent",
+      "samples": 64,
+      "lines": false,
+      "worldStrength": 0.25,
+      "exposure": -2.0,
+      "background": "#18202b"
+    },
+    {
+      "id": "g-hdr-4k",
+      "label": "G - HDR studio / 4K",
+      "description": "Studio HDR environment, detailed surface reflections and a 3840 px render.",
+      "mode": "hdr",
+      "samples": 96,
+      "resolution": [
+        3840,
+        3200
+      ],
+      "saveExr": true,
+      "lines": false,
+      "worldStrength": 0.65,
+      "exposure": -2.3,
+      "environment": "studio.exr"
+    },
+    {
+      "id": "h-sketch",
+      "label": "H - Pencil sketch",
+      "description": "Graphite contours with subtle hand-drawn variation on warm paper.",
+      "mode": "sketch",
+      "samples": 32,
+      "lines": true,
+      "lineThickness": 1.05,
+      "lineColor": [
+        0.085,
+        0.067,
+        0.05
+      ],
+      "worldStrength": 0.45,
+      "exposure": -2.1,
+      "background": "#f3ecdf"
+    },
+    {
+      "id": "i-brick-manual",
+      "label": "I - Brick manual",
+      "description": "LEGO-inspired instruction styling: bold colour, plastic sheen and clear outlines.",
+      "mode": "brick",
+      "samples": 48,
+      "lines": true,
+      "lineThickness": 1.9,
+      "lineColor": [
+        0.025,
+        0.03,
+        0.035
+      ],
+      "worldStrength": 0.5,
+      "exposure": -2.5,
+      "palette": {
+        "old": [
+          0.38,
+          0.45,
+          0.5,
+          1
+        ],
+        "print": [
+          1.0,
+          0.24,
+          0.008,
+          1
+        ],
+        "rail": [
+          0.035,
+          0.31,
+          0.67,
+          1
+        ],
+        "wagon": [
+          0.02,
+          0.2,
+          0.45,
+          1
+        ]
+      }
+    },
+    {
+      "id": "j-editorial",
+      "label": "J - Design studio",
+      "description": "A restrained slate-and-sand palette, satin finishes and warm soft light.",
+      "mode": "editorial",
+      "samples": 64,
+      "lines": false,
+      "worldStrength": 0.4,
+      "exposure": -2.5,
+      "background": "#eee9e1",
+      "palette": {
+        "old": [
+          0.12,
+          0.2,
+          0.245,
+          1
+        ],
+        "print": [
+          0.68,
+          0.46,
+          0.265,
+          1
+        ],
+        "hardware": [
+          0.43,
+          0.46,
+          0.49,
+          1
+        ],
+        "rail": [
+          0.35,
+          0.43,
+          0.46,
+          1
+        ],
+        "wagon": [
+          0.25,
+          0.32,
+          0.35,
+          1
+        ]
+      }
+    },
+    {
+      "id": "k-ghibli",
+      "label": "K - Ghibli-inspired",
+      "description": "Painted sage and terracotta, warm light, blue-grey shadows and fine ink contours.",
+      "mode": "ghibli",
+      "samples": 32,
+      "lines": true,
+      "lineThickness": 1.15,
+      "lineColor": [
+        0.12,
+        0.095,
+        0.073
+      ],
+      "worldStrength": 0,
+      "exposure": 0,
+      "background": "#eee9d9",
+      "palette": {
+        "old": [
+          0.58,
+          0.64,
+          0.39,
+          1
+        ],
+        "print": [
+          0.72,
+          0.255,
+          0.11,
+          1
+        ],
+        "rail": [
+          0.24,
+          0.47,
+          0.55,
+          1
+        ],
+        "wagon": [
+          0.16,
+          0.3,
+          0.35,
+          1
+        ],
+        "hardware": [
+          0.78,
+          0.72,
+          0.53,
+          1
+        ],
+        "rubber": [
+          0.12,
+          0.15,
+          0.11,
+          1
+        ]
+      }
+    },
+    {
+      "id": "l-sci-fi-anime",
+      "label": "L - Sci-fi punk anime",
+      "description": "Hard cel-shaded planes, graphic dark shadows, orange panels and cyan accents.",
+      "mode": "anime",
+      "samples": 32,
+      "lines": true,
+      "lineThickness": 2.0,
+      "lineColor": [
+        0.008,
+        0.013,
+        0.024
+      ],
+      "worldStrength": 0,
+      "exposure": 0,
+      "background": "#222b3c",
+      "palette": {
+        "old": [
+          0.22,
+          0.28,
+          0.37,
+          1
+        ],
+        "print": [
+          1,
+          0.3,
+          0.018,
+          1
+        ],
+        "rail": [
+          0.01,
+          0.8,
+          1,
+          1
+        ],
+        "wagon": [
+          0.01,
+          0.45,
+          0.6,
+          1
+        ],
+        "hardware": [
+          0.62,
+          0.7,
+          0.74,
+          1
+        ],
+        "rubber": [
+          0.02,
+          0.025,
+          0.04,
+          1
+        ]
+      }
+    },
+    {
+      "id": "m-architecture",
+      "label": "M - Shaded architecture",
+      "description": "Light clay surfaces, fine grey edges, deep contact shading and restrained blue accents.",
+      "mode": "architecture",
+      "samples": 48,
+      "lines": true,
+      "lineThickness": 0.9,
+      "lineColor": [
+        0.26,
+        0.28,
+        0.29
+      ],
+      "worldStrength": 0.35,
+      "exposure": -2.15,
+      "background": "#ffffff",
+      "palette": {
+        "old": [
+          0.88,
+          0.89,
+          0.88,
+          1
+        ],
+        "print": [
+          0.82,
+          0.84,
+          0.84,
+          1
+        ],
+        "rail": [
+          0.39,
+          0.56,
+          0.66,
+          1
+        ],
+        "wagon": [
+          0.3,
+          0.44,
+          0.51,
+          1
+        ],
+        "hardware": [
+          0.74,
+          0.77,
+          0.79,
+          1
+        ],
+        "rubber": [
+          0.25,
+          0.28,
+          0.3,
+          1
+        ]
+      }
+    },
+    {
+      "id": "n-industrial-product",
+      "label": "N - Teenage Engineering-inspired",
+      "description": "A 4K product treatment: warm grey shells, satin metal, graphite and small orange accents.",
+      "mode": "product",
+      "samples": 96,
+      "lines": false,
+      "resolution": [
+        3840,
+        3200
+      ],
+      "worldStrength": 0.45,
+      "environment": "studio.exr",
+      "exposure": -2.8,
+      "background": "#eeedeb",
+      "semanticColors": true,
+      "lights": {
+        "Large key": {
+          "energy": 38,
+          "size": 0.38
+        },
+        "Soft fill": {
+          "energy": 8,
+          "size": 0.48
+        },
+        "Upper rim": {
+          "energy": 22,
+          "size": 0.18
+        }
+      },
+      "palette": {
+        "shell": [
+          0.62,
+          0.61,
+          0.57,
+          1
+        ],
+        "panel": [
+          0.45,
+          0.45,
+          0.42,
+          1
+        ],
+        "accent": [
+          1,
+          0.12,
+          0.008,
+          1
+        ],
+        "print": [
+          0.13,
+          0.14,
+          0.14,
+          1
+        ],
+        "dark": [
+          0.025,
+          0.029,
+          0.03,
+          1
+        ],
+        "pcb": [
+          0.035,
+          0.045,
+          0.04,
+          1
+        ],
+        "rail": [
+          0.21,
+          0.23,
+          0.24,
+          1
+        ],
+        "wagon": [
+          0.075,
+          0.09,
+          0.1,
+          1
+        ],
+        "hardware": [
+          0.46,
+          0.47,
+          0.47,
+          1
+        ],
+        "rubber": [
+          0.012,
+          0.015,
+          0.015,
+          1
+        ]
+      }
+    },
+    {
+      "id": "o-garage-diorama",
+      "label": "O - Garage diorama",
+      "description": "Rick-and-Morty garage reference: warm miniature lighting, muted olive and terracotta.",
+      "mode": "garage",
+      "samples": 64,
+      "lines": false,
+      "worldStrength": 0.25,
+      "exposure": -2.3,
+      "background": "#40322e",
+      "lights": {
+        "Large key": {
+          "energy": 42,
+          "size": 0.45
+        },
+        "Soft fill": {
+          "energy": 9,
+          "size": 0.42
+        },
+        "Upper rim": {
+          "energy": 18,
+          "size": 0.3
+        }
+      },
+      "palette": {
+        "old": [
+          0.28,
+          0.32,
+          0.2,
+          1
+        ],
+        "print": [
+          0.52,
+          0.19,
+          0.12,
+          1
+        ],
+        "rail": [
+          0.28,
+          0.43,
+          0.41,
+          1
+        ],
+        "wagon": [
+          0.17,
+          0.26,
+          0.22,
+          1
+        ],
+        "hardware": [
+          0.67,
+          0.56,
+          0.38,
+          1
+        ],
+        "rubber": [
+          0.045,
+          0.055,
+          0.038,
+          1
+        ]
+      }
+    },
+    {
+      "id": "p-sketchup",
+      "label": "P - SketchUp-style",
+      "description": "Clean dark edges, simple face shading and a neutral architectural-model palette.",
+      "mode": "sketchup",
+      "samples": 12,
+      "lines": true,
+      "lineThickness": 1.65,
+      "lineColor": [
+        0.055,
+        0.06,
+        0.055
+      ],
+      "worldStrength": 0,
+      "exposure": 0,
+      "background": "#ffffff",
+      "palette": {
+        "old": [
+          0.33,
+          0.36,
+          0.35,
+          1
+        ],
+        "print": [
+          0.65,
+          0.52,
+          0.32,
+          1
+        ],
+        "rail": [
+          0.37,
+          0.48,
+          0.45,
+          1
+        ],
+        "wagon": [
+          0.22,
+          0.29,
+          0.27,
+          1
+        ],
+        "hardware": [
+          0.69,
+          0.7,
+          0.68,
+          1
+        ],
+        "rubber": [
+          0.08,
+          0.09,
+          0.085,
+          1
+        ]
+      }
+    }
+  ]
+}

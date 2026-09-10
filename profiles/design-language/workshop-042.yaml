@@ -1,0 +1,11 @@
+id: workshop-042
+source: historical-project-preference
+calibration: not-a-manufacturing-calibration
+units: mm
+label: Workshop 0.42
+edges:
+  vertical_fillet: 4.2
+  edge_break: 0.42
+  protected: [mating-faces, bearing-seats, rack-teeth, motion-envelopes, load-paths]
+intent: Flush adjoining silhouettes, continuous edge treatment and deliberate functional transitions.
+provenance: UniFi mount and local FDM/Onshape skill notes.

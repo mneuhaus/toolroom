@@ -1,0 +1,131 @@
+# Uncalibrated manufacturing example. Dimensions come from the supplied package, not new machine measurements.
+id: fdm-bambu-a1-0.4
+process: fdm
+machine: Bambu Lab A1; AMS not assumed
+units: mm
+source: Uncalibrated example from the supplied package; override with the actual project
+  setup
+build_volume:
+- 256
+- 256
+- 256
+nozzle: 0.4
+line_width: 0.42
+layer_height:
+  default: 0.2
+  fine: 0.12
+  draft: 0.28
+walls:
+  hard_min: 0.84
+  min_thickness: 1.26
+  recommended: 1.68
+  stiff: 2.1
+  around_insert_each_side: 1.68
+  allowed_multiples_of: 0.42
+  scope: Geometric screening and generic enclosure exploration; not a strength specification
+features:
+  min_positive: 0.8
+  min_negative: 1.0
+  min_hole_dia_vertical: 1.5
+  min_hole_dia_horizontal: 2.0
+  max_fillet_vs_wall: 0.9
+overhang:
+  max_angle_deg: 45
+  max_angle_hidden: 55
+  max_bridge: 20
+  supports: Use a project-specific support strategy and verify actual sliced paths
+holes:
+  compensation_vertical: 0.2
+  compensation_vertical_large: 0.1
+  compensation_horizontal: 0.3
+  horizontal_shape: teardrop
+  scope: Calibration candidates; never add these offsets to already approved fits
+    automatically
+clearances:
+  press: -0.05
+  tight: 0.15
+  slip: 0.25
+  free: 0.4
+  print_in_place: 0.5
+  scope: Starting candidates only; define radial/diametral or per-side interpretation
+    for each interface
+edges:
+  bottom_chamfer: 0.5
+  min_chamfer: 0.4
+  chamfer_step: 0.2
+  min_fillet_vertical_edge: 0.5
+text:
+  min_height: 5.0
+  min_stroke: 0.8
+  inlay_depth: 0.4
+  emboss_height: 0.6
+  deboss_depth: 0.6
+  font_weight: bold
+multicolor:
+  system: Optional; select only if actual hardware and filament assignments are known
+  color_region_min_thickness: 0.4
+  min_color_island: 1.0
+  cheap_change: between layers (Z)
+  expensive_change: several colours in one layer (purge per change)
+  tpu_via_ams: false
+inserts:
+  M2:
+    od: 3.2
+    hole: 3.2
+    depth: 4.0
+  M2.5:
+    od: 3.5
+    hole: 3.4
+    depth: 5.7
+  M3:
+    od: 4.6
+    hole: 4.0
+    depth: 5.7
+  M4:
+    od: 5.6
+    hole: 5.6
+    depth: 8.1
+  M5:
+    od: 6.4
+    hole: 6.4
+    depth: 9.5
+  mouth_chamfer: 0.5
+  boss_od_min_over_insert: 3.4
+screw_clearance:
+  M2: 2.6
+  M2.5: 3.1
+  M3: 3.6
+  M4: 4.7
+  M5: 5.7
+self_tapping_pilot:
+  M2: 1.6
+  M2.5: 2.0
+  M3: 2.5
+  M4: 3.3
+nut_trap:
+  M3:
+    across_flats: 5.7
+    depth: 2.6
+  M4:
+    across_flats: 7.2
+    depth: 3.4
+snap_fit:
+  thickness: 1.6
+  length: 12
+  hook: 1.0
+  entry_angle: 30
+  retention_angle: 80
+  taper: 0.3
+threads:
+  printed_min: M8
+materials:
+  default: PLA matte
+  selection: Use an existing verified machine/material preset; other materials need
+    a separate profile
+orientation_rules:
+- Choose the orientation using strength, joint geometry, surface finish and support
+  needs together
+- Keep the native-to-print transform in the part manifest
+- Existing approved support and mating-face orientations take precedence over generic
+  preferences
+- Calibrate actual screw/insert holes and label strokes in their intended orientation

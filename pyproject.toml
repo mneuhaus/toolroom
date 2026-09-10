@@ -1,0 +1,10 @@
+[project]
+name = "cad-skills-framework"
+version = "0.1.0.dev0"
+description = "A local CAD skill workbench, documentation and verification tools"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy>=2,<3", "scipy>=1.14,<2", "trimesh>=4.5,<5", "pyyaml>=6,<7",
+  "rtree>=1.3,<2", "build123d==0.10.0", "ocp-gordon==0.2.0", "markdown-it-py>=3,<5",
+  "pillow>=12,<13"
+]

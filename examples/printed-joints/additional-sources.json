@@ -1,0 +1,89 @@
+{
+  "status": "additional-reference-review",
+  "repeated_source": {
+    "url": "https://www.youtube.com/watch?v=fSISiR5XIbk&t=6s",
+    "existing_example": "J08",
+    "note": "Same source video as the initial collection; not counted as an additional source."
+  },
+  "sources": [
+    {
+      "id": "UUiE-b5xlbo",
+      "url": "https://www.youtube.com/shorts/UUiE-b5xlbo",
+      "title": "Designer Snap Kit for adding pegs to your 3d printed projects. available in my Patreon or etsy.",
+      "creator": "Dsk",
+      "upload_date": "20221210",
+      "duration_seconds": 11,
+      "accessed": "2026-09-10",
+      "method": "Metadata and video frames; no English subtitles available.",
+      "sampling_interval_seconds": 1,
+      "detail_frame_seconds": 3.8,
+      "evidence_sha256": {
+        "metadata": "846d82605fc70c6ef06ba1acefbd5aaf608315aef45f862514fdd89a9b795029",
+        "video": "9e541c11b202ada62745877386cbeeee9e838016b286bcde09543215aa409601",
+        "contact_sheet": "6749561d20eeeb5a815f7d930c959130026c43b9ce4779ac3df57326a450887a",
+        "detail_frame": "1b1c97385a58b78ce86012b48d7475090952c8be2508dfe8d6ded3423ff19aa0"
+      },
+      "status": "reviewed-reference-only; no native reconstruction or physical verification"
+    },
+    {
+      "id": "E6BHts_ii8s",
+      "url": "https://www.youtube.com/watch?v=E6BHts_ii8s",
+      "title": "3D Printed Panel Joint - Joining Thin Panel Mechanically",
+      "creator": "Payo",
+      "upload_date": "20241121",
+      "duration_seconds": 165,
+      "accessed": "2026-09-10",
+      "method": "Metadata, automatic English transcript and video frames.",
+      "sampling_interval_seconds": 10,
+      "detail_frame_seconds": 136,
+      "evidence_sha256": {
+        "metadata": "882aa6c3ab025839840fc531f3f43766e0c1b2b50be3899b7dd6c91c1bc23ed3",
+        "video": "2db841858e3ab3b0a57ac4dbd6e8d7428dd83f028105da7af2e56bd5c001e2ac",
+        "contact_sheet": "0b9f669182a92327ac7703a8ae7511760b8ef0e328c02d1514ae003784ca49fc",
+        "detail_frame": "14cf44cb687f81a4cb0793832e320a8b20c99f99d1a65744515fac47db25be15",
+        "transcript": "e5aec09e0e29266a7f6b97d56755df34354d0898c8e66e5856c76cc0647b1c1b"
+      },
+      "status": "reviewed-reference-only; no native reconstruction or physical verification"
+    },
+    {
+      "id": "JXoMlPqsxLQ",
+      "url": "https://www.youtube.com/shorts/JXoMlPqsxLQ",
+      "title": "Snapfit prototype #3 #3dprinting #cad #satisfying #satisfyingvideo #3ddesign #3dprint",
+      "creator": "V3DPrints",
+      "upload_date": "20230215",
+      "duration_seconds": 9,
+      "accessed": "2026-09-10",
+      "method": "Metadata and video frames; subtitle retrieval returned HTTP 429, so no transcript was used.",
+      "sampling_interval_seconds": 1,
+      "detail_frame_seconds": 3.5,
+      "evidence_sha256": {
+        "metadata": "3e71d06bd193a30abedcb3988fd049ff48b25d9f54de3e13f565f9bc08d7e5ce",
+        "video": "af9d613d34ed9c6ab4586d6adab385367221bb7029384cf6261b40cb3caa5bdb",
+        "contact_sheet": "eff36793e7b18953b49ab38157db2325e976d9849aac2ba3aadb7524ec11d50e",
+        "detail_frame": "55a6cf925f701e0b9ff8b42d252977f0123997637fd129c550b1d863dc415e98"
+      },
+      "status": "reviewed-reference-only; no native reconstruction or physical verification"
+    },
+    {
+      "id": "ER19yHpgT30",
+      "url": "https://www.youtube.com/shorts/ER19yHpgT30",
+      "title": "How to Join Parts Together!",
+      "creator": "Joseph Willis",
+      "upload_date": "20240210",
+      "duration_seconds": 48,
+      "accessed": "2026-09-10",
+      "method": "Metadata, automatic English transcript and video frames; 0.05 mm outer clearance confirmed in the frame at 37 seconds.",
+      "sampling_interval_seconds": 4,
+      "detail_frame_seconds": 37,
+      "evidence_sha256": {
+        "metadata": "4d1d23e947bb89bd6b17ae0a4b79f9dd77efde15d04c4ca76bef9c64736798bb",
+        "video": "fcdff07c54bda42811e0b8a5d4c1aba38b438eeffa99d4a27dfdf316c44e7fed",
+        "contact_sheet": "083da25d1fbe70196f706cd07269287c2dec1887eaa19664b42008d5b5b7de76",
+        "detail_frame": "bd7f33a35c3ebe49dc080a84c311ad3356489c56d3cb56da7d838b9225db30f0",
+        "transcript": "cbc8dba667849792743af306d90fffc02b0d0fa38552a95e3bdb3f378ab58ea1"
+      },
+      "status": "reviewed-reference-only; no native reconstruction or physical verification"
+    }
+  ],
+  "copyright": "Original videos and CAD remain with their authors. Analysis files are retained locally; original CAD, full videos and transcripts are not redistributed."
+}

@@ -1,0 +1,56 @@
+# Manufacturing profile — small diode laser, 3 mm sheet (plywood / MDF / opaque cast acrylic)
+# 2.5D plates: front plates, spacers, stacked bodies. Model nominal; CAM compensates kerf.
+
+id: laser-diode-3mm
+process: laser
+machine: self-built diode laser (450 nm)
+units: mm
+source: default                       # kerf and fits deserve "measured" quickly
+
+build_volume: [300, 200, 6]           # [x, y, max cut thickness]; set to the actual bed
+
+sheet:
+  material: birch plywood
+  nominal_thickness: 3.0
+  measured_thickness: 3.0             # measure every batch; plywood runs 2.6–3.2
+
+kerf: 0.18                            # plywood; acrylic 0.18, MDF 0.18, cardboard 0.2
+kerf_compensation: in_cam             # LightBurn kerf offset = kerf/2
+
+fits:                                 # slot width relative to measured thickness
+  press: -0.05
+  firm: 0.05
+  slip: 0.2
+
+min_feature: 3.0                      # structural; = sheet thickness in plywood
+min_feature_decorative: 1.0           # plywood; 0.5 in acrylic
+min_hole: 1.0
+min_cut_spacing: 1.0
+inner_corner_radius: 0.0              # sharp is possible; use 0.5 in acrylic against cracks
+taper_deg: 1.0                        # cut-wall taper on 3 mm
+
+engraving:
+  vector_min_text: 2.0
+  raster_min_text: 3.0
+  raster_min_stroke: 0.5
+  depth: cosmetic
+  best_surface: black cast acrylic (frosted white mark)
+
+joints:
+  tab_width_min: 6.0                  # 2 × thickness
+  tab_length: 3.0                     # = thickness for flush; 4.0 proud as a feature
+  finger_width: 6–9
+  finger_count: odd per edge
+  t_slot: {screw: M3, slot: 3.4, nut_pocket: [5.6, 2.6], edge_offset: 6.0}
+  stack_alignment: two Ø3.4 through-holes per plate
+
+screw_clearance: {M2: 2.4, M2.5: 2.9, M3: 3.4, M4: 4.5}
+
+living_hinge: {slot_length: 22, slot_spacing: 1.8, end_gap: 1.0, min_bend_radius: 20}
+
+materials:
+  cuts: [birch plywood ≤ 4, MDF 3, opaque cast acrylic ≤ 3 (dark colours), cardboard, felt, leather]
+  cannot: [clear/white acrylic, PVC, polycarbonate, metal]
+  marks: [anodised aluminium (surface bleach), coated metals, slate, glass with coating]
+
+cut_order: inner features first, outline last

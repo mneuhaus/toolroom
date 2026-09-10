@@ -1,0 +1,83 @@
+# Design-language profile template. Copy, rename to <id>.yaml, fill it.
+# Tag values with a comment: observed | measured | estimated | derived.
+# Read references/design-language-schema.md for what each field means and how to choose it.
+# Manufacturing minimums are NOT here — they live in the manufacturing profile and win.
+
+meta:
+  id: <slug>
+  name: <one line a human recognises>
+  intent: >
+    <three sentences: what it is for, how it should feel, what it refuses>
+  references: []                         # products / photos / STEP files used
+
+edges:
+  policy: sharp | broken | chamfer | fillet | mixed
+  edge_treatment: {type: chamfer | fillet, size: , angle: 45}
+  outer_corner_radius:                   # plan-view corners
+  radius_family: []                      # allowed fillet radii, e.g. [0.5, 1, 2]
+  max_radius:
+  inner_corner_radius:
+  bottom_edge: {type: chamfer | fillet, size: }
+  hierarchy: <which edges get which treatment>
+
+proportions:
+  grid:                                  # 0 = no visible grid
+  sub_grid:
+  control_pitch:
+  preferred_aspect_ratios: []
+  plate_thickness:
+  layering: []                           # e.g. [front_plate, body, back_plate] or [shell]
+  reveal: {width: , depth: }
+  nesting_offset:
+  snap_positions_to_grid: true | false
+
+surfaces:
+  finish: matte | satin | gloss | textured
+  texture_zones: []                      # [{zone, type: fuzzy_skin | ribs | knurl, ...}]
+  visible_face_rule: <which faces are cosmetic and what orientation they need>
+  parting_lines: celebrated | hidden
+
+fasteners:
+  visible: true | false
+  type: <e.g. M3 socket head cap, black>
+  pattern: {rule: , inset_grid_units: }
+  method: heat-set inserts | self-tapping | captive nuts | snap-fit | press-fit pins
+  head_treatment: flush | proud | sunk | countersunk
+
+color:
+  base: []                               # RAL / Pantone / filament names, 1–2
+  accents: []
+  max_colors_per_object:
+  accent_rule: <where accents may appear>
+  semantics: {}                          # colour → meaning
+  filament_map: {}
+
+typography:
+  font: <family or description>
+  case: lowercase | uppercase | mixed
+  method: multicolor_inlay | embossed | debossed | engraved | printed_plate
+  min_height:
+  placement: <rule>
+  density: none | sparse | full
+
+controls:
+  knob_cap: {shape: , dia: , height: , top: , chamfer: , shaft: , color: }
+  button: {footprint: , corner_radius: , gap_to_bezel: , pitch: , material: }
+  display: {mount: , bezel: , window_corner_radius: }
+  ports: bare | framed | recessed
+
+grilles:
+  pattern: {type: round_holes | slots | none, dia: , pitch: , arrangement: square | hex, w: , l: }
+  alignment:
+  edge_margin:
+
+feet_and_handles:
+  feet:
+  handles:
+
+signature:
+  playfulness: none | one element | pervasive
+  element_examples: []
+  humour_in_labels: false
+
+anti_patterns: []                        # concrete things that break the look

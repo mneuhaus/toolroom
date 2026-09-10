@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "documents": 68,
+  "source_files": 126,
+  "local_links": 192,
+  "modules": 10,
+  "case_studies": 8,
+  "lab_cases": 4,
+  "network_required": false,
+  "outputs": {
+    "index.html": "4282a622e1aa625aa88d4a4a1fc30e85acfcf49ae1e963918e311496544c56ed",
+    "site/style.css": "acc202f79ab7102114cc16f8c692bb4a8c9f6b3fbc5c4cd11a944eec05220c8d",
+    "site/app.js": "18383ca5135e16235bd6178a29b668b7bc6efd23cd947b2be50a190cab64b0d7",
+    "site/data.js": "27fd06097985cbb630b55cb95896a0a639e36293af2f86390df1622a31f5cf8c"
+  }
+}

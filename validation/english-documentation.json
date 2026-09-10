@@ -1,0 +1,195 @@
+{
+  "status": "passed",
+  "language": "en",
+  "date": "2026-09-10",
+  "scope": "Maintained framework documentation, website UI, source references, case studies, figure labels and the generated Postplan reading edition.",
+  "desktop": {
+    "status": "passed",
+    "language": "en",
+    "routes": [
+      {
+        "path": "overview",
+        "title": "From idea\nto part.",
+        "overflow": false
+      },
+      {
+        "path": "architecture",
+        "title": "Five layers. One shared workflow.",
+        "overflow": false
+      },
+      {
+        "path": "skills",
+        "title": "The knowledge is now in one place.",
+        "overflow": false
+      },
+      {
+        "path": "examples",
+        "title": "Lessons that carry a project forward.",
+        "overflow": false
+      },
+      {
+        "path": "profiles",
+        "title": "One language. Several manufacturing paths.",
+        "overflow": false
+      },
+      {
+        "path": "evidence",
+        "title": "What does a checker actually detect?",
+        "overflow": false
+      },
+      {
+        "path": "knowledge",
+        "title": "The shared rules.",
+        "overflow": false
+      },
+      {
+        "path": "roadmap",
+        "title": "A concrete foundation. Useful next questions.",
+        "overflow": false
+      },
+      {
+        "path": "case/printed-joints",
+        "title": "How two printed parts hold together",
+        "overflow": false
+      },
+      {
+        "path": "read/docs/design-languages/mosey.md",
+        "title": "Mosey \u2014 friendly tools with sculptural form",
+        "overflow": false
+      },
+      {
+        "path": "read/docs/joints/additional-references.md",
+        "title": "Further joint references: panels and elastic clips",
+        "overflow": false
+      }
+    ],
+    "styles": 5,
+    "processes": 4,
+    "joint_views": 16,
+    "english_search_results": [
+      "Panels and elastic clips",
+      "Mosey \u2014 form and handling",
+      "Distributor: modelling the actual contact",
+      "Printed Joints Lab \u2014 eight native joint principles",
+      "Fit, preload and snap retention",
+      "Joints \u2014 how connections hold",
+      "cad-fdm-design",
+      "CAD joints",
+      "Existing interfaces, derived variants and identical parts",
+      "FeatureScript revisions and local verification"
+    ],
+    "errors": []
+  },
+  "mobile": {
+    "mobile_menu": {
+      "closed": "false",
+      "opened": "true"
+    },
+    "note_export": {
+      "contains_test_note": true,
+      "english_heading": true,
+      "filename": "cad-skills-discussion-notes.md"
+    },
+    "previous_note_restored": true,
+    "routes": [
+      {
+        "overflow": false,
+        "route": "overview",
+        "title": "From ideato part."
+      },
+      {
+        "overflow": false,
+        "route": "architecture",
+        "title": "Five layers. One shared workflow."
+      },
+      {
+        "overflow": false,
+        "route": "skills",
+        "title": "The knowledge is now in one place."
+      },
+      {
+        "overflow": false,
+        "route": "examples",
+        "title": "Lessons that carry a project forward."
+      },
+      {
+        "overflow": false,
+        "route": "profiles",
+        "title": "One language. Several manufacturing paths."
+      },
+      {
+        "overflow": false,
+        "route": "evidence",
+        "title": "What does a checker actually detect?"
+      },
+      {
+        "overflow": false,
+        "route": "knowledge",
+        "title": "The shared rules."
+      },
+      {
+        "overflow": false,
+        "route": "roadmap",
+        "title": "A concrete foundation. Useful next questions."
+      },
+      {
+        "overflow": false,
+        "route": "case/printed-joints",
+        "title": "How two printed parts hold together"
+      },
+      {
+        "overflow": false,
+        "route": "read/docs/design-languages/mosey.md",
+        "title": "Mosey \u2014 friendly tools with sculptural form"
+      },
+      {
+        "overflow": false,
+        "route": "read/docs/joints/additional-references.md",
+        "title": "Further joint references: panels and elastic clips"
+      }
+    ],
+    "status": "passed",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "postplan_local": {
+    "broken_anchors": [],
+    "details": 26,
+    "german_text_matches": [],
+    "has_additional_review": true,
+    "has_four_new_sources": true,
+    "horizontal_overflow": false,
+    "images": 25,
+    "language": "en",
+    "status": "passed",
+    "title": "CAD Skills Framework \u2014 Reading edition"
+  },
+  "maintained_source_files": 126,
+  "markdown_documents": 68,
+  "german_text_scan": {
+    "matches": [],
+    "scope": "Maintained sources, HTML/JS templates and own vector labels; source snapshots and historical evidence excluded"
+  },
+  "outputs_sha256": {
+    "index.html": "4282a622e1aa625aa88d4a4a1fc30e85acfcf49ae1e963918e311496544c56ed",
+    "site/app.js": "18383ca5135e16235bd6178a29b668b7bc6efd23cd947b2be50a190cab64b0d7",
+    "site/data.js": "27fd06097985cbb630b55cb95896a0a639e36293af2f86390df1622a31f5cf8c",
+    "site/postplan.html": "596dbd39fc8d7b123e4a66ee5238a9ff7f856c1773a0977c13c590c62728f3b4"
+  },
+  "published": {
+    "version": 4,
+    "remote_bytes_match": true,
+    "sha256": "596dbd39fc8d7b123e4a66ee5238a9ff7f856c1773a0977c13c590c62728f3b4"
+  },
+  "published_browser": {
+    "language": "en",
+    "reference_section_found": true,
+    "reference_section_open": true,
+    "reference_title": "Further joint references: panels and elastic clips",
+    "has_clip_dimensions": true,
+    "has_panel_source": true,
+    "horizontal_overflow": false
+  }
+}

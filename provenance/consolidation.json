@@ -1,0 +1,32 @@
+{
+  "checker": {
+    "destination": "skills/cad-design-system/scripts/check_mesh.py",
+    "source_files": [
+      {
+        "path": "workspace/cad/spar-key-z-axis/src/cad-design-system/scripts/check_mesh.py",
+        "sha256": "5ddbb29ef1dbfd946390c17ab9ca583b436e85205e2757d8d60e09a31fcf9334"
+      },
+      {
+        "path": "workspace/cad/distributor-printed-layer/design-system/scripts/check_mesh.py",
+        "sha256": "071ae3f6b5a91bef0ff72abb08edcf2e8bd99a110dd9e13ca9830e7eee0daf2d"
+      }
+    ],
+    "result_sha256": "58b18dcb19bf62686104b8c693e9bc4dc492e96cc3426d48c04a7d31675050b6",
+    "changes": [
+      "Sparky integrity, pose, failure and STEP semantics retained",
+      "Distributor bounded raster replaces all-point intersection matrix",
+      "Narrow lips require demonstrated side attachment; geometry-query errors remain incomplete"
+    ],
+    "tests": [
+      "tests/test_checkers.py",
+      "tests/test_distributor_regressions.py"
+    ]
+  },
+  "profile_resolver": {
+    "destination": "skills/cad-fdm-design/scripts/resolve_profiles.py",
+    "origin": "New implementation extracted from documented Bambu/Orca preparation requirements",
+    "tests": [
+      "tests/test_profile_resolution.py"
+    ]
+  }
+}

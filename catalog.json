@@ -1,0 +1,97 @@
+{
+  "version": "0.1.0-dev",
+  "date": "2026-09-10",
+  "language": "en",
+  "modules": [
+    {
+      "id": "cad-workflow",
+      "title": "CAD workflow",
+      "category": "workflow",
+      "description": "Coordinate multi-stage CAD work: establish the authoritative design, select the required CAD, manufacturing or documentation skills, and retain revision-bound evidence. Use for a new CAD project, cross-tool work or an explicit workflow review; a small isolated edit does not need a full lifecycle.",
+      "document": "skills/cad-workflow/SKILL.md",
+      "state": "curated",
+      "runtime": "local"
+    },
+    {
+      "id": "onshape-cad",
+      "title": "Onshape CAD",
+      "category": "cad",
+      "description": "Construct or revise native Onshape geometry with FeatureScript, preserve user features and stable assembly references, and verify the affected interfaces. Use for native Onshape design, retrofit or variant work.",
+      "document": "skills/onshape-cad/SKILL.md",
+      "state": "curated",
+      "runtime": "external"
+    },
+    {
+      "id": "onshape-bridge",
+      "title": "Onshape session bridge",
+      "category": "cad",
+      "description": "Operate the configured Onshape session bridge: reuse the signed-in local app, verify runtime and endpoint budgets, reconcile uncertain writes, and verify binary artifacts. Use only for live work through this adapter; local CAD file review needs no startup.",
+      "document": "skills/onshape-bridge/SKILL.md",
+      "state": "curated",
+      "runtime": "external"
+    },
+    {
+      "id": "cad-khana",
+      "title": "Build123d / cad-khana",
+      "category": "cad",
+      "description": "Use the cad-khana Build123d wrapper for local parametrically generated parts, assembly assertions, geometric diagnostics, drawing and export. Apply when editing cad_khana scripts or interpreting its diagnostic output.",
+      "document": "skills/cad-khana/SKILL.md",
+      "state": "curated",
+      "runtime": "external"
+    },
+    {
+      "id": "cad-fdm-design",
+      "title": "FDM design & preparation",
+      "category": "manufacturing",
+      "description": "Design or revise FDM parts in the selected CAD backend: choose the print pose, preserve mating interfaces, assess assembly access and fits, and inspect actual slicer output. Also use for preparing or comparing print files.",
+      "document": "skills/cad-fdm-design/SKILL.md",
+      "state": "local-tools",
+      "runtime": "local"
+    },
+    {
+      "id": "cad-joints",
+      "title": "CAD Joints",
+      "category": "construction",
+      "description": "Select, reconstruct or design mechanical connections between CAD parts, including printed sliding joints, dovetails, keyed scarfs and snap fits. Use for joint geometry, assembly paths, retention or comparative fit coupons; cosmetic seams and ordinary assembly illustration alone do not require this skill.",
+      "document": "skills/cad-joints/SKILL.md",
+      "state": "curated",
+      "runtime": "local"
+    },
+    {
+      "id": "cad-design-system",
+      "title": "CAD design system",
+      "category": "design",
+      "description": "Define, apply or calibrate a reusable CAD design language with manufacturing and protected-interface profiles. Use for coherent part families, functional colours, edge and label rules, design screening or style coupons.",
+      "document": "skills/cad-design-system/SKILL.md",
+      "state": "local-tools",
+      "runtime": "local"
+    },
+    {
+      "id": "onshape-build-manuals",
+      "title": "CAD assembly manuals",
+      "category": "documentation",
+      "description": "Create or regenerate illustrated assembly manuals from Onshape CAD using durable native stages, semantic parts, explicit inventory and a maintained rendering recipe. Use for manuals, stage planning, layout or rendering-style work.",
+      "document": "skills/onshape-build-manuals/SKILL.md",
+      "state": "curated",
+      "runtime": "external"
+    },
+    {
+      "id": "fusion360",
+      "title": "Fusion / fusion-khana",
+      "category": "cad",
+      "description": "Construct or revise Fusion designs using the existing fusion-khana source-program workflow, explicit volume balances and native assembly checks. Requires a configured running Fusion application; generic STL review does not require this skill.",
+      "document": "skills/fusion360/SKILL.md",
+      "state": "curated",
+      "runtime": "external"
+    },
+    {
+      "id": "scan-reverse-engineering",
+      "title": "Scan → parametric CAD",
+      "category": "reconstruction",
+      "description": "Reconstruct functional CAD from 3D scans: inspect and clean the source, register and orient it, fit primitives, distinguish base form from features, and compare the reconstruction with a meaningful reference surface.",
+      "document": "skills/scan-reverse-engineering/SKILL.md",
+      "state": "curated",
+      "runtime": "external"
+    }
+  ]
+}

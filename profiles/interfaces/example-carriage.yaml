@@ -1,0 +1,11 @@
+id: illustrative-carriage-interfaces
+source: framework-example
+units: mm
+status: illustrative-not-calibrated
+protected:
+  - id: wheel-stack
+    requirement: Preserve both seating faces, spacers, bearing geometry and internal shim.
+  - id: detach-joint
+    requirement: Preserve the existing mounting pattern and actual tool access.
+  - id: travel
+    requirement: Preserve the required carriage motion and surrounding clearances.
