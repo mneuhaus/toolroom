@@ -1,11 +1,11 @@
 {
   "status": "passed",
-  "documents": 83,
-  "source_files": 177,
-  "local_links": 378,
+  "documents": 84,
+  "source_files": 179,
+  "local_links": 393,
   "modules": 11,
   "knowledge_sections": 7,
-  "knowledge_articles": 20,
+  "knowledge_articles": 21,
   "labs": 3,
   "lab_cases": 4,
   "network_required": false,
@@ -13,6 +13,6 @@
     "index.html": "1355daf4fed2a5ffc5e2f41625beb5b94a160e677ebe26ba02550da0e9b5f253",
     "site/style.css": "c53670a35aacaaf7f0f44032aeeadef0fd8abbc4cd5844b0b981ed503b81ac1e",
     "site/app.js": "67d2f724492a98ea12d360ed749ff415f2a1713b25c07e77674a5d1e345ac601",
-    "site/data.js": "c3e20d118f92ff866ff818e3b8b8934b6b6bcebe44600cded90cfc551474d106"
+    "site/data.js": "935ba8a6399174a0ef3df67a9972d9526e6e2745967fa296ccd6db936fa2af81"
   }
 }

@@ -5,6 +5,8 @@ to snap in under slight tension. Derived from Alternate Chute / Funnel Guide
 R2–R4, September 2026. R4 was checked in CAD and OrcaSlicer; physical fit and
 retained PLA preload were still untested. Its dimensions are not general rules.
 
+A latch that is a separate pivoting part and closes two parts under preload, such as a box lid, is covered in [pivoting snap latches](pivoting-snap-latches.md); this article stays with integral one-piece latches and slide-in fits.
+
 ## Establish the actual constraint and contact system
 
 - Record material, allowed part count, adjustment method and which existing

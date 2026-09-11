@@ -27,6 +27,7 @@ Use the project's authoritative CAD backend: [onshape-cad](../onshape-cad/SKILL.
 - [Assembly, access and load-path review](../../knowledge/construction/assembly-review.md) — access and completeness.
 - [Print orientation for FDM parts](../../knowledge/manufacturing/print-orientation.md) — layer direction against the opening load on a printed joint.
 - [Clip-in-pocket tile joints: OpenLOCK and a merged design](../../knowledge/construction/tile-clip-joints.md) — sourced socket and clip geometry, lying and standing pockets, scaling with process floors, matching clips.
+- [Pivoting snap latches: closing two parts under preload](../../knowledge/construction/pivoting-snap-latches.md) — separate latch part with pivot, hooked arms and a flexing tongue; preload, detent and wear rules.
 - [Further joint references: panels and elastic clips](../../knowledge/construction/joints-panels-and-clips.md) — reviewed references with no reconstructed CAD or physical verification yet; keep them distinct from the lab.
 - [Shared project and evidence conventions](../../knowledge/foundations/core.md) and [what a check actually establishes](../../knowledge/foundations/verification.md).
 

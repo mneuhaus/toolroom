@@ -1,0 +1,723 @@
+{
+  "status": "reviewed reference; geometry extents read from the designer's Fusion archive; no mesh obtained; no physical verification",
+  "derived_article": "knowledge/construction/pivoting-snap-latches.md",
+  "compiled": "2026-09-12",
+  "method": "MakerWorld design 2168356 (SnapLock V3, Hugo) and its predecessors and remixes were read through MakerWorld's public design API because the HTML pages sit behind a Cloudflare challenge; model downloads require a login and were not obtained. The designer's SnapLock V3.f3d, supplied by the user, is a zip with Zstandard (method 93) members; its ASM BREP blobs were read at token level to extract vertex and plane extents of the final bodies and the design stream was searched for parameter expressions. Feature roles (catch bar, pivot boss, tongue, skirt) are inferred from the design pictures. Full page archive, images, scripts and findings.md stay in var/research/snaplock/ (local, not committed).",
+  "licence": "SnapLock V3, V1, V2 and the Thin Remix carry the MakerWorld Exclusive License: derivatives only on MakerWorld with attribution, no re-hosting, commercial use prohibited. The article describes the mechanism and quotes extents as a reviewed example; no SnapLock geometry, image or file is redistributed in this repository.",
+  "findings_file": "var/research/snaplock/findings.md",
+  "sources": [
+    {
+      "url": "https://makerworld.com/en/models/2168356-snaplock-v3 (model file 'SnapLock V3.f3d', 900555 bytes, modelUpdateTime 2026-01-12T20:55:26Z per API; supplied by Marc 2026-09-11, MakerWorld download itself requires login)",
+      "title": "",
+      "retrieved": "2026-09-11",
+      "status": "",
+      "sha256": "2aa3ce2b9cfd49349fe20cc79ee42e35c42d8ebbe6fb92fe6c16f0743399584a",
+      "local_file": "var/research/snaplock/../../inbox/snaplock/SnapLock V3.f3d",
+      "note": ""
+    },
+    {
+      "url": "extracted from SnapLock V3.f3d (zip member, zstd method 93)",
+      "title": "",
+      "retrieved": "2026-09-11",
+      "status": "",
+      "sha256": "d68c7b04cad85f1dc1e37ff826d1f80016b12be306bc14905cfd3ea4edd732ed",
+      "local_file": "var/research/snaplock/files/f3d_extract/FusionAssetName[Active]/Previews/small.png",
+      "note": ""
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-21_8cf050f96c66a.gif",
+      "title": "design image 'Assembly gif.gif'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "9fb47b6f6eb0b87275b1515ff58d95672d9c1759e6a3713bfb8cd8d63490e051",
+      "local_file": "var/research/snaplock/images/Assembly_gif.gif",
+      "note": "design image 'Assembly gif.gif'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-28_22d5eba250af78.jpeg",
+      "title": "design image 'DSCF2404.jpeg'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "5ce8d1c7481849cb31833432dfbbcaaf09aef282a39eda4c534513fa0b0f878f",
+      "local_file": "var/research/snaplock/images/DSCF2404.jpeg",
+      "note": "design image 'DSCF2404.jpeg'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-21_d58043dd2277b.jpg",
+      "title": "design image 'DSCF2405.jpg'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "cfd7f5cda96c976b62af0c489e0e5aef7cfbff018741719b51204cd4dd45fb91",
+      "local_file": "var/research/snaplock/images/DSCF2405.jpg",
+      "note": "design image 'DSCF2405.jpg'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-21_0d2f7089783d48.jpg",
+      "title": "design image 'DSCF2406.jpg'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "12059df95786fb8571de6bcb2f8daa8f9001844da1639442cde3c791178384a2",
+      "local_file": "var/research/snaplock/images/DSCF2406.jpg",
+      "note": "design image 'DSCF2406.jpg'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-21_f99d944265968.jpg",
+      "title": "design image 'DSCF2409.jpg'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "e8a705828ceba943ad54e11a79e4ab8986293491e977f78cf165dd3f33efcaff",
+      "local_file": "var/research/snaplock/images/DSCF2409.jpg",
+      "note": "design image 'DSCF2409.jpg'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-21_9382d2ce6098c.jpg",
+      "title": "design image 'DSCF2410.jpg'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "4dfd6a4cbfe8d9ebd3e52d756f446f97c5a99b49e9d18be46ae4ec9f6a3a0e2a",
+      "local_file": "var/research/snaplock/images/DSCF2410.jpg",
+      "note": "design image 'DSCF2410.jpg'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-21_ee9d070904e958.jpg",
+      "title": "design image 'DSCF2411.jpg'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "891a04000cfd01f21c94fc6bc5f3f1b476377865ca747254e761715d9cd1b68d",
+      "local_file": "var/research/snaplock/images/DSCF2411.jpg",
+      "note": "design image 'DSCF2411.jpg'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-21_b4c32f93b989c.jpg",
+      "title": "design image 'DSCF2412.jpg'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "769ee41b61b73df890465403ec86e18426f725b09de6820c0834f4afface71d8",
+      "local_file": "var/research/snaplock/images/DSCF2412.jpg",
+      "note": "design image 'DSCF2412.jpg'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-21_59a53607f66738.jpg",
+      "title": "design image 'DSCF2413.jpg'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "41374b2528ba0986083b168fcac6376de69a2be138036fc634ae5b3a06b4cb8d",
+      "local_file": "var/research/snaplock/images/DSCF2413.jpg",
+      "note": "design image 'DSCF2413.jpg'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-21_884df2ca573bf.jpg",
+      "title": "design image 'DSCF2414.jpg'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "794bf90f58e7c8b35d1e3d9071a41e7facf296d83ef0c72502dbfdc7b991c051",
+      "local_file": "var/research/snaplock/images/DSCF2414.jpg",
+      "note": "design image 'DSCF2414.jpg'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-21_be25fadf9aad88.jpg",
+      "title": "design image 'DSCF2424.jpg'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "dc2a373bdef3c0ae71184d3dd71105505f81f26d4ecda24966c99e0561f4c2f1",
+      "local_file": "var/research/snaplock/images/DSCF2424.jpg",
+      "note": "design image 'DSCF2424.jpg'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/design/2025-12-21_ffbfa6816e1768.jpg",
+      "title": "design image 'cover'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "9bcdf0140e4c20944ee4de7c0168ff159854202c65396f23b25bca633fbd6f0e",
+      "local_file": "var/research/snaplock/images/cover.jpg",
+      "note": "design image 'cover'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/msfile/2026-01-12_723ddce2c602d.f3d.jpeg?at=1789163196&exp=1789166796&key=12819a695937fb66bf876b9ee1e05923&uid=0",
+      "title": "design image 'f3d_thumbnail_SnapLock V3.jpeg'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "c0052ef4adef956fc8ff9e1b2e120aabdc0345a76900aab797c2078bcf0425ea",
+      "local_file": "var/research/snaplock/images/f3d_thumbnail_SnapLock_V3.jpeg",
+      "note": "design image 'f3d_thumbnail_SnapLock V3.jpeg'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/539874254/instance/2025-12-28_01fb5e428ee4b.jpg",
+      "title": "design image 'instance_2351459_cover'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "cfd7f5cda96c976b62af0c489e0e5aef7cfbff018741719b51204cd4dd45fb91",
+      "local_file": "var/research/snaplock/images/instance_2351459_cover.jpg",
+      "note": "design image 'instance_2351459_cover'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/539870533/instance/2025-12-28_0c46e71484fda.jpg",
+      "title": "design image 'instance_2351464_cover'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "f4c238552d56116b7e183af9a10ba685300a136c8d694b7d98f097aca631c684",
+      "local_file": "var/research/snaplock/images/instance_2351464_cover.jpg",
+      "note": "design image 'instance_2351464_cover'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/539873286/instance/2025-12-28_328c59e09197a.jpg",
+      "title": "design image 'instance_2351473_cover'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "93d85bc6c5d173e490dc3230fc8442d448e642fb9da72fc9ccdaa55aef24ab91",
+      "local_file": "var/research/snaplock/images/instance_2351473_cover.jpg",
+      "note": "design image 'instance_2351473_cover'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/539877806/instance/2025-12-28_0107c6b9e102.jpg",
+      "title": "design image 'instance_2351483_cover'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "a78579a7b0a358334d78514e6e334ff03a5bd79a022ba5d81813af1d3d3c4955",
+      "local_file": "var/research/snaplock/images/instance_2351483_cover.jpg",
+      "note": "design image 'instance_2351483_cover'"
+    },
+    {
+      "url": "https://makerworld.bblmw.com/makerworld/model/US30e5ff4eeb1d33/897193941/instance/b0861f0ab6cabc3c.jpg",
+      "title": "design image 'instance_3488509_cover'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "ad136b2eb1a7714e5591a3b978e0949d85a72736786f8eacdb54883af68f790e",
+      "local_file": "var/research/snaplock/images/instance_3488509_cover.jpg",
+      "note": "design image 'instance_3488509_cover'"
+    },
+    {
+      "url": "https://3dgo.app/models/makerworld/2776423",
+      "title": "Cloudflare stub (403)",
+      "retrieved": "2026-09-11",
+      "status": "403",
+      "sha256": "de9fea6b4d2faec90ffcdc02008a5859201b7214b3d6ae6fa7ef1f0a683b013b",
+      "local_file": "var/research/snaplock/pages/3dgo_2776423.html",
+      "note": "Cloudflare stub (403)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/comment/list?targetId=2168356&targetType=1&limit=20&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_comment_list_a.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/comment/list?limit=20&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_comment_list_b.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/comment?limit=20&offset=0&orderBy=hot",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_comment_list_c.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/comment?targetType=1&targetId=2168356&limit=20&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_comment_list_d.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/comment/2168356?limit=20&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_comment_list_e.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/comment?designId=2168356&limit=20&offset=0",
+      "title": "guessed endpoint, not found (400)",
+      "retrieved": "2026-09-11",
+      "status": "400",
+      "sha256": "571bf2ad62ad7c1e10d88ec48b35a6770e20abebe4ca02616f1e67ef9e3e80e4",
+      "local_file": "var/research/snaplock/pages/api_comment_list_f.json",
+      "note": "guessed endpoint, not found (400)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/comments?limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_comments_alt.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/comment?designId=2168356&limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_comments_alt2.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/comment?limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_comments_p0.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/derivative_list?limit=20&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_deriv_a.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/derivative?limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_derivative.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/derivatives?limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_derivatives.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/1382560",
+      "title": "",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "e6cb78bce718cf927636fe1fffaa59d506f618dff473e4a7847ab4e6fbe4b110",
+      "local_file": "var/research/snaplock/pages/api_design_1382560.json",
+      "note": ""
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/1407016",
+      "title": "",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "43b63f2e157846055206c5e81600140f8b3f6a2902d8abc5b79186e4656e4668",
+      "local_file": "var/research/snaplock/pages/api_design_1407016.json",
+      "note": ""
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/213420",
+      "title": "",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "a48586a72bee21097578912440e80d166deecb2fc9fa6c5cce75a6a42caf8cdd",
+      "local_file": "var/research/snaplock/pages/api_design_213420.json",
+      "note": ""
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356",
+      "title": "WORKS without login: full design record (title, summary HTML, licence text, tags, instances/profiles with print stats and filaments, picture URLs, model_files with Fusion parameters). Used as primary source (MW-API)",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "ca6d68dbf82f49ff9c2b04e7797fba440cebbc82efd1f81534f9921e7c8e7af0",
+      "local_file": "var/research/snaplock/pages/api_design_2168356.json",
+      "note": "WORKS without login: full design record (title, summary HTML, licence text, tags, instances/profiles with print stats and filaments, picture URLs, model_files with Fusion parameters). Used as primary source (MW-API)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/instance",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_design_2168356_instances.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2381026",
+      "title": "",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "e10c6d075d4985850f9ffd96e9ded865abab73f533f1e9e617a1f0ba766881c8",
+      "local_file": "var/research/snaplock/pages/api_design_2381026.json",
+      "note": ""
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2776423",
+      "title": "",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "5051809658d6cc44415b5ad6b49f64d437a4590cb9854720229854f3b27b47fb",
+      "local_file": "var/research/snaplock/pages/api_design_2776423.json",
+      "note": ""
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/377006",
+      "title": "",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "5923123012dab7d291a37c54273adf46d9b29487e0721319e8a0f8283362e9a2",
+      "local_file": "var/research/snaplock/pages/api_design_377006.json",
+      "note": ""
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/674871",
+      "title": "",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "4a089fa1c6a9a7758c313128431b32831a9757df09672ea634b606215d778b94",
+      "local_file": "var/research/snaplock/pages/api_design_674871.json",
+      "note": ""
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/history",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_design_history.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/instance/2351483",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_design_instance_2351483.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/instance/2351483/rating?limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_design_instance_ratings.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/ratings?limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_design_ratings.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/version",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_design_version.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/print_history?limit=20&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_history_a.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/instance/2351483",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_instance_2351483.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/instance/2351483/f3mf?type=download",
+      "title": "download endpoint: HTTP 403 {\"code\":1,\"error\":\"Please log in to download models.\"}",
+      "retrieved": "2026-09-11",
+      "status": "403",
+      "sha256": "c86d25f151f32362e89743cd4f99cb70ba757fd4d53fc1ac4c61db74d3eb73f0",
+      "local_file": "var/research/snaplock/pages/api_instance_2351483_f3mf.json",
+      "note": "download endpoint: HTTP 403 {\"code\":1,\"error\":\"Please log in to download models.\"}"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/instance/2351483/rating?limit=20&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_instance_2351483_rating.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/instance/2351483/detail",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_instance_detail_a.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/instance/2351483",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_instance_detail_b.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/instance?id=2351483",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_instance_detail_c.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/instance_list?limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_instance_list.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/makes?limit=20&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_makes_a.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/model_file?type=download",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_model_file_download.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/original_list?limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_original_list.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/print_profile?limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_print_profile.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/rating?limit=20&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_rating_a.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/rawmodel?type=download",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_rawmodel_download.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/remix?limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_remix.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/search-service/select/design2?keyword=snaplock&limit=40&offset=0",
+      "title": "WORKS: search-service select/design2?keyword=snaplock (1655 hits, first 40 saved)",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "bb08d589b717f1cbcdd0df0964b9eb582598864fcdddb83974cdd6d4888f5ea0",
+      "local_file": "var/research/snaplock/pages/api_search_snaplock.json",
+      "note": "WORKS: search-service select/design2?keyword=snaplock (1655 hits, first 40 saved)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/search-service/select/design2?keyword=snaplock%20hugo&limit=40&offset=0",
+      "title": "WORKS: search-service, keyword 'snaplock hugo'",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "a7943d208b61eb0ea1c22e6ca5440b0f0f1ed7bb8dbcb2fab3c399f28ec2de81",
+      "local_file": "var/research/snaplock/pages/api_search_snaplock_hugo.json",
+      "note": "WORKS: search-service, keyword 'snaplock hugo'"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/user/1019415998/design?limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_user_1019415998_designs.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/user-service/user/1019415998",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_user_a.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/published/user/design?uid=1019415998&limit=50&offset=0",
+      "title": "guessed endpoint, not found (400)",
+      "retrieved": "2026-09-11",
+      "status": "400",
+      "sha256": "c9c5e7e8031b7faec4bbe455e6ae12fbcc86d20aa452c2bf5ff433d37c3f2217",
+      "local_file": "var/research/snaplock/pages/api_user_designs_alt.json",
+      "note": "guessed endpoint, not found (400)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/user/design?uid=1019415998&limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_user_designs_b.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/my/design?uid=1019415998&limit=50&offset=0",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_user_designs_c.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://makerworld.com/api/v1/design-service/design/2168356/version_list",
+      "title": "guessed endpoint, not found (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "40e37b765834b1b79d7076c62d6eb0c651c10073c28d32da912f589e15b1170f",
+      "local_file": "var/research/snaplock/pages/api_version_a.json",
+      "note": "guessed endpoint, not found (404)"
+    },
+    {
+      "url": "https://cults3d.com/en/3d-model/tool/snap-lock-storage-box-3d-printable-toolbox",
+      "title": "Cloudflare stub (403)",
+      "retrieved": "2026-09-11",
+      "status": "403",
+      "sha256": "bd990c95102f0468a486514a7d29a23aa6d1ebb74c0ee01b19a6b38da4abee69",
+      "local_file": "var/research/snaplock/pages/cults3d_snap_lock_box.html",
+      "note": "Cloudflare stub (403)"
+    },
+    {
+      "url": "https://makerworld.com/de/models/2168356-snaplock-v3",
+      "title": "same Cloudflare stub for the /de/ URL",
+      "retrieved": "2026-09-11",
+      "status": "403",
+      "sha256": "52f07576d1d50c2cc9745b7483ee42ef4c8ed716a44869077ae4af760e479aea",
+      "local_file": "var/research/snaplock/pages/makerworld_2168356_de.html",
+      "note": "same Cloudflare stub for the /de/ URL"
+    },
+    {
+      "url": "https://makerworld.com/en/models/2168356-snaplock-v3",
+      "title": "Cloudflare 'Just a moment' challenge stub (HTTP 403); JS page not obtainable with curl or headless Chromium (Turnstile checkbox never resolved)",
+      "retrieved": "2026-09-11",
+      "status": "403",
+      "sha256": "dccb5936db47cc631bac119c55ff852f59cdf0fd60f93a419c28dfab9a8d5da7",
+      "local_file": "var/research/snaplock/pages/makerworld_2168356_en.html",
+      "note": "Cloudflare 'Just a moment' challenge stub (HTTP 403); JS page not obtainable with curl or headless Chromium (Turnstile checkbox never resolved)"
+    },
+    {
+      "url": "https://makerworld.de/en/models/2168356-snaplock-v3",
+      "title": "makerworld.de does not exist (404)",
+      "retrieved": "2026-09-11",
+      "status": "404",
+      "sha256": "1c86f713476e15ebe212f2c05840219e3774e67d0fe793d5e9261f08233107f4",
+      "local_file": "var/research/snaplock/pages/makerworld_de_2168356.html",
+      "note": "makerworld.de does not exist (404)"
+    },
+    {
+      "url": "https://www.patreon.com/_Hugo/posts/snaplock-storage-118711712",
+      "title": "Cloudflare stub (403)",
+      "retrieved": "2026-09-11",
+      "status": "403",
+      "sha256": "4ac954ebb132c2d54039bc1269e214e30551d2c82844d964434276212afe59c6",
+      "local_file": "var/research/snaplock/pages/patreon_snaplock_v1.html",
+      "note": "Cloudflare stub (403)"
+    },
+    {
+      "url": "https://www.patreon.com/_Hugo/posts/snaplock-v3-146640024",
+      "title": "Cloudflare stub (403)",
+      "retrieved": "2026-09-11",
+      "status": "403",
+      "sha256": "2aeeb032a4b1635fbe5c90d0404ae5e0271212e6d7a85b0025c11132834b78a7",
+      "local_file": "var/research/snaplock/pages/patreon_snaplock_v3.html",
+      "note": "Cloudflare stub (403)"
+    },
+    {
+      "url": "https://www.printables.com/model/942439-hugos-snaplock-storage-boxes-with-sorting-tray-par",
+      "title": "Cloudflare stub (403)",
+      "retrieved": "2026-09-11",
+      "status": "403",
+      "sha256": "688282fb344bdaa0f45dda8ea45ac9981fe20372a8af3c94014ad1ad91040c92",
+      "local_file": "var/research/snaplock/pages/printables_942439.html",
+      "note": "Cloudflare stub (403)"
+    },
+    {
+      "url": "https://api.pullpush.io/reddit/search/comment/?q=snaplock%20hugo&size=100",
+      "title": "0 results",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "f15e28b895f1b9326512a525d16423fefba15bd066ff4c24e8fb0094f2b5758b",
+      "local_file": "var/research/snaplock/pages/pullpush_comments_snaplock_hugo.json",
+      "note": "0 results"
+    },
+    {
+      "url": "https://api.pullpush.io/reddit/search/submission/?q=snaplock%20box&size=100",
+      "title": "45 results, none about Hugo's boxes except two link posts (design 976244 'Trezor Model T Snaplock Rugged Storage Box') and an r/Fusion360 question about inserts for design 377006",
+      "retrieved": "2026-09-11",
+      "status": "200",
+      "sha256": "d5687b80c76c8a3247cf929bd996945b6233f9752f930eef7484ea465f60142a",
+      "local_file": "var/research/snaplock/pages/pullpush_submissions_snaplock_box.json",
+      "note": "45 results, none about Hugo's boxes except two link posts (design 976244 'Trezor Model T Snaplock Rugged Storage Box') and an r/Fusion360 question about inserts for design 377006"
+    }
+  ],
+  "images": [],
+  "copyright": "Designs, images and files remain with their designer (Hugo, MakerWorld). Nothing from the archive is redistributed here."
+}

@@ -23,6 +23,7 @@ A joint is described by its geometry, assembly path, manufacturing process and i
 | Apply preload after joining and release deliberately | Scarf with opposing wedges | Wedge access, push-out travel, stops and lateral guidance |
 | Connect quickly and open frequently | Snap fit | Strain limit, notches, fatigue and release access |
 | Join modular tiles or panels edge to edge, repeatedly and without tools | Clip in two identical side pockets (OpenLOCK, Dragonbite) | Pocket profile, neck and chamber, clearance floors, roof and rim thickness; see [clip-in-pocket tile joints: OpenLOCK and a merged design](tile-clip-joints.md) |
+| Close two parts under preload and open by hand, such as a lid on a box | Pivoting snap latch: pivot boss, hooked arms, flexing tongue as detent | Pivot-to-wing versus pivot-to-catch distance, tongue strain, wing hook depth; see [pivoting snap latches](pivoting-snap-latches.md) |
 
 This is a selection guide, not a strength ranking. Printed threads, bayonets, pins, magnet pockets and adhesive joints can extend the knowledge later; the first native collection covers the three linked video sources.
 

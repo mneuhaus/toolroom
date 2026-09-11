@@ -1,12 +1,12 @@
 {
   "status": "passed",
-  "checks_run": 144,
+  "checks_run": 145,
   "errors": [],
   "checks": [
     {
       "check": "markdown links and headings",
       "passed": true,
-      "detail": "378"
+      "detail": "393"
     },
     {
       "check": "unique module identifiers",
@@ -170,6 +170,11 @@
     },
     {
       "check": "knowledge article: knowledge/construction/tile-clip-joints.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "knowledge article: knowledge/construction/pivoting-snap-latches.md",
       "passed": true,
       "detail": ""
     },

@@ -53,3 +53,7 @@ The complete old-to-new path map is `provenance/restructure-2026-09-10.json`.
 ## 11 September 2026: flatter navigation and structured skill pages
 
 The site's sidebar became an explorer tree: every skill, every knowledge article by section, every lab and the profile and repository documents are one click away, and the group of the current page opens automatically. Skill entrypoints render from their fixed shape into a structured page: category and description, a "use when / not for" pair, numbered step cards, and link cards for the knowledge and references they load. Knowledge articles open with a summary card that names the section, the reading time and the skills that load the article. The overview ends with the whole map. The Markdown sources did not change; only `site/src/` did.
+
+## 12 September 2026: pivoting snap latches
+
+SnapLock V3 (Hugo, MakerWorld) turned out to be a storage box with pivoting latches, not a tile system. It became its own construction article on latches that close two parts under preload, with the reviewed example, design rules, print poses and the licence limits that forbid copying its geometry. The research archive and the token-level read of the Fusion file stay local; the provenance manifest records the sources.

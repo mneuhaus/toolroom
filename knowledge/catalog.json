@@ -92,6 +92,12 @@
       "section": "construction"
     },
     {
+      "path": "knowledge/construction/pivoting-snap-latches.md",
+      "title": "Pivoting snap latches: closing two parts under preload",
+      "summary": "A printed latch that pivots on one part and hooks the other under tension, with a flexing tongue as the detent; SnapLock V3 as the reviewed example, design rules, print orientation and licence limits.",
+      "section": "construction"
+    },
+    {
       "path": "knowledge/construction/patterns.md",
       "title": "Reusable construction patterns",
       "summary": "Sliding guides, crush ribs, printed threads, split assemblies and shared parts.",
