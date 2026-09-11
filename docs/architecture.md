@@ -38,6 +38,6 @@ The design language defines colour roles, selected edges, labelling and form fam
 
 ## Kept out of scope
 
-Toolroom adds no CAD kernel, no workflow execution engine and no cloud synchronisation. Native applications keep their APIs. The bundled helpers are the consolidated mesh and STEP screeners, the profile resolver, the joints verifier and the documentation tools. Cloud adapters and CAD runtimes are separately installed; see [scope](scope.md).
+Toolroom adds no CAD kernel, no general workflow execution engine and no cloud synchronisation. Bounded local helpers prepare worker briefs, extract sources and invoke native slicer preparation; the agent host and native applications retain execution authority. Native applications keep their APIs. The bundled helpers include mesh and STEP screeners, profile resolution, joint verification, documentation and the [shared CAD work commands](cad-work-basis.md). Cloud adapters and CAD runtimes are separately installed; see [scope](scope.md).
 
 The website reads only Markdown and the catalogs. Viewing it needs neither a build server nor an internet connection.

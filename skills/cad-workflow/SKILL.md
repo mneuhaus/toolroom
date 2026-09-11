@@ -25,6 +25,7 @@ description: "Coordinate multi-stage CAD work: establish the authoritative desig
 | A coherent product design language | [cad-design-system](../cad-design-system/SKILL.md) | [Profiles](../../profiles/README.md) |
 | Illustrated CAD assembly manual | [onshape-build-manuals](../onshape-build-manuals/SKILL.md) | [Evidence](../../knowledge/foundations/verification.md) |
 | Scan-derived replacement geometry | [scan-reverse-engineering](../scan-reverse-engineering/SKILL.md) | [Recipes](../../knowledge/workflow/recipes.md) |
+| Physics simulation or physically driven footage of a mechanism | [cad-physics-simulation](../cad-physics-simulation/SKILL.md) | [Verification](../../knowledge/foundations/verification.md) |
 
 ## Knowledge
 
@@ -33,6 +34,14 @@ description: "Coordinate multi-stage CAD work: establish the authoritative desig
 - [CAD project files and revisions](../../knowledge/workflow/project-layout.md) — for a longer project; a small prototype needs only the files it uses.
 - [Combining tasks](../../knowledge/workflow/recipes.md) — worked multi-skill sequences.
 - [Lessons from projects](../../knowledge/lessons/project-lessons.md) — what went wrong before.
+
+## Routine work and shared tools
+
+For bounded delegation, read [the delegation rules](../../knowledge/workflow/delegation.md) and [team profile](../../profiles/agents/cad-team.yaml). Critical decisions stay with Astra at the highest available quality. Keep worker contexts fresh and task-scoped.
+
+- [Worker jobs](references/worker-jobs.md): prepare compact briefs and verify returned source/artifact bindings.
+- [Source extraction](references/source-extraction.md): hash-bound snapshots and focused evidence passages.
+- [Print packages](../cad-fdm-design/references/print-package.md): native multi-plate inspection, slice/reimport and verified cache.
 
 ## Environment
 

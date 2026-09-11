@@ -1,0 +1,6 @@
+mujoco>=3.3
+trimesh>=4.4
+numpy>=1.26
+scipy>=1.11
+coacd>=1.0.5
+pillow>=10

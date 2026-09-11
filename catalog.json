@@ -92,6 +92,15 @@
       "document": "skills/scan-reverse-engineering/SKILL.md",
       "state": "curated",
       "runtime": "external"
+    },
+    {
+      "id": "cad-physics-simulation",
+      "title": "CAD physics simulation",
+      "category": "simulation",
+      "description": "Simulate or animate a CAD mechanism handling loose parts, exercise control software against a virtual machine, or produce physically driven footage from a logged trajectory; not for FEM strength analysis and not for a static render of an assembly.",
+      "document": "skills/cad-physics-simulation/SKILL.md",
+      "state": "curated",
+      "runtime": "external"
     }
   ]
 }

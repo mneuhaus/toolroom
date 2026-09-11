@@ -4,6 +4,8 @@ Toolroom is a local working edition for practical use and discussion. It combine
 
 ## Included in the repository
 
+- [Shared CAD work helpers](cad-work-basis.md): short source-bound worker jobs, bounded source snapshots/excerpts and native Bambu print-package inspection/preparation. Critical release remains outside their automated scope.
+
 - The knowledge base: foundations, workflow, construction, manufacturing, design languages and lessons, each article listed in `knowledge/catalog.json`.
 - Ten skill entrypoints consolidated from the previously installed skill collections, with their imported field notes kept as identified historical sources.
 - A consolidated mesh and STEP screening workflow with regression tests from both source projects.

@@ -24,3 +24,7 @@
 - When moving files, record the old and new paths in a `provenance/` record and update `provenance/imports.json` destinations.
 - Keep the existing installed skills and original project directories intact unless migration is explicitly requested.
 - No live CAD, slicer job, device or publishing operation is required for documentation work. Uploading the reading edition is a public step and needs an explicit request.
+
+## Using Toolroom for CAD work
+
+For a CAD task using this knowledge base, follow the [workflow entrypoint](skills/cad-workflow/SKILL.md). For independent routine work, the [delegation rules](knowledge/workflow/delegation.md) and [team profile](profiles/agents/cad-team.yaml) define narrow worker scopes; critical engineering decisions remain with Astra at the highest available quality. Repository maintenance itself does not require loading every CAD skill.

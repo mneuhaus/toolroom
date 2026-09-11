@@ -1,12 +1,12 @@
 {
   "status": "passed",
-  "checks_run": 131,
+  "checks_run": 144,
   "errors": [],
   "checks": [
     {
       "check": "markdown links and headings",
       "passed": true,
-      "detail": "304"
+      "detail": "378"
     },
     {
       "check": "unique module identifiers",
@@ -114,6 +114,16 @@
       "detail": ""
     },
     {
+      "check": "skill metadata: cad-physics-simulation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "skill entrypoint length: cad-physics-simulation",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "unique knowledge sections",
       "passed": true,
       "detail": ""
@@ -159,6 +169,11 @@
       "detail": ""
     },
     {
+      "check": "knowledge article: knowledge/construction/tile-clip-joints.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "knowledge article: knowledge/construction/patterns.md",
       "passed": true,
       "detail": ""
@@ -199,7 +214,17 @@
       "detail": ""
     },
     {
+      "check": "knowledge article: knowledge/simulation/cad-to-physics-simulation.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "knowledge article: knowledge/lessons/project-lessons.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "knowledge article: knowledge/workflow/delegation.md",
       "passed": true,
       "detail": ""
     },
@@ -210,6 +235,11 @@
     },
     {
       "check": "lab references: checker-lab",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lab references: tile-clip-sockets",
       "passed": true,
       "detail": ""
     },
@@ -634,12 +664,27 @@
       "detail": ""
     },
     {
+      "check": "test evidence current: skills/cad-fdm-design/scripts/print_package.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "test evidence current: skills/cad-fdm-design/scripts/resolve_profiles.py",
       "passed": true,
       "detail": ""
     },
     {
-      "check": "test evidence current: tests/test_checkers.py",
+      "check": "test evidence current: skills/cad-workflow/scripts/source_extract.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: skills/cad-workflow/scripts/worker_job.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: skills/onshape-build-manuals/scripts/make_pdf_transport_safe.py",
       "passed": true,
       "detail": ""
     },
@@ -649,7 +694,27 @@
       "detail": ""
     },
     {
+      "check": "test evidence current: tests/test_checkers.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: tests/test_print_package.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "test evidence current: tests/test_profile_resolution.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: tests/test_source_extract.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: tests/test_worker_job.py",
       "passed": true,
       "detail": ""
     },

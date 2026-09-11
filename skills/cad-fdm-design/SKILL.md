@@ -29,6 +29,8 @@ description: "Design or revise FDM parts in the selected CAD backend: choose the
 
 ## References
 
+- [Print-package helper](references/print-package.md) — inspect existing 3MFs or run a frozen posed-source job through native slicing, reimport and source/profile checks. Actual-layer and critical engineering review remain separate.
+
 - [Field notes](references/field-notes.md) — local Build123d/OCC pitfalls, connection recipes, house-style edge treatment and historical prototype dimensions. Apply one relevant pattern at a time and confirm it against the current material, orientation and interfaces.
 - [Profile resolver](scripts/resolve_profiles.py) — resolves `inherits` and ordered `include` dependencies, detects missing and cyclic inputs, keeps child overrides. It produces data for review; it is not a G-code generator.
 - [Geometry screening](../cad-design-system/scripts/check_mesh.py) and [STEP screening](../cad-design-system/scripts/check_step.py) — sampled checks with explicit findings and an incomplete status.

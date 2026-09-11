@@ -1,0 +1,698 @@
+{
+  "lab": "tile-clip-sockets/merged",
+  "build123d": "0.10.0",
+  "scale": 1.0,
+  "process": {
+    "nozzle": 0.4,
+    "layer": 0.2,
+    "perimeters": 2,
+    "first_layer": 0.2,
+    "clearance_xy": 0.15,
+    "clearance_z": 0.2,
+    "interference_min": 0.4,
+    "roof_min_layers": 2,
+    "rim_min_perimeters": 2,
+    "support_bar": 0.5,
+    "clip_thickness_min_layers": 4,
+    "lead_in_chamfer": 0.4
+  },
+  "merged_spec": {
+    "tile": 25.4,
+    "pitch": 12.7,
+    "base_height": 6.0,
+    "top_plate": 1.2,
+    "post_dia": 2.0,
+    "post_x": 8.0,
+    "lead_in_chamfer": 0.4,
+    "cube_edge": 50.8,
+    "jaw_root_w": 0.53,
+    "jaw_root_y": 1.75,
+    "jaw_compliance_w": 3.0,
+    "jaw_compliance_y": 4.5,
+    "jaw_bite_y": 7.0,
+    "jaw_cup_dia": 2.2,
+    "jaw_cup_y": 8.0,
+    "jaw_tip_w": 2.6,
+    "jaw_tip_y": 9.75,
+    "thicknesses": [
+      3.5,
+      3.7,
+      3.9
+    ],
+    "grip_standard": [
+      0.2,
+      0.1
+    ],
+    "grip_tight": [
+      0.3,
+      0.15
+    ],
+    "label_engrave_depth": 0.4,
+    "label_letter_height": 2.0,
+    "label_cube_letter_height": 5.0
+  },
+  "dims_merged_post": {
+    "mouth_w": 14.0,
+    "mouth_d": 2.0,
+    "taper_w0": 12.0,
+    "taper_x1": 5.0,
+    "neck_w": 10.0,
+    "neck_x1": 6.0,
+    "chamber_w": 12.8,
+    "chamber_x1": 10.7,
+    "pocket_z0": 1.4,
+    "pocket_z1": 5.6,
+    "rim_w": 16.0,
+    "rim_d": 2.0,
+    "rim_z0": 0.4,
+    "rim_h": 5.6,
+    "wall_t": 12.7,
+    "wall_mouth_d": 1.0,
+    "wall_taper_x1": 4.0,
+    "side_t": 4.2,
+    "side_mouth_h": 14.0,
+    "side_mouth_d": 2.0,
+    "side_taper_x1": 5.0,
+    "side_neck_h": 10.0,
+    "side_neck_x1": 5.9,
+    "side_chamber_h": 10.52,
+    "side_chamber_x1": 10.43,
+    "side_rim_d": 11.43,
+    "side_rim_t": 6.2,
+    "side_rim_h": 16.0,
+    "clip_bar_w": 13.2,
+    "clip_bar_w_v43": 14.0,
+    "clip_t": 3.6,
+    "clip_t_v54": 3.5,
+    "clip_len": 19.5,
+    "bar_len": 3.45,
+    "prong_w": 10.0,
+    "prong_y0": 1.775,
+    "prong_y1": 5.675,
+    "barb_w": 10.4,
+    "barb_y0": 6.0,
+    "barb_y1": 6.25,
+    "taper_stations": [
+      [
+        9.98,
+        7.0
+      ],
+      [
+        9.6,
+        7.5
+      ],
+      [
+        8.6,
+        8.0
+      ],
+      [
+        7.6,
+        8.5
+      ],
+      [
+        6.6,
+        9.0
+      ]
+    ],
+    "tip_y": 9.75,
+    "tip_w": 5.1,
+    "eye_open": 0.53,
+    "eye_open_y": 1.75,
+    "eye_max": 3.64,
+    "eye_max_y": 4.5,
+    "eye_y9": 2.54,
+    "eye_tip": 2.0,
+    "tile": 25.4,
+    "pitch": 12.7,
+    "base_height": 6.0,
+    "top_plate": 1.2,
+    "post_dia": 2.0,
+    "post_x": 8.0,
+    "lead_in_chamfer": 0.4,
+    "cube_edge": 50.8,
+    "jaw_root_w": 0.53,
+    "jaw_root_y": 1.75,
+    "jaw_compliance_w": 3.0,
+    "jaw_compliance_y": 4.5,
+    "jaw_bite_y": 7.0,
+    "jaw_cup_dia": 2.2,
+    "jaw_cup_y": 8.0,
+    "jaw_tip_w": 2.6,
+    "jaw_tip_y": 9.75,
+    "thicknesses": [
+      3.5,
+      3.7,
+      3.9
+    ],
+    "grip_standard": [
+      0.2,
+      0.1
+    ],
+    "grip_tight": [
+      0.3,
+      0.15
+    ],
+    "label_engrave_depth": 0.4,
+    "label_letter_height": 2.0,
+    "label_cube_letter_height": 5.0,
+    "total_height": 7.2,
+    "post": true,
+    "chamfer": true,
+    "variant": "merged",
+    "pocket_h": 4.199999999999999,
+    "half_len": 9.75
+  },
+  "hybrid_clip_matrix": [
+    {
+      "label": "35S",
+      "t": 3.5,
+      "grip": "standard",
+      "i": 0.2,
+      "b": 0.1
+    },
+    {
+      "label": "35T",
+      "t": 3.5,
+      "grip": "tight",
+      "i": 0.3,
+      "b": 0.15
+    },
+    {
+      "label": "37S",
+      "t": 3.7,
+      "grip": "standard",
+      "i": 0.2,
+      "b": 0.1
+    },
+    {
+      "label": "37T",
+      "t": 3.7,
+      "grip": "tight",
+      "i": 0.3,
+      "b": 0.15
+    },
+    {
+      "label": "39S",
+      "t": 3.9,
+      "grip": "standard",
+      "i": 0.2,
+      "b": 0.1
+    },
+    {
+      "label": "39T",
+      "t": 3.9,
+      "grip": "tight",
+      "i": 0.3,
+      "b": 0.15
+    }
+  ],
+  "c1_hybrid_in_reference_socket": {
+    "35S": {
+      "protrusion_mm3": 0.45500000000000057,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.45500000000000057,
+      "seated_interference_mm3": 0.45500000000000057,
+      "barb_seated_interference_mm3": 0.45500000000000057,
+      "barb_seated_expected_mm3": 0.4550000000000007,
+      "barb_ok": true,
+      "transit_interference_mm3": 0.9646875000000019,
+      "transit_expected_range_mm3": [
+        0.001,
+        13.650000000000013
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "barb_interference_i_per_side": 0.2
+    },
+    "35T": {
+      "protrusion_mm3": 0.6825000000000003,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.6825000000000003,
+      "seated_interference_mm3": 0.6825000000000003,
+      "barb_seated_interference_mm3": 0.6825000000000003,
+      "barb_seated_expected_mm3": 0.6824999999999999,
+      "barb_ok": true,
+      "transit_interference_mm3": 1.4503124999999986,
+      "transit_expected_range_mm3": [
+        0.001,
+        20.474999999999987
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "barb_interference_i_per_side": 0.3
+    },
+    "37S": {
+      "protrusion_mm3": 0.48100000000000054,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.48100000000000054,
+      "seated_interference_mm3": 0.48100000000000054,
+      "barb_seated_interference_mm3": 0.48100000000000054,
+      "barb_seated_expected_mm3": 0.48100000000000076,
+      "barb_ok": true,
+      "transit_interference_mm3": 1.0198125000000018,
+      "transit_expected_range_mm3": [
+        0.001,
+        14.430000000000014
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "barb_interference_i_per_side": 0.2
+    },
+    "37T": {
+      "protrusion_mm3": 0.7215000000000004,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.7215000000000004,
+      "seated_interference_mm3": 0.7215000000000004,
+      "barb_seated_interference_mm3": 0.7215000000000004,
+      "barb_seated_expected_mm3": 0.7214999999999999,
+      "barb_ok": true,
+      "transit_interference_mm3": 1.5331874999999981,
+      "transit_expected_range_mm3": [
+        0.001,
+        21.644999999999985
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "barb_interference_i_per_side": 0.3
+    },
+    "39S": {
+      "protrusion_mm3": 0.5070000000000007,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.5070000000000007,
+      "seated_interference_mm3": 0.5070000000000007,
+      "barb_seated_interference_mm3": 0.5070000000000007,
+      "barb_seated_expected_mm3": 0.5070000000000008,
+      "barb_ok": true,
+      "transit_interference_mm3": 1.074937500000002,
+      "transit_expected_range_mm3": [
+        0.001,
+        15.210000000000013
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "barb_interference_i_per_side": 0.2
+    },
+    "39T": {
+      "protrusion_mm3": 0.7605000000000003,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.7605000000000003,
+      "seated_interference_mm3": 0.7605000000000003,
+      "barb_seated_interference_mm3": 0.7605000000000003,
+      "barb_seated_expected_mm3": 0.7605,
+      "barb_ok": true,
+      "transit_interference_mm3": 1.6160624999999984,
+      "transit_expected_range_mm3": [
+        0.001,
+        22.814999999999984
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "barb_interference_i_per_side": 0.3
+    }
+  },
+  "c2_v43_in_merged_socket_with_post": {
+    "eye_half_width_at_post_x_mm": 1.3922222222222222,
+    "post_radius_mm": 1.0,
+    "clearance_mm": 0.39222222222222225,
+    "collides": false,
+    "post_clip_intersection_mm3": 0.0,
+    "protrusion_outside_barb_mm3": 0.0,
+    "barb_seated_interference_mm3": 0.4680000000000005,
+    "insertion": {
+      "protrusion_mm3": 0.4680000000000005,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.4680000000000005,
+      "seated_interference_mm3": 0.4680000000000005,
+      "barb_seated_interference_mm3": 0.4680000000000005,
+      "barb_seated_expected_mm3": 0.46800000000000075,
+      "barb_ok": true,
+      "transit_interference_mm3": 0.9922500000000021,
+      "transit_expected_range_mm3": [
+        0.001,
+        14.040000000000013
+      ],
+      "outside_ok": true,
+      "transit_ok": true
+    }
+  },
+  "c3_hybrid_in_merged_socket": {
+    "35S": {
+      "protrusion_mm3": 0.45500000000000057,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.45500000000000057,
+      "seated_interference_mm3": 0.45500000000000057,
+      "barb_seated_interference_mm3": 0.45500000000000057,
+      "barb_seated_expected_mm3": 0.4550000000000007,
+      "barb_ok": true,
+      "transit_interference_mm3": 0.9646875000000019,
+      "transit_expected_range_mm3": [
+        0.001,
+        13.650000000000013
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "bite_interference_mm3": 0.0,
+      "bite_interference_b_per_side": 0.1
+    },
+    "35T": {
+      "protrusion_mm3": 0.6825000000000003,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.6825000000000003,
+      "seated_interference_mm3": 0.6825000000000003,
+      "barb_seated_interference_mm3": 0.6825000000000003,
+      "barb_seated_expected_mm3": 0.6824999999999999,
+      "barb_ok": true,
+      "transit_interference_mm3": 1.4503124999999986,
+      "transit_expected_range_mm3": [
+        0.001,
+        20.474999999999987
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "bite_interference_mm3": 0.0,
+      "bite_interference_b_per_side": 0.15
+    },
+    "37S": {
+      "protrusion_mm3": 0.48100000000000054,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.48100000000000054,
+      "seated_interference_mm3": 0.48100000000000054,
+      "barb_seated_interference_mm3": 0.48100000000000054,
+      "barb_seated_expected_mm3": 0.48100000000000076,
+      "barb_ok": true,
+      "transit_interference_mm3": 1.0198125000000018,
+      "transit_expected_range_mm3": [
+        0.001,
+        14.430000000000014
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "bite_interference_mm3": 0.0,
+      "bite_interference_b_per_side": 0.1
+    },
+    "37T": {
+      "protrusion_mm3": 0.7215000000000004,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.7215000000000004,
+      "seated_interference_mm3": 0.7215000000000004,
+      "barb_seated_interference_mm3": 0.7215000000000004,
+      "barb_seated_expected_mm3": 0.7214999999999999,
+      "barb_ok": true,
+      "transit_interference_mm3": 1.5331874999999981,
+      "transit_expected_range_mm3": [
+        0.001,
+        21.644999999999985
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "bite_interference_mm3": 0.0,
+      "bite_interference_b_per_side": 0.15
+    },
+    "39S": {
+      "protrusion_mm3": 0.5070000000000007,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.5070000000000007,
+      "seated_interference_mm3": 0.5070000000000007,
+      "barb_seated_interference_mm3": 0.5070000000000007,
+      "barb_seated_expected_mm3": 0.5070000000000008,
+      "barb_ok": true,
+      "transit_interference_mm3": 1.074937500000002,
+      "transit_expected_range_mm3": [
+        0.001,
+        15.210000000000013
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "bite_interference_mm3": 0.0,
+      "bite_interference_b_per_side": 0.1
+    },
+    "39T": {
+      "protrusion_mm3": 0.7605000000000003,
+      "protrusion_outside_barb_mm3": 0.0,
+      "barb_region_protrusion_mm3": 0.7605000000000003,
+      "seated_interference_mm3": 0.7605000000000003,
+      "barb_seated_interference_mm3": 0.7605000000000003,
+      "barb_seated_expected_mm3": 0.7605,
+      "barb_ok": true,
+      "transit_interference_mm3": 1.6160624999999984,
+      "transit_expected_range_mm3": [
+        0.001,
+        22.814999999999984
+      ],
+      "outside_ok": true,
+      "transit_ok": true,
+      "bite_interference_mm3": 0.0,
+      "bite_interference_b_per_side": 0.15
+    }
+  },
+  "c4_section_measurements": {
+    "pocket": {
+      "expected": {
+        "mouth_w": 14.0,
+        "taper_mid_w": 11.0,
+        "neck_w": 10.0,
+        "chamber_w_nominal": 12.8,
+        "chamber_centreline_at_post": 0.0,
+        "chamber_side_channel": 5.4
+      },
+      "measured": {
+        "mouth_w": 14.0,
+        "taper_mid_w": 11.006666666666671,
+        "neck_w": 10.0,
+        "chamber_w_nominal": 12.800000000000002,
+        "chamber_centreline_at_post": 0.0,
+        "chamber_side_channel": 5.400050001250069
+      },
+      "roof_over_mouth_neck_mm": 1.5999999999999996,
+      "roof_over_mouth_neck_expected_mm": 1.6000000000000005,
+      "roof_over_chamber_mm": 1.1999999999999993,
+      "roof_over_chamber_expected_mm": 1.2000000000000002,
+      "floor_mm": 1.4,
+      "floor_expected_mm": 1.4,
+      "post_dia_expected_mm": 2.0,
+      "post_dia_measured_mm": 2.0,
+      "post_x_expected_mm": 8.0
+    },
+    "clip_stations": {
+      "35S": {
+        "thickness_expected_mm": 3.5,
+        "thickness_measured_mm": 3.5000001000000003,
+        "bar_w_mm": 13.200000000000001,
+        "prong_w_mm": 10.0,
+        "barb_w_measured_mm": 10.399999999999999,
+        "barb_w_expected_mm": 10.4,
+        "bite_w_measured_mm": 1.8048000000000002,
+        "bite_w_expected_mm": 1.8,
+        "cup_dia_measured_mm": 2.202285714285715,
+        "cup_dia_expected_mm": 2.2,
+        "tip_w_mm": 5.320000000000004
+      },
+      "35T": {
+        "thickness_expected_mm": 3.5,
+        "thickness_measured_mm": 3.5000001000000003,
+        "bar_w_mm": 13.200000000000001,
+        "prong_w_mm": 10.0,
+        "barb_w_measured_mm": 10.600000000000001,
+        "barb_w_expected_mm": 10.6,
+        "bite_w_measured_mm": 1.7052000000000007,
+        "bite_w_expected_mm": 1.7,
+        "cup_dia_measured_mm": 2.202285714285715,
+        "cup_dia_expected_mm": 2.2,
+        "tip_w_mm": 5.320000000000004
+      },
+      "37S": {
+        "thickness_expected_mm": 3.7,
+        "thickness_measured_mm": 3.7000001000000013,
+        "bar_w_mm": 13.200000000000001,
+        "prong_w_mm": 10.0,
+        "barb_w_measured_mm": 10.399999999999999,
+        "barb_w_expected_mm": 10.4,
+        "bite_w_measured_mm": 1.8048000000000002,
+        "bite_w_expected_mm": 1.8,
+        "cup_dia_measured_mm": 2.202285714285715,
+        "cup_dia_expected_mm": 2.2,
+        "tip_w_mm": 5.320000000000004
+      },
+      "37T": {
+        "thickness_expected_mm": 3.7,
+        "thickness_measured_mm": 3.7000001000000013,
+        "bar_w_mm": 13.200000000000001,
+        "prong_w_mm": 10.0,
+        "barb_w_measured_mm": 10.600000000000001,
+        "barb_w_expected_mm": 10.6,
+        "bite_w_measured_mm": 1.7052000000000007,
+        "bite_w_expected_mm": 1.7,
+        "cup_dia_measured_mm": 2.202285714285715,
+        "cup_dia_expected_mm": 2.2,
+        "tip_w_mm": 5.320000000000004
+      },
+      "39S": {
+        "thickness_expected_mm": 3.9,
+        "thickness_measured_mm": 3.9000001000000006,
+        "bar_w_mm": 13.200000000000001,
+        "prong_w_mm": 10.0,
+        "barb_w_measured_mm": 10.399999999999999,
+        "barb_w_expected_mm": 10.4,
+        "bite_w_measured_mm": 1.8048000000000002,
+        "bite_w_expected_mm": 1.8,
+        "cup_dia_measured_mm": 2.202285714285715,
+        "cup_dia_expected_mm": 2.2,
+        "tip_w_mm": 5.320000000000004
+      },
+      "39T": {
+        "thickness_expected_mm": 3.9,
+        "thickness_measured_mm": 3.9000001000000006,
+        "bar_w_mm": 13.200000000000001,
+        "prong_w_mm": 10.0,
+        "barb_w_measured_mm": 10.600000000000001,
+        "barb_w_expected_mm": 10.6,
+        "bite_w_measured_mm": 1.7052000000000007,
+        "bite_w_expected_mm": 1.7,
+        "cup_dia_measured_mm": 2.202285714285715,
+        "cup_dia_expected_mm": 2.2,
+        "tip_w_mm": 5.320000000000004
+      },
+      "REF": {
+        "thickness_expected_mm": 3.5,
+        "thickness_measured_mm": 3.5000001000000003,
+        "bar_w_mm": 13.200000000000001,
+        "prong_w_mm": 10.0,
+        "barb_w_measured_mm": 10.399999999999999,
+        "eye_max_measured_mm": 3.6400000000000006,
+        "eye_max_expected_mm": 3.64
+      }
+    }
+  },
+  "wall_post_vs_v43_outline": {
+    "clearance_mm": 0.39222222222222225,
+    "collides": false,
+    "post_clip_intersection_mm3": 0.0,
+    "wall_collision_mm3": 0.11215384615384608,
+    "note": "same clip geometry and post station as C.2 (y = post_x when seated); only the surrounding pocket differs"
+  },
+  "cube_spot_checks": {
+    "z1": {
+      "37S": {
+        "collision_mm3": 0.2405000000000027,
+        "post_interference_mm3": 0.0
+      },
+      "v43": {
+        "collision_mm3": 0.23400000000000265,
+        "post_interference_mm3": 0.0
+      }
+    },
+    "z0": {
+      "37S": {
+        "collision_mm3": 0.24050000000000027,
+        "post_interference_mm3": 0.0
+      },
+      "v43": {
+        "collision_mm3": 0.23400000000000026,
+        "post_interference_mm3": 0.0
+      }
+    },
+    "x0": {
+      "37S": {
+        "collision_mm3": 0.24050000000000082,
+        "post_interference_mm3": 0.0
+      },
+      "v43": {
+        "collision_mm3": 0.23400000000000082,
+        "post_interference_mm3": 0.0
+      }
+    },
+    "y0": {
+      "37S": {
+        "collision_mm3": 0.11526923076922926,
+        "post_interference_mm3": 0.0
+      },
+      "v43": {
+        "collision_mm3": 0.11215384615384466,
+        "post_interference_mm3": 0.0
+      }
+    }
+  },
+  "printability_report": [
+    {
+      "coupon": "coupon-merged",
+      "pose": "tile flat (top up)",
+      "feature": "mouth bridge",
+      "span_mm": 14.0,
+      "note": "14 x 2.0 mm bridge over the mouth cut, at the floor (z 1.4)"
+    },
+    {
+      "coupon": "coupon-merged-post",
+      "pose": "tile flat (top up)",
+      "feature": "chamber roof",
+      "span_mm": 5.4,
+      "note": "top plate (1.2 mm) over the open chamber; the post at x=8.0 splits the 12.8 mm span into two ~5.4 mm half-bridges instead of one 12.8 mm span"
+    },
+    {
+      "coupon": "coupon-merged-nopost",
+      "pose": "tile flat (top up)",
+      "feature": "chamber roof",
+      "span_mm": 12.8,
+      "note": "same 1.2 mm top plate, no post: one unsupported 12.8 mm bridge"
+    },
+    {
+      "coupon": "coupon-openlock-ref",
+      "pose": "tile flat (top up)",
+      "feature": "chamber roof",
+      "span_mm": 12.8,
+      "note": "control: same top-plate mechanism as coupon-merged-nopost, 12.8 mm bridge"
+    },
+    {
+      "coupon": "wall-merged / wall-openlock-ref",
+      "pose": "standing (on its base)",
+      "feature": "base pocket roof",
+      "span_mm": 14.0,
+      "note": "the base through-pocket's mouth/taper/neck ceiling is a 14 mm bridge near the top of the standing wall"
+    },
+    {
+      "coupon": "wall-merged / wall-openlock-ref",
+      "pose": "standing (on its base)",
+      "feature": "side-lock chamber",
+      "span_mm": 4.2,
+      "note": "the vertical side-lock pocket is a through-slot in thickness; each layer bridges only 4.2 mm"
+    },
+    {
+      "coupon": "wall-merged / wall-openlock-ref",
+      "pose": "lying (on one 25.4 x 25.4 face)",
+      "feature": "side-lock chamber",
+      "span_mm": 10.52,
+      "note": "rotated 90 deg, the side-lock chamber's 10.52 mm height becomes the bridge span; wall-merged's post sits mid-span and acts as a support, wall-openlock-ref has none"
+    },
+    {
+      "coupon": "wall-merged / wall-openlock-ref",
+      "pose": "lying (on one 25.4 x 25.4 face)",
+      "feature": "base through-pocket",
+      "span_mm": 0.0,
+      "note": "prints as a plan profile (the pocket's depth axis is now vertical, its floor/ceiling faces are vertical too): no bridge"
+    },
+    {
+      "coupon": "cube-merged-50.8",
+      "pose": "one face down (bottom pocket up against the bed)",
+      "feature": "bottom-face mouth + chamber roof",
+      "span_mm": 12.8,
+      "note": "the bottom-face pocket opens downward into the bed contact face: its mouth and chamber ceilings print as bridges/overhangs over the void the nozzle cannot reach cleanly on layer 1"
+    },
+    {
+      "coupon": "cube-merged-50.8",
+      "pose": "one face down",
+      "feature": "top-face chamber ledge",
+      "span_mm": 1.4,
+      "note": "the top-face pocket's neck-to-chamber step overhangs 1.40 mm on each side under the neck (neck 10.0 widening to chamber 12.8)"
+    },
+    {
+      "coupon": "cube-merged-50.8",
+      "pose": "one face down",
+      "feature": "side pockets (4x)",
+      "span_mm": 4.2,
+      "note": "the four vertical side faces reproduce the wall-standing/-lying bridge cases above, one per face"
+    }
+  ],
+  "flags": [],
+  "physical_print": "not performed",
+  "physical_fit": "not measured",
+  "strength": "not tested"
+}

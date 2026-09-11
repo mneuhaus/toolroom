@@ -49,3 +49,7 @@ The complete old-to-new path map is `provenance/restructure-2026-09-10.json`.
 3. Which design languages and machine profiles should become maintained defaults?
 4. Which physically measured coupons should replace values that are still assumptions?
 5. Which parts of Toolroom should receive a public licence, and under which name-space for skills?
+
+## 11 September 2026: flatter navigation and structured skill pages
+
+The site's sidebar became an explorer tree: every skill, every knowledge article by section, every lab and the profile and repository documents are one click away, and the group of the current page opens automatically. Skill entrypoints render from their fixed shape into a structured page: category and description, a "use when / not for" pair, numbered step cards, and link cards for the knowledge and references they load. Knowledge articles open with a summary card that names the section, the reading time and the skills that load the article. The overview ends with the whole map. The Markdown sources did not change; only `site/src/` did.

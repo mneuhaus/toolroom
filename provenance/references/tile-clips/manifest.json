@@ -1,0 +1,3066 @@
+{
+  "status": "reviewed references and measured third-party files; no physical verification",
+  "derived_article": "knowledge/construction/tile-clip-joints.md",
+  "derived_lab": "labs/tile-clip-sockets/README.md",
+  "compiled": "2026-09-10",
+  "method": "Three research passes on 2026-09-10: (1) OpenLOCK: Printable Scenery pages, forum threads, the OpenForge OpenSCAD bases (devonjones) vendored with commit, two community re-implementations, and trimesh sections of the OpenForge-vendored clip STLs v3.1/v4.0/v4.3 and of locally rendered OpenSCAD sockets; official PS port templates and the v5.4 clip STL were not obtainable without an account. (2) DRAGONLOCK: Fat Dragon Games pages and free adaptor files, trimesh sections of FDG models (DLU_2x2_Master, Dragonbite_Port, WallBase_1, wall cores, Dragonlock-Openlock-ComboClip-v3) and the OpenForge lock_dragonlock.scad; the standalone free clip v3 STL was not obtainable (store login). (3) Comparable systems: product, forum and repository pages for 26 systems; several vendor and marketplace pages returned 403 and are logged as not retrieved. The full page archive, downloads, measurement scripts and findings.md files stay in var/research/ (local, not committed); this manifest records url, retrieval date and sha256 of each archived file.",
+  "findings_files": {
+    "openlock": "var/research/openlock/findings.md",
+    "dragonlock": "var/research/dragonlock/findings.md",
+    "comparables": "var/research/comparables/findings.md"
+  },
+  "sources": [
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "http://biasedbillunplugged.blogspot.com/2017/12/quick-look-dragonlock-vs-openlock.html",
+      "title": "Biased Bill: Quick Look: DRAGONLOCK vs. OpenLOCK (2017-12-03)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/biasedbill_dragonlock_vs_openlock.html",
+      "sha256": "46f92da982eb90b7d07f9c9b935598e8515008a9541c002b36289dec0b32cef1",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "http://biasedbillunplugged.blogspot.com/2017/12/quick-look-dragonlock-vs-openlock.html",
+      "title": "Biased Bill: Quick Look: DRAGONLOCK vs. OpenLOCK (2017-12-03)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/biasedbill_dragonlock_vs_openlock.txt",
+      "sha256": "08446dc9e0c87706fd40c1331ae4aa05709b2934b7163d4e02d3dbe762a412ad",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonlock-general/dragonlock-ultimate-dragonbite-clip-v3-0-fdg0184/",
+      "title": "Fat Dragon Games: DRAGONLOCK Ultimate: Dragonbite Clip v3.0 FDG0184",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/fdg_dragonbite_clip_v3.html",
+      "sha256": "457467c676fc03ffe956702086c361f54cfbd8add852ef2c3927e2d656684fb8",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonlock-general/dragonlock-ultimate-dragonbite-clip-v3-0-fdg0184/",
+      "title": "Fat Dragon Games: DRAGONLOCK Ultimate: Dragonbite Clip v3.0 FDG0184",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/fdg_dragonbite_clip_v3.txt",
+      "sha256": "50bfc58566509918a033a543bb455c7114620c87dc9d3ba76573e9c9fb5242bd",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonbite-v3-0-released/",
+      "title": "Fat Dragon Games: Dragonbite v3.0 released",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/fdg_dragonbite_v3.html",
+      "sha256": "f02dc4bd10652c80a69665e9c79533e9983872a0cc6a04231339c0c8e9f64916",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonbite-v3-0-released/",
+      "title": "Fat Dragon Games: Dragonbite v3.0 released",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/fdg_dragonbite_v3.txt",
+      "sha256": "9b43ad5f6a7c085454939d01da10eec1f119c8060b8780a5457e20e122c6835a",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://api.github.com/repos/devonjones/openforge-tutorials/issues/8",
+      "title": "GitHub API: openforge-tutorials issue 8 'OpenLock 1.0 vs 2.0 links clarification in Basic Set'",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/github_openforge_tutorials_issue8.json",
+      "sha256": "c909293ab4ea6965513c8920208cd3103919efa737c4aba8f150c76a2d3aed75",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://api.github.com/repos/devonjones/openforge-tutorials/issues/8/comments",
+      "title": "GitHub API: comments on openforge-tutorials issue 8",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/github_openforge_tutorials_issue8_comments.json",
+      "sha256": "31c937be303937875c975776cb6d1b17bca885cee7ec165ed2b3d92a74353904",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://github.com/devonjones/openforge-tutorials/issues/9",
+      "title": "GitHub issue 9 (HTML fetch failed: 'Not Found'; see the .json files fetched via API)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/github_openforge_tutorials_issue9.html",
+      "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://api.github.com/repos/MasterworkTools/openforge-tutorials/issues/9",
+      "title": "GitHub API: openforge-tutorials issue 9 'Clips pointers and printer setting tips'",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/github_openforge_tutorials_issue9.json",
+      "sha256": "1fe75b29bfe81ddf2716516d5479e51202427c256e6c305e0bb0be30f9669164",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://api.github.com/repos/MasterworkTools/openforge-tutorials/issues/9/comments",
+      "title": "GitHub API: comments on openforge-tutorials issue 9",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/github_openforge_tutorials_issue9_comments.json",
+      "sha256": "1c755e6028785a96d29ccd50ec69b1f210f1621fe325a4b1a3795c25b5832a54",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://makerworld.com/en/models/1568110-official-printable-scenery-openlock-clip-latest",
+      "title": "MakerWorld: Official Printable Scenery OpenLOCK clip (Latest)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/makerworld_official_clip.html",
+      "sha256": "31878218dcbe0ae812f4682acb2c64de00386eba5fbfb915f7096101aecae616",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://makerworld.com/en/models/1568110-official-printable-scenery-openlock-clip-latest",
+      "title": "MakerWorld: Official Printable Scenery OpenLOCK clip (Latest)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/makerworld_official_clip.txt",
+      "sha256": "d44c878b16cb238c3c267f979438cd2a940ab62532af72961dde5e9cda9b23a4",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.myminifactory.com/object/3d-print-openlock-29338",
+      "title": "MyMiniFactory: 3D Printable OpenLOCK by Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/mmf_openlock_29338.html",
+      "sha256": "01e3ec9d7c7172ccc89390e0af0eb1ef537333700e4f5868d1abbe6d17fdcf3c",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.myminifactory.com/object/3d-print-openlock-29338",
+      "title": "MyMiniFactory: 3D Printable OpenLOCK by Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/mmf_openlock_29338.txt",
+      "sha256": "d44c878b16cb238c3c267f979438cd2a940ab62532af72961dde5e9cda9b23a4",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printables.com/model/513520-openlock-magnetic-connection-system-v3",
+      "title": "Printables: OpenLock Magnetic Connection System V3 (Singularity Games)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/printables_magnetic_v3.html",
+      "sha256": "ad9e1d88fe94c79de797d9d41927c11cd18ac507777a337b700b5268a9a034e9",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printables.com/model/513520-openlock-magnetic-connection-system-v3",
+      "title": "Printables: OpenLock Magnetic Connection System V3 (Singularity Games)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/printables_magnetic_v3.txt",
+      "sha256": "d44c878b16cb238c3c267f979438cd2a940ab62532af72961dde5e9cda9b23a4",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2017/07/21/dave-knott-openlock-licence/",
+      "title": "Printable Scenery: Dave Knott OpenLOCK Licence (example of the BSD commercial licence text)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_dave_knott_licence.html",
+      "sha256": "5db744a6d4dd6faa96f0afe48d17d5069dc4a29d02d77f779a71280f3cca777c",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2017/07/21/dave-knott-openlock-licence/",
+      "title": "Printable Scenery: Dave Knott OpenLOCK Licence (example of the BSD commercial licence text)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_dave_knott_licence.txt",
+      "sha256": "c434c1007500dbfd9455c4341c1206fa05fb9df47a2ad9a98e6b1fc7c2df90fe",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2017/04/26/openlock-developer-information/",
+      "title": "Printable Scenery: OpenLOCK developer information",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_developer_information.html",
+      "sha256": "bfcbfbb0d84e3dea06c2860fcd802bce69c2b9258fbcf740d94f31222793de2d",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2017/04/26/openlock-developer-information/",
+      "title": "Printable Scenery: OpenLOCK developer information",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_developer_information.txt",
+      "sha256": "2969173006c157666384b6bcba00f0f386c0b4f63a49bf1a116143ba6cf362a6",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/choosing-the-right-scale-and-impact-of-change/",
+      "title": "Printable Scenery forum: Choosing the right scale and impact of change",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_choosing_scale.html",
+      "sha256": "8fca89530ff6c66cca6c87bcecc37eff078fa0322b3b52caa34efdfcce4a8788",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/choosing-the-right-scale-and-impact-of-change/",
+      "title": "Printable Scenery forum: Choosing the right scale and impact of change",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_choosing_scale.txt",
+      "sha256": "5bc494f4892ec8db9945cf6e71cc9f7cb6fb51ced29d8450a25d01d767c9d044",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/clips-breaking-terrain/",
+      "title": "Printable Scenery forum: Clips Breaking Terrain",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_clips_breaking_terrain.html",
+      "sha256": "925590b6402706fee1ae032b68102ad81d173f7a163d3b42de68d535760ca703",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/clips-breaking-terrain/",
+      "title": "Printable Scenery forum: Clips Breaking Terrain",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_clips_breaking_terrain.txt",
+      "sha256": "9af73048885773cb81c25a3cbcd2d740d4bbf61a598b2b96433cfc4e4cd268fd",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/clips-not-fitting/",
+      "title": "Printable Scenery forum: Clips not fitting?",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_clips_not_fitting.html",
+      "sha256": "3e609e7eb4567dc1f4169190e90b77cc012175ed59976f458a618d9f3954ac14",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/clips-not-fitting/",
+      "title": "Printable Scenery forum: Clips not fitting?",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_clips_not_fitting.txt",
+      "sha256": "505cd175093f99022853cc1d3c5689f33095146e3bae1515df2bf4cbbd4adb03",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/how-do-i-get-a-licence-to-use-the-openlock-system-commercially/",
+      "title": "Printable Scenery forum: How do I get a licence to use the OpenLOCK system commercially?",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_commercial_licence.html",
+      "sha256": "b5fa0e1b831d04abefd599af645e885e1bf705b78a1fd88f277f4c04a9f8b938",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/how-do-i-get-a-licence-to-use-the-openlock-system-commercially/",
+      "title": "Printable Scenery forum: How do I get a licence to use the OpenLOCK system commercially?",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_commercial_licence.txt",
+      "sha256": "5f445f716de23bda0c351dca7653febb6c35d9ed3eb9b1da9735717fb433544f",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/first-build/",
+      "title": "Printable Scenery forum: First build (Clorehaven)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_first_build.html",
+      "sha256": "b3f6a0aed8b8919e3f149b7122c647a02757c7e29c08bd63da3e2493c9d2755d",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/first-build/",
+      "title": "Printable Scenery forum: First build (Clorehaven)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_first_build.txt",
+      "sha256": "307149eabd3d3b6806a9998436442bd26f5cd0da249c2b912ba03881bdab62b8",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/springy-clip-caps/",
+      "title": "Printable Scenery forum: Springy Clip Caps",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_springy_clip_caps.html",
+      "sha256": "d8cefb67b189b260423399cbf82d7b7998961f70d96640b4d7c3fec13fe40e43",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/topic/springy-clip-caps/",
+      "title": "Printable Scenery forum: Springy Clip Caps",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forum_springy_clip_caps.txt",
+      "sha256": "16d7f69b5719c0c11840bdbb06413c021433bfa6a4e22a80a4ef4940f3a23943",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/forum/openlock-creators-and-designers/ (assumed)",
+      "title": "Printable Scenery forum category page",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forums_openlock_creators.html",
+      "sha256": "7e37edaf2720e6670c982ba75bedb5d2a14288da766b8609bc6e4caa53be11f1",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/forums/forum/openlock-creators-and-designers/ (assumed)",
+      "title": "Printable Scenery forum category page",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_forums_openlock_creators.txt",
+      "sha256": "9688a175643d882884465be45ebed3aa95f06ba6e7e4eb92a2fb75cd9c04ab6a",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2025/01/17/how-to-build-and-connect-city-foundations/",
+      "title": "Printable Scenery KB: How to build and connect city foundations",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_city_foundations.html",
+      "sha256": "55b8d5acf832ed5a24e9b18609266e7b08db2eec5496f6e246a0373872190611",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2025/01/17/how-to-build-and-connect-city-foundations/",
+      "title": "Printable Scenery KB: How to build and connect city foundations",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_city_foundations.txt",
+      "sha256": "5634b17df7a961ef994ad07e8f04467daf0df2c35a36bc34ea8e98c0107364f8",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2025/07/21/creating-magnetic-dungeon-tiles-with-openlock/",
+      "title": "Printable Scenery KB: Creating Magnetic Dungeon Tiles with OpenLOCK",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_magnetic_tiles.html",
+      "sha256": "e7d1063ed5fc07b63d00921f4a5439df7765fb63f270735fa71ba27000d52c2a",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2025/07/21/creating-magnetic-dungeon-tiles-with-openlock/",
+      "title": "Printable Scenery KB: Creating Magnetic Dungeon Tiles with OpenLOCK",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_magnetic_tiles.txt",
+      "sha256": "2ffb1003cb896bc6ff6f9fadac57c8e043fdc40a36b4493db85b66740607a216",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/category/knowledgebase/openlock/",
+      "title": "Printable Scenery KB category: OpenLOCK",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_openlock_category.html",
+      "sha256": "be0ac6491aae8f978039153b69e8ef914f51e2166c7e75d0e06d410af0205895",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/category/knowledgebase/openlock/",
+      "title": "Printable Scenery KB category: OpenLOCK",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_openlock_category.txt",
+      "sha256": "6b7564a9ce0ec436704c38d4cd4cc804e350776ef3857a9f278053893a3bd558",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2026/05/14/how-to-build-3d-printed-openlock-doors/",
+      "title": "Printable Scenery KB: How to build 3D Printed OpenLOCK doors",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_openlock_doors.html",
+      "sha256": "642c297bd348cffc75424dd846609453b5db15b892bb2dae8a3a9554319a82ed",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2026/05/14/how-to-build-3d-printed-openlock-doors/",
+      "title": "Printable Scenery KB: How to build 3D Printed OpenLOCK doors",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_openlock_doors.txt",
+      "sha256": "413f8812b2e2d377ea5040e3bab35f9283fb65f78ecc996887ba90d516697891",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/category/knowledgebase/openlock/",
+      "title": "Printable Scenery KB category: OpenLOCK (redirected; near-duplicate of ps_kb_openlock_category)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_rampage_category.html",
+      "sha256": "39c261c66f050abb7fccc4b1e1d4957ef7a02b3973fa42d6bac651352609987e",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/category/knowledgebase/openlock/",
+      "title": "Printable Scenery KB category: OpenLOCK (redirected; near-duplicate of ps_kb_openlock_category)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_rampage_category.txt",
+      "sha256": "6b7564a9ce0ec436704c38d4cd4cc804e350776ef3857a9f278053893a3bd558",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2024/11/30/removing-supports-from-the-openlock-ports/",
+      "title": "Printable Scenery KB: Removing supports from the OpenLOCK ports",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_removing_supports.html",
+      "sha256": "d70adabe533615a0b12c30687146c665a426fb8a04e20e7acf802de138916712",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2024/11/30/removing-supports-from-the-openlock-ports/",
+      "title": "Printable Scenery KB: Removing supports from the OpenLOCK ports",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_kb_removing_supports.txt",
+      "sha256": "4dc570fe2d4a77bad72d1e33d9ca7207011ce24bb1d8dca734ecac8b944cf50d",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2020/02/10/the-openlock-license/",
+      "title": "Printable Scenery: The Openlock License (+ list of licence holders)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_openlock_license.html",
+      "sha256": "1fe7df777f83ca5788d4f4a5b6e77403496380d9f9bf3f61993f2aad28485d4b",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2020/02/10/the-openlock-license/",
+      "title": "Printable Scenery: The Openlock License (+ list of licence holders)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_openlock_license.txt",
+      "sha256": "4f0af1f1b1b51659d54a9f126ef12da64c859461c7d26bada9e8518a268f3260",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2016/11/21/openlock-open-source/",
+      "title": "Printable Scenery: OpenLOCK Open Source (CC BY-NC announcement)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_openlock_open_source.html",
+      "sha256": "d2db19304a45a422c61893864dac4b0b905b9509d47cbb0254f435acc5597b4a",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2016/11/21/openlock-open-source/",
+      "title": "Printable Scenery: OpenLOCK Open Source (CC BY-NC announcement)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_openlock_open_source.txt",
+      "sha256": "d22c19b02ce73de0d6799c78b86c6d9f41ab8da1fbbeb9229e67dda64dea4e97",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2021/03/17/openvlex-2/",
+      "title": "Printable Scenery: OpenVLex 2 OpenLOCK licence notice",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_openvlex2_licence.html",
+      "sha256": "3fea6d465cb651b05c02d5c048187cf6a6026429aa605d0ba676e6fca7be4feb",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2021/03/17/openvlex-2/",
+      "title": "Printable Scenery: OpenVLex 2 OpenLOCK licence notice",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_openvlex2_licence.txt",
+      "sha256": "c8590543a2249689daf8ecd1a42d4b0ab807c4ced2263c555524755ab5135714",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/product/open-lock/",
+      "title": "Printable Scenery product: OpenLOCK Tessellation Templates (free; changelog)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_product_open_lock.html",
+      "sha256": "3aab96d36318a0a319c6bcadadae268d6daca12262144781b3025e967784c677",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/product/open-lock/",
+      "title": "Printable Scenery product: OpenLOCK Tessellation Templates (free; changelog)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_product_open_lock.txt",
+      "sha256": "db4f817f53c3a67d35c06ac4874028423eb93cabd8dac7c032c04e21512a68e5",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/product/openlock-clips/",
+      "title": "Printable Scenery product: OpenLOCK Clips (v5.4/5.5)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_product_openlock_clips.html",
+      "sha256": "c615bee843ac214f499077bef005c36af207e98c2357236730183ad50be45582",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/product/openlock-clips/",
+      "title": "Printable Scenery product: OpenLOCK Clips (v5.4/5.5)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_product_openlock_clips.txt",
+      "sha256": "4240640738ebff3648f265527da930402031802541af8bd3f24fe366f1aa3e9f",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/product/openlockdragonlock-adapter/",
+      "title": "Printable Scenery product: OpenLOCK/Dragonlock Adapter (beta)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_product_openlock_dragonlock_adapter.html",
+      "sha256": "9031e168fa73d4d66b95a0497f556282b77245df3b448a5e64c70c72a6b111d4",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/product/openlockdragonlock-adapter/",
+      "title": "Printable Scenery product: OpenLOCK/Dragonlock Adapter (beta)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_product_openlock_dragonlock_adapter.txt",
+      "sha256": "9b0181a9b8f16b4164eddd3574132bc9450789345bdae75dd0471ce08dd11a13",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/product/openlock-magnetic/",
+      "title": "Printable Scenery product: OpenLOCK Magnetic (clip)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_product_openlock_magnetic.html",
+      "sha256": "e1a05bba289342ab728391e43fca93d7da2bde81e05440a6d042d94415d6047b",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/product/openlock-magnetic/",
+      "title": "Printable Scenery product: OpenLOCK Magnetic (clip)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_product_openlock_magnetic.txt",
+      "sha256": "6c61773a4e6779c951fccad9246c4c656f9d9aa9c98640d908bfc6f086ce8613",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2017/07/13/openlock/",
+      "title": "Printable Scenery: What is OpenLOCK?",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_what_is_openlock.html",
+      "sha256": "c911855fd1d52e68ced95753cba2d9a0206ac813d83efe75537222fd4079c305",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/2017/07/13/openlock/",
+      "title": "Printable Scenery: What is OpenLOCK?",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ps_what_is_openlock.txt",
+      "sha256": "55790b54dcb346544de783be5fb79fc294411679612ba0210b25bdfdff0a33d9",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "http://ragingowlbear.blogspot.com/2017/09/dnd-in-3d-printing.html",
+      "title": "Raging Owlbear: D&D in 3D (printing) (OpenForge/OpenLOCK/DragonLock comparison)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ragingowlbear_dnd_in_3d.html",
+      "sha256": "aea46d9ba83242da4cbb544310666434a9c5ac08bed436f4469e1e8dd4a9d9c0",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "http://ragingowlbear.blogspot.com/2017/09/dnd-in-3d-printing.html",
+      "title": "Raging Owlbear: D&D in 3D (printing) (OpenForge/OpenLOCK/DragonLock comparison)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/ragingowlbear_dnd_in_3d.txt",
+      "sha256": "e572e664dc9f979883947b44b9743a96410295451e1572f2fcc731f02361ab03",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://saucermenstudios.com.au/what-is-openlock-and-how-does-it-connect/",
+      "title": "Saucermen Studios: What is OpenLock and how does it connect?",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/saucermen_what_is_openlock.html",
+      "sha256": "d035eb193210fdf9f096b8a0dfb4fdf118f5b794b47d3dbee569f16cbdab5338",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://saucermenstudios.com.au/what-is-openlock-and-how-does-it-connect/",
+      "title": "Saucermen Studios: What is OpenLock and how does it connect?",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/saucermen_what_is_openlock.txt",
+      "sha256": "db68c6e265440978b4e6c86f3f17de9a4640bb7b17351c8d8ca045848860ead8",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://api.thingiverse.com/things/1833963",
+      "title": "Thingiverse API: thing 1833963 (OpenLOCK by Printablescenery)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/thingiverse_1833963_api.json",
+      "sha256": "718ea63b4790a4621c716fff05355abbf7aa452de92b847b852946fb886e3fe3",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.thingiverse.com/thing:1833963/files",
+      "title": "Thingiverse: OpenLOCK by Printablescenery, files tab",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/thingiverse_1833963_files.html",
+      "sha256": "d84a622104e27a9e7c111ba52294bda94ddb973eb6b95dba73930b4010d1249b",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.thingiverse.com/thing:1833963/files",
+      "title": "Thingiverse: OpenLOCK by Printablescenery, files tab",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/thingiverse_1833963_files.txt",
+      "sha256": "9581bac3918ad2383e9ac8728d8032768ec25916b5a394200891084d467cf457",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.thingiverse.com/thing:1910972",
+      "title": "Thingiverse: OpenForge plain OpenLOCK base (thing 1910972)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/thingiverse_openforge_plain_openlock_base.html",
+      "sha256": "3bb66b0c3455a353b2f90b51b12dac44b06a2a43807a94eb69f28ecc8128cbf8",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.thingiverse.com/thing:1910972",
+      "title": "Thingiverse: OpenForge plain OpenLOCK base (thing 1910972)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/thingiverse_openforge_plain_openlock_base.txt",
+      "sha256": "9581bac3918ad2383e9ac8728d8032768ec25916b5a394200891084d467cf457",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.thingiverse.com/thing:3367267",
+      "title": "Thingiverse: Springy OpenLOCK Clip by eleotlecram (thing 3367267)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/thingiverse_springy_clip.html",
+      "sha256": "ad78cbd62ce38e2366e4efca2f995d875dd539acc77608c3286e347487330681",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.thingiverse.com/thing:3367267",
+      "title": "Thingiverse: Springy OpenLOCK Clip by eleotlecram (thing 3367267)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/thingiverse_springy_clip.txt",
+      "sha256": "9581bac3918ad2383e9ac8728d8032768ec25916b5a394200891084d467cf457",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://xykit.com/products/openlock-clip-by-printablescenery",
+      "title": "Xykit: OpenLOCK Clip by Printable Scenery (licensed reseller)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/xykit_openlock_clip.html",
+      "sha256": "dd00bdef9dc3a03e3c3e3e94b61ea34ea5e9fe790c0d51e46e8eb9bcaa206a07",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://xykit.com/products/openlock-clip-by-printablescenery",
+      "title": "Xykit: OpenLOCK Clip by Printable Scenery (licensed reseller)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/pages/xykit_openlock_clip.txt",
+      "sha256": "ebab06f32ed8100bd314fbd7bd2cefc49c83478ab9ce011ab8478ee16259f741",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2017/04/Castle-floor-Ref-2-1.png",
+      "title": "Printable Scenery image Castle-floor-Ref-2-1.png (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/Castle-floor-Ref-2-1.png",
+      "sha256": "cd72a03890a22a8dc61834c0826f57f66ef7f9c4bccb91e72683babc57e53a38",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2017/04/Open-Lock-1.jpg",
+      "title": "Printable Scenery image Open-Lock-1.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/Open-Lock-1.jpg",
+      "sha256": "d8c00cb59644a550d74f38c7a52dfa2a9ad81b9f1931b9bdb97459065a971d74",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2017/04/OpenLOCK-5.0-Column-Ref.jpg",
+      "title": "Printable Scenery image OpenLOCK-5.0-Column-Ref.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-5.0-Column-Ref.jpg",
+      "sha256": "537f5fb188f17186fbd4f2928719ca722672b9277f4c18f9d1455124bf8bb8a9",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2017/04/OpenLOCK-5.0-Ref-3.jpg",
+      "title": "Printable Scenery image OpenLOCK-5.0-Ref-3.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-5.0-Ref-3.jpg",
+      "sha256": "e3773eb8630cafec913cce75fb6e90962c7da74d6d3a212546dee3c5a3dec41d",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2017/04/OpenLOCK-8.4-Ref.jpg",
+      "title": "Printable Scenery image OpenLOCK-8.4-Ref.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-8.4-Ref.jpg",
+      "sha256": "aa22922acd3adf716ca608ffd7e5b3820669f14d5d38cf915ab3077ba61ef901",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2025/03/OpenLOCK-Clip-5.4.png",
+      "title": "Printable Scenery image OpenLOCK-Clip-5.4.png (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Clip-5.4.png",
+      "sha256": "3aa9d902b7110aa49e0d9ad962733ab56cc49bef51cafc15d56fd38d6d65e4e0",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2025/03/OpenLOCK-Clip-Grip-5.4.png",
+      "title": "Printable Scenery image OpenLOCK-Clip-Grip-5.4.png (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Clip-Grip-5.4.png",
+      "sha256": "8e618bb5dd33e55fb570573f22fd0857ecc6069090eb7644fa1371a4d13f8c6f",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2025/03/OpenLOCK-Clip-Magnet-5.4.png",
+      "title": "Printable Scenery image OpenLOCK-Clip-Magnet-5.4.png (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Clip-Magnet-5.4.png",
+      "sha256": "1c5491e53eab676603757231374b780b8f4ed7fb9b106e2c54a10ccededd8c93",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2025/03/OpenLOCK-Clip-Springy-A-5.4.png",
+      "title": "Printable Scenery image OpenLOCK-Clip-Springy-A-5.4.png (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Clip-Springy-A-5.4.png",
+      "sha256": "9d1b28c132a8847873d4c5c7b01ef2efd4c59130a2824780c51525a428b44a8d",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2025/03/OpenLOCK-Clip-Springy-B-5.4.png",
+      "title": "Printable Scenery image OpenLOCK-Clip-Springy-B-5.4.png (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Clip-Springy-B-5.4.png",
+      "sha256": "5724157b4ac18d9247ce1075986ab70d0d61b6a594b55fc30a29862a1c063a5b",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2025/03/OpenLOCK-Clips-Measurement-1.jpg",
+      "title": "Printable Scenery image OpenLOCK-Clips-Measurement-1.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Clips-Measurement-1.jpg",
+      "sha256": "9c915f6ea79343b756a610d882fc33d17cfaa093da97774204579eb788e7b87c",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2025/03/OpenLOCK-Clips-Measurement-2.jpg",
+      "title": "Printable Scenery image OpenLOCK-Clips-Measurement-2.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Clips-Measurement-2.jpg",
+      "sha256": "10d38390b0617c64db3c0896c45b4f890454160c5ea8710a05b355238cce8696",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2025/03/OpenLOCK-Clips-Measurement-3.jpg",
+      "title": "Printable Scenery image OpenLOCK-Clips-Measurement-3.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Clips-Measurement-3.jpg",
+      "sha256": "0efdbd900282c17d41cb9fc09519136abeba69a07b4d7abc77c5609180f90bb1",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2025/04/OpenLOCK-Clips-Reference.jpg",
+      "title": "Printable Scenery image OpenLOCK-Clips-Reference.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Clips-Reference.jpg",
+      "sha256": "5f94afc404bb6c359703579fedb4ca4caef78c96c42150d00cf904461d3eca70",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2025/03/OpenLOCK-Clips-STL.png",
+      "title": "Printable Scenery image OpenLOCK-Clips-STL.png (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Clips-STL.png",
+      "sha256": "16cdf4548bdcecb37ff11266d9bfa3f9949c4fd489d50d5978971686b97043e2",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2025/04/OpenLOCK-Pass-Thru-Clip.jpg",
+      "title": "Printable Scenery image OpenLOCK-Pass-Thru-Clip.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Pass-Thru-Clip.jpg",
+      "sha256": "8377f5f9ab29717982d58fe0f87e64ebea2cb04282435673daf121c20c648ff4",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2017/12/OpenLOCK-Templates.jpg",
+      "title": "Printable Scenery image OpenLOCK-Templates.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Templates.jpg",
+      "sha256": "effca3b7d60f44839de2e94fcc7bdeb08cc98302c607c3236cca8117a4a72ae0",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2017/04/OpenLOCK-Top-Locking.jpg",
+      "title": "Printable Scenery image OpenLOCK-Top-Locking.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK-Top-Locking.jpg",
+      "sha256": "2cd58e03702f8c5ba8288e2efde4c2ab3021a94197e32be6ac555a52456008af",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2017/04/OpenLOCK.jpg",
+      "title": "Printable Scenery image OpenLOCK.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/OpenLOCK.jpg",
+      "sha256": "9f262b051b3b9338f0a34808ff6c843e9a59fc76fdfd634de9bcc0d6c2e7865a",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2017/04/Primary-Walls.jpg",
+      "title": "Printable Scenery image Primary-Walls.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/Primary-Walls.jpg",
+      "sha256": "ef1701a53754e44b3044ac10b59a80aed0f14cecc2e5c04ccfd7b146123e5456",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2017/08/Removing-OpenLOCK-supports-1200x670-COVER.jpg",
+      "title": "Printable Scenery image Removing-OpenLOCK-supports-1200x670-COVER.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/Removing-OpenLOCK-supports-1200x670-COVER.jpg",
+      "sha256": "69d2d17a8f48fa1b58a65a946b2124ee51d0cd7050adb78104586ed389c16f55",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://www.printablescenery.com/wp-content/uploads/2017/04/S-and-I-Wall-side-locks-.jpg",
+      "title": "Printable Scenery image S-and-I-Wall-side-locks-.jpg (from developer-information / templates / clips product pages)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/ps_images/S-and-I-Wall-side-locks-.jpg",
+      "sha256": "2b8846023bc6c11fd9e7784b2325fd1fd784bfc4d994add530f49051999d125f",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://github.com/devonjones/openforge-bases",
+      "title": "OpenForge bases OpenSCAD (lock_openlock*.scad, bases.scad); pruned per PRUNED.txt",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-bases/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://github.com/devonjones/openforge-cut_stone-openlock",
+      "title": "OpenForge cut-stone OpenLOCK set; only accessories/ kept (vendored PS clips v3.1/4.0/4.3 'powered')",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-cut_stone-openlock/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://github.com/devonjones/openforge-tutorials",
+      "title": "OpenForge tutorials (sets/openlock.md)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-tutorials/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://github.com/devonjones/OpenForge",
+      "title": "OpenForge 1.x (Dwarven-Forge style, pre-OpenLOCK) context only",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_OpenForge/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://github.com/caitlynb/OpenSCAD-OpenLock",
+      "title": "Community OpenSCAD OpenLOCK tiles (OpenLock.scad clipcut constants)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/caitlynb_OpenSCAD-OpenLock/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://github.com/manolitto/openvlex2",
+      "title": "OpenVLex 2 (README: base heights of OpenLOCK/DragonLock/Tilescape)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/manolitto_openvlex2/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://github.com/PieterVdc/Openlock-Template-maker",
+      "title": "Blender add-on generating OpenLOCK floor templates (floor_maker.py socket bool constants)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/PieterVdc_Openlock-Template-maker/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://github.com/richeyrose/make-tile",
+      "title": "MakeTile Blender add-on (OpenLOCK cutters live in .blend assets; not extracted)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/richeyrose_make-tile/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://github.com/hadencain/openlock-terrain-gen",
+      "title": "Web generator; its T-slot port constants do NOT match OpenForge/PS geometry",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/hadencain_openlock-terrain-gen/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "https://github.com/F1nnM/openforge-workshop",
+      "title": "OpenForge catalog web app; context only",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/F1nnM_openforge-workshop/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-bases/lock_openlock.scad",
+      "sha256": "c53727fa46cdf9ada5825191c61f9c7ff130101345f372d3437a646af08c2b24",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-bases/lock_openlock_dual.scad",
+      "sha256": "f334b2b73c074911d15dd4d3f04454c964a108084587a24dd6703a57ffddbccd",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-bases/lock_openlock_topless.scad",
+      "sha256": "89001201e6b38dbe10a0a4d591842530cce6e6380b5a7aaed2b94c830b8707aa",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-bases/bases.scad",
+      "sha256": "d25400c2898de41e4dea868d66f6ae508c5fc0f53e27ffb17beb435517268d65",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-bases/impl_square.scad",
+      "sha256": "33a1dd7d37321340d8e41a5261cef58010c9660932a53e6e65c62edf105dc8f2",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-bases/cut-stone.blank.A.stl",
+      "sha256": "d4b82a2cab4cb331f23a6ff21ef21277009235afbe0c0b7e24f37e2d2c82835d",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-cut_stone-openlock/accessories/powered/Clip-OpenLOCK-v3.1-powered.stl",
+      "sha256": "74edbdaad4b3714ad512863a7e5b4c1cb6c1a02ee0dda012d63d9e4c0e2cdc5f",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-cut_stone-openlock/accessories/powered/Clip-OpenLOCK-v4.0-powered.stl",
+      "sha256": "42bf8e5f24be19953edd55d973b5905f112dcf9158e546ea60b7f290d1bee776",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-cut_stone-openlock/accessories/powered/Clip-OpenLOCK-v4.3-powered.stl",
+      "sha256": "1167f78ba0b7e359e76ca577dc052b71c994f256c24146701e4bedf6ced6c44b",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/devonjones_openforge-tutorials/sets/openlock.md",
+      "sha256": "386a4d2eeb368e52c47f5ca4c6dfb00ad1d87e5c47ed59af578f2863f4505efb",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/caitlynb_OpenSCAD-OpenLock/OpenLock.scad",
+      "sha256": "f986a817be37121045516eca9e1d86eaf855689fc8b74ca082c5ea872090822f",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/caitlynb_OpenSCAD-OpenLock/README.md",
+      "sha256": "d77766fe07086694e5cec3b65c525af863cde610af58e96a9d307b753ff61c09",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/manolitto_openvlex2/README.md",
+      "sha256": "6f6065217ecf73952ea5748813eccef18d9d3e2145501bfa7b7751aa8becdc15",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/PieterVdc_Openlock-Template-maker/floor_maker.py",
+      "sha256": "7c9da362ef972f3523b4c7219a2a5fab6771c7c78f9a281e18f9474bb32fc44d",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(see repository entry)",
+      "title": "cited file inside vendored repository",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/hadencain_openlock-terrain-gen/src/lib/terrain.ts",
+      "sha256": "92e26ff2d8dc8f129afa8fdd11db66fdac29ac8ef30718ad4fc7abf03e7ee673",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(local)",
+      "title": "Local OpenSCAD render of devonjones/openforge-bases lock_openlock.scad modules via render_openlock.scad (previous agent)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/openscad_renders/openforge_openlock_chamber.stl",
+      "sha256": "063dfd0fccd8cb15f09ca0abd2c9009a89cb4f20f663fb7fc172c181369ca0af",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(local)",
+      "title": "Local OpenSCAD render of devonjones/openforge-bases lock_openlock.scad modules via render_openlock.scad (previous agent)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/openscad_renders/openforge_openlock_chamber_raw.stl",
+      "sha256": "0c847d75e66b99d58cc7d70ecffd9a9f9d7913b0c9e89b6edecc7b6737787b2d",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(local)",
+      "title": "Local OpenSCAD render of devonjones/openforge-bases lock_openlock.scad modules via render_openlock.scad (previous agent)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/openscad_renders/openforge_openlock_positive.stl",
+      "sha256": "55382d52faae98490e7cf29e9ded05913373bc246d66d85351a06e74679b51f2",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(local)",
+      "title": "Local OpenSCAD render of devonjones/openforge-bases lock_openlock.scad modules via render_openlock.scad (previous agent)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/openscad_renders/openforge_openlock_sidelock.stl",
+      "sha256": "f76389c56e7dbdf6785fccba65d179fe4be465a574bd33a16d43d16e850b2f14",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(local)",
+      "title": "Local OpenSCAD render of devonjones/openforge-bases lock_openlock.scad modules via render_openlock.scad (previous agent)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/openscad_renders/openforge_openlock_tile.stl",
+      "sha256": "b0090c2aba17c247780e7c9ef9eb43f2e383d66078a0570892bcb14e2b2a0904",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(local)",
+      "title": "Local OpenSCAD render of devonjones/openforge-bases lock_openlock.scad modules via render_openlock.scad (previous agent)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/openscad_renders/openforge_openlock_wall.stl",
+      "sha256": "928059a5f68e624a2c94752dbac09e3e862d3c270d823d48e59771cf011f2113",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(local)",
+      "title": "Local OpenSCAD render of devonjones/openforge-bases lock_openlock.scad modules via render_openlock.scad (previous agent)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/openscad_renders/openforge_openlock_wall_raw.stl",
+      "sha256": "369f26507c37d5a5e4923f17f25fe61f8cc454682fda035eed40a459d2d65341",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(local)",
+      "title": "Local OpenSCAD render of devonjones/openforge-bases lock_openlock.scad modules via render_openlock.scad (previous agent)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/downloads/openscad_renders/render_openlock.scad",
+      "sha256": "2ec8f166f1873d6c2f34b2bb363bbe13af39694ff59039edd0896ec31b478124",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(local)",
+      "title": "local tooling / measurement output",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/measure.py",
+      "sha256": "7502281bc82e1a5974d3ae78c8347ad0785b8b8bed786dc0742449351f070eb5",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(local)",
+      "title": "local tooling / measurement output",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/measurements.json",
+      "sha256": "b19967f97b72f9478521985463a739b13ab78ac1961a5b69822d656cb6d9c2ee",
+      "status": "archived"
+    },
+    {
+      "topic": "OpenLOCK",
+      "kind": "sources",
+      "url": "(local)",
+      "title": "local tooling / measurement output",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/openlock/html2txt.py",
+      "sha256": "4ea656d2122a585a9c7a125a2eeb05493b2cc4d52969a11c29616159d3dc91a4",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://archaniaworkshop.com/products/dragonbite-clips",
+      "title": "DragonBite Clips",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/archania_clips.html",
+      "sha256": "9712fefee26865d9f513039b529272e23cecaad244bfa4d460e2599a01a456ac",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.ontabletop.com/terrain/fat-dragon-games-brings-dragonbite-upgrade-dragonlock-ultimate-terrain/",
+      "title": "Fat Dragon Games Brings Forth Dragonbite Terrain Upgrade – OnTableTop – Home of Beasts of War",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/beastsofwar_dragonbite.html",
+      "sha256": "0433f3e1849a01952f54cf6f590821d51ee53b1cee62c6ca3d6c9a12d9a49a54",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": null,
+      "title": "Just a moment...",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/bgg_clip_v3.html",
+      "sha256": "2efe80766f292101381c890a4d168af985c61e997ccc6c642b980eeb692f0aa0",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": null,
+      "title": "Biased Bill's World of Unplugged Gaming: Quick Look: DRAGONLOCK vs. OpenLOCK",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/biasedbill_dl_vs_ol.html",
+      "sha256": "46f92da982eb90b7d07f9c9b935598e8515008a9541c002b36289dec0b32cef1",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://cults3d.com/en/tags/dragonbite",
+      "title": "Just a moment...",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/cults3d_tag_dragonbite.html",
+      "sha256": "b6759c18fbaaa39bcfc7a680170b08c46003963c25b6e1975a9fb857260a1473",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": null,
+      "title": "Dropbox - File Deleted - Simplify your life",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/dropbox_fdg0264_landing.html",
+      "sha256": "091d0d01c946396a60a2ecbdd3a6907645a8150388f641011701f81ad2a7211e",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://help.drivethrurpg.com/hc/en-us/articles/12723312219415-Fat-Dragon-Games-Dragonbite-Community-Creator",
+      "title": "Just a moment...",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/dtrpg_cc_help.html",
+      "sha256": "f916e8f1517c1fbf51a299cfc50277154e1aac1e8cf032c05cb34b4c27683b20",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://support.drivethrurpg.com/hc/en-us/articles/115003304806-Fat-Dragon-Games-Dragonbite-Community-Creator",
+      "title": "pages/dtrpg_cc_support.html",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/dtrpg_cc_support.html",
+      "sha256": "f10d8893e413e35bddae00a167b62ecf985394049892d4baf1ddeccc60389b0c",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.drivethrurpg.com/en/product/206435/DRAGONLOCK-Ultimate-DragonbiteTM-Clip-v30",
+      "title": "Just a moment...",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/dtrpg_clip_v3.html",
+      "sha256": "4eb02b4c2749ade37a00926021a7b1e17dc89bd110a1de3c7e49849ff3a1348c",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/3d-printing-faq/",
+      "title": "3D Printing FAQ - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_3d_printing_faq.html",
+      "sha256": "db7bda4f64584793b978e3c8b9dc03c3fcdc5878c5c414727feebe404cdf1ec4",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonlock-ultimate-adaptors/",
+      "title": "DRAGONLOCK™ Ultimate: Adaptors - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_adaptors.html",
+      "sha256": "7330fff09bc52f51906e18dacdae4915bd5869bb99e31eae85c64b63000afac4",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/new-dragonbite-clip-v2-0-released/",
+      "title": "New Dragonbite™ Clip v2.0 released! - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_clip_v2_release.html",
+      "sha256": "c4f27d8864d84a42e269b769bd434e987beae6e390c081a2c457c9c7ccb1879c",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonlock-general/dragonlock-ultimate-dragonbite-clip-v3-0-fdg0184/",
+      "title": "DRAGONLOCK™ Ultimate: Dragonbite™ Clip v3.0 FDG0184 - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_clip_v3_product.html",
+      "sha256": "967b679cf5c731509ee1cf715ba4b09b4b0ff6a7e273c271eefc16a5e5f653bd",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonbite-v3-0-released/",
+      "title": "Dragonbite™ v3.0 released - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_clip_v3_release.html",
+      "sha256": "9cb2d0e2ee52c4cc6ea190520fafbbc8dd496e93028fbd4eeea5c7de737339ba",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonbite-community-creator-program/",
+      "title": "Dragonbite Community Creator Program - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_community_creator.html",
+      "sha256": "1c757740b4bf51fa54702f25848ce745eab35f49d13c9a5cabaf146a5497ba75",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonbite-compatibility-license/",
+      "title": "DRAGONBITE™ Compatibility License - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_compat_license.html",
+      "sha256": "7a539f45f2af9aa10ed392fa92078ea21db90c58c01de9235af5a64391f506bc",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonlock-core-model-files/",
+      "title": "DRAGONLOCK™ Core Model Files - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_core_model_files.html",
+      "sha256": "82c72f2456010ef688978728f0490ed8882c213057dad52e64f3656dc263f565",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/free-stuff-2/",
+      "title": "Free Dragonlock™ Sample Set - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_free_sample.html",
+      "sha256": "2b40f3d42cc45a900ca6806ec1a97e28cf83830db8e9be0c91e8e3c06032338e",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonbite-dragonlock-licenses/",
+      "title": "DRAGONBITE™ & DRAGONLOCK™ Licenses - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_licenses.html",
+      "sha256": "9b75f94c531f2e38af53bd294005a8df476c60c430e8f441f691f581bd4074dd",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonlock-lost-dungeons/",
+      "title": "DRAGONLOCK: LOST DUNGEONS & SEWERS - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_lost_dungeons.html",
+      "sha256": "dcfbdb11ab0782eef9600b61686eef06ab461313fd36524267c2766a4c164cfb",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonlock-ultimate-interlocking-terrain-system-allows-create-fully-modular-multi-level-28mm-scale-dungeon-terrain-rpg-wargame-home-3d-printer/",
+      "title": "DRAGONLOCK™ Magnetic Base & Clips - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_magnetic_base.html",
+      "sha256": "19e02822686fd909d234058e424d6398f7a163b7ad9c275c2a57b445ac350804",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonlock-ultimate-dungeon-separate-walls/",
+      "title": "DRAGONLOCK™ Ultimate: Dungeon Separate Walls - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_separate_walls.html",
+      "sha256": "f8906cf4b0532e9cf56e4e09953025b88ae4279b6278ae8d8562ecfd8a563544",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonlock-dungeon-separate-walls-fdg0317/",
+      "title": "DRAGONLOCK: Dungeon Separate Walls FDG0317 - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_separate_walls_fdg0317.html",
+      "sha256": "ea6be9ee8250538095452ac2566a2320984a497535dccfa06a1c88881025cb90",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/3d-printer-models/dragonlock-dungeon-starter-set-fdg0160/",
+      "title": "DRAGONLOCK™ Ultimate: Dungeon Starter Set (2nd Edition) FDG0160R - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_starter_set_2nd_ed.html",
+      "sha256": "ce35102ca7629be83d202690d81dcc234d28a4186694c773e3cd2e20596dcfde",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.fatdragongames.com/fdgfiles/terms-conditions/",
+      "title": "Terms & Conditions - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/fdg_terms.html",
+      "sha256": "9119544277ba3072e730f222706bfe43dad3ff9418b26f894500225c1aa05454",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://geekdad.com/2017/09/new-kickstarter-dragonlock-3-3d-printable-terrain/",
+      "title": "New Kickstarter — Dragonlock 3: 3D-Printable Terrain – GeekDad",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/geekdad_dragonlock3.html",
+      "sha256": "b1c110cd6005caeef2465389bbc4b3df8d348381d18aeffd6d6989c29f8e2ce3",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.kickstarter.com/projects/fatdragongames/dragonlock-2-fantasy-village-terrain-for-3d-printe",
+      "title": "Just a moment...",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/kickstarter_dragonlock2.html",
+      "sha256": "93ac676ed3cbc0bf7825243dd974b82947d09f27b694d09e806d007e9c428e63",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://github.com/devonjones/openforge-tutorials/blob/master/license.md",
+      "title": "3rd party licenses",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/openforge_tutorials_license.md",
+      "sha256": "6daecf007e3927dd3ff4893de821ef66e771c64ef5d417851a8c6f341686632c",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://github.com/devonjones/openforge-tutorials/blob/master/sets/README.md",
+      "title": "OpenForge Sets",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/openforge_tutorials_sets_README.md",
+      "sha256": "0a8d62351cb3f3136490bff84a7c64a32f6a23d6c3a3a16457e457bc73c1450c",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://github.com/devonjones/openforge-tutorials/blob/master/sets/basic.md",
+      "title": "Basic Set",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/openforge_tutorials_sets_basic.md",
+      "sha256": "591daf3c8b20407fe2dbb80bc35ea8b1aac57d034bc88c7a964620983ae2e40a",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://github.com/devonjones/openforge-tutorials/blob/master/sets/dragonlock.md",
+      "title": "pages/openforge_tutorials_sets_dragonlock.md",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/openforge_tutorials_sets_dragonlock.md",
+      "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.printables.com/model/482040",
+      "title": "Just a moment...",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/printables_482040.html",
+      "sha256": "b7310847e9556e6a0b88b653d16ed78a8164f3c6de582bf8019069907f0e84a6",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://api.pullpush.io/reddit/search/comment/?q=dragonbite",
+      "title": "pages/pullpush_comments_dragonbite.json",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/pullpush_comments_dragonbite.json",
+      "sha256": "a0daa9bf7283a8d29a7d12bb5d2ceb23f42135e8eee392957bee45529302a132",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://api.pullpush.io/reddit/search/comment/?q=dragonlock%20clip",
+      "title": "pages/pullpush_comments_dragonlock_clip.json",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/pullpush_comments_dragonlock_clip.json",
+      "sha256": "30f48900aacba697798247cf4cddd3f6401fbde50262d6d2dcb5571189cd81ee",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://api.pullpush.io/reddit/search/comment/?q=dragonlock%20socket",
+      "title": "pages/pullpush_comments_dragonlock_socket.json",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/pullpush_comments_dragonlock_socket.json",
+      "sha256": "1178a26cad8e34ca20492c377913fe63f429572cbdcbf1825d328bbaa29b1361",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://api.pullpush.io/reddit/search/submission/?q=dragonbite",
+      "title": "pages/pullpush_submissions_dragonbite.json",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/pullpush_submissions_dragonbite.json",
+      "sha256": "a0daa9bf7283a8d29a7d12bb5d2ceb23f42135e8eee392957bee45529302a132",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://api.pullpush.io/reddit/search/submission/?q=dragonlock%20clip",
+      "title": "pages/pullpush_submissions_dragonlock_clip.json",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/pullpush_submissions_dragonlock_clip.json",
+      "sha256": "4438a414c22f758b1fbb2e1d1536bd0fe7f93a1ea627861a91327a05a474f41a",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://api.pullpush.io/reddit/search/submission/?q=dragonlock%20socket",
+      "title": "pages/pullpush_submissions_dragonlock_socket.json",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/pullpush_submissions_dragonlock_socket.json",
+      "sha256": "1178a26cad8e34ca20492c377913fe63f429572cbdcbf1825d328bbaa29b1361",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.stlfinder.com/3dmodels/dragonbite/",
+      "title": "Just a moment...",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/stlfinder_dragonbite.html",
+      "sha256": "72f7f3385aeb2e844f66e17646cffbc52e71e0989d43b4b24699f5bddf2f91b7",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.thingiverse.com/thing:3809057",
+      "title": "Thingiverse - The community for Open Hardware",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/thingiverse_3809057.html",
+      "sha256": "2dd4fa6d119ba7ce7093618488ee1f536d8a2ed873eb9b6446aa804499952e92",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.thingiverse.com/search?q=dragonbite",
+      "title": "Thingiverse - Search Thingiverse",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/thingiverse_search_dragonbite.html",
+      "sha256": "1848c1743f28d6b88e7385b8f37971b762945ce767ae0f70add79d73c588a05e",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.thingiverse.com/tag:dragonbite",
+      "title": "Thingiverse - Things tagged with \"Dragonbite\"",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/thingiverse_tag_dragonbite.html",
+      "sha256": "8022a199c1069de39706cfcfc72751007b7bae75df3846188b2bf5e7acbc824d",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://www.thingiverse.com/tag:dragonlock",
+      "title": "Thingiverse - Things tagged with \"Dragonlock\"",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/thingiverse_tag_dragonlock.html",
+      "sha256": "80112d3170c90e396389b7f2e5472908810f35723a5ba0f09ce0861d1a983ae2",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://web.archive.org/web/2/https://www.drivethrurpg.com/cc/12/dragonbite",
+      "title": "Dragonbite",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/wayback_dtrpg_cc_dragonbite.decoded.html",
+      "sha256": "b0830e791edc8a7b4187dacf16502e70f601a6c51c65c59b2bbb38c2bf764c90",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://web.archive.org/web/2/https://www.drivethrurpg.com/cc/12/dragonbite",
+      "title": "pages/wayback_dtrpg_cc_dragonbite.html",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/wayback_dtrpg_cc_dragonbite.html",
+      "sha256": "cc2e065f41f6d94b30b11312dd70654da6ef3928536f71ff601497c538663c6e",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://web.archive.org/web/2/https://support.drivethrurpg.com/hc/en-us/articles/115003304806-Fat-Dragon-Games-Dragonbite-Community-Creator",
+      "title": "Fat Dragon Games - Dragonbite Community Creator – DriveThruRPG Support",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/wayback_dtrpg_cc_support.html",
+      "sha256": "c859d585ee9d760b0703cf717cd7998d6baa9fc6dc07af4e57ac3b16b3ffdb6d",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://web.archive.org/web/2/https://www.drivethrurpg.com/product/206435/",
+      "title": "Wayback Machine",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/wayback_dtrpg_clip_v3.html",
+      "sha256": "a68a684fbc847b525c5f0f69071cf312bd8ef785d582857eb77f3ce86f451537",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "pages",
+      "url": "https://web.archive.org/web/2/https://www.drivethrurpg.com/product/455526/",
+      "title": "Wayback Machine",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/pages/wayback_dtrpg_sample.html",
+      "sha256": "f75c65576453661d39c5fe2c1864e93169430e76d765741b618ec37d6507b204",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "https://www.dropbox.com/s/jl4fvrd7nluxeih/FDG_Adaptors.zip?dl=0 (linked from https://www.fatdragongames.com/fdgfiles/dragonlock-ultimate-adaptors/)",
+      "title": "files/FDG_Adaptors.zip",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/files/FDG_Adaptors.zip",
+      "sha256": "140b7100f0115c05bedfcc51ae22906259ee061ef5112d8957f28f799b421f1c",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/FDG_Adaptors.zip",
+      "title": "files/FDG_Adaptors/Dragonbite_Infinity_ComboClip-V1.stl",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/files/FDG_Adaptors/Dragonbite_Infinity_ComboClip-V1.stl",
+      "sha256": "57e896e08575aa3195f6cf2b464921cebdaf5ae6e8040ab6d2d309248555c8cf",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/FDG_Adaptors.zip",
+      "title": "files/FDG_Adaptors/Dragonlock-Openlock-ComboClip-v3.stl",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/files/FDG_Adaptors/Dragonlock-Openlock-ComboClip-v3.stl",
+      "sha256": "d035aa9bf280166caf242bdc767eb191f09d156741d9681fffc345344c096d27",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Base_Angle.stl",
+      "retrieved": "2017-12-14",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Base_Angle.stl",
+      "sha256": "e00916770140002232550348f653734ba5a819498e3c44c856ee6c89a3f4876e",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/DLU_2x2_Master.stl",
+      "retrieved": "2017-11-14",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/DLU_2x2_Master.stl",
+      "sha256": "4973f9a814eafce90bc677dd14f72ba8d140e9f045b2879a5ff73417a312217f",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/DLU_2x4_Master.stl",
+      "retrieved": "2017-11-14",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/DLU_2x4_Master.stl",
+      "sha256": "cdc1c1f748de82a0c6e862c520ee4a4fd1125fdd229f842dd5caa3ffb3e4fad8",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/DLU_4x4_Master.stl",
+      "retrieved": "2017-11-14",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/DLU_4x4_Master.stl",
+      "sha256": "bdf9beaf8b4279eb5447138e77cdc545fdaa3257e4662e47a26fb7f9b8752600",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Dragonbite_Port.stl",
+      "retrieved": "2020-07-02",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Dragonbite_Port.stl",
+      "sha256": "862380975f8411270fae8a30fbf9cc70bb8a87d84924f57088d52ba0c8bcb44c",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_1-5i_NoSupport.stl",
+      "retrieved": "2020-08-24",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_1-5i_NoSupport.stl",
+      "sha256": "a1936ec2346417ddd486d25429447dc347854fe6bfcb326b8b444ff11b9f8ef7",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_1-5i_Supports.stl",
+      "retrieved": "2020-08-24",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_1-5i_Supports.stl",
+      "sha256": "5459ec7143ac90fbb03631e9237ac7dfbf96de8316a2aa8e323cbe1b0dea2ae1",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_1i_NoSupport.stl",
+      "retrieved": "2020-08-24",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_1i_NoSupport.stl",
+      "sha256": "ec63824e90270b01dd79ce68fdbb0f5edd6b8500bab81dc525bea96ff99e018f",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_1i_Supports.stl",
+      "retrieved": "2020-08-24",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_1i_Supports.stl",
+      "sha256": "f3b37b76c203e826bffc9c60812c9682d179dab2d2d6cd06bd5695f14b553a56",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_2-5i_NoSupport.stl",
+      "retrieved": "2020-08-24",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_2-5i_NoSupport.stl",
+      "sha256": "d095c441a7e732e5bc816747e1018a003964bebadf609a8859547d10854b5b44",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_2-5i_Supports.stl",
+      "retrieved": "2020-08-24",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_2-5i_Supports.stl",
+      "sha256": "6f74b0637ba25cd1a072dfe6f59a32c6f315a72ca2507b545eb3506287eaba9e",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_2i_NoSupport.stl",
+      "retrieved": "2020-08-24",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_2i_NoSupport.stl",
+      "sha256": "fc1c1b09205624eba13da04f6fc3addf6f67bfe8e180355bc69b10ea214774db",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_2i_Supports.stl",
+      "retrieved": "2020-08-24",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Passthru_Cores/Passthru_Core_2i_Supports.stl",
+      "sha256": "2ac403e2b43597d01142bf9f4bf63f5c77a424f086aa326836f27c52cba27f77",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Angle-A.stl",
+      "retrieved": "2018-01-03",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Angle-A.stl",
+      "sha256": "80a59bd9ca7ae7abead14bfe8f4298b0a95762f677d92a20c7d1ffe961eb4498",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Angle-B.stl",
+      "retrieved": "2018-01-03",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Angle-B.stl",
+      "sha256": "f8e300ba5fb5fd1272296162d726443683005c9573b3d649a8f5ed6be314b18f",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Wall-1-5.stl",
+      "retrieved": "2018-01-03",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Wall-1-5.stl",
+      "sha256": "cd18398d35001c1a9b08f5c7ae96d115b051dd3ebb874e9e6cfac51640868ad2",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Wall-1.stl",
+      "retrieved": "2018-01-03",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Wall-1.stl",
+      "sha256": "c102a94019334426c08f608023dadbd50cf540587bedc2c05752cad9da5fd607",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Wall-2-5.stl",
+      "retrieved": "2018-01-03",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Wall-2-5.stl",
+      "sha256": "c95888e2ce17155293f0451a2e9433d68bddab6cecce67d140a4fc63c0ac08bf",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Wall-2.stl",
+      "retrieved": "2018-01-03",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/CORE_Wall-2.stl",
+      "sha256": "45acf1ba5a4fa6d945b672957e096aa1447a99cc011734dd4415ee936a46e537",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/DB-Core-Instr.jpg",
+      "retrieved": "2018-01-03",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall-Cores/DB-Core-Instr.jpg",
+      "sha256": "bdd645168dd70d8213303f77b7a71dbdad147adc5e32415a6edac4d28a612b80",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall_Bases/Pegs.stl",
+      "retrieved": "2017-12-14",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall_Bases/Pegs.stl",
+      "sha256": "79672214fb8d3d4c4e9c2294d1efcef1fe1fa3161dee169fea93e9be415ad5ab",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall_Bases/WallBase_1-5.stl",
+      "retrieved": "2017-12-14",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall_Bases/WallBase_1-5.stl",
+      "sha256": "2a6f1a0171b0a6fbdb884d4ea93556666fce40e2122ce723b855bf5d35394c87",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall_Bases/WallBase_1.stl",
+      "retrieved": "2017-12-14",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall_Bases/WallBase_1.stl",
+      "sha256": "93a0066383f807e742466fdb50c806064db0bbd360db0b9b037bbb09cf0d540b",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall_Bases/WallBase_2-5.stl",
+      "retrieved": "2017-12-14",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall_Bases/WallBase_2-5.stl",
+      "sha256": "0af7bae56e90ac621440a4635a0adcc1a9e673b48164c23152a08870518e7c30",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "extracted from files/fdg_core_model_files_dropbox.zip -> Dragonbite_Cores_08272020.zip",
+      "title": "files/cores/Dragonbite_Cores_08272020/Separate_Wall_Bases/WallBase_2.stl",
+      "retrieved": "2017-12-14",
+      "local_file": "var/research/dragonlock/files/cores/Dragonbite_Cores_08272020/Separate_Wall_Bases/WallBase_2.stl",
+      "sha256": "a7fb82d56d6652848646593f61e946429b92e1761cafefc3b985cff97df66a43",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "https://www.dropbox.com/sh/ivwpkxyyexj3nll/AACtocdO0R02__LBL7eAMKg4a?dl=0 (linked from https://www.fatdragongames.com/fdgfiles/dragonlock-core-model-files/; contains Dragonbite_Cores_08272020.zip)",
+      "title": "files/fdg_core_model_files_dropbox.zip",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/files/fdg_core_model_files_dropbox.zip",
+      "sha256": "69221401faa94319ccc91a22b13ef4a365689f421674ea2e4c4e09d12204f97f",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "https://www.thingiverse.com/thing:3809057/zip (returned an HTML shell, not a zip)",
+      "title": "files/thingiverse_3809057.zip",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/files/thingiverse_3809057.zip",
+      "sha256": "55be13e4f9cb031575b4a59dd692e58436f89957259b053e45eb0b71ce7abc04",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "https://www.thingiverse.com/thing:3825736/zip (returned an HTML shell, not a zip)",
+      "title": "files/thingiverse_3825736.zip",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/files/thingiverse_3825736.zip",
+      "sha256": "a0d6693cb2bd2839064a1054638d76d9e9512c113898eaf254bc7d95d1f7bb99",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "https://www.thingiverse.com/thing:5823020/zip (returned an HTML shell, not a zip)",
+      "title": "files/thingiverse_5823020.zip",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/files/thingiverse_5823020.zip",
+      "sha256": "8f3593489087c4d0246416bad7bface5888a040997508799cea8842c1200a0cc",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "files",
+      "url": "https://github.com/devonjones/openforge-bases (OpenForge bases OpenSCAD; identical lock_dragonlock.scad to the vendored copy at var/research/openlock/downloads/devonjones_openforge-bases, upstream commit e6dbbffc40e937fd5e7ddf13562c021c15b98034)",
+      "title": "files/openforge-bases/ (directory)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/dragonlock/files/openforge-bases/ (directory)",
+      "sha256": "3f8ff4a6abad8474bb16ac1a4de66281bd7dfb8cfc94362e0b4a3456a0309571",
+      "status": "archived"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "external_read_only",
+      "url": "https://github.com/devonjones/openforge-bases commit e6dbbffc40e937fd5e7ddf13562c021c15b98034",
+      "title": "",
+      "retrieved": "",
+      "local_file": "var/research/dragonlock/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "DRAGONLOCK / Dragonbite",
+      "kind": "external_read_only",
+      "url": "https://github.com/manolitto/openvlex2 commit 867d9c712a4f11cd6627f4f4212fea94c18a6836",
+      "title": "",
+      "retrieved": "",
+      "local_file": "var/research/dragonlock/",
+      "sha256": null,
+      "status": "not retrieved"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/product/openlock-magnetic/",
+      "title": "OpenLOCK Magnetic - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_product_openlock_magnetic.html",
+      "sha256": "ec9ebb4070046a3f1911216aa48e8c44f1c622cff73c3d39a192d1dd9d628284",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/2017/04/26/openlock-developer-information/",
+      "title": "OpenLOCK developer information - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_2017_04_26_openlock_developer_information.html",
+      "sha256": "b32e8aed45e1cbca25f570efad8716bf90af1202bc075c1ac202d7ce89daddff",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://github.com/manolitto/openvlex2",
+      "title": "GitHub - manolitto/openvlex2: OpenVLex is a Vertical decor-to-base Locking system for 3D printed terrain. · GitHub",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/github_com_manolitto_openvlex2.html",
+      "sha256": "d3a79c4e1514d9005b0bcd9656f010979fc0441093d59a82c1b407408a3636ff",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.thingiverse.com/thing:2100870",
+      "title": "Thingiverse - The community for Open Hardware",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_thingiverse_com_thing_2100870.html",
+      "sha256": "b829c0ff6375c19551b504b7ad337f5e41de4766f1f081e1dd28393c95661339",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.thingiverse.com/thing:2590116",
+      "title": "Thingiverse - The community for Open Hardware",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_thingiverse_com_thing_2590116.html",
+      "sha256": "582c9558f1676b4be1edd9046a5b9f1cd087bbb07e3476ca871dbb41badc5959",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.thingiverse.com/thing:2914039",
+      "title": "Thingiverse - The community for Open Hardware",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_thingiverse_com_thing_2914039.html",
+      "sha256": "8935955aefbdc516f50e8ba1247dcfd204d44bf9050c4facd8d38b4b7f122aa5",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "http://mojobob.blogspot.com/2020/12/dungeon-sticks.html",
+      "title": "Shouting Into The Void: Dungeon Sticks",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/mojobob_blogspot_com_2020_12_dungeon_sticks_html.html",
+      "sha256": "5bc32ab685543168444776b8449160b7c3419c8726ac786a29a888bedbceb5a8",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://github.com/gridfinity-unofficial/specification",
+      "title": "GitHub - gridfinity-unofficial/specification · GitHub",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/github_com_gridfinity_unofficial_specification.html",
+      "sha256": "e840a96de3965735e391deb566a0fe2ca444c5625aea16e3a0f84fb975fd5b2f",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://gridfinity.xyz/specification/",
+      "title": "Gridfinity | The modular, open-source grid storage system.",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/gridfinity_xyz_specification.html",
+      "sha256": "354ba7094f90afaefcd5c17d7a252e7d251069c2f1c2440257aed29392423eee",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.opengrid.world/guides/snaps/",
+      "title": "Snaps | openGrid",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_opengrid_world_guides_snaps.html",
+      "sha256": "d42cb7c1127ec57c962329ffd762493726c50eaa75ba88e3551b92bc63e6d30f",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "http://multiboard.stonekeep.com/glossary.html",
+      "title": "Systems and Concepts | multiboard",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/multiboard_stonekeep_com_glossary_html.html",
+      "sha256": "007caf4001bddc4269de7fc21d6b2b6bf33e5cfbbbb0c817c3f91923cd18d5c6",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printables.com/model/152592-honeycomb-storage-wall",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.thingiverse.com/thing:1910974",
+      "title": "Thingiverse - The community for Open Hardware",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_thingiverse_com_thing_1910974.html",
+      "sha256": "74663a30fc9b3365fd96edf4f5ce96e9733a9c724bfa462820d4ac5821b77f23",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printables.com/model/380287-openforge-20-improved-magnetic-bases-for-dnd",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.etsy.com/listing/1778557378/modular-dungeon-interior-walls-style-1",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.tapatalk.com/groups/hirstarts/magnetic-dungeon-t7710.html",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "http://ragingowlbear.blogspot.com/2017/09/dnd-in-3d-printing.html",
+      "title": "Raging Owlbear: D&D in 3D (printing)",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/ragingowlbear_blogspot_com_2017_09_dnd_in_3d_printing_html.html",
+      "sha256": "aea46d9ba83242da4cbb544310666434a9c5ac08bed436f4469e1e8dd4a9d9c0",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/2016/11/13/how-rampage-system-works/",
+      "title": "What is OpenLOCK ? - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_2016_11_13_how_rampage_system_works.html",
+      "sha256": "d7105a301bdb07eb42ba548f046719ddce032b6efcbfcc73da737890f8a5d0c2",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.kickstarter.com/projects/rocketpiggames/tilescape-dungeons",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.3ders.org/articles/20161102-create-unique-tabletop-dungeons-with-25-3d-printable-tilescape-terrain-set.html",
+      "title": "3ders.org - Create unique tabletop dungeons with $25 3D printable TileScape terrain set | 3D Printer News & 3D Printing News",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_3ders_org_articles_20161102_create_unique_tabletop_dungeons_with_25_3d_printable_tilescape_terrain_set_htm.html",
+      "sha256": "4b3c83c5e6bab587898a0769d72a3e4827c14745c2200f4b58a7489026828814",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "http://tobolds.blogspot.com/2018/05/more-thoughts-on-3d-printed-dungeon.html",
+      "title": "Tobold's Blog: More thoughts on 3D printed dungeon tiles",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/tobolds_blogspot_com_2018_05_more_thoughts_on_3d_printed_dungeon_html.html",
+      "sha256": "c3d23adb2b7838ee12cb43aef4173730e3cd13f16821b82d210f3bf9f9d0f185",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printables.com/model/1010698-base-grid-3x3-with-magnet-slots-dungeon-blocks-com",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://3dwithus.com/honeycomb-storage-wall-guide-3d-printed-tool-organization",
+      "title": "Honeycomb Storage Wall Guide: 3D Printed Tool Organization",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/3dwithus_com_honeycomb_storage_wall_guide_3d_printed_tool_organization.html",
+      "sha256": "a00122c7de106aa19f1fa3309383f3ed474ce9fe0acd4a7a14fd47a8ec2b9e10",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/forums/topic/how-do-i-get-a-licence-to-use-the-openlock-system-commercially/",
+      "title": "How do I get a licence to use the OpenLOCK system commercially ? - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_forums_topic_how_do_i_get_a_licence_to_use_the_openlock_system_commercially.html",
+      "sha256": "7637fa981b90a1d5e8bdf8aea006201471b39b0759aab7068e42897334cafd80",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/forums/topic/trp-system-is-much-too-fragile/",
+      "title": "TRP system is far too fragile - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_forums_topic_trp_system_is_much_too_fragile.html",
+      "sha256": "17eb770e4f7491b47c3fe8c1c9d36cc1996d15cc96393ba695754ac54cfcde2d",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/forums/topic/springy-clip-caps/",
+      "title": "Springy Clip Caps - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_forums_topic_springy_clip_caps.html",
+      "sha256": "c990519acc359da6c6cb8d0f1e4e332f32d87abdf265107f464609eef9ee5124",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/product/openlock-clips/",
+      "title": "OpenLOCK Clips - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_product_openlock_clips.html",
+      "sha256": "4c56da9690d27f0d495faf0f118bc7ec4164c578f228a8c392cff8a6c3d676ed",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/2025/07/21/creating-magnetic-dungeon-tiles-with-openlock/",
+      "title": "Creating Magnetic Dungeon Tiles with OpenLOCK - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_2025_07_21_creating_magnetic_dungeon_tiles_with_openlock.html",
+      "sha256": "ba1dedcefc307ee657e6aca92922532f5d45bb2fada1d962cd407a5cc6bbbd73",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/product/openlockdragonlock-adapter/",
+      "title": "OpenLOCK/Dragonlock Adapter - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_product_openlockdragonlock_adapter.html",
+      "sha256": "d19764d86fd7332d260902cd6e454ff535ee51d1b7480516b6109dd4eeff7b31",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/2017/07/13/openlock/",
+      "title": "What is OpenLOCK ? - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_2017_07_13_openlock.html",
+      "sha256": "fdd2432edf8bd1652dc176dd979f3bf450072b18f9c0cd2de944462f651dd90a",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://github.com/devonjones/openforge-tutorials/blob/master/sets/README.md",
+      "title": "openforge-tutorials/sets/README.md at master · MasterworkTools/openforge-tutorials · GitHub",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/github_com_devonjones_openforge_tutorials_blob_master_sets_README_md.html",
+      "sha256": "b167e4583ad987484b2380eee95816cfb0797424ccb21f84b5ad2bad993d354c",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://manufactur3dmag.com/infinite-dimensions-games-3d-design-company-brings-high-quality-modelling-tabletop-games/",
+      "title": "Infinite Dimensions Games, A 3D Design Company Brings High Quality Modelling To Tabletop Games | Manufactur3D",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/manufactur3dmag_com_infinite_dimensions_games_3d_design_company_brings_high_quality_modelling_tabletop_games.html",
+      "sha256": "6979e5a6cfc4737aba55d9820ced0f31254cf7be3112c609a54c7d4154594f18",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://gurps.dungeoncrawlers.com/3d-printed-dungeons/",
+      "title": "3D Printed Dungeons | GURPS Mega Dungeon",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/gurps_dungeoncrawlers_com_3d_printed_dungeons.html",
+      "sha256": "098b49849b753875de07791ae2c447ac16b1083071b80c7d5c1bf60ff1b282d3",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://makerfun3d.com/business-directory/2116/dungeon-works",
+      "title": "Dungeon Works / Game Decor | 3D Printing for Gaming and More",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/makerfun3d_com_business_directory_2116_dungeon_works.html",
+      "sha256": "905ab8b51339f914af7cacc776c82e588815bbe8e3f2ac461dc896691a4af88b",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.thebudgetdm.com/interlocking-tiles",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.heroshoard.com/true-tiles",
+      "title": "True-Tiles — Hero's Hoard",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_heroshoard_com_true_tiles.html",
+      "sha256": "09b1251ced1c2ba8adee4a93aaf9205736e29a023ecdff2668535ad62ef18eed",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.myminifactory.com/object/3d-print-true-tiles-sample-set-36225",
+      "title": "3D Printable True Tiles Sample Set\n            by Ryan Beasecker",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_myminifactory_com_object_3d_print_true_tiles_sample_set_36225.html",
+      "sha256": "27750bee29a912849d4a2eceb5aa75ab93a6af2c678fb77ab50af542671c4102",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://basicroleplaying.org/topic/5312-tilescape-modular-terrain-system/",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://spikeybits.com/2019/01/new-gothic-tilescape-3d-printable-modular-building-system.html",
+      "title": "New Gothic Tilescape 3D Printable Modular Building System",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/spikeybits_com_2019_01_new_gothic_tilescape_3d_printable_modular_building_system_html.html",
+      "sha256": "1212f4b3cb328daef1dcfc8bd3ec455230803c4a2c049ba4bf2df520e0ef3a50",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://geekdad.com/2015/11/dungeon-casting-making-modular-pieces/",
+      "title": "Dungeon Casting Part 3: Making Modular Pieces – GeekDad",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/geekdad_com_2015_11_dungeon_casting_making_modular_pieces.html",
+      "sha256": "4b927b23486c3df12594e99ed60cc64797e54d95a9d5cdac983bdfc01c8a0f90",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://lv427-designs.com/pages/open-lock-base",
+      "title": "Open-Lock System | Modular 3D Printable Sci-Fi Terrain\n– Lv427Designs",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/lv427_designs_com_pages_open_lock_base.html",
+      "sha256": "8066323d575f67341b0a77872ee0e5d169b317a71fbd3fdc4c671c00da2ef8d6",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://saucermenstudios.com.au/what-is-openlock-and-how-does-it-connect/",
+      "title": "What is OpenLock and how does it connect? - Saucermen Studios",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/saucermenstudios_com_au_what_is_openlock_and_how_does_it_connect.html",
+      "sha256": "0bc9c594898d3b0ee07d142b7f31f293d3bbf854bf2919803cdf9fc1b7021dec",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://multibuild.io/license",
+      "title": "MultiBuild License | Terms & Conditions",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/multibuild_io_license.html",
+      "sha256": "e920b5699a60a173750fba1f4f6b9d76bfedb37347ffaf102e08b2525e4d18c0",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://docs.multibuild.io/beginner-section/core-parts-documentation",
+      "title": "MultiBuild Core Parts - Complete Guide to Every Component | MultiBuild Knowledge Hub",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/docs_multibuild_io_beginner_section_core_parts_documentation.html",
+      "sha256": "76a88ab1ee1dc88145744c2575feb8f92dec1e5163010dc93104825b5fcc801f",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.hubs.com/talk/t/new-3d-printing-kickstarter-dungeon-blocks/782/",
+      "title": "New 3D Printing Kickstarter: Dungeon Blocks! - No category - Talk Manufacturing | Hubs",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_hubs_com_talk_t_new_3d_printing_kickstarter_dungeon_blocks_782.html",
+      "sha256": "f4e759c7d90ce6802349cd288d02d9963d3223fad90133b13989b4bb58c5c26d",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.opengrid.world/guides/",
+      "title": "Overview | openGrid",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_opengrid_world_guides.html",
+      "sha256": "ed280448e80e035e8bc95cf0ccf3be8310ebef2709db8d7e632f240f83102d90",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://github.com/Stu142/Gridfinity-Documentation",
+      "title": "GitHub - Stu142/Gridfinity-Documentation: Documentation relating to the Gridfinity project by Zack Freedman to provide designers with the information to make cool things · GitHub",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/github_com_Stu142_Gridfinity_Documentation.html",
+      "sha256": "8b0fd867f27341195b7af5e2004cc90b701d5dbf804a0ec34dce6a55b4083471",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://zandoriastudios.com/tag/gaming-terrain/",
+      "title": "gaming terrain – Zandoria Studios",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/zandoriastudios_com_tag_gaming_terrain.html",
+      "sha256": "f5c20c599b7c9af9079c0ae3fc5123051031672ce56fe6b483843ebd5a6536c0",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "http://biasedbillunplugged.blogspot.com/2017/12/quick-look-dragonlock-vs-openlock.html",
+      "title": "Biased Bill's World of Unplugged Gaming: Quick Look: DRAGONLOCK vs. OpenLOCK",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/biasedbillunplugged_blogspot_com_2017_12_quick_look_dragonlock_vs_openlock_html.html",
+      "sha256": "46f92da982eb90b7d07f9c9b935598e8515008a9541c002b36289dec0b32cef1",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://makerworld.com/en/models/1611337-openforge-2-0-magnetic-base",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://makerworld.com/en/models/22521-honeycomb-storage-wall",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://makerworld.com/en/models/641724-dungeon-blocks-compatible-grid-with-magnet",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.myminifactory.com/object/3d-print-the-ultimate-dungeon-dungeon-blocks-299141",
+      "title": "3D Printable THE ULTIMATE DUNGEON (Dungeon Blocks)\n            by Dungeon Blocks",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_myminifactory_com_object_3d_print_the_ultimate_dungeon_dungeon_blocks_299141.html",
+      "sha256": "d2a333bcb6d1d33cacb5541adc84510cfc41686ffe350c8b776f5f63638917dd",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.myminifactory.com/object/3d-print-connector-kit-v3-2-122256",
+      "title": "3D Printable Connector Kit v3.2\n            by Bad Tentacles Studios",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_myminifactory_com_object_3d_print_connector_kit_v3_2_122256.html",
+      "sha256": "b9eb14d37af505e847469203aa6ee45df423fa7174387ff89aa32a2d8e6d1ff1",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.myminifactory.com/object/3d-print-magna-build-dungeon-tiles-base-set-1-magnetic-rpg-terrain-376587",
+      "title": "3D Printable Magna-Build DUNGEON Tiles Base Set 1 -Magnetic RPG Terrain\n            by Dark-Platypus Studio",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_myminifactory_com_object_3d_print_magna_build_dungeon_tiles_base_set_1_magnetic_rpg_terrain_376587.html",
+      "sha256": "18b1fb2e4ff42c9ed75a637a5865aaec2fe89acaeef601150eb954ea38989705",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.myminifactory.com/object/3d-print-clips-for-openlock-to-standard-grid-bases-3d-modular-dungeon-tile-dnd-town-minis-www-dnd-town-479797",
+      "title": "3D Printable Clips for Grid Bases - (STANDARD to OPEN LOCK) Dual Side\n            by TTR.Town",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_myminifactory_com_object_3d_print_clips_for_openlock_to_standard_grid_bases_3d_modular_dungeon_tile_dnd_to.html",
+      "sha256": "bc33941004f77826fa97c58e67fd57c41887e510cabaeab06aef134fea8245f7",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.myminifactory.com/object/3d-print-f-e-d-modular-dungeon-system-stone-122327",
+      "title": "Login to MyMiniFactory",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_myminifactory_com_object_3d_print_f_e_d_modular_dungeon_system_stone_122327.html",
+      "sha256": "51d6fac03583075e5cbaab5d6cf3becfbaffc6722321ef9a3e7b3e6522f8182e",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonlock-ultimate-adaptors/",
+      "title": "DRAGONLOCK™ Ultimate: Adaptors - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_fatdragongames_com_fdgfiles_dragonlock_ultimate_adaptors.html",
+      "sha256": "b724ce7b56a1d87d01e3efc86ad03ebb20d90e0b2b7bc4f0e7a9b1b41f67596b",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.snapmaker.com/blog/3d-printed-organizers/",
+      "title": "3D Printed Organization: Gridfinity, Multiboard, HSW, OpenGrid, &Skadis",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_snapmaker_com_blog_3d_printed_organizers.html",
+      "sha256": "e64af1eaf7a40c99831a34feca6a7ecb92aff451ad24936b196d95b695d25604",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://strokeofmeh.wordpress.com/2019/04/26/magnetised-dungeon-tiles-3d-printed/",
+      "title": "Magnetised Dungeon Tiles (3D Printed) | Stroke of Meh",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/strokeofmeh_wordpress_com_2019_04_26_magnetised_dungeon_tiles_3d_printed.html",
+      "sha256": "4fd341f96c7a7884a5fd8799583bd58c4d07de2f83624bd44368266bf7fb6529",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://cults3d.com/en/3d-model/game/true-tiles-sample-set-original-and-openlock",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.tabletopanalytics.com/project/dungeon-grid-magnetic-stackable-3d-tiles-36250",
+      "title": "Dungeon Grid - magnetic, stackable 3D Tiles - Tabletop Analytics",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_tabletopanalytics_com_project_dungeon_grid_magnetic_stackable_3d_tiles_36250.html",
+      "sha256": "bf658e3942ac5df50b507436cb7434ab03b0d8539d63d7626791e936b04e099e",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://halflinghobbies.com/the-best-dungeon-tiles-for-table-top-rpgs/",
+      "title": "The Best Dungeon Tiles for Table Top RPGs – Halfling Hobbies & Trinkets",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/halflinghobbies_com_the_best_dungeon_tiles_for_table_top_rpgs.html",
+      "sha256": "dce98931b92ffce91998d6705773feccca5fc0f0d1095808e24e60b04ae05727",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://dwarvenforge.com/blogs/build-guides/dungeon-of-doom",
+      "title": "Dungeon of Doom\n– Dwarven Forge",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/dwarvenforge_com_blogs_build_guides_dungeon_of_doom.html",
+      "sha256": "d1ae4fa5c7805ce816468d666a9d3026d8b2a7f700559e61e727d6606ed8b918",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.fabbaloo.com/2016/11/the-3d-printable-openlock-gaming-system",
+      "title": "The 3D Printable OpenLOCK Gaming System « Fabbaloo",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_fabbaloo_com_2016_11_the_3d_printable_openlock_gaming_system.html",
+      "sha256": "0df774e56dd043126e88ae628c3e1e829393c6063f2daca3036dea08e4368306",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/product/rampage-base-pack/",
+      "title": "Rampage Base Pack - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_product_rampage_base_pack.html",
+      "sha256": "f3af3f83c1da0e1f0cf08268d480ab1308a51bfbd606fc748861117e50586112",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/2019/04/30/rampage-openlock-tile-guide/",
+      "title": "OLD Rampage OpenLOCK tile guide. - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_2019_04_30_rampage_openlock_tile_guide.html",
+      "sha256": "6084f01490e2712477e698abec6e8497fd4aa045eb095e6257e97bacd2d24bc0",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/forums/topic/where-is-the-lock-for-the-openlock-system/",
+      "title": "Where is the Lock for the OpenLOCK system? - Printable Scenery",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_forums_topic_where_is_the_lock_for_the_openlock_system.html",
+      "sha256": "24360013bdbeab06e33c0f9fd3a78fd197fdaf6ab4c344a34f63fb06a0c9579c",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.myminifactory.com/object/3d-print-alternative-openlock-clip-more-flexible-84993",
+      "title": "3D Printable Alternative OpenLOCK Clip (more flexible)\n            by Hirschmeister",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_myminifactory_com_object_3d_print_alternative_openlock_clip_more_flexible_84993.html",
+      "sha256": "902504b5db5e0225466eac883e57a69b7ac580b6f70800602981794354bf722f",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://mitznsimz.com/blogs/news/dungeon-blocks-thoughts-on-usage",
+      "title": "Dungeon Blocks Tips & Tricks for D&D Campaigns – MitzNSimz",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/mitznsimz_com_blogs_news_dungeon_blocks_thoughts_on_usage.html",
+      "sha256": "a548137bcd5b4fd6100b9816f778eb736912fc5b326a9fc845728c3ca0ccef28",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://miniaturemakes.eu/en/accessories/dungeon-blocks/the-ultimate-dungeon/level-key-the-ultimate-dungeon-dungeon-blocks-092/",
+      "title": "Level Key - The Ultimate Dungeon - Dungeon Blocks - Miniature Makes",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/miniaturemakes_eu_en_accessories_dungeon_blocks_the_ultimate_dungeon_level_key_the_ultimate_dungeon_dungeon_bl.html",
+      "sha256": "e1e17dd4a563cdb34cdcc8efecb922f4e484b3ff04083a90dd588bcfee773898",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.fatdragongames.com/fdgfiles/dragonlock-dragonshire-streets-fdg0283/",
+      "title": "DRAGONLOCK: Dragonshire Streets FDG0283 - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_fatdragongames_com_fdgfiles_dragonlock_dragonshire_streets_fdg0283.html",
+      "sha256": "6b7e569285aaa53d042ed84e1f602df1313b0b7f796d16d46786861c7b48e1c8",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.castnplay.games/cnpcampaigns",
+      "title": "Cast n Play - 3D Printable Miniatures",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_castnplay_games_cnpcampaigns.html",
+      "sha256": "99186e1c4c7c8d1141e4d0aff128dd06cc2e19ea46b448d1405d7a534ee1a2cd",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://dynamod.gumroad.com/l/dungeontiles",
+      "title": "Dynamod Games - 3D Printable Dungeon Tiles - Digital",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/dynamod_gumroad_com_l_dungeontiles.html",
+      "sha256": "ffe9e464f3bf6c6f2bf76c662325e3eaf53b8f476a84ea6edb2768a39dcf9273",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.thingiverse.com/thing:2659919",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "too short: 0 "
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://daneislazy.itch.io/lazylock-clip",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "too short: 0 "
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.kickstarter.com/projects/klingbeil/dungeonworks-ii-3d-printer-modular-fantasy-dungeon",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "too short: 0 "
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.patreon.com/posts/terrain-vol-3-n-87128618",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "too short: 0 "
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printables.com/model/513520-openlock-magnetic-connection-system-v3",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "too short: 0 "
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.myminifactory.com/users/CastnPlay/collection/terrain-essentials",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "too short: 0 "
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.drivethrurpg.com/en/product/205614/rocket-pig-games-tilescape-dungeons-modular-terrain-core-set",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 403: Forbidden"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://raw.githubusercontent.com/devonjones/openforge-tutorials/master/README.md",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/raw_githubusercontent_com_devonjones_openforge_tutorials_master_README_md.html",
+      "sha256": "06ca8c8a57b5b2e36986489a9b4bb71f7951f5468f42c6e4bddf7693122e983b",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.fatdragongames.com/fdgfiles/?p=5098",
+      "title": "DRAGONLOCK™ Magnetic Base & Clips - Fat Dragon Games",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_fatdragongames_com_fdgfiles_p_5098.html",
+      "sha256": "0a557afd6597a2456a5cc11b04242d3bbf1b989f961b573e7860f5114da49791",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://raw.githubusercontent.com/devonjones/openforge2/master/README.md",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 404: Not Found"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/product/3d-printable-dungeon-tiles/",
+      "title": "3D Printable Dungeon Tiles Base Set",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/www_printablescenery_com_product_3d_printable_dungeon_tiles.html",
+      "sha256": "bae748bbd912e8eafe14b4cc18d3432cd95569fa8cd4a4cfaec7c2e0651baf4e",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://cubebrush.co/rocketpiggames/products/qklxuq/rocket-pig-games-tilescape-dungeons-core-set",
+      "title": "Rocket Pig Games - Tilescape DUNGEONS Core Set",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/cubebrush_co_rocketpiggames_products_qklxuq_rocket_pig_games_tilescape_dungeons_core_set.html",
+      "sha256": "73cd6d69372471a4de90645da7d399efaadc390a3b81e699ccbaefa8f804bb27",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://github.com/aderusha/DDD-Printable-Wall-Control-System/discussions/85",
+      "title": "Honeycomb Storage Wall (HSW) adapter · aderusha/DDD-Printable-Wall-Control-System · Discussion #85 · GitHub",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/pages/github_com_aderusha_DDD_Printable_Wall_Control_System_discussions_85.html",
+      "sha256": "07fa0b5a591eeccbddbef71b0b3a52c6f7104af8ba95e96b7a10a32cbf3c194f",
+      "status": "archived"
+    },
+    {
+      "topic": "Comparable systems",
+      "kind": "page",
+      "url": "https://www.printablescenery.com/product/openlock-triplex/",
+      "title": "",
+      "retrieved": "2026-09-10",
+      "local_file": "var/research/comparables/",
+      "sha256": null,
+      "status": "HTTP Error 404: Not Found"
+    }
+  ],
+  "images": [],
+  "copyright": "All fetched pages, STL files and images remain with their publishers (Printable Scenery, Fat Dragon Games, OpenForge/Devon Jones, community authors). OpenLOCK system files are CC BY-NC 4.0 with attribution to www.printablescenery.com; DRAGONLOCK/Dragonbite geometry and names are proprietary to Fat Dragon Games and were measured only to describe compatibility; OpenForge sources are Apache-2.0. Nothing from these archives is redistributed in the repository; the derived article and lab contain our own descriptions and our own parametric geometry."
+}

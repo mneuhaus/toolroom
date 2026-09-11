@@ -1,0 +1,36 @@
+schema_version: 1
+id: cad-team
+recorded: 2026-09-11
+source: User-approved CAD workflow review, 2026-09-11
+note: >
+  Routing preferences, not a CAD quality calibration or model benchmark.
+  The calling agent checks current runtime availability before dispatch.
+  Never silently substitute a cheaper model for the critical role.
+limits:
+  brief_characters: 12000
+  result_characters: 6000
+roles:
+  research:
+    model: gpt-5.6-terra
+    reasoning_effort: medium
+    access: read sources; write only job artifacts
+    scope: Find sources and extract attributed facts; no critical engineering conclusions.
+    repair_attempts: 1
+  preparation:
+    model: gpt-5.6-terra
+    reasoning_effort: medium
+    access: read authoritative exports; run approved local preparation tools; write job artifacts
+    scope: Export bookkeeping, profile resolution, print candidates and evidence packaging; no geometry changes or print dispatch.
+    repair_attempts: 1
+  implementation:
+    model: gpt-5.6-sol
+    reasoning_effort: high
+    access: modify only the assigned isolated files; no unrelated live CAD writes
+    scope: Implement a bounded specification and run its checks; escalate interface or acceptance-criteria changes.
+    repair_attempts: 2
+  critical:
+    model: gpt-6-astra
+    reasoning_effort: highest_available
+    access: within the user's authorized task
+    scope: Mechanical design, tolerances, load paths, assembly integration, exceptions and critical release decisions.
+    repair_attempts: null

@@ -521,6 +521,166 @@
       "destination": "tests/test_checker_regressions.py",
       "import_sha256": "119278d655da8e501ee9584d67e66724a99f6eb78fef347006097d40ce0a50f2",
       "change": "Tests use shared checker and canonical no_findings status"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:render/code/jobs/clip.sh",
+      "source_sha256": "391bdbfb220dad481eb460926bcf39dd9f2e705ac1190caf7c8df1ca3103f53f",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/render/code/jobs/clip.sh",
+      "import_sha256": "391bdbfb220dad481eb460926bcf39dd9f2e705ac1190caf7c8df1ca3103f53f",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:render/code/ldraw_parts.py",
+      "source_sha256": "92f5e2c6deadcd5d3fff7eb897276ea93f9784c00b34b822eafc877b9bbf2ec3",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/render/code/ldraw_parts.py",
+      "import_sha256": "92f5e2c6deadcd5d3fff7eb897276ea93f9784c00b34b822eafc877b9bbf2ec3",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:render/code/sorter_render.py",
+      "source_sha256": "e0cd479880494984bfc869f8e073d660679cf69dfc0a326376a70bbb3efc4d32",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/render/code/sorter_render.py",
+      "import_sha256": "e0cd479880494984bfc869f8e073d660679cf69dfc0a326376a70bbb3efc4d32",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:render/code/translate_gltf.py",
+      "source_sha256": "bdd71ffd72ad240e020151d3cdeec47b348704737f54b43cb0d443161e8bcffc",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/render/code/translate_gltf.py",
+      "import_sha256": "bdd71ffd72ad240e020151d3cdeec47b348704737f54b43cb0d443161e8bcffc",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/AGENTS.md",
+      "source_sha256": "42a2ce053dca9d3b49041a08b89e95aab740ddb1fd8065cd6e4e72e354858e60",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/AGENTS.md",
+      "import_sha256": "42a2ce053dca9d3b49041a08b89e95aab740ddb1fd8065cd6e4e72e354858e60",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/README.md",
+      "source_sha256": "01acb2e34e2824a742b457fc4fd6065166fba6a87e5183acaaf203c99588a322",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/README.md",
+      "import_sha256": "01acb2e34e2824a742b457fc4fd6065166fba6a87e5183acaaf203c99588a322",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/config/machine.sim.toml",
+      "source_sha256": "725e6045044e61b84a6afa241dab07fb9d4d450805b9b9b726659d3187e76516",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/config/machine.sim.toml",
+      "import_sha256": "725e6045044e61b84a6afa241dab07fb9d4d450805b9b9b726659d3187e76516",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/requirements.txt",
+      "source_sha256": "528880d456a05753dbdffd34825b0abaa964e871a5f6e35e98bc2f9155b82a9d",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/requirements.txt",
+      "import_sha256": "528880d456a05753dbdffd34825b0abaa964e871a5f6e35e98bc2f9155b82a9d",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/sim/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/sim/__init__.py",
+      "import_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/sim/assets.py",
+      "source_sha256": "cf1e6d1a1f3a8ff29dc2af7735eaf7b5ad48e50a4ff8b7b9d4535aa2e6eacf84",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/sim/assets.py",
+      "import_sha256": "cf1e6d1a1f3a8ff29dc2af7735eaf7b5ad48e50a4ff8b7b9d4535aa2e6eacf84",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/sim/clip.py",
+      "source_sha256": "cc558ca681bc43bafd35f41f757cfd0f28a1eed93f7a6ef301b22b1dd496e4e6",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/sim/clip.py",
+      "import_sha256": "cc558ca681bc43bafd35f41f757cfd0f28a1eed93f7a6ef301b22b1dd496e4e6",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/sim/collide.py",
+      "source_sha256": "3f69774b8dcedab1dbdc29d124d610f34b7e6cb066b4dc499831c4da8823b89f",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/sim/collide.py",
+      "import_sha256": "3f69774b8dcedab1dbdc29d124d610f34b7e6cb066b4dc499831c4da8823b89f",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/sim/extract.py",
+      "source_sha256": "9bb0650ea0bb5a56d5ad20774097b35dab79dd7e741dc812bb21f5eb925e9fcc",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/sim/extract.py",
+      "import_sha256": "9bb0650ea0bb5a56d5ad20774097b35dab79dd7e741dc812bb21f5eb925e9fcc",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/sim/materials.py",
+      "source_sha256": "885af40f2eb94198b5b3cd768d817cd5acdfe5d475afdb9ee9ccb668d4d6efd6",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/sim/materials.py",
+      "import_sha256": "885af40f2eb94198b5b3cd768d817cd5acdfe5d475afdb9ee9ccb668d4d6efd6",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/sim/pieces.py",
+      "source_sha256": "277df485d9ab7a1f7555cf0cef9e6fd736bcdaf1848abef024fd2dcbb05a16cd",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/sim/pieces.py",
+      "import_sha256": "277df485d9ab7a1f7555cf0cef9e6fd736bcdaf1848abef024fd2dcbb05a16cd",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/sim/record.py",
+      "source_sha256": "4378a48212fac9465b98d528c1079471857e2851a4572be8bc2a9f9e5538c0b1",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/sim/record.py",
+      "import_sha256": "4378a48212fac9465b98d528c1079471857e2851a4572be8bc2a9f9e5538c0b1",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/sim/scene.py",
+      "source_sha256": "0270dbc0563e0829dad59d7958b741074dcc311b7e3622f9fbad6cd1e89c690a",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/sim/scene.py",
+      "import_sha256": "0270dbc0563e0829dad59d7958b741074dcc311b7e3622f9fbad6cd1e89c690a",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/sim/snapshot.py",
+      "source_sha256": "9e625dddc08f5a6b75fd39771f3b1a9cdbe199c9287b95b6b0749afc124df8a7",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/sim/snapshot.py",
+      "import_sha256": "9e625dddc08f5a6b75fd39771f3b1a9cdbe199c9287b95b6b0749afc124df8a7",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:sim/sim/viewer.py",
+      "source_sha256": "19f91630be05b466e16a637ad89cb4b240ec39efb4e1ad877f2a14622d6e2161",
+      "destination": "skills/cad-physics-simulation/references/sorter-v2-feeder-clip/sim/sim/viewer.py",
+      "import_sha256": "19f91630be05b466e16a637ad89cb4b240ec39efb4e1ad877f2a14622d6e2161",
+      "change": "Verbatim snapshot of the Sorter V2 feeder clip handoff (2026-09-10); MIT + Commons Clause / CC BY-NC-SA 4.0, see LICENSE-NOTE.md",
+      "disposition": "Reference code for the cad-physics-simulation skill; not maintained here"
+    },
+    {
+      "source": "attachment/sorter-feeder-clip-handoff.zip:README.md + sim/AGENTS.md",
+      "source_sha256": "",
+      "destination": "skills/cad-physics-simulation/references/field-notes.md",
+      "import_sha256": "",
+      "change": "Handoff narrative and repository AGENTS.md combined verbatim under a banner; headings demoted one level",
+      "disposition": "Field notes for the cad-physics-simulation skill"
     }
   ],
   "restructure": "Destinations reflect the 10 September 2026 restructure; see restructure-2026-09-10.json for the path map."

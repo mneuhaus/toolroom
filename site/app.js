@@ -7,7 +7,7 @@
   const $ = (selector, parent = document) => parent.querySelector(selector);
   const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const normalize = (s) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  const categories = {workflow:"Workflow",cad:"CAD integration",construction:"Construction",manufacturing:"Manufacturing",design:"Design",documentation:"Documentation",reconstruction:"Reconstruction"};
+  const categories = {workflow:"Workflow",cad:"CAD integration",construction:"Construction",manufacturing:"Manufacturing",design:"Design",documentation:"Documentation",reconstruction:"Reconstruction",simulation:"Simulation"};
   const summaries = {
     "cad-joints":"Select joint principles, construct native mating parts and check the complete assembly path.",
     "cad-workflow":"Establish the source, task and interfaces. Select the skills needed for the result.",
@@ -18,10 +18,12 @@
     "cad-design-system":"Combine design language, manufacturing and protected interfaces through independent profiles.",
     "onshape-build-manuals":"Create clear instructions from reusable build stages, actual parts and a shared recipe.",
     "fusion360":"Build native Fusion geometry from source programs and verify changes with explicit volume accounting.",
+    "cad-physics-simulation":"Turn a CAD assembly into a rigid-body simulation with driven joints and logged poses, then replay it in a renderer bound to its log.",
     "scan-reverse-engineering":"Convert raw scans into justified functional CAD geometry. Check shape assumptions against the surfaces."
   };
   const navNames = {overview:"Overview",architecture:"Architecture",skills:"Skills",knowledge:"Knowledge base",profiles:"Profiles",labs:"Labs",roadmap:"Development",provenance:"Provenance & sources"};
   const state = {joint:"J06",jointPose:"separate",filter:"all",layer:0,style:"instrument",process:"fdm",lab:"solid",route:"overview",title:"Overview"};
+  const wordNum = (n)=>({1:"One",2:"Two",3:"Three",4:"Four",5:"Five",6:"Six",7:"Seven",8:"Eight",9:"Nine",10:"Ten",11:"Eleven",12:"Twelve"})[n]||String(n);
   const pill = (label, cls="") => `<span class="pill ${cls}">${esc(label)}</span>`;
   const readLink = (path, label, cls="text-link") => `<a class="${cls}" href="#read/${esc(path)}">${esc(label)} <span aria-hidden="true">↗</span></a>`;
   const heading = (num, title, text) => `<div class="page-heading"><span class="eyebrow accent">${esc(num)}</span><h1 tabindex="-1">${esc(title)}</h1><p>${esc(text)}</p></div>`;
@@ -33,7 +35,9 @@
       <section class="hero"><div class="hero-copy"><span class="eyebrow accent">TOOLROOM</span><h1 tabindex="-1">From idea<br>to part<span style="color:var(--accent)">.</span></h1><p>CAD knowledge that fits together. Construction, manufacturing and design, connected through traceable checks and reproducible labs.</p><div class="hero-actions"><a class="button" href="#architecture">Explore the framework <span>↗</span></a><a class="text-link" href="#knowledge">Read the knowledge base <span>→</span></a></div></div><div class="hero-visual"><div class="drawing-meta"><span>JOINTS / J06</span><span>FIG. 001</span></div><img src="site/assets/joints-J06-assembled.png" alt="Two printed parts joined by the J06 echo-lock principle, native Onshape render" width="1100" height="650"><div class="hero-ticks" aria-hidden="true"><span>+</span><span>+</span></div><div class="drawing-caption"><span>PRINTED JOINTS LAB / J06 · NATIVE CAD GEOMETRY</span><a href="#lab/printed-joints" aria-label="Open the Printed Joints Lab">↗</a></div></div></section>
       <div class="stats-line"><div class="stat"><strong>${two(D.modules.length)}</strong><span>composable skills</span></div><div class="stat"><strong>${two(D.knowledge.articles.length)}</strong><span>knowledge articles</span></div><div class="stat"><strong>${two(D.labs.length)}</strong><span>reproducible labs</span></div></div>
       <div class="section-head"><h2>A good starting point</h2><span>READ · UNDERSTAND · DISCUSS</span></div>
-      <div class="entry-grid"><a class="entry-card" href="#skills"><span class="eyebrow">01 /</span><h3>The right knowledge<br>for the task.</h3><p>Short skill entrypoints, specific technical references and clearly identified tool integrations.</p><div class="card-bottom"><span>SKILLS</span><span class="arrow">↗</span></div></a><a class="entry-card" href="#knowledge"><span class="eyebrow">02 /</span><h3>Rules that hold<br>across backends.</h3><p>Foundations, workflow, construction, manufacturing and design languages in one maintained catalogue.</p><div class="card-bottom"><span>KNOWLEDGE BASE</span><span class="arrow">↗</span></div></a><a class="entry-card" href="#labs"><span class="eyebrow">03 /</span><h3>Evidence gives<br>results meaning.</h3><p>Two reproducible experiments show what a joint principle and a geometry checker actually demonstrate.</p><div class="card-bottom"><span>LABS</span><span class="arrow">↗</span></div></a></div>
+      <div class="entry-grid"><a class="entry-card" href="#skills"><span class="eyebrow">01 /</span><h3>The right knowledge<br>for the task.</h3><p>Short skill entrypoints, specific technical references and clearly identified tool integrations.</p><div class="card-bottom"><span>SKILLS</span><span class="arrow">↗</span></div></a><a class="entry-card" href="#knowledge"><span class="eyebrow">02 /</span><h3>Rules that hold<br>across backends.</h3><p>Foundations, workflow, construction, manufacturing and design languages in one maintained catalogue.</p><div class="card-bottom"><span>KNOWLEDGE BASE</span><span class="arrow">↗</span></div></a><a class="entry-card" href="#labs"><span class="eyebrow">03 /</span><h3>Evidence gives<br>results meaning.</h3><p>Reproducible experiments show what a joint principle, a geometry checker and a scalable socket generator actually demonstrate.</p><div class="card-bottom"><span>LABS</span><span class="arrow">↗</span></div></a></div>
+      <div class="section-head"><h2>Everything, one click away</h2><span>THE WHOLE MAP</span></div>
+      <div class="map-grid"><div class="map-col"><h3>Skills · when and how</h3>${D.modules.map(m=>`<a href="#read/${esc(m.document)}">${esc(m.title)}</a>`).join("")}</div><div class="map-col"><h3>Knowledge · why</h3>${D.knowledge.sections.map(s=>{const arts=D.knowledge.articles.filter(a=>a.section===s.id);return arts.length?`<span class="tree-sub">${esc(s.title)}</span>${arts.map(a=>`<a href="#read/${esc(a.path)}">${esc(a.title)}</a>`).join("")}`:"";}).join("")}</div><div class="map-col"><h3>Labs · evidence</h3>${D.labs.map(l=>`<a href="#lab/${esc(l.id)}">${esc(l.title)}</a>`).join("")}<span class="tree-sub">Profiles</span><a href="#profiles">Profile workbench</a><a href="#read/profiles/README.md">Profile conventions</a><a href="#read/profiles/environment/README.md">Environment profiles</a><span class="tree-sub">About</span><a href="#architecture">Architecture</a><a href="#read/docs/scope.md">Scope and maturity</a><a href="#read/docs/history.md">History</a></div></div>
       ${note('This edition brings the current sources together for discussion. For locally verified helpers and separate CAD runtimes, see <a href="#read/docs/scope.md">Scope & maturity</a>.')}`;
   }
 
@@ -59,10 +63,10 @@
 
   function skillCards() {
     const list=D.modules.filter(m=>state.filter==="all"||m.category===state.filter);
-    return list.map(m=>`<a class="skill-card" href="#read/${esc(m.document)}"><div class="skill-card-top"><span class="skill-icon" aria-hidden="true">${({workflow:"⌁",cad:"⌑",construction:"⊏",manufacturing:"≋",design:"◐",documentation:"▤",reconstruction:"⋈"})[m.category]}</span>${pill(categories[m.category])}</div><h2>${esc(m.title)}</h2><p>${esc(summaries[m.id])}</p><div class="skill-card-footer"><span>${m.state==="local-tools"?"WITH LOCAL HELPERS":"CURATED KNOWLEDGE"}</span><span>↗</span></div></a>`).join("");
+    return list.map(m=>`<a class="skill-card" href="#read/${esc(m.document)}"><div class="skill-card-top"><span class="skill-icon" aria-hidden="true">${({workflow:"⌁",cad:"⌑",construction:"⊏",manufacturing:"≋",design:"◐",documentation:"▤",reconstruction:"⋈",simulation:"∿"})[m.category]}</span>${pill(categories[m.category])}</div><h2>${esc(m.title)}</h2><p>${esc(summaries[m.id])}</p><div class="skill-card-footer"><span>${m.state==="local-tools"?"WITH LOCAL HELPERS":"CURATED KNOWLEDGE"}</span><span>↗</span></div></a>`).join("");
   }
   function skills() {
-    return `${heading("03 / SKILLS", "An entrypoint for every task.", "Ten short entrypoints connect the existing capabilities. Detailed references and practical helpers remain directly accessible.")}
+    return `${heading("03 / SKILLS", "An entrypoint for every task.", "${wordNum(D.modules.length)} short entrypoints connect the existing capabilities. Detailed references and practical helpers remain directly accessible.")}
       <div class="filter-bar" aria-label="Filter skills by area"><button class="filter-chip" data-filter="all" aria-pressed="${state.filter==="all"}">All skills</button>${Object.entries(categories).map(([id,title])=>`<button class="filter-chip" data-filter="${id}" aria-pressed="${state.filter===id}">${title}</button>`).join("")}<span id="filter-count" class="filter-count" role="status">${D.modules.filter(m=>state.filter==="all"||m.category===state.filter).length} ENTRIES</span></div><div class="skill-grid" id="skill-grid">${skillCards()}</div>
       ${note('All maintained documentation uses English. The rules a skill relies on are collected in the <a href="#knowledge">knowledge base</a>.')}`;
   }
@@ -75,7 +79,12 @@
   function labPage(id) {
     const lab=D.labs.find(x=>x.id===id);
     if(!lab) return notFound();
-    return id==="printed-joints" ? jointsPage(lab) : checkerLabPage(lab);
+    return id==="printed-joints" ? jointsPage(lab) : id==="checker-lab" ? checkerLabPage(lab) : genericLabPage(lab);
+  }
+  function genericLabPage(lab) {
+    state.title=lab.title;
+    const doc=D.documents[lab.document];
+    return `${heading("LAB / "+lab.tag.toUpperCase(),lab.title,lab.summary)}<div class="article-toolbar"><a href="#labs">← All labs</a><a href="#source/${esc(lab.document)}">View source file ↗</a></div><figure class="joint-figure"><img src="${esc(lab.image)}" alt="${esc(lab.title)}" loading="lazy"><figcaption>${esc(lab.kind).toUpperCase()} · GENERATED FROM THE LAB'S OWN GEOMETRY</figcaption></figure><div class="article-shell"><article class="article">${doc?doc.body:""}</article>${toc(doc,lab.document)}</div>${labFooter(lab)}`;
   }
   function labFooter(lab) {
     return `<div class="source-reference">RUN: ${esc(lab.runnable)}<br>SOURCE: ${esc(lab.source)}${lab.source_sha256?`<br>SHA-256: ${esc(lab.source_sha256)}`:""}</div>`;
@@ -147,7 +156,7 @@
   }
 
   function roadmap() {
-    const done=[["A knowledge base in sections","Foundations, workflow, construction, manufacturing, design languages and lessons, listed in one maintained catalogue."],["Ten short skill entrypoints","Selection, working practice and limits per skill, with backend references and helpers beside them."],["Profiles with clear ownership","Design language, manufacturing and interfaces resolved through ordered includes and a traceable resolution order."],["Two reproducible labs","Native joint geometry with STEP evidence, and a checker lab with actual program output."],["Personal case studies removed","The project narratives were distilled into transferable rules in the lessons section."]];
+    const done=[["A knowledge base in sections","Foundations, workflow, construction, manufacturing, design languages, simulation and lessons, listed in one maintained catalogue."],[`${wordNum(D.modules.length)} short skill entrypoints`,"Selection, working practice and limits per skill, with backend references and helpers beside them."],["Profiles with clear ownership","Design language, manufacturing and interfaces resolved through ordered includes and a traceable resolution order."],[`${wordNum(D.labs.length)} reproducible labs`,"Native joint geometry with STEP evidence, a checker lab with actual program output, and a scalable tile-clip socket generator."],["Personal case studies removed","The project narratives were distilled into transferable rules in the lessons section."]];
     const next=[["Define maintenance boundaries","Which runtimes remain separate projects? Which helpers belong here permanently?"],["Choose a complete pilot case","Take a small independent model through construction, manufacturing and an assembly guide."],["Calibrate profiles physically","Which actual materials, machines and coupons establish our working values?"],["Define the public scope","Name, examples, our own licence and supported installations for a first release."]];
     return `${heading("DEVELOPMENT / DISCUSS TOGETHER", "A concrete foundation. Useful next questions.", "The restructure is ready to inspect. The next decisions concern scope and maintenance and can be discussed through the labs.")}
       <div class="roadmap-grid"><div class="roadmap-column"><span class="eyebrow accent">01 / IN THIS EDITION</span><h2>Already consolidated</h2>${done.map(([t,p])=>`<div class="roadmap-item"><span class="mark">✓</span><div><h3>${t}</h3><p>${p}</p></div></div>`).join("")}</div><div class="roadmap-column"><span class="eyebrow">02 / NEXT</span><h2>Decide together</h2>${next.map(([t,p],i)=>`<div class="roadmap-item"><span class="mark">${i+1}</span><div><h3>${t}</h3><p>${p}</p></div></div>`).join("")}</div></div>
@@ -170,10 +179,91 @@
     return "knowledge";
   }
   const backHref = (path) => "#" + (navFor(path)==="provenance" ? "overview" : navFor(path));
+
+  // ---- explorer tree: every document one click away ----
+  function treeGroups(){
+    const skills=[{href:"#skills",label:"All skills",all:true},...D.modules.map(m=>({href:"#read/"+m.document,label:m.title}))];
+    const knowledge=D.knowledge.sections.map(s=>({label:s.title,items:D.knowledge.articles.filter(a=>a.section===s.id).map(a=>({href:"#read/"+a.path,label:a.title}))})).filter(s=>s.items.length);
+    const labs=[{href:"#labs",label:"All labs",all:true},...D.labs.map(l=>({href:"#lab/"+l.id,label:l.title}))];
+    return [
+      {id:"skills",label:"Skills",items:skills},
+      {id:"knowledge",label:"Knowledge",groups:[{label:"",items:[{href:"#knowledge",label:"All articles",all:true}]},...knowledge]},
+      {id:"labs",label:"Labs",items:labs},
+      {id:"profiles",label:"Profiles",items:[{href:"#profiles",label:"Profile workbench",all:true},{href:"#read/profiles/README.md",label:"Profile conventions"},{href:"#read/profiles/environment/README.md",label:"Environment profiles"},{href:"#read/knowledge/design/mosey.md",label:"Mosey design language"}]},
+      {id:"about",label:"About Toolroom",items:[{href:"#architecture",label:"Architecture"},{href:"#read/docs/scope.md",label:"Scope and maturity"},{href:"#read/docs/history.md",label:"History"},{href:"#read/docs/provenance.md",label:"Provenance and sources"},{href:"#roadmap",label:"Development"}]}
+    ];
+  }
+  function renderTree(){
+    const host=$("#tree"); if(!host) return;
+    const item=(it,g)=>`<a href="${it.href}" data-tree="${g}"${it.all?' class="tree-all"':''}>${esc(it.label)}</a>`;
+    host.innerHTML=treeGroups().map(g=>{
+      const count=g.items?g.items.filter(i=>!i.all).length:g.groups.reduce((n,s)=>n+s.items.filter(i=>!i.all).length,0);
+      const body=g.items?g.items.map(it=>item(it,g.id)).join("")
+        :g.groups.map(s=>`${s.label?`<span class="tree-sub">${esc(s.label)}</span>`:""}${s.items.map(it=>item(it,g.id)).join("")}`).join("");
+      return `<details class="tree-group" data-group="${g.id}"><summary data-nav="${g.id}"><span>${esc(g.label)}</span><span class="nav-count">${count}</span></summary><div class="tree-items">${body}</div></details>`;
+    }).join("");
+  }
+  function syncTree(nav,routePath){
+    const group=({architecture:"about",roadmap:"about",provenance:"about"})[nav]||nav;
+    document.querySelectorAll(".tree-group").forEach(d=>{if(d.dataset.group===group)d.open=true;});
+    document.querySelectorAll(".tree-items a").forEach(a=>a.getAttribute("href")==="#"+routePath?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
+  }
+
+  // ---- structured skill page ----
+  function skillPage(path){
+    const doc=D.documents[path]; const mod=D.modules.find(m=>m.document===path);
+    const root=new DOMParser().parseFromString(`<div>${doc.body}</div>`,"text/html").body.firstChild;
+    let cur="intro"; const sec={intro:[]};
+    for(const n of [...root.children]){ if(n.tagName==="H2"){cur=n.textContent.trim().toLowerCase();sec[cur]=[];} else sec[cur].push(n); }
+    let useWhen="",notWhen=""; const introRest=[];
+    for(const n of sec.intro){
+      if(n.tagName==="P"&&/use when/i.test(n.textContent)&&!useWhen){
+        const parts=n.innerHTML.split(/<strong>\s*Do not use when\s*<\/strong>/i);
+        useWhen=parts[0].replace(/<strong>\s*Use when\s*<\/strong>/i,"").trim(); notWhen=(parts[1]||"").trim();
+      } else introRest.push(n);
+    }
+    const html=(nodes)=>nodes.map(n=>n.outerHTML).join("");
+    const proc=sec.procedure||[]; const stepsOl=proc.find(n=>n.tagName==="OL"); const procNotes=proc.filter(n=>n!==stepsOl);
+    const cards=(list)=>{
+      const ul=(list||[]).find(n=>n.tagName==="UL"); const others=(list||[]).filter(n=>n!==ul);
+      const grid=ul?`<div class="link-cards">${[...ul.children].map(li=>{
+        const links=[...li.querySelectorAll("a")]; if(!links.length) return `<div class="link-card"><p>${li.innerHTML}</p></div>`;
+        const kindOf=(href)=>href.includes("labs/")?"LAB":href.includes("knowledge/")?"KNOWLEDGE":href.includes("SKILL.md")?"SKILL":/scripts\/|\.py|\.toml/.test(href)?"HELPER":"REFERENCE";
+        if(links.length>1) return links.map(a=>`<a class="link-card" href="${a.getAttribute("href")}"><span class="eyebrow">${kindOf(a.getAttribute("href"))}</span><h3>${esc(a.textContent)}</h3></a>`).join("");
+        const a=links[0]; const href=a.getAttribute("href"); const title=a.textContent; const clone=li.cloneNode(true); clone.querySelector("a").remove();
+        const rest=clone.innerHTML.replace(/^\s*(—|–|-|:)\s*/,"").trim();
+        return `<a class="link-card" href="${href}"><span class="eyebrow">${kindOf(href)}</span><h3>${esc(title)}</h3>${rest?`<p>${rest}</p>`:""}</a>`;}).join("")}</div>`:"";
+      return grid+(others.length?`<div class="skill-notes">${html(others)}</div>`:"");
+    };
+    const env=html(sec.environment||[]);
+    const known=["intro","procedure","knowledge","references","environment"];
+    const extra=Object.entries(sec).filter(([k])=>!known.includes(k)).map(([k,v])=>`<div class="section-head"><h2>${esc(k[0].toUpperCase()+k.slice(1))}</h2></div><div class="skill-notes">${html(v)}</div>`).join("");
+    state.title=doc.title;
+    return `<div class="article-toolbar"><a href="#skills">← All skills</a><button data-copy="${esc(path)}">Copy Markdown</button><a href="#source/${esc(path)}">View source file ↗</a><button data-action="notes">Note on this topic</button></div>
+      <div class="skill-head">${mod?pill(categories[mod.category]||mod.category):""}<h1 tabindex="-1">${esc(doc.title)}</h1>${mod?`<p class="lede">${esc(mod.description)}</p>`:""}</div>
+      ${useWhen?`<div class="when-grid"><div class="when yes"><span class="eyebrow">USE WHEN</span><p>${useWhen}</p></div><div class="when no"><span class="eyebrow">NOT FOR</span><p>${notWhen||"See the description above."}</p></div></div>`:""}
+      ${introRest.length?`<div class="skill-notes">${html(introRest)}</div>`:""}
+      ${stepsOl?`<div class="section-head"><h2>Procedure</h2><span>${stepsOl.children.length} STEPS</span></div><ol class="steps">${[...stepsOl.children].map((li,i)=>`<li><span class="step-no">${two(i+1)}</span><div>${li.innerHTML}</div></li>`).join("")}</ol>`:""}
+      ${procNotes.length?`<div class="skill-notes">${html(procNotes)}</div>`:""}
+      ${sec.knowledge?`<div class="section-head"><h2>Knowledge to load</h2><span>THE WHY</span></div>${cards(sec.knowledge)}`:""}
+      ${sec.references?`<div class="section-head"><h2>References and helpers</h2><span>THE HOW</span></div>${cards(sec.references)}`:""}
+      ${env?`<div class="wide-note"><span aria-hidden="true">⌂</span><div class="note-body">${env}</div></div>`:""}
+      ${extra}
+      <div class="source-reference">MAINTAINED SOURCE / ${esc(path)}</div>`;
+  }
+  function articleIntro(path){
+    const art=D.knowledge.articles.find(a=>a.path===path); if(!art) return "";
+    const section=D.knowledge.sections.find(s=>s.id===art.section);
+    const file=path.split("/").pop();
+    const users=D.modules.filter(m=>(D.sources[m.document]?.text||"").includes(file));
+    const words=(D.documents[path].plain||"").split(/\s+/).length; const mins=Math.max(1,Math.round(words/220));
+    return `<div class="intro-card"><div><span class="eyebrow accent">${esc((section?section.title:"").toUpperCase())} · ${mins} MIN READ</span><p>${esc(art.summary)}</p></div>${users.length?`<div class="intro-users"><span class="eyebrow">LOADED BY</span>${users.map(m=>`<a class="pill" href="#read/${esc(m.document)}">${esc(m.title)}</a>`).join("")}</div>`:""}</div>`;
+  }
   function readPage(path) {
     const doc=D.documents[path];if(!doc)return sourcePage(path);
+    if(/^skills\/[^/]+\/SKILL\.md$/.test(path)) return skillPage(path);
     state.title=doc.title;
-    return `<div class="article-toolbar"><a href="${backHref(path)}">← Back to overview</a><button data-copy="${esc(path)}">Copy Markdown</button><a href="#source/${esc(path)}">View source file ↗</a><button data-action="notes">Note on this topic</button></div><div class="article-shell"><article class="article">${doc.html}</article>${toc(doc,path)}</div><div class="source-reference">MAINTAINED SOURCE / ${esc(path)}</div>`;
+    return `<div class="article-toolbar"><a href="${backHref(path)}">← Back to overview</a><button data-copy="${esc(path)}">Copy Markdown</button><a href="#source/${esc(path)}">View source file ↗</a><button data-action="notes">Note on this topic</button></div>${articleIntro(path)}<div class="article-shell"><article class="article">${doc.html}</article>${toc(doc,path)}</div><div class="source-reference">MAINTAINED SOURCE / ${esc(path)}</div>`;
   }
   function sourcePage(path) {
     const src=D.sources[path];if(!src)return notFound();
@@ -200,6 +290,7 @@
     $("#breadcrumb").textContent=state.title;
     document.title=`${state.title} — Toolroom`;
     document.querySelectorAll("[data-nav]").forEach(a=>a.dataset.nav===nav?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
+    syncTree(nav,routePath);
     closeMenu();
     main.querySelectorAll("table").forEach(t=>{const wrapper=document.createElement("div");wrapper.className="table-wrap";t.replaceWith(wrapper);wrapper.append(t);});
     main.querySelectorAll("a[href^='http']").forEach(a=>{a.target="_blank";a.rel="noopener noreferrer";});
@@ -276,6 +367,7 @@
       else if($("#sidebar").classList.contains("open")){closeMenu();$("#menu-toggle").focus();}
     }
   });
+  renderTree();
   window.addEventListener("hashchange",route);
   route();
 })();

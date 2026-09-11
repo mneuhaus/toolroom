@@ -1,0 +1,108 @@
+{
+ "source": "Sorter V2 feeder clip handoff, 2026-09-10 (var/inbox/sorter-feeder-clip-handoff)",
+ "snapshot_date": "2026-09-11",
+ "licence": "software MIT + Commons Clause; design content CC BY-NC-SA 4.0 (see LICENSE-NOTE.md)",
+ "hash": "sha256",
+ "files": [
+  {
+   "path": "LICENSE-NOTE.md",
+   "sha256": "c51e22d8583e3137d979056bcfaf05077ab5c6c28da29320872dc944a408d39a",
+   "bytes": 447
+  },
+  {
+   "path": "render/code/jobs/clip.sh",
+   "sha256": "391bdbfb220dad481eb460926bcf39dd9f2e705ac1190caf7c8df1ca3103f53f",
+   "bytes": 967
+  },
+  {
+   "path": "render/code/ldraw_parts.py",
+   "sha256": "92f5e2c6deadcd5d3fff7eb897276ea93f9784c00b34b822eafc877b9bbf2ec3",
+   "bytes": 8779
+  },
+  {
+   "path": "render/code/sorter_render.py",
+   "sha256": "e0cd479880494984bfc869f8e073d660679cf69dfc0a326376a70bbb3efc4d32",
+   "bytes": 40946
+  },
+  {
+   "path": "render/code/translate_gltf.py",
+   "sha256": "bdd71ffd72ad240e020151d3cdeec47b348704737f54b43cb0d443161e8bcffc",
+   "bytes": 2261
+  },
+  {
+   "path": "sim/AGENTS.md",
+   "sha256": "42a2ce053dca9d3b49041a08b89e95aab740ddb1fd8065cd6e4e72e354858e60",
+   "bytes": 8689
+  },
+  {
+   "path": "sim/README.md",
+   "sha256": "01acb2e34e2824a742b457fc4fd6065166fba6a87e5183acaaf203c99588a322",
+   "bytes": 593
+  },
+  {
+   "path": "sim/config/machine.sim.toml",
+   "sha256": "725e6045044e61b84a6afa241dab07fb9d4d450805b9b9b726659d3187e76516",
+   "bytes": 1391
+  },
+  {
+   "path": "sim/requirements.txt",
+   "sha256": "528880d456a05753dbdffd34825b0abaa964e871a5f6e35e98bc2f9155b82a9d",
+   "bytes": 73
+  },
+  {
+   "path": "sim/sim/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "bytes": 0
+  },
+  {
+   "path": "sim/sim/assets.py",
+   "sha256": "cf1e6d1a1f3a8ff29dc2af7735eaf7b5ad48e50a4ff8b7b9d4535aa2e6eacf84",
+   "bytes": 405
+  },
+  {
+   "path": "sim/sim/clip.py",
+   "sha256": "cc558ca681bc43bafd35f41f757cfd0f28a1eed93f7a6ef301b22b1dd496e4e6",
+   "bytes": 9248
+  },
+  {
+   "path": "sim/sim/collide.py",
+   "sha256": "3f69774b8dcedab1dbdc29d124d610f34b7e6cb066b4dc499831c4da8823b89f",
+   "bytes": 2462
+  },
+  {
+   "path": "sim/sim/extract.py",
+   "sha256": "9bb0650ea0bb5a56d5ad20774097b35dab79dd7e741dc812bb21f5eb925e9fcc",
+   "bytes": 5829
+  },
+  {
+   "path": "sim/sim/materials.py",
+   "sha256": "885af40f2eb94198b5b3cd768d817cd5acdfe5d475afdb9ee9ccb668d4d6efd6",
+   "bytes": 4420
+  },
+  {
+   "path": "sim/sim/pieces.py",
+   "sha256": "277df485d9ab7a1f7555cf0cef9e6fd736bcdaf1848abef024fd2dcbb05a16cd",
+   "bytes": 10199
+  },
+  {
+   "path": "sim/sim/record.py",
+   "sha256": "4378a48212fac9465b98d528c1079471857e2851a4572be8bc2a9f9e5538c0b1",
+   "bytes": 3230
+  },
+  {
+   "path": "sim/sim/scene.py",
+   "sha256": "0270dbc0563e0829dad59d7958b741074dcc311b7e3622f9fbad6cd1e89c690a",
+   "bytes": 13860
+  },
+  {
+   "path": "sim/sim/snapshot.py",
+   "sha256": "9e625dddc08f5a6b75fd39771f3b1a9cdbe199c9287b95b6b0749afc124df8a7",
+   "bytes": 2452
+  },
+  {
+   "path": "sim/sim/viewer.py",
+   "sha256": "19f91630be05b466e16a637ad89cb4b240ec39efb4e1ad877f2a14622d6e2161",
+   "bytes": 1583
+  }
+ ]
+}

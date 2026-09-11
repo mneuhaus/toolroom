@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "source-profile-includes",
+  "role": "research",
+  "objective": "Extract Toolroom's recorded rule for Bambu inheritance and ordered includes, with a source passage.",
+  "inputs": [
+    {"path": "../../../knowledge/manufacturing/print-preparation.md", "purpose": "Maintained profile-resolution rule"}
+  ],
+  "constraints": ["Read-only source research; write only job artifacts.", "Do not infer machine-specific settings or change a CAD model."],
+  "artifacts": ["evidence.json"],
+  "checks": [
+    {"id": "source-evidence", "owner": "worker", "criterion": "Return an exact supporting source passage and its snapshot hash."},
+    {"id": "engineering-applicability", "owner": "astra", "criterion": "Determine applicability to the actual selected machine and profile."}
+  ]
+}

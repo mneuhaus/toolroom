@@ -9,6 +9,7 @@ A pattern describes a function, its boundary conditions and the appropriate evid
 | Printed hand-operated thread | Tool-free adjustment within the available space | Layer direction, thread engagement, access and service load | Camera arm and tripod adapter |
 | Split assembly | Accommodate build volume or assembly access | Individual subassembly sequences and the complete closing sequence | Large enclosure that exceeds the bed, two-part interface |
 | Symmetric common part | Reduce variants and spare-part inventory | The same native part in both actual installed poses | Left/right guide pair, mirrored mounting plates |
+| Clip in two identical side pockets | Join modular tiles and walls edge to edge without tools; the clip owns every clearance | Mid-height pocket section, roof and rim thickness, clip insertion at the intended scale; see [tile clip joints](tile-clip-joints.md) | Terrain tiles, modular panels, drawer or shelf modules |
 | Laser-cut tab-and-slot joint | Turn flat sheets into a spatial structure | Material thickness and kerf compensation applied exactly once | Sheet-material shelf or trolley extension |
 | Functional labels | Identify parts and controls unambiguously | Legibility on the actual surface and at the print resolution | Machine axis and control labelling, engraved signage |
 

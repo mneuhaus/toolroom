@@ -1,0 +1,199 @@
+{
+  "lab": "tile-clip-sockets/merged",
+  "generated_by": "labs/tile-clip-sockets/merged.py",
+  "plate_3mf": {
+    "written": false,
+    "message": "trimesh cannot write 3MF here: No module named 'networkx'"
+  },
+  "files": [
+    {
+      "file": "coupon-merged-post.stl",
+      "sha256": "fe367e983a0852668975ace086bc977159461fef5e802e2186fae4f9494aa414",
+      "bytes": 115084,
+      "parameters": {
+        "post": true,
+        "chamfer": true,
+        "base_height": 6.0,
+        "top_plate": 1.2
+      }
+    },
+    {
+      "file": "coupon-merged-nopost.stl",
+      "sha256": "e164d835346fa18b1a1ff64d1da94ebe2257d4d32cc99cbf16c37e8180ee820e",
+      "bytes": 14284,
+      "parameters": {
+        "post": false,
+        "chamfer": true,
+        "base_height": 6.0,
+        "top_plate": 1.2
+      }
+    },
+    {
+      "file": "coupon-openlock-ref.stl",
+      "sha256": "e3f247df7eabaeb4d90d52307208ae41c9351b86a566a42ff7969a61573bf579",
+      "bytes": 12684,
+      "parameters": {
+        "post": false,
+        "chamfer": false,
+        "base_height": 6.0,
+        "top_plate": 1.2
+      }
+    },
+    {
+      "file": "wall-merged-standing.stl",
+      "sha256": "a5b7061760fae5fbbd1c04ff89426a9636be71c21f5fa3441ae89ab106dc1566",
+      "bytes": 62084,
+      "parameters": {
+        "post": true,
+        "chamfer": true,
+        "pose": "standing on its base"
+      }
+    },
+    {
+      "file": "wall-merged-lying.stl",
+      "sha256": "1cabb2874595ce31c210a323acc90810afadfa3574e14ed1b3a66a4b1685c422",
+      "bytes": 62084,
+      "parameters": {
+        "post": true,
+        "chamfer": true,
+        "pose": "lying on one 25.4 x 25.4 face"
+      }
+    },
+    {
+      "file": "wall-openlock-ref-standing.stl",
+      "sha256": "6631c2c18bf66dbc2765f86060df8ee40a386f521faabd13050ec19d4fcdb335",
+      "bytes": 9684,
+      "parameters": {
+        "post": false,
+        "chamfer": false,
+        "pose": "standing on its base"
+      }
+    },
+    {
+      "file": "wall-openlock-ref-lying.stl",
+      "sha256": "f4072da2537ce931ac771d55c5c10261aca209679a3af0af44dc96ce55accc42",
+      "bytes": 9684,
+      "parameters": {
+        "post": false,
+        "chamfer": false,
+        "pose": "lying on one 25.4 x 25.4 face"
+      }
+    },
+    {
+      "file": "cube-merged-50.8.stl",
+      "sha256": "d100dbf631d7c2f591cecd1e1984be40748d4165bfd27a7debe916e4f6b9b479",
+      "bytes": 1022284,
+      "parameters": {
+        "edge": 50.8,
+        "pose": "bottom face (-Z) down",
+        "labels": {
+          "x0": "LYING L",
+          "x1": "LYING R",
+          "y0": "STANDING F",
+          "y1": "STANDING B",
+          "z1": "TOP",
+          "z0": "BOTTOM"
+        }
+      }
+    },
+    {
+      "file": "clip-35S.stl",
+      "sha256": "5a5c2bb84ecb17ee4f5519ac1c79d8590b64323c259ea26f211f423946105919",
+      "bytes": 379784,
+      "parameters": {
+        "thickness": 3.5,
+        "barb_interference_i_per_side": 0.2,
+        "bite_interference_b_per_side": 0.1,
+        "barb_w": 10.4,
+        "bite_w": 1.8,
+        "label_method": "text"
+      }
+    },
+    {
+      "file": "clip-35T.stl",
+      "sha256": "07dc7f96b76eaac9e973eef24eb74b69db9a7f12bb4b3d33e21d1acee27c5677",
+      "bytes": 248984,
+      "parameters": {
+        "thickness": 3.5,
+        "barb_interference_i_per_side": 0.3,
+        "bite_interference_b_per_side": 0.15,
+        "barb_w": 10.6,
+        "bite_w": 1.7,
+        "label_method": "text"
+      }
+    },
+    {
+      "file": "clip-37S.stl",
+      "sha256": "d67fca4a94eed7a2f84775768b7c5356a8e4101416a8d90248e4949a64552939",
+      "bytes": 299484,
+      "parameters": {
+        "thickness": 3.7,
+        "barb_interference_i_per_side": 0.2,
+        "bite_interference_b_per_side": 0.1,
+        "barb_w": 10.4,
+        "bite_w": 1.8,
+        "label_method": "text"
+      }
+    },
+    {
+      "file": "clip-37S-onedge.stl",
+      "sha256": "1a52bc8f6032a2c1ad46459975786f02b182042ae2ecdf0a24d13e6a36a44b0c",
+      "bytes": 303984,
+      "parameters": {
+        "thickness": 3.7,
+        "barb_interference_i_per_side": 0.2,
+        "bite_interference_b_per_side": 0.1,
+        "pose": "standing on its long edge"
+      }
+    },
+    {
+      "file": "clip-37T.stl",
+      "sha256": "f3902804a6dde0df2fb87d698d5464f7f6ab3323c0acf70d7b635b1f0bc9dfad",
+      "bytes": 168984,
+      "parameters": {
+        "thickness": 3.7,
+        "barb_interference_i_per_side": 0.3,
+        "bite_interference_b_per_side": 0.15,
+        "barb_w": 10.6,
+        "bite_w": 1.7,
+        "label_method": "text"
+      }
+    },
+    {
+      "file": "clip-39S.stl",
+      "sha256": "c190c314983e61baf7aa9f860cd79c0dd2ae2d9c089a681fe60e0109a808629b",
+      "bytes": 434684,
+      "parameters": {
+        "thickness": 3.9,
+        "barb_interference_i_per_side": 0.2,
+        "bite_interference_b_per_side": 0.1,
+        "barb_w": 10.4,
+        "bite_w": 1.8,
+        "label_method": "text"
+      }
+    },
+    {
+      "file": "clip-39T.stl",
+      "sha256": "86391860abc5badce6cdeb1460306bf7259ab62c453acc937187ef80199b6c0c",
+      "bytes": 302884,
+      "parameters": {
+        "thickness": 3.9,
+        "barb_interference_i_per_side": 0.3,
+        "bite_interference_b_per_side": 0.15,
+        "barb_w": 10.6,
+        "bite_w": 1.7,
+        "label_method": "text"
+      }
+    },
+    {
+      "file": "clip-REF.stl",
+      "sha256": "92afc48f7c7aba51d9cec18b832f4ddcba3a9def6a4ba86affb6a818d8d6782b",
+      "bytes": 71384,
+      "parameters": {
+        "thickness": 3.5,
+        "barb_w": 10.4,
+        "note": "plain eye slot, v5.4 bar/thickness"
+      }
+    }
+  ]
+}

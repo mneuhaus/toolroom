@@ -5,6 +5,7 @@ Design language, manufacturing and mechanical interfaces are maintained independ
 - `design-language/`: Instrument, Soft Consumer, Rugged Industrial, the historical Workshop 0.42 family and [Mosey](../knowledge/design/mosey.md).
 - `manufacturing/`: generic starting profiles for FDM, CNC, laser cutting and SLA.
 - `interfaces/`: an illustrative interface profile showing the structure of protected requirements.
+- `agents/`: [task-level CAD team preferences](agents/cad-team.yaml), context allowances and critical-role boundaries; no model-quality calibration.
 - `environment/`: one machine's local facts — endpoints, installed runtimes, default profiles.
 
 The [environment layer](environment/README.md) is deliberately separate from the other three. Design language, manufacturing and interface profiles describe a subject and can be reused by anyone; an environment profile describes a single workstation and is expected to be replaced. It records where a CAD runtime is installed, which port a local adapter listens on and which manufacturing and design-language profiles that machine defaults to, so no skill entrypoint has to hard-code a path or a port. Nothing there calibrates anything: a default printer entry names the machine in the room, it does not establish a tolerance.

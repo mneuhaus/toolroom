@@ -26,6 +26,11 @@
       "summary": "Illustrated studies behind the design-language profiles."
     },
     {
+      "id": "simulation",
+      "title": "Simulation",
+      "summary": "Physics and structural models built from CAD: what they can answer, how to bind them to their inputs, and how to replay them."
+    },
+    {
       "id": "lessons",
       "title": "Lessons",
       "summary": "Transferable rules distilled from real projects, without the project narrative."
@@ -81,6 +86,12 @@
       "section": "construction"
     },
     {
+      "path": "knowledge/construction/tile-clip-joints.md",
+      "title": "Clip-in-pocket tile joints: OpenLOCK and a merged design",
+      "summary": "Socket and clip geometry of both systems with sources, how to model lying and standing pockets cleanly, scaling rules with process floors, matching clips, and the alternatives.",
+      "section": "construction"
+    },
+    {
       "path": "knowledge/construction/patterns.md",
       "title": "Reusable construction patterns",
       "summary": "Sliding guides, crush ribs, printed threads, split assemblies and shared parts.",
@@ -129,10 +140,22 @@
       "section": "design"
     },
     {
+      "path": "knowledge/simulation/cad-to-physics-simulation.md",
+      "title": "From CAD assembly to rigid-body simulation and replay",
+      "summary": "Export with honoured tolerances, convex collision sets, explicit mass and inertia, velocity-driven joints, contact masks, cheap camera previews and a replay render bound to its log.",
+      "section": "simulation"
+    },
+    {
       "path": "knowledge/lessons/project-lessons.md",
       "title": "Lessons from projects",
       "summary": "Transferable rules from design-system, manual, simulation, scan, joint and laser projects.",
       "section": "lessons"
+    },
+    {
+      "path": "knowledge/workflow/delegation.md",
+      "title": "Bounded delegation without lowering CAD quality",
+      "summary": "Small source-bound worker jobs, critical lead decisions, evidence returns and reusable tools.",
+      "section": "workflow"
     }
   ]
 }

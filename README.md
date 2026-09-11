@@ -17,14 +17,18 @@ Then open `http://127.0.0.1:4176`.
 | Directory | Holds | Answers |
 | --- | --- | --- |
 | [`knowledge/`](knowledge/README.md) | Backend-independent rules in six sections: foundations, workflow, construction, manufacturing, design languages, lessons | Why a rule exists and what evidence it needs |
-| [`skills/`](skills/README.md) | Ten thin entrypoints with backend-specific references and helper scripts | When to load what, and how to do it in Onshape, Build123d or Fusion |
+| [`skills/`](skills/README.md) | Thin entrypoints with backend-specific references and helper scripts | When to load what, and how to do it in Onshape, Build123d or Fusion |
 | [`profiles/`](profiles/README.md) | Design-language, manufacturing, interface and workstation data in YAML | Which numbers apply to this machine, style or setup |
-| [`labs/`](labs/README.md) | Two reproducible experiments with their own evidence: the Printed Joints Lab and the checker lab | What a helper or a joint principle actually demonstrates |
+| [`labs/`](labs/README.md) | Reproducible experiments with their own evidence | What a helper or a joint principle actually demonstrates |
 | [`docs/`](docs/architecture.md) | Architecture, scope, history and provenance of this repository | How Toolroom itself is organised and why |
 | `tools/`, `tests/` | Site builder, validator, reading-edition builder and regression tests | How to rebuild and check the repository |
 | `provenance/`, `validation/` | Import hashes, original skill snapshots, reference manifests and the results of checks that were actually run | Where content came from and what was verified |
 
 The rule of thumb: a **why** goes into `knowledge/`, a **when and how** into `skills/`, a **number** into `profiles/`, an **experiment** into `labs/`, and anything about the repository itself into `docs/`.
+
+## Shared CAD work basis
+
+[Start here](docs/cad-work-basis.md) for the bounded worker, source-extraction and print-package commands. These keep routine work small while preserving critical CAD decisions and evidence requirements.
 
 ## Using it with an agent
 

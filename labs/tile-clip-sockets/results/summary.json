@@ -1,0 +1,2044 @@
+{
+  "lab": "tile-clip-sockets",
+  "build123d": "0.10.0",
+  "options": {
+    "variant": "through",
+    "supports": false,
+    "chamfer": false,
+    "enforce": false,
+    "v43_bar": false
+  },
+  "process": {
+    "nozzle": 0.4,
+    "layer": 0.2,
+    "perimeters": 2,
+    "first_layer": 0.2,
+    "clearance_xy": 0.15,
+    "clearance_z": 0.2,
+    "interference_min": 0.4,
+    "roof_min_layers": 2,
+    "rim_min_perimeters": 2,
+    "support_bar": 0.5,
+    "clip_thickness_min_layers": 4,
+    "lead_in_chamfer": 0.4,
+    "roof_min": 0.4,
+    "floor_min": 0.4,
+    "rim_min": 0.8,
+    "clip_thickness_min": 0.8
+  },
+  "volume_tolerance_mm3": 0.001,
+  "script_sha256": {
+    "build.py": "d6a97d1b4a6202101f5cfa388c7730391d9e2aebbd273d4d0f9f4c99f8de7056",
+    "spec.py": "21c57dc8c99e8d6798f6aa2a51c91b2c01c03e3210dd090f4d5a9af9239180c3",
+    "verify.py": "33a55a26d5941445567f0f91d9f12c0a3a50a965ea09df2901da550f9140ed71"
+  },
+  "physical_print": "not performed",
+  "physical_fit": "not measured",
+  "strength": "not tested",
+  "cases": [
+    {
+      "insertion": {
+        "pose": "bar centred on the joint plane between the coupon and its mirror image, clip centred in the pocket band",
+        "protrusion_mm3": 0.11700000000000013,
+        "protrusion_outside_barb_mm3": 0.0,
+        "barb_region_protrusion_mm3": 0.11700000000000013,
+        "seated_interference_mm3": 0.11700000000000013,
+        "barb_seated_interference_mm3": 0.11700000000000013,
+        "barb_seated_expected_mm3": 0.11700000000000019,
+        "barb_region": "|x| >= prong end 2.837 (barb ramp against the neck edge)",
+        "transit_pose_shift_mm": 0.3125,
+        "transit_interference_mm3": 0.24890625000000016,
+        "transit_expected_range_mm3": [
+          0.001,
+          3.5100000000000033
+        ],
+        "support_bar_overlap_mm3": null,
+        "passed": true
+      },
+      "measurements": {
+        "pocket": {
+          "mouth_w": 7.0,
+          "taper_mid_w": 5.506666666666671,
+          "neck_w": 5.0,
+          "chamber_w": 6.400000000000002,
+          "depth": 5.85,
+          "depth_expected": 5.85,
+          "floor": 0.7,
+          "roof": 0.20000000000000018,
+          "floor_chamber": null,
+          "roof_chamber": null,
+          "rim_side": 0.5,
+          "expected": {
+            "mouth_w": 7.0,
+            "taper_mid_w": 5.5,
+            "neck_w": 5.0,
+            "chamber_w": 6.4
+          }
+        },
+        "clip": {
+          "thickness": 1.8000000000000003,
+          "length": 9.750000000000002,
+          "bar_w": 6.600000000000001,
+          "prong_w": 5.0,
+          "barb_w": 5.3999999999999995,
+          "tip_w": 2.6200000000000063,
+          "eye_max": 1.8200000000000005,
+          "expected": {
+            "thickness": 1.8,
+            "length": 9.75,
+            "bar_w": 6.6,
+            "prong_w": 5.0,
+            "barb_w": 5.4,
+            "eye_max": 1.82
+          }
+        }
+      },
+      "validity": {
+        "floor_coupon": {
+          "valid": true,
+          "solids": 2,
+          "volume_mm3": 212.3699999999998
+        },
+        "floor_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 127.17500000000001
+        },
+        "wall_coupon": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 826.6281199999999
+        },
+        "wall_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 103.425
+        },
+        "sidelock_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 76.46918999999998
+        },
+        "clip": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 68.61037500000002
+        }
+      },
+      "volumes": {
+        "clip_mm3": 68.61037500000002,
+        "floor_coupon_mm3": 212.3699999999998
+      },
+      "wall": {
+        "through_protrusion_mm3": 0.7505510670731707,
+        "through_interference_mm3": 0.7505510670731705,
+        "through_mouth_w": 7.0,
+        "through_neck_w": 5.0,
+        "sidelock_protrusion_mm3": 0.08273414634146332,
+        "sidelock_protrusion_outside_barb_mm3": 0.0,
+        "sidelock_interference_mm3": 0.08273414634146332,
+        "sidelock_barb_interference_mm3": 0.08273414634146332,
+        "sidelock_depth": 5.215,
+        "sidelock_depth_expected": 5.215,
+        "sidelock_mouth_h": 7.0,
+        "sidelock_mouth_h_expected": 7.0,
+        "volume_mm3": 826.6281199999999,
+        "valid": true,
+        "solids": 1
+      },
+      "system": "openlock",
+      "scale": 0.5,
+      "variant": "through",
+      "options": {
+        "supports": false,
+        "chamfer": false,
+        "enforce": false,
+        "v43_bar": false
+      },
+      "dimensions": {
+        "base_height": 3.0,
+        "pocket_z0": 0.7,
+        "pocket_z1": 2.8,
+        "mouth_w": 7.0,
+        "mouth_d": 1.0,
+        "taper_w0": 6.0,
+        "taper_x1": 2.5,
+        "neck_w": 5.0,
+        "neck_x1": 3.0,
+        "chamber_w": 6.4,
+        "chamber_x1": 5.35,
+        "rim_w": 8.0,
+        "rim_d": 1.0,
+        "rim_z0": 0.2,
+        "rim_h": 2.8,
+        "support_w": 0.5,
+        "support_y0": 1.025,
+        "support_y1": 1.525,
+        "support_z0": 0.6,
+        "support_z1": 2.9,
+        "support_x1": 1.0,
+        "pitch": 6.35,
+        "wall_t": 6.35,
+        "wall_mouth_d": 0.5,
+        "wall_taper_x1": 2.0,
+        "wall_neck_len": 2.35,
+        "side_t": 2.1,
+        "side_mouth_h": 7.0,
+        "side_mouth_d": 1.0,
+        "side_taper_x1": 2.5,
+        "side_neck_h": 5.0,
+        "side_neck_x1": 2.95,
+        "side_chamber_h": 5.26,
+        "side_chamber_x1": 5.215,
+        "side_rim_d": 5.715,
+        "side_rim_t": 3.1,
+        "side_rim_h": 8.0,
+        "clip_bar_w": 6.6,
+        "clip_bar_w_v43": 7.0,
+        "clip_len": 9.75,
+        "clip_t": 1.8,
+        "clip_t_v54": 1.75,
+        "bar_len": 1.725,
+        "prong_w": 5.0,
+        "prong_y0": 0.8875,
+        "prong_y1": 2.8375,
+        "barb_w": 5.4,
+        "barb_y0": 3.0,
+        "barb_y1": 3.125,
+        "taper_stations": [
+          [
+            4.99,
+            3.5
+          ],
+          [
+            4.8,
+            3.75
+          ],
+          [
+            4.3,
+            4.0
+          ],
+          [
+            3.8,
+            4.25
+          ],
+          [
+            3.3,
+            4.5
+          ]
+        ],
+        "tip_y": 4.875,
+        "tip_w": 2.55,
+        "eye_open": 0.265,
+        "eye_open_y": 0.875,
+        "eye_max": 1.82,
+        "eye_max_y": 2.25,
+        "eye_y9": 1.27,
+        "eye_tip": 1.0,
+        "tile": 12.7,
+        "pocket_h": 2.0999999999999996,
+        "base_required": 3.1999999999999997,
+        "prong_neck_clearance": 0.0,
+        "barb_chamber_clearance": 1.0,
+        "axial_clearance": 0.47499999999999964
+      },
+      "adjustments": [
+        {
+          "quantity": "barb interference (barb - neck)",
+          "scaled_value": 0.2,
+          "floor": 0.4,
+          "applied_value": 0.4,
+          "action": "grow barb"
+        },
+        {
+          "quantity": "roof",
+          "scaled_value": 0.2,
+          "floor": 0.4,
+          "applied_value": 0.2,
+          "action": "flag"
+        },
+        {
+          "quantity": "rim side (per side beside the mouth)",
+          "scaled_value": 0.5,
+          "floor": 0.8,
+          "applied_value": 0.5,
+          "action": "flag"
+        }
+      ],
+      "flags": [
+        "barb interference (barb - neck):grow barb",
+        "rim_below_min",
+        "roof_below_min",
+        "through_centre_island",
+        "wall_through_bar_clash"
+      ],
+      "exports": {
+        "labs/tile-clip-sockets/exports/s0.5/openlock-through-floor-coupon.step": "182e9c94911242e17129d125522e6de5dbed8ac5025fbc921e3dfd37d27bf6a3",
+        "labs/tile-clip-sockets/exports/s0.5/openlock-through-floor-coupon.stl": "bfd611c99a8fe385a5ffbe4d9de29bdfcde9490a4aa729db366f1c7ca4098659",
+        "labs/tile-clip-sockets/exports/s0.5/openlock-through-floor-negative.step": "eb802ce19bf397148589bd8086e8f2b50a10abf2e8a71969790d13d66188d163",
+        "labs/tile-clip-sockets/exports/s0.5/openlock-through-wall-coupon.step": "db5fda3f9749c86fa0be398bfd358596586ce26c5810f43645c77d37cb77bd87",
+        "labs/tile-clip-sockets/exports/s0.5/openlock-through-wall-coupon.stl": "edb6515c91810eef646584af63fc999c209b959425df673ec064efae36af7e05",
+        "labs/tile-clip-sockets/exports/s0.5/openlock-through-wall-negative.step": "a594f2e85f74d421e672590d709c65bb079dce42af5eb4c38256a998773fe0b6",
+        "labs/tile-clip-sockets/exports/s0.5/openlock-through-sidelock-negative.step": "2034dd54134254663b9392f90d5a104782a79f58bf0dd2585ac28b27219d3e49",
+        "labs/tile-clip-sockets/exports/s0.5/openlock-through-clip.step": "6bbd9c0f6db3d1b0a0a0b239fd5266a49b5a0b5317c630820531931f77a5e678",
+        "labs/tile-clip-sockets/exports/s0.5/openlock-through-clip.stl": "053d36458ec78de50fbbed79aed09bc9668e200b2ac8423fddf06ffd3684cf3c"
+      },
+      "build_seconds": 0.7
+    },
+    {
+      "insertion": {
+        "pose": "bar centred on the joint plane between the coupon and its mirror image, clip centred in the pocket band",
+        "protrusion_mm3": 0.0,
+        "protrusion_outside_barb_mm3": 0.0,
+        "barb_region_protrusion_mm3": 0.0,
+        "seated_interference_mm3": 0.0,
+        "barb_seated_interference_mm3": 0.0,
+        "barb_seated_expected_mm3": 0.0,
+        "barb_region": "|x| >= post nose 2.650 (jaws around the post)",
+        "transit_pose_shift_mm": 0.875,
+        "transit_interference_mm3": 0.297103599089035,
+        "transit_expected_range_mm3": [
+          0.001,
+          3.6884375
+        ],
+        "support_bar_overlap_mm3": null,
+        "passed": true
+      },
+      "measurements": {
+        "pocket": {
+          "mouth_w": 6.825000000000003,
+          "cavity_front_w": 8.175,
+          "chamber_w": 3.0375000000000014,
+          "neck_w": 2.8000000000000007,
+          "post_nose_x": 2.650035714741265,
+          "post_nose_expected": 2.65,
+          "depth": 6.35,
+          "depth_expected": 6.35,
+          "floor": 0.6999999999999997,
+          "roof": 0.8999999999999999,
+          "floor_cavity": null,
+          "roof_cavity": 0.8999999999999999,
+          "rim_side": 0.5074999999999985,
+          "expected": {
+            "mouth_w": 6.825,
+            "cavity_front_w": 8.175,
+            "chamber_w": 3.0375000000000005,
+            "neck_w": 2.8
+          }
+        },
+        "clip": {
+          "thickness": 1.3750000000000002,
+          "length": 10.73,
+          "bar_w": 6.674999999999999,
+          "neck_w": 4.850000000000001,
+          "max_w": 6.25,
+          "tip_w": 5.493750000000002,
+          "gap_cup": 2.95,
+          "gap_bite": 2.3119576229214687,
+          "expected": {
+            "thickness": 1.375,
+            "length": 10.73,
+            "bar_w": 6.675,
+            "neck_w": 4.85,
+            "max_w": 6.25,
+            "gap_cup": 2.95,
+            "gap_bite": 2.3
+          }
+        }
+      },
+      "validity": {
+        "floor_coupon": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 290.1637164930549
+        },
+        "floor_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 100.20375756398627
+        },
+        "clip": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 62.58532992990908
+        }
+      },
+      "volumes": {
+        "clip_mm3": 62.58532992990908,
+        "floor_coupon_mm3": 290.1637164930549
+      },
+      "system": "dragonbite",
+      "scale": 0.5,
+      "variant": "through",
+      "options": {
+        "supports": false,
+        "chamfer": false,
+        "enforce": false,
+        "v43_bar": false
+      },
+      "dimensions": {
+        "base_height": 3.175,
+        "throat_w": 6.825,
+        "throat_z0": 0.7,
+        "throat_z1": 2.275,
+        "lip_d": 1.575,
+        "cavity_w": 8.175,
+        "cavity_x1": 5.85,
+        "post_nose_x": 2.65,
+        "head_d": 2.8,
+        "head_cx": 4.05,
+        "post_neck_w": 2.1,
+        "pad_w": 3.91,
+        "pad_disc_d": 4.62,
+        "floor_t": 0.7,
+        "rib_w": 0.25,
+        "rib_y": [
+          0.0,
+          1.8,
+          -1.8
+        ],
+        "rim_w": 7.84,
+        "rim_d": 1.0,
+        "rim_z0": 0.2,
+        "rim_h": 2.8,
+        "pitch": 6.35,
+        "clip_t": 1.375,
+        "bar_len": 1.8,
+        "clip_bar_w": 6.675,
+        "half_len": 5.365,
+        "jaw_neck_w": 4.85,
+        "jaw_neck_y0": 1.3,
+        "jaw_neck_y1": 1.5,
+        "jaw_max_w": 6.25,
+        "jaw_max_y0": 4.3,
+        "jaw_max_y1": 4.725,
+        "jaw_tip_w": 5.45,
+        "gap_root": 0.6,
+        "gap_cup": 2.95,
+        "gap_cup_y": 3.975,
+        "gap_bite": 2.3,
+        "gap_bite_y": 4.925,
+        "gap_tip": 2.65,
+        "tile": 12.7,
+        "throat_h": 1.575,
+        "base_required": 3.175,
+        "cup_head_clearance": 0.15000000000000036,
+        "axial_clearance": 0.48499999999999943,
+        "clip_len": 10.73
+      },
+      "adjustments": [
+        {
+          "quantity": "clearance_z (throat height - clip thickness)",
+          "scaled_value": 0.035,
+          "floor": 0.2,
+          "applied_value": 0.2,
+          "action": "shrink clip thickness"
+        },
+        {
+          "quantity": "clearance_xy (throat - bar width)",
+          "scaled_value": 0.125,
+          "floor": 0.15,
+          "applied_value": 0.15,
+          "action": "shrink clip bar width"
+        },
+        {
+          "quantity": "rim side (per side beside the throat)",
+          "scaled_value": 0.5075,
+          "floor": 0.8,
+          "applied_value": 0.5075,
+          "action": "flag"
+        }
+      ],
+      "flags": [
+        "clearance_xy (throat - bar width):shrink clip bar width",
+        "clearance_z (throat height - clip thickness):shrink clip thickness",
+        "rim_below_min"
+      ],
+      "exports": {
+        "labs/tile-clip-sockets/exports/s0.5/dragonbite-through-floor-coupon.step": "1a84d04e1e24061a3db59afa059043c2b9bc77fe82649949a0a4e584b7015a6e",
+        "labs/tile-clip-sockets/exports/s0.5/dragonbite-through-floor-coupon.stl": "a36f0c36108b2be7deb8f2581e8f1a68850d521e499a8b085b1ba089e0816f33",
+        "labs/tile-clip-sockets/exports/s0.5/dragonbite-through-floor-negative.step": "8148ff7d49ec127deb3e23030a8923d027749aa9efc986b0e4407d3c21f94d0a",
+        "labs/tile-clip-sockets/exports/s0.5/dragonbite-through-clip.step": "3337cabb7a38e81401c9bd730d36b6ae3b77c9ae0557117fcc0a5089fff205e0",
+        "labs/tile-clip-sockets/exports/s0.5/dragonbite-through-clip.stl": "dbb593b57bc8e5abef98e3c45f543b22e77ad3a0f34f6373b0c6da2e1e465a1f"
+      },
+      "build_seconds": 0.6
+    },
+    {
+      "insertion": {
+        "pose": "bar centred on the joint plane between the coupon and its mirror image, clip centred in the pocket band",
+        "protrusion_mm3": 0.26325000000000076,
+        "protrusion_outside_barb_mm3": 0.0,
+        "barb_region_protrusion_mm3": 0.26325000000000076,
+        "seated_interference_mm3": 0.26325000000000076,
+        "barb_seated_interference_mm3": 0.26325000000000076,
+        "barb_seated_expected_mm3": 0.26325000000000065,
+        "barb_region": "|x| >= prong end 4.256 (barb ramp against the neck edge)",
+        "transit_pose_shift_mm": 0.46875,
+        "transit_interference_mm3": 0.559089843750001,
+        "transit_expected_range_mm3": [
+          0.001,
+          7.897500000000007
+        ],
+        "support_bar_overlap_mm3": null,
+        "passed": true
+      },
+      "measurements": {
+        "pocket": {
+          "mouth_w": 10.5,
+          "taper_mid_w": 8.256666666666671,
+          "neck_w": 7.5,
+          "chamber_w": 9.600000000000001,
+          "depth": 8.524999999999999,
+          "depth_expected": 8.524999999999999,
+          "floor": 1.0499999999999998,
+          "roof": 0.3000000000000007,
+          "floor_chamber": null,
+          "roof_chamber": null,
+          "rim_side": 0.75,
+          "expected": {
+            "mouth_w": 10.5,
+            "taper_mid_w": 8.25,
+            "neck_w": 7.5,
+            "chamber_w": 9.600000000000001
+          }
+        },
+        "clip": {
+          "thickness": 2.700000000000001,
+          "length": 14.625,
+          "bar_w": 9.899999999999999,
+          "prong_w": 7.5,
+          "barb_w": 7.8999999999999995,
+          "tip_w": 3.9200000000000035,
+          "eye_max": 2.730000000000002,
+          "expected": {
+            "thickness": 2.7,
+            "length": 14.625,
+            "bar_w": 9.899999999999999,
+            "prong_w": 7.5,
+            "barb_w": 7.9,
+            "eye_max": 2.73
+          }
+        }
+      },
+      "validity": {
+        "floor_coupon": {
+          "valid": true,
+          "solids": 2,
+          "volume_mm3": 716.7487499999997
+        },
+        "floor_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 378.8381249999999
+        },
+        "wall_coupon": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 2789.8699049999973
+        },
+        "wall_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 315.9843749999999
+        },
+        "sidelock_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 241.54601625
+        },
+        "clip": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 230.9221406249999
+        }
+      },
+      "volumes": {
+        "clip_mm3": 230.9221406249999,
+        "floor_coupon_mm3": 716.7487499999997
+      },
+      "wall": {
+        "through_protrusion_mm3": 2.2143062405873484,
+        "through_interference_mm3": 2.2143062405873484,
+        "through_mouth_w": 10.5,
+        "through_neck_w": 7.5,
+        "sidelock_protrusion_mm3": 0.06841428601424987,
+        "sidelock_protrusion_outside_barb_mm3": 0.0,
+        "sidelock_interference_mm3": 0.06841428601424987,
+        "sidelock_barb_interference_mm3": 0.06841428601424987,
+        "sidelock_depth": 7.8225,
+        "sidelock_depth_expected": 7.8225,
+        "sidelock_mouth_h": 10.5,
+        "sidelock_mouth_h_expected": 10.5,
+        "volume_mm3": 2789.8699049999973,
+        "valid": true,
+        "solids": 1
+      },
+      "system": "openlock",
+      "scale": 0.75,
+      "variant": "through",
+      "options": {
+        "supports": false,
+        "chamfer": false,
+        "enforce": false,
+        "v43_bar": false
+      },
+      "dimensions": {
+        "base_height": 4.5,
+        "pocket_z0": 1.0499999999999998,
+        "pocket_z1": 4.199999999999999,
+        "mouth_w": 10.5,
+        "mouth_d": 1.5,
+        "taper_w0": 9.0,
+        "taper_x1": 3.75,
+        "neck_w": 7.5,
+        "neck_x1": 4.5,
+        "chamber_w": 9.600000000000001,
+        "chamber_x1": 8.024999999999999,
+        "rim_w": 12.0,
+        "rim_d": 1.5,
+        "rim_z0": 0.30000000000000004,
+        "rim_h": 4.199999999999999,
+        "support_w": 0.75,
+        "support_y0": 1.5374999999999999,
+        "support_y1": 2.2874999999999996,
+        "support_z0": 0.8999999999999999,
+        "support_z1": 4.35,
+        "support_x1": 1.5,
+        "pitch": 9.524999999999999,
+        "wall_t": 9.524999999999999,
+        "wall_mouth_d": 0.75,
+        "wall_taper_x1": 3.0,
+        "wall_neck_len": 3.5250000000000004,
+        "side_t": 3.1500000000000004,
+        "side_mouth_h": 10.5,
+        "side_mouth_d": 1.5,
+        "side_taper_x1": 3.75,
+        "side_neck_h": 7.5,
+        "side_neck_x1": 4.425000000000001,
+        "side_chamber_h": 7.89,
+        "side_chamber_x1": 7.8225,
+        "side_rim_d": 8.5725,
+        "side_rim_t": 4.65,
+        "side_rim_h": 12.0,
+        "clip_bar_w": 9.899999999999999,
+        "clip_bar_w_v43": 10.5,
+        "clip_len": 14.625,
+        "clip_t": 2.7,
+        "clip_t_v54": 2.625,
+        "bar_len": 2.5875000000000004,
+        "prong_w": 7.5,
+        "prong_y0": 1.3312499999999998,
+        "prong_y1": 4.25625,
+        "barb_w": 7.9,
+        "barb_y0": 4.5,
+        "barb_y1": 4.6875,
+        "taper_stations": [
+          [
+            7.485,
+            5.25
+          ],
+          [
+            7.199999999999999,
+            5.625
+          ],
+          [
+            6.449999999999999,
+            6.0
+          ],
+          [
+            5.699999999999999,
+            6.375
+          ],
+          [
+            4.949999999999999,
+            6.75
+          ]
+        ],
+        "tip_y": 7.3125,
+        "tip_w": 3.8249999999999997,
+        "eye_open": 0.3975,
+        "eye_open_y": 1.3125,
+        "eye_max": 2.73,
+        "eye_max_y": 3.375,
+        "eye_y9": 1.905,
+        "eye_tip": 1.5,
+        "tile": 19.049999999999997,
+        "pocket_h": 3.1499999999999995,
+        "base_required": 4.6,
+        "prong_neck_clearance": 0.0,
+        "barb_chamber_clearance": 1.700000000000001,
+        "axial_clearance": 0.7124999999999986
+      },
+      "adjustments": [
+        {
+          "quantity": "barb interference (barb - neck)",
+          "scaled_value": 0.3,
+          "floor": 0.4,
+          "applied_value": 0.4,
+          "action": "grow barb"
+        },
+        {
+          "quantity": "roof",
+          "scaled_value": 0.3,
+          "floor": 0.4,
+          "applied_value": 0.3,
+          "action": "flag"
+        },
+        {
+          "quantity": "rim side (per side beside the mouth)",
+          "scaled_value": 0.75,
+          "floor": 0.8,
+          "applied_value": 0.75,
+          "action": "flag"
+        }
+      ],
+      "flags": [
+        "barb interference (barb - neck):grow barb",
+        "rim_below_min",
+        "roof_below_min",
+        "through_centre_island",
+        "wall_through_bar_clash"
+      ],
+      "exports": {
+        "labs/tile-clip-sockets/exports/s0.75/openlock-through-floor-coupon.step": "be53c7b3e39e471ba5cb2cd3237a8e9824409718855a62d9ebe334a3c852d3aa",
+        "labs/tile-clip-sockets/exports/s0.75/openlock-through-floor-coupon.stl": "46a40041b1834a7732838beef5129035ddfab82fbfae08251f6fe578ba75096f",
+        "labs/tile-clip-sockets/exports/s0.75/openlock-through-floor-negative.step": "3cc2266e21c4d2e14e830b16095bb082c7e42d7930dbe7d38713be048856580b",
+        "labs/tile-clip-sockets/exports/s0.75/openlock-through-wall-coupon.step": "2da9fc065684a33c5d3b20613848a03b26eb59faa9567940fae0370a1f1c46bc",
+        "labs/tile-clip-sockets/exports/s0.75/openlock-through-wall-coupon.stl": "41aea7d8255c0d75c7605825fcb5a7d8e461cdcad863cf6571eef443c2bd463a",
+        "labs/tile-clip-sockets/exports/s0.75/openlock-through-wall-negative.step": "86849d64dd876ac0b7f9696d441be24c84844c8b393fd85aa188b5be3a408c35",
+        "labs/tile-clip-sockets/exports/s0.75/openlock-through-sidelock-negative.step": "740c213c3dbea8184d66d68a1ea6558f29b0b459fbd918b0b96e6d183d98c67b",
+        "labs/tile-clip-sockets/exports/s0.75/openlock-through-clip.step": "db95d793a4f25fb3c895e669d67a8a2ace8239f55f98830193c20bfad917ed98",
+        "labs/tile-clip-sockets/exports/s0.75/openlock-through-clip.stl": "790bafa1d3273071ecbda83338c9eacc6371ecf0dc22e535fe4b0c50fdf02216"
+      },
+      "build_seconds": 0.7
+    },
+    {
+      "insertion": {
+        "pose": "bar centred on the joint plane between the coupon and its mirror image, clip centred in the pocket band",
+        "protrusion_mm3": 0.0,
+        "protrusion_outside_barb_mm3": 0.0,
+        "barb_region_protrusion_mm3": 0.0,
+        "seated_interference_mm3": 0.0,
+        "barb_seated_interference_mm3": 0.0,
+        "barb_seated_expected_mm3": 0.0,
+        "barb_region": "|x| >= post nose 3.975 (jaws around the post)",
+        "transit_pose_shift_mm": 1.3125,
+        "transit_interference_mm3": 1.0513415995036977,
+        "transit_expected_range_mm3": [
+          0.001,
+          13.05203906249999
+        ],
+        "support_bar_overlap_mm3": null,
+        "passed": true
+      },
+      "measurements": {
+        "pocket": {
+          "mouth_w": 10.237499999999999,
+          "cavity_front_w": 12.262500000000003,
+          "chamber_w": 4.556250000000002,
+          "neck_w": 4.199999999999999,
+          "post_nose_x": 3.9750238096587855,
+          "post_nose_expected": 3.9749999999999996,
+          "depth": 9.274999999999999,
+          "depth_expected": 9.274999999999999,
+          "floor": 1.0499999999999998,
+          "roof": 1.3499999999999996,
+          "floor_cavity": null,
+          "roof_cavity": 1.3499999999999996,
+          "rim_side": 0.7612499999999995,
+          "expected": {
+            "mouth_w": 10.2375,
+            "cavity_front_w": 12.262500000000001,
+            "chamber_w": 4.55625,
+            "neck_w": 4.199999999999999
+          }
+        },
+        "clip": {
+          "thickness": 2.1625,
+          "length": 16.095,
+          "bar_w": 10.05,
+          "neck_w": 7.274999999999999,
+          "max_w": 9.375,
+          "tip_w": 8.234375,
+          "gap_cup": 4.4250000000000025,
+          "gap_bite": 3.461957622921469,
+          "expected": {
+            "thickness": 2.1624999999999996,
+            "length": 16.095,
+            "bar_w": 10.05,
+            "neck_w": 7.2749999999999995,
+            "max_w": 9.375,
+            "gap_cup": 4.425000000000001,
+            "gap_bite": 3.4499999999999997
+          }
+        }
+      },
+      "validity": {
+        "floor_coupon": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 979.3025431640614
+        },
+        "floor_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 306.91467202451145
+        },
+        "clip": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 221.73433369515547
+        }
+      },
+      "volumes": {
+        "clip_mm3": 221.73433369515547,
+        "floor_coupon_mm3": 979.3025431640614
+      },
+      "system": "dragonbite",
+      "scale": 0.75,
+      "variant": "through",
+      "options": {
+        "supports": false,
+        "chamfer": false,
+        "enforce": false,
+        "v43_bar": false
+      },
+      "dimensions": {
+        "base_height": 4.762499999999999,
+        "throat_w": 10.2375,
+        "throat_z0": 1.0499999999999998,
+        "throat_z1": 3.4124999999999996,
+        "lip_d": 2.3625,
+        "cavity_w": 12.262500000000001,
+        "cavity_x1": 8.774999999999999,
+        "post_nose_x": 3.9749999999999996,
+        "head_d": 4.199999999999999,
+        "head_cx": 6.074999999999999,
+        "post_neck_w": 3.1500000000000004,
+        "pad_w": 5.865,
+        "pad_disc_d": 6.93,
+        "floor_t": 1.0499999999999998,
+        "rib_w": 0.375,
+        "rib_y": [
+          0.0,
+          2.7,
+          -2.7
+        ],
+        "rim_w": 11.76,
+        "rim_d": 1.5,
+        "rim_z0": 0.30000000000000004,
+        "rim_h": 4.199999999999999,
+        "pitch": 9.524999999999999,
+        "clip_t": 2.1624999999999996,
+        "bar_len": 2.7,
+        "clip_bar_w": 10.05,
+        "half_len": 8.0475,
+        "jaw_neck_w": 7.2749999999999995,
+        "jaw_neck_y0": 1.9500000000000002,
+        "jaw_neck_y1": 2.25,
+        "jaw_max_w": 9.375,
+        "jaw_max_y0": 6.449999999999999,
+        "jaw_max_y1": 7.0874999999999995,
+        "jaw_tip_w": 8.175,
+        "gap_root": 0.8999999999999999,
+        "gap_cup": 4.425000000000001,
+        "gap_cup_y": 5.9625,
+        "gap_bite": 3.4499999999999997,
+        "gap_bite_y": 7.387499999999999,
+        "gap_tip": 3.9749999999999996,
+        "tile": 19.049999999999997,
+        "throat_h": 2.3625,
+        "base_required": 4.762499999999999,
+        "cup_head_clearance": 0.22500000000000142,
+        "axial_clearance": 0.7274999999999991,
+        "clip_len": 16.095
+      },
+      "adjustments": [
+        {
+          "quantity": "clearance_z (throat height - clip thickness)",
+          "scaled_value": 0.0525,
+          "floor": 0.2,
+          "applied_value": 0.2,
+          "action": "shrink clip thickness"
+        },
+        {
+          "quantity": "rim side (per side beside the throat)",
+          "scaled_value": 0.7612,
+          "floor": 0.8,
+          "applied_value": 0.7612,
+          "action": "flag"
+        }
+      ],
+      "flags": [
+        "clearance_z (throat height - clip thickness):shrink clip thickness",
+        "rim_below_min"
+      ],
+      "exports": {
+        "labs/tile-clip-sockets/exports/s0.75/dragonbite-through-floor-coupon.step": "426d3ecd5ee11fe22d1ee71807de20030a957789468a95cedc90a38d50801dd7",
+        "labs/tile-clip-sockets/exports/s0.75/dragonbite-through-floor-coupon.stl": "e042e5be072c5f801007b542ee39b1caaf35a4ab4700465d636ff7f004285ba1",
+        "labs/tile-clip-sockets/exports/s0.75/dragonbite-through-floor-negative.step": "7c2c65cd12d5525cadfc7bee71c8fbf8ce28e39ede8cf501cbc2798d27d52610",
+        "labs/tile-clip-sockets/exports/s0.75/dragonbite-through-clip.step": "bfa8c435b23b235559f50b8ab8bc039c77267eef4002afb8e140f8d9f30e7193",
+        "labs/tile-clip-sockets/exports/s0.75/dragonbite-through-clip.stl": "3577932c03b3b3f4c077e827ee2df27975a30a2d192f1ca27203fd24d9002d5f"
+      },
+      "build_seconds": 0.6
+    },
+    {
+      "insertion": {
+        "pose": "bar centred on the joint plane between the coupon and its mirror image, clip centred in the pocket band",
+        "protrusion_mm3": 0.4680000000000005,
+        "protrusion_outside_barb_mm3": 0.0,
+        "barb_region_protrusion_mm3": 0.4680000000000005,
+        "seated_interference_mm3": 0.4680000000000005,
+        "barb_seated_interference_mm3": 0.4680000000000005,
+        "barb_seated_expected_mm3": 0.46800000000000075,
+        "barb_region": "|x| >= prong end 5.675 (barb ramp against the neck edge)",
+        "transit_pose_shift_mm": 0.625,
+        "transit_interference_mm3": 0.9922500000000021,
+        "transit_expected_range_mm3": [
+          0.001,
+          14.040000000000013
+        ],
+        "support_bar_overlap_mm3": null,
+        "passed": true
+      },
+      "measurements": {
+        "pocket": {
+          "mouth_w": 14.0,
+          "taper_mid_w": 11.006666666666671,
+          "neck_w": 10.0,
+          "chamber_w": 12.800000000000002,
+          "depth": 11.2,
+          "depth_expected": 11.2,
+          "floor": 1.4,
+          "roof": 0.40000000000000036,
+          "floor_chamber": null,
+          "roof_chamber": null,
+          "rim_side": 1.0,
+          "expected": {
+            "mouth_w": 14.0,
+            "taper_mid_w": 11.0,
+            "neck_w": 10.0,
+            "chamber_w": 12.8
+          }
+        },
+        "clip": {
+          "thickness": 3.6000000000000005,
+          "length": 19.500000000000004,
+          "bar_w": 13.200000000000001,
+          "prong_w": 10.0,
+          "barb_w": 10.399999999999999,
+          "tip_w": 5.220000000000003,
+          "eye_max": 3.6400000000000006,
+          "expected": {
+            "thickness": 3.6,
+            "length": 19.5,
+            "bar_w": 13.2,
+            "prong_w": 10.0,
+            "barb_w": 10.4,
+            "eye_max": 3.64
+          }
+        }
+      },
+      "validity": {
+        "floor_coupon": {
+          "valid": true,
+          "solids": 2,
+          "volume_mm3": 1698.9599999999984
+        },
+        "floor_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 838.2799999999997
+        },
+        "wall_coupon": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 6613.024959999999
+        },
+        "wall_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 709.8
+        },
+        "sidelock_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 552.95352
+        },
+        "clip": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 546.615
+        }
+      },
+      "volumes": {
+        "clip_mm3": 546.615,
+        "floor_coupon_mm3": 1698.9599999999984
+      },
+      "wall": {
+        "through_protrusion_mm3": 4.87103571428571,
+        "through_interference_mm3": 4.87103571428571,
+        "through_mouth_w": 14.0,
+        "through_neck_w": 10.0,
+        "sidelock_protrusion_mm3": 0.11215384615384608,
+        "sidelock_protrusion_outside_barb_mm3": 0.0,
+        "sidelock_interference_mm3": 0.11215384615384608,
+        "sidelock_barb_interference_mm3": 0.11215384615384608,
+        "sidelock_depth": 10.43,
+        "sidelock_depth_expected": 10.43,
+        "sidelock_mouth_h": 14.0,
+        "sidelock_mouth_h_expected": 14.0,
+        "volume_mm3": 6613.024959999999,
+        "valid": true,
+        "solids": 1
+      },
+      "system": "openlock",
+      "scale": 1.0,
+      "variant": "through",
+      "options": {
+        "supports": false,
+        "chamfer": false,
+        "enforce": false,
+        "v43_bar": false
+      },
+      "dimensions": {
+        "base_height": 6.0,
+        "pocket_z0": 1.4,
+        "pocket_z1": 5.6,
+        "mouth_w": 14.0,
+        "mouth_d": 2.0,
+        "taper_w0": 12.0,
+        "taper_x1": 5.0,
+        "neck_w": 10.0,
+        "neck_x1": 6.0,
+        "chamber_w": 12.8,
+        "chamber_x1": 10.7,
+        "rim_w": 16.0,
+        "rim_d": 2.0,
+        "rim_z0": 0.4,
+        "rim_h": 5.6,
+        "support_w": 1.0,
+        "support_y0": 2.05,
+        "support_y1": 3.05,
+        "support_z0": 1.2,
+        "support_z1": 5.8,
+        "support_x1": 2.0,
+        "pitch": 12.7,
+        "wall_t": 12.7,
+        "wall_mouth_d": 1.0,
+        "wall_taper_x1": 4.0,
+        "wall_neck_len": 4.7,
+        "side_t": 4.2,
+        "side_mouth_h": 14.0,
+        "side_mouth_d": 2.0,
+        "side_taper_x1": 5.0,
+        "side_neck_h": 10.0,
+        "side_neck_x1": 5.9,
+        "side_chamber_h": 10.52,
+        "side_chamber_x1": 10.43,
+        "side_rim_d": 11.43,
+        "side_rim_t": 6.2,
+        "side_rim_h": 16.0,
+        "clip_bar_w": 13.2,
+        "clip_bar_w_v43": 14.0,
+        "clip_len": 19.5,
+        "clip_t": 3.6,
+        "clip_t_v54": 3.5,
+        "bar_len": 3.45,
+        "prong_w": 10.0,
+        "prong_y0": 1.775,
+        "prong_y1": 5.675,
+        "barb_w": 10.4,
+        "barb_y0": 6.0,
+        "barb_y1": 6.25,
+        "taper_stations": [
+          [
+            9.98,
+            7.0
+          ],
+          [
+            9.6,
+            7.5
+          ],
+          [
+            8.6,
+            8.0
+          ],
+          [
+            7.6,
+            8.5
+          ],
+          [
+            6.6,
+            9.0
+          ]
+        ],
+        "tip_y": 9.75,
+        "tip_w": 5.1,
+        "eye_open": 0.53,
+        "eye_open_y": 1.75,
+        "eye_max": 3.64,
+        "eye_max_y": 4.5,
+        "eye_y9": 2.54,
+        "eye_tip": 2.0,
+        "tile": 25.4,
+        "pocket_h": 4.199999999999999,
+        "base_required": 6.0,
+        "prong_neck_clearance": 0.0,
+        "barb_chamber_clearance": 2.4000000000000004,
+        "axial_clearance": 0.9499999999999993
+      },
+      "adjustments": [],
+      "flags": [
+        "through_centre_island",
+        "wall_through_bar_clash"
+      ],
+      "exports": {
+        "labs/tile-clip-sockets/exports/s1/openlock-through-floor-coupon.step": "2b4c18ab83150f901017d926752577904a042d5518409f7a89fd1fce259db755",
+        "labs/tile-clip-sockets/exports/s1/openlock-through-floor-coupon.stl": "86a3654554af2f38a468b7c9c75e3c804da15ffba660a492f1396ef6bfe485f7",
+        "labs/tile-clip-sockets/exports/s1/openlock-through-floor-negative.step": "bf2819c3dee8978d6e9b6b3301abc2099d2faed489e0d6c5feeb1f10932c467a",
+        "labs/tile-clip-sockets/exports/s1/openlock-through-wall-coupon.step": "13ec1211fe27e1d4d2727d7e603e3759d7144775f0cbcbf69ca01bc2291d0d0e",
+        "labs/tile-clip-sockets/exports/s1/openlock-through-wall-coupon.stl": "6631c2c18bf66dbc2765f86060df8ee40a386f521faabd13050ec19d4fcdb335",
+        "labs/tile-clip-sockets/exports/s1/openlock-through-wall-negative.step": "7372f5ed496220fb4f9321cad56658756ebd88ae0e416086274773945ec4d23d",
+        "labs/tile-clip-sockets/exports/s1/openlock-through-sidelock-negative.step": "cbc4f711d13450bd32a0f7f36b49d8627ca9499501a984e6e741f98cb7145635",
+        "labs/tile-clip-sockets/exports/s1/openlock-through-clip.step": "49027fc3a74500a4b89a7bbb8ae191df1e0f35cddb762d0193902e2286ceb587",
+        "labs/tile-clip-sockets/exports/s1/openlock-through-clip.stl": "2a0497e01f711c6fa006bf58a81cabfee65170bdf6e6523fe12a0c81103b80a4"
+      },
+      "build_seconds": 0.6
+    },
+    {
+      "insertion": {
+        "pose": "bar centred on the joint plane between the coupon and its mirror image, clip centred in the pocket band",
+        "protrusion_mm3": 0.0,
+        "protrusion_outside_barb_mm3": 0.0,
+        "barb_region_protrusion_mm3": 0.0,
+        "seated_interference_mm3": 0.0,
+        "barb_seated_interference_mm3": 0.0,
+        "barb_seated_expected_mm3": 0.0,
+        "barb_region": "|x| >= post nose 5.300 (jaws around the post)",
+        "transit_pose_shift_mm": 1.75,
+        "transit_interference_mm3": 2.549689068545901,
+        "transit_expected_range_mm3": [
+          0.001,
+          31.653499999999998
+        ],
+        "support_bar_overlap_mm3": null,
+        "passed": true
+      },
+      "measurements": {
+        "pocket": {
+          "mouth_w": 13.649999999999999,
+          "cavity_front_w": 16.35,
+          "chamber_w": 6.075000000000001,
+          "neck_w": 5.600000000000001,
+          "post_nose_x": 5.300017857199807,
+          "post_nose_expected": 5.3,
+          "depth": 12.2,
+          "depth_expected": 12.2,
+          "floor": 1.3999999999999995,
+          "roof": 1.7999999999999998,
+          "floor_cavity": null,
+          "roof_cavity": 1.7999999999999998,
+          "rim_side": 1.0150000000000006,
+          "expected": {
+            "mouth_w": 13.65,
+            "cavity_front_w": 16.35,
+            "chamber_w": 6.075000000000001,
+            "neck_w": 5.6
+          }
+        },
+        "clip": {
+          "thickness": 2.95,
+          "length": 21.46,
+          "bar_w": 13.399999999999999,
+          "neck_w": 9.700000000000001,
+          "max_w": 12.5,
+          "tip_w": 10.975000000000001,
+          "gap_cup": 5.900000000000002,
+          "gap_bite": 4.611957622921468,
+          "expected": {
+            "thickness": 2.9499999999999997,
+            "length": 21.46,
+            "bar_w": 13.4,
+            "neck_w": 9.7,
+            "max_w": 12.5,
+            "gap_cup": 5.9,
+            "gap_bite": 4.6
+          }
+        }
+      },
+      "validity": {
+        "floor_coupon": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 2321.3097319444378
+        },
+        "floor_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 690.4371369423253
+        },
+        "clip": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 537.7449223075834
+        }
+      },
+      "volumes": {
+        "clip_mm3": 537.7449223075834,
+        "floor_coupon_mm3": 2321.3097319444378
+      },
+      "system": "dragonbite",
+      "scale": 1.0,
+      "variant": "through",
+      "options": {
+        "supports": false,
+        "chamfer": false,
+        "enforce": false,
+        "v43_bar": false
+      },
+      "dimensions": {
+        "base_height": 6.35,
+        "throat_w": 13.65,
+        "throat_z0": 1.4,
+        "throat_z1": 4.55,
+        "lip_d": 3.15,
+        "cavity_w": 16.35,
+        "cavity_x1": 11.7,
+        "post_nose_x": 5.3,
+        "head_d": 5.6,
+        "head_cx": 8.1,
+        "post_neck_w": 4.2,
+        "pad_w": 7.82,
+        "pad_disc_d": 9.24,
+        "floor_t": 1.4,
+        "rib_w": 0.5,
+        "rib_y": [
+          0.0,
+          3.6,
+          -3.6
+        ],
+        "rim_w": 15.68,
+        "rim_d": 2.0,
+        "rim_z0": 0.4,
+        "rim_h": 5.6,
+        "pitch": 12.7,
+        "clip_t": 2.9499999999999997,
+        "bar_len": 3.6,
+        "clip_bar_w": 13.4,
+        "half_len": 10.73,
+        "jaw_neck_w": 9.7,
+        "jaw_neck_y0": 2.6,
+        "jaw_neck_y1": 3.0,
+        "jaw_max_w": 12.5,
+        "jaw_max_y0": 8.6,
+        "jaw_max_y1": 9.45,
+        "jaw_tip_w": 10.9,
+        "gap_root": 1.2,
+        "gap_cup": 5.9,
+        "gap_cup_y": 7.95,
+        "gap_bite": 4.6,
+        "gap_bite_y": 9.85,
+        "gap_tip": 5.3,
+        "tile": 25.4,
+        "throat_h": 3.15,
+        "base_required": 6.35,
+        "cup_head_clearance": 0.3000000000000007,
+        "axial_clearance": 0.9699999999999989,
+        "clip_len": 21.46
+      },
+      "adjustments": [
+        {
+          "quantity": "clearance_z (throat height - clip thickness)",
+          "scaled_value": 0.07,
+          "floor": 0.2,
+          "applied_value": 0.2,
+          "action": "shrink clip thickness"
+        }
+      ],
+      "flags": [
+        "clearance_z (throat height - clip thickness):shrink clip thickness"
+      ],
+      "exports": {
+        "labs/tile-clip-sockets/exports/s1/dragonbite-through-floor-coupon.step": "a6c4abd368a8be0f427a28593a5f4c34c930f96f15bb13dd9af3a0e99524519c",
+        "labs/tile-clip-sockets/exports/s1/dragonbite-through-floor-coupon.stl": "3254b85b99988ae38922c5144154457d10fd017a5eb1e0fa9c547a2db7efc506",
+        "labs/tile-clip-sockets/exports/s1/dragonbite-through-floor-negative.step": "2046bf8b3b9b5bb62f7c533a3049c4fd29fc2feb8f324aa90f3d8267aaf09580",
+        "labs/tile-clip-sockets/exports/s1/dragonbite-through-clip.step": "a5e7278ad7ac29adb52b126fa3f1c123863e6385d46557ae1035673e8043ecee",
+        "labs/tile-clip-sockets/exports/s1/dragonbite-through-clip.stl": "e982beb15b6ced65c3fed416c39934ba84a43f3c05ca9ecb9a80bdc929c42ac3"
+      },
+      "build_seconds": 0.6
+    },
+    {
+      "insertion": {
+        "pose": "bar centred on the joint plane between the coupon and its mirror image, clip centred in the pocket band",
+        "protrusion_mm3": 1.5795000000000061,
+        "protrusion_outside_barb_mm3": 0.0,
+        "barb_region_protrusion_mm3": 1.5795000000000061,
+        "seated_interference_mm3": 1.5795000000000061,
+        "barb_seated_interference_mm3": 1.5795000000000061,
+        "barb_seated_expected_mm3": 1.579500000000006,
+        "barb_region": "|x| >= prong end 8.512 (barb ramp against the neck edge)",
+        "transit_pose_shift_mm": 0.9375,
+        "transit_interference_mm3": 3.34884375000001,
+        "transit_expected_range_mm3": [
+          0.001,
+          47.38500000000011
+        ],
+        "support_bar_overlap_mm3": null,
+        "passed": true
+      },
+      "measurements": {
+        "pocket": {
+          "mouth_w": 21.0,
+          "taper_mid_w": 16.506666666666668,
+          "neck_w": 15.0,
+          "chamber_w": 19.200000000000003,
+          "depth": 16.549999999999997,
+          "depth_expected": 16.549999999999997,
+          "floor": 2.0999999999999996,
+          "roof": 0.6000000000000014,
+          "floor_chamber": null,
+          "roof_chamber": null,
+          "rim_side": 1.5,
+          "expected": {
+            "mouth_w": 21.0,
+            "taper_mid_w": 16.5,
+            "neck_w": 15.0,
+            "chamber_w": 19.200000000000003
+          }
+        },
+        "clip": {
+          "thickness": 5.400000000000002,
+          "length": 29.25,
+          "bar_w": 19.799999999999997,
+          "prong_w": 15.0,
+          "barb_w": 15.600000000000001,
+          "tip_w": 7.820000000000002,
+          "eye_max": 5.460000000000003,
+          "expected": {
+            "thickness": 5.4,
+            "length": 29.25,
+            "bar_w": 19.799999999999997,
+            "prong_w": 15.0,
+            "barb_w": 15.600000000000001,
+            "eye_max": 5.46
+          }
+        }
+      },
+      "validity": {
+        "floor_coupon": {
+          "valid": true,
+          "solids": 2,
+          "volume_mm3": 5733.989999999998
+        },
+        "floor_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 2627.6849999999995
+        },
+        "wall_coupon": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 22318.95923999998
+        },
+        "wall_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 2263.274999999999
+        },
+        "sidelock_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 1800.06813
+        },
+        "clip": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 1844.8256249999997
+        }
+      },
+      "volumes": {
+        "clip_mm3": 1844.8256249999997,
+        "floor_coupon_mm3": 5733.989999999998
+      },
+      "wall": {
+        "through_protrusion_mm3": 16.43974553571428,
+        "through_interference_mm3": 16.43974553571428,
+        "through_mouth_w": 21.0,
+        "through_neck_w": 15.0,
+        "sidelock_protrusion_mm3": 0.3785192307692358,
+        "sidelock_protrusion_outside_barb_mm3": 0.0,
+        "sidelock_interference_mm3": 0.3785192307692358,
+        "sidelock_barb_interference_mm3": 0.3785192307692358,
+        "sidelock_depth": 15.645,
+        "sidelock_depth_expected": 15.645,
+        "sidelock_mouth_h": 21.0,
+        "sidelock_mouth_h_expected": 21.0,
+        "volume_mm3": 22318.95923999998,
+        "valid": true,
+        "solids": 1
+      },
+      "system": "openlock",
+      "scale": 1.5,
+      "variant": "through",
+      "options": {
+        "supports": false,
+        "chamfer": false,
+        "enforce": false,
+        "v43_bar": false
+      },
+      "dimensions": {
+        "base_height": 9.0,
+        "pocket_z0": 2.0999999999999996,
+        "pocket_z1": 8.399999999999999,
+        "mouth_w": 21.0,
+        "mouth_d": 3.0,
+        "taper_w0": 18.0,
+        "taper_x1": 7.5,
+        "neck_w": 15.0,
+        "neck_x1": 9.0,
+        "chamber_w": 19.200000000000003,
+        "chamber_x1": 16.049999999999997,
+        "rim_w": 24.0,
+        "rim_d": 3.0,
+        "rim_z0": 0.6000000000000001,
+        "rim_h": 8.399999999999999,
+        "support_w": 1.5,
+        "support_y0": 3.0749999999999997,
+        "support_y1": 4.574999999999999,
+        "support_z0": 1.7999999999999998,
+        "support_z1": 8.7,
+        "support_x1": 3.0,
+        "pitch": 19.049999999999997,
+        "wall_t": 19.049999999999997,
+        "wall_mouth_d": 1.5,
+        "wall_taper_x1": 6.0,
+        "wall_neck_len": 7.050000000000001,
+        "side_t": 6.300000000000001,
+        "side_mouth_h": 21.0,
+        "side_mouth_d": 3.0,
+        "side_taper_x1": 7.5,
+        "side_neck_h": 15.0,
+        "side_neck_x1": 8.850000000000001,
+        "side_chamber_h": 15.78,
+        "side_chamber_x1": 15.645,
+        "side_rim_d": 17.145,
+        "side_rim_t": 9.3,
+        "side_rim_h": 24.0,
+        "clip_bar_w": 19.799999999999997,
+        "clip_bar_w_v43": 21.0,
+        "clip_len": 29.25,
+        "clip_t": 5.4,
+        "clip_t_v54": 5.25,
+        "bar_len": 5.175000000000001,
+        "prong_w": 15.0,
+        "prong_y0": 2.6624999999999996,
+        "prong_y1": 8.5125,
+        "barb_w": 15.600000000000001,
+        "barb_y0": 9.0,
+        "barb_y1": 9.375,
+        "taper_stations": [
+          [
+            14.97,
+            10.5
+          ],
+          [
+            14.399999999999999,
+            11.25
+          ],
+          [
+            12.899999999999999,
+            12.0
+          ],
+          [
+            11.399999999999999,
+            12.75
+          ],
+          [
+            9.899999999999999,
+            13.5
+          ]
+        ],
+        "tip_y": 14.625,
+        "tip_w": 7.6499999999999995,
+        "eye_open": 0.795,
+        "eye_open_y": 2.625,
+        "eye_max": 5.46,
+        "eye_max_y": 6.75,
+        "eye_y9": 3.81,
+        "eye_tip": 3.0,
+        "tile": 38.099999999999994,
+        "pocket_h": 6.299999999999999,
+        "base_required": 9.0,
+        "prong_neck_clearance": 0.0,
+        "barb_chamber_clearance": 3.6000000000000014,
+        "axial_clearance": 1.4249999999999972
+      },
+      "adjustments": [],
+      "flags": [
+        "through_centre_island",
+        "wall_through_bar_clash"
+      ],
+      "exports": {
+        "labs/tile-clip-sockets/exports/s1.5/openlock-through-floor-coupon.step": "bf23d0114363965afe96f2caa072c73e66abaed1f15cd612553a109552b79dc8",
+        "labs/tile-clip-sockets/exports/s1.5/openlock-through-floor-coupon.stl": "46274ad000616eb639ec6d289f21cee11084e4b5e386524a62486e479d55efa2",
+        "labs/tile-clip-sockets/exports/s1.5/openlock-through-floor-negative.step": "ddad6752a8eb4ad9e5fdaf7833baa54dd80a5a54b1724b5ec0d5e81531363ccf",
+        "labs/tile-clip-sockets/exports/s1.5/openlock-through-wall-coupon.step": "e6f860a97030dfab148d01b12ee47bd79d6209cf0d529a5490fc8ec0377aac55",
+        "labs/tile-clip-sockets/exports/s1.5/openlock-through-wall-coupon.stl": "450e9906f1b321d236bf8a3072d0409fbde88d623b2949a1b6017502e3b0db75",
+        "labs/tile-clip-sockets/exports/s1.5/openlock-through-wall-negative.step": "a82c40855d2a2daa88ea30375d03b6f5994d2e20a9fac6a11c13a2b037d6008e",
+        "labs/tile-clip-sockets/exports/s1.5/openlock-through-sidelock-negative.step": "58453894070378e675f560cb568c0825d39f549583b00c673895cb916eacdffc",
+        "labs/tile-clip-sockets/exports/s1.5/openlock-through-clip.step": "da16d78f949315402ab68d469acd144e8490e6e6ce86d7373e29a474989bd1f3",
+        "labs/tile-clip-sockets/exports/s1.5/openlock-through-clip.stl": "1646735fbcb2fb0eeb7dcff6dba6115ae446d7440089357154d8eea080f7b8f7"
+      },
+      "build_seconds": 0.7
+    },
+    {
+      "insertion": {
+        "pose": "bar centred on the joint plane between the coupon and its mirror image, clip centred in the pocket band",
+        "protrusion_mm3": 0.0,
+        "protrusion_outside_barb_mm3": 0.0,
+        "barb_region_protrusion_mm3": 0.0,
+        "seated_interference_mm3": 0.0,
+        "barb_seated_interference_mm3": 0.0,
+        "barb_seated_expected_mm3": 0.0,
+        "barb_region": "|x| >= post nose 7.950 (jaws around the post)",
+        "transit_pose_shift_mm": 2.625,
+        "transit_interference_mm3": 8.799668416655226,
+        "transit_expected_range_mm3": [
+          0.001,
+          109.24481249999991
+        ],
+        "support_bar_overlap_mm3": null,
+        "passed": true
+      },
+      "measurements": {
+        "pocket": {
+          "mouth_w": 20.475,
+          "cavity_front_w": 24.525000000000006,
+          "chamber_w": 9.112500000000004,
+          "neck_w": 8.399999999999999,
+          "post_nose_x": 7.950011904778783,
+          "post_nose_expected": 7.949999999999999,
+          "depth": 18.049999999999997,
+          "depth_expected": 18.049999999999997,
+          "floor": 2.0999999999999996,
+          "roof": 2.6999999999999993,
+          "floor_cavity": null,
+          "roof_cavity": 2.6999999999999993,
+          "rim_side": 1.5224999999999973,
+          "expected": {
+            "mouth_w": 20.475,
+            "cavity_front_w": 24.525000000000002,
+            "chamber_w": 9.1125,
+            "neck_w": 8.399999999999999
+          }
+        },
+        "clip": {
+          "thickness": 4.525,
+          "length": 32.19,
+          "bar_w": 20.1,
+          "neck_w": 14.549999999999997,
+          "max_w": 18.75,
+          "tip_w": 16.456249999999997,
+          "gap_cup": 8.850000000000005,
+          "gap_bite": 6.911957622921468,
+          "expected": {
+            "thickness": 4.5249999999999995,
+            "length": 32.19,
+            "bar_w": 20.1,
+            "neck_w": 14.549999999999999,
+            "max_w": 18.75,
+            "gap_cup": 8.850000000000001,
+            "gap_bite": 6.8999999999999995
+          }
+        }
+      },
+      "validity": {
+        "floor_coupon": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 7834.420345312497
+        },
+        "floor_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 2205.13329816457
+        },
+        "clip": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 1855.903556014943
+        }
+      },
+      "volumes": {
+        "clip_mm3": 1855.903556014943,
+        "floor_coupon_mm3": 7834.420345312497
+      },
+      "system": "dragonbite",
+      "scale": 1.5,
+      "variant": "through",
+      "options": {
+        "supports": false,
+        "chamfer": false,
+        "enforce": false,
+        "v43_bar": false
+      },
+      "dimensions": {
+        "base_height": 9.524999999999999,
+        "throat_w": 20.475,
+        "throat_z0": 2.0999999999999996,
+        "throat_z1": 6.824999999999999,
+        "lip_d": 4.725,
+        "cavity_w": 24.525000000000002,
+        "cavity_x1": 17.549999999999997,
+        "post_nose_x": 7.949999999999999,
+        "head_d": 8.399999999999999,
+        "head_cx": 12.149999999999999,
+        "post_neck_w": 6.300000000000001,
+        "pad_w": 11.73,
+        "pad_disc_d": 13.86,
+        "floor_t": 2.0999999999999996,
+        "rib_w": 0.75,
+        "rib_y": [
+          0.0,
+          5.4,
+          -5.4
+        ],
+        "rim_w": 23.52,
+        "rim_d": 3.0,
+        "rim_z0": 0.6000000000000001,
+        "rim_h": 8.399999999999999,
+        "pitch": 19.049999999999997,
+        "clip_t": 4.5249999999999995,
+        "bar_len": 5.4,
+        "clip_bar_w": 20.1,
+        "half_len": 16.095,
+        "jaw_neck_w": 14.549999999999999,
+        "jaw_neck_y0": 3.9000000000000004,
+        "jaw_neck_y1": 4.5,
+        "jaw_max_w": 18.75,
+        "jaw_max_y0": 12.899999999999999,
+        "jaw_max_y1": 14.174999999999999,
+        "jaw_tip_w": 16.35,
+        "gap_root": 1.7999999999999998,
+        "gap_cup": 8.850000000000001,
+        "gap_cup_y": 11.925,
+        "gap_bite": 6.8999999999999995,
+        "gap_bite_y": 14.774999999999999,
+        "gap_tip": 7.949999999999999,
+        "tile": 38.099999999999994,
+        "throat_h": 4.725,
+        "base_required": 9.524999999999999,
+        "cup_head_clearance": 0.45000000000000284,
+        "axial_clearance": 1.4549999999999983,
+        "clip_len": 32.19
+      },
+      "adjustments": [
+        {
+          "quantity": "clearance_z (throat height - clip thickness)",
+          "scaled_value": 0.105,
+          "floor": 0.2,
+          "applied_value": 0.2,
+          "action": "shrink clip thickness"
+        }
+      ],
+      "flags": [
+        "clearance_z (throat height - clip thickness):shrink clip thickness"
+      ],
+      "exports": {
+        "labs/tile-clip-sockets/exports/s1.5/dragonbite-through-floor-coupon.step": "6cca2b0032bec58d90d85ca1cd4b7bcff41a002c53c4ee6ce3e744d3c47dd916",
+        "labs/tile-clip-sockets/exports/s1.5/dragonbite-through-floor-coupon.stl": "866d86119f163c7b1fd08fbb799f7fe9c1ff69b7e176c8ba20ba528240079502",
+        "labs/tile-clip-sockets/exports/s1.5/dragonbite-through-floor-negative.step": "6986d9a4fa8c40ce2d7919d404a49a27d589eed2998ca27e7dbe4714313fc911",
+        "labs/tile-clip-sockets/exports/s1.5/dragonbite-through-clip.step": "9918b7f0b91bd9e57b04965fc84130b436c3cf22f5969130b3f6124d1c822754",
+        "labs/tile-clip-sockets/exports/s1.5/dragonbite-through-clip.stl": "7cfb5fd089613f5b8ef915521327f04cf4ddb3f17c6761cac2598ae9d46a33f5"
+      },
+      "build_seconds": 0.6
+    },
+    {
+      "insertion": {
+        "pose": "bar centred on the joint plane between the coupon and its mirror image, clip centred in the pocket band",
+        "protrusion_mm3": 3.744000000000004,
+        "protrusion_outside_barb_mm3": 0.0,
+        "barb_region_protrusion_mm3": 3.744000000000004,
+        "seated_interference_mm3": 3.744000000000004,
+        "barb_seated_interference_mm3": 3.744000000000004,
+        "barb_seated_expected_mm3": 3.744000000000006,
+        "barb_region": "|x| >= prong end 11.350 (barb ramp against the neck edge)",
+        "transit_pose_shift_mm": 1.25,
+        "transit_interference_mm3": 7.938000000000017,
+        "transit_expected_range_mm3": [
+          0.001,
+          112.3200000000001
+        ],
+        "support_bar_overlap_mm3": null,
+        "passed": true
+      },
+      "measurements": {
+        "pocket": {
+          "mouth_w": 28.0,
+          "taper_mid_w": 22.00666666666667,
+          "neck_w": 20.0,
+          "chamber_w": 25.600000000000005,
+          "depth": 21.9,
+          "depth_expected": 21.9,
+          "floor": 2.8,
+          "roof": 0.8000000000000007,
+          "floor_chamber": null,
+          "roof_chamber": null,
+          "rim_side": 2.0,
+          "expected": {
+            "mouth_w": 28.0,
+            "taper_mid_w": 22.0,
+            "neck_w": 20.0,
+            "chamber_w": 25.6
+          }
+        },
+        "clip": {
+          "thickness": 7.200000000000001,
+          "length": 39.00000000000001,
+          "bar_w": 26.400000000000002,
+          "prong_w": 20.0,
+          "barb_w": 20.799999999999997,
+          "tip_w": 10.420000000000012,
+          "eye_max": 7.280000000000001,
+          "expected": {
+            "thickness": 7.2,
+            "length": 39.0,
+            "bar_w": 26.4,
+            "prong_w": 20.0,
+            "barb_w": 20.8,
+            "eye_max": 7.28
+          }
+        }
+      },
+      "validity": {
+        "floor_coupon": {
+          "valid": true,
+          "solids": 2,
+          "volume_mm3": 13591.679999999988
+        },
+        "floor_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 5989.759999999998
+        },
+        "wall_coupon": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 52904.19967999999
+        },
+        "wall_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 5207.999999999999
+        },
+        "sidelock_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 4188.4281599999995
+        },
+        "clip": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 4372.92
+        }
+      },
+      "volumes": {
+        "clip_mm3": 4372.92,
+        "floor_coupon_mm3": 13591.679999999988
+      },
+      "wall": {
+        "through_protrusion_mm3": 38.968285714285685,
+        "through_interference_mm3": 38.968285714285685,
+        "through_mouth_w": 28.0,
+        "through_neck_w": 20.0,
+        "sidelock_protrusion_mm3": 0.8972307692307688,
+        "sidelock_protrusion_outside_barb_mm3": 0.0,
+        "sidelock_interference_mm3": 0.8972307692307688,
+        "sidelock_barb_interference_mm3": 0.8972307692307688,
+        "sidelock_depth": 20.86,
+        "sidelock_depth_expected": 20.86,
+        "sidelock_mouth_h": 28.0,
+        "sidelock_mouth_h_expected": 28.0,
+        "volume_mm3": 52904.19967999999,
+        "valid": true,
+        "solids": 1
+      },
+      "system": "openlock",
+      "scale": 2.0,
+      "variant": "through",
+      "options": {
+        "supports": false,
+        "chamfer": false,
+        "enforce": false,
+        "v43_bar": false
+      },
+      "dimensions": {
+        "base_height": 12.0,
+        "pocket_z0": 2.8,
+        "pocket_z1": 11.2,
+        "mouth_w": 28.0,
+        "mouth_d": 4.0,
+        "taper_w0": 24.0,
+        "taper_x1": 10.0,
+        "neck_w": 20.0,
+        "neck_x1": 12.0,
+        "chamber_w": 25.6,
+        "chamber_x1": 21.4,
+        "rim_w": 32.0,
+        "rim_d": 4.0,
+        "rim_z0": 0.8,
+        "rim_h": 11.2,
+        "support_w": 2.0,
+        "support_y0": 4.1,
+        "support_y1": 6.1,
+        "support_z0": 2.4,
+        "support_z1": 11.6,
+        "support_x1": 4.0,
+        "pitch": 25.4,
+        "wall_t": 25.4,
+        "wall_mouth_d": 2.0,
+        "wall_taper_x1": 8.0,
+        "wall_neck_len": 9.4,
+        "side_t": 8.4,
+        "side_mouth_h": 28.0,
+        "side_mouth_d": 4.0,
+        "side_taper_x1": 10.0,
+        "side_neck_h": 20.0,
+        "side_neck_x1": 11.8,
+        "side_chamber_h": 21.04,
+        "side_chamber_x1": 20.86,
+        "side_rim_d": 22.86,
+        "side_rim_t": 12.4,
+        "side_rim_h": 32.0,
+        "clip_bar_w": 26.4,
+        "clip_bar_w_v43": 28.0,
+        "clip_len": 39.0,
+        "clip_t": 7.2,
+        "clip_t_v54": 7.0,
+        "bar_len": 6.9,
+        "prong_w": 20.0,
+        "prong_y0": 3.55,
+        "prong_y1": 11.35,
+        "barb_w": 20.8,
+        "barb_y0": 12.0,
+        "barb_y1": 12.5,
+        "taper_stations": [
+          [
+            19.96,
+            14.0
+          ],
+          [
+            19.2,
+            15.0
+          ],
+          [
+            17.2,
+            16.0
+          ],
+          [
+            15.2,
+            17.0
+          ],
+          [
+            13.2,
+            18.0
+          ]
+        ],
+        "tip_y": 19.5,
+        "tip_w": 10.2,
+        "eye_open": 1.06,
+        "eye_open_y": 3.5,
+        "eye_max": 7.28,
+        "eye_max_y": 9.0,
+        "eye_y9": 5.08,
+        "eye_tip": 4.0,
+        "tile": 50.8,
+        "pocket_h": 8.399999999999999,
+        "base_required": 12.0,
+        "prong_neck_clearance": 0.0,
+        "barb_chamber_clearance": 4.800000000000001,
+        "axial_clearance": 1.8999999999999986
+      },
+      "adjustments": [],
+      "flags": [
+        "through_centre_island",
+        "wall_through_bar_clash"
+      ],
+      "exports": {
+        "labs/tile-clip-sockets/exports/s2/openlock-through-floor-coupon.step": "acf7ee675f2ca9a9438b2ae36e743449a10deadab058df49234f96d3ae67280b",
+        "labs/tile-clip-sockets/exports/s2/openlock-through-floor-coupon.stl": "0649c14452fcab64a09d79974a7ea18e907c2c00a3cb0d9b697d242b8df32e0f",
+        "labs/tile-clip-sockets/exports/s2/openlock-through-floor-negative.step": "e9d7c91c5e27f0d68130f7dbc53f59b8af0acf02900773db493907d3f2f0b969",
+        "labs/tile-clip-sockets/exports/s2/openlock-through-wall-coupon.step": "1f74aea323310caaa7afe05df63e3aa207c5b5902c3f7ce22b2aacd3cec58706",
+        "labs/tile-clip-sockets/exports/s2/openlock-through-wall-coupon.stl": "647c3573b11eb4db788822dcd5fb27d058602ee9d711b3771cd3684ceea56f67",
+        "labs/tile-clip-sockets/exports/s2/openlock-through-wall-negative.step": "e765f9b34bb092e3b7d32f35507db9b8d17e4127e5722f046f408e223e64e78d",
+        "labs/tile-clip-sockets/exports/s2/openlock-through-sidelock-negative.step": "11a7ca2f846402c4679f3a7dee680d2745924dffac91a9232273d4f18b66e4b1",
+        "labs/tile-clip-sockets/exports/s2/openlock-through-clip.step": "7201cd8aa82d24facaba875011dd6e1f7d6d70c096c1945d9a53a9de23735910",
+        "labs/tile-clip-sockets/exports/s2/openlock-through-clip.stl": "784de583901c4023a0c7339cb12bd0ec420f3cbb59e2cd931a95a7a2d3b68e6b"
+      },
+      "build_seconds": 0.6
+    },
+    {
+      "insertion": {
+        "pose": "bar centred on the joint plane between the coupon and its mirror image, clip centred in the pocket band",
+        "protrusion_mm3": 0.0,
+        "protrusion_outside_barb_mm3": 0.0,
+        "barb_region_protrusion_mm3": 0.0,
+        "seated_interference_mm3": 0.0,
+        "barb_seated_interference_mm3": 0.0,
+        "barb_seated_expected_mm3": 0.0,
+        "barb_region": "|x| >= post nose 10.600 (jaws around the post)",
+        "transit_pose_shift_mm": 3.5,
+        "transit_interference_mm3": 21.088953651701686,
+        "transit_expected_range_mm3": [
+          0.001,
+          261.812
+        ],
+        "support_bar_overlap_mm3": null,
+        "passed": true
+      },
+      "measurements": {
+        "pocket": {
+          "mouth_w": 27.299999999999997,
+          "cavity_front_w": 32.7,
+          "chamber_w": 12.149999999999999,
+          "neck_w": 11.200000000000003,
+          "post_nose_x": 10.600008928578564,
+          "post_nose_expected": 10.6,
+          "depth": 23.9,
+          "depth_expected": 23.9,
+          "floor": 2.7999999999999994,
+          "roof": 3.5999999999999996,
+          "floor_cavity": null,
+          "roof_cavity": 3.5999999999999996,
+          "rim_side": 2.030000000000001,
+          "expected": {
+            "mouth_w": 27.3,
+            "cavity_front_w": 32.7,
+            "chamber_w": 12.150000000000002,
+            "neck_w": 11.2
+          }
+        },
+        "clip": {
+          "thickness": 6.1000000000000005,
+          "length": 42.92,
+          "bar_w": 26.799999999999997,
+          "neck_w": 19.4,
+          "max_w": 25.0,
+          "tip_w": 21.93750000000001,
+          "gap_cup": 11.800000000000002,
+          "gap_bite": 9.21195762292147,
+          "expected": {
+            "thickness": 6.1,
+            "length": 42.92,
+            "bar_w": 26.8,
+            "neck_w": 19.4,
+            "max_w": 25.0,
+            "gap_cup": 11.8,
+            "gap_bite": 9.2
+          }
+        }
+      },
+      "validity": {
+        "floor_coupon": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 18570.47785555551
+        },
+        "floor_negative": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 5078.725401260302
+        },
+        "clip": {
+          "valid": true,
+          "solids": 1,
+          "volume_mm3": 4447.788509933911
+        }
+      },
+      "volumes": {
+        "clip_mm3": 4447.788509933911,
+        "floor_coupon_mm3": 18570.47785555551
+      },
+      "system": "dragonbite",
+      "scale": 2.0,
+      "variant": "through",
+      "options": {
+        "supports": false,
+        "chamfer": false,
+        "enforce": false,
+        "v43_bar": false
+      },
+      "dimensions": {
+        "base_height": 12.7,
+        "throat_w": 27.3,
+        "throat_z0": 2.8,
+        "throat_z1": 9.1,
+        "lip_d": 6.3,
+        "cavity_w": 32.7,
+        "cavity_x1": 23.4,
+        "post_nose_x": 10.6,
+        "head_d": 11.2,
+        "head_cx": 16.2,
+        "post_neck_w": 8.4,
+        "pad_w": 15.64,
+        "pad_disc_d": 18.48,
+        "floor_t": 2.8,
+        "rib_w": 1.0,
+        "rib_y": [
+          0.0,
+          7.2,
+          -7.2
+        ],
+        "rim_w": 31.36,
+        "rim_d": 4.0,
+        "rim_z0": 0.8,
+        "rim_h": 11.2,
+        "pitch": 25.4,
+        "clip_t": 6.1,
+        "bar_len": 7.2,
+        "clip_bar_w": 26.8,
+        "half_len": 21.46,
+        "jaw_neck_w": 19.4,
+        "jaw_neck_y0": 5.2,
+        "jaw_neck_y1": 6.0,
+        "jaw_max_w": 25.0,
+        "jaw_max_y0": 17.2,
+        "jaw_max_y1": 18.9,
+        "jaw_tip_w": 21.8,
+        "gap_root": 2.4,
+        "gap_cup": 11.8,
+        "gap_cup_y": 15.9,
+        "gap_bite": 9.2,
+        "gap_bite_y": 19.7,
+        "gap_tip": 10.6,
+        "tile": 50.8,
+        "throat_h": 6.3,
+        "base_required": 12.7,
+        "cup_head_clearance": 0.6000000000000014,
+        "axial_clearance": 1.9399999999999977,
+        "clip_len": 42.92
+      },
+      "adjustments": [
+        {
+          "quantity": "clearance_z (throat height - clip thickness)",
+          "scaled_value": 0.14,
+          "floor": 0.2,
+          "applied_value": 0.2,
+          "action": "shrink clip thickness"
+        }
+      ],
+      "flags": [
+        "clearance_z (throat height - clip thickness):shrink clip thickness"
+      ],
+      "exports": {
+        "labs/tile-clip-sockets/exports/s2/dragonbite-through-floor-coupon.step": "37d88642ba2718e74c6f4e68f393547296e43f60c43610c6a7a97c46497849d8",
+        "labs/tile-clip-sockets/exports/s2/dragonbite-through-floor-coupon.stl": "55129c2bc65b92999fa269b77b6643895324ba61c6a85b7e6804da3e3b6990e1",
+        "labs/tile-clip-sockets/exports/s2/dragonbite-through-floor-negative.step": "ce8db1d3d331587a5123624dfe37567acbb3a4ba13300a0a4c068c03e08416ac",
+        "labs/tile-clip-sockets/exports/s2/dragonbite-through-clip.step": "bcb3ca0a226c7ee83f3680a6814f43eef8a70d27e4c8caaba8866b41f9bcce2a",
+        "labs/tile-clip-sockets/exports/s2/dragonbite-through-clip.stl": "bd3e698958560a1d847e8ba8767dd84a36d32ceb769a7199eb5cad9ce94bf4ec"
+      },
+      "build_seconds": 0.6
+    }
+  ]
+}

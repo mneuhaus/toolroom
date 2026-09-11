@@ -26,9 +26,11 @@ Use the project's authoritative CAD backend: [onshape-cad](../onshape-cad/SKILL.
 - [Slide-in fit, preload and one-piece latches](../../knowledge/construction/fits-and-retention.md) — snaps, preload, compensation.
 - [Assembly, access and load-path review](../../knowledge/construction/assembly-review.md) — access and completeness.
 - [Print orientation for FDM parts](../../knowledge/manufacturing/print-orientation.md) — layer direction against the opening load on a printed joint.
+- [Clip-in-pocket tile joints: OpenLOCK and a merged design](../../knowledge/construction/tile-clip-joints.md) — sourced socket and clip geometry, lying and standing pockets, scaling with process floors, matching clips.
 - [Further joint references: panels and elastic clips](../../knowledge/construction/joints-panels-and-clips.md) — reviewed references with no reconstructed CAD or physical verification yet; keep them distinct from the lab.
 - [Shared project and evidence conventions](../../knowledge/foundations/core.md) and [what a check actually establishes](../../knowledge/foundations/verification.md).
 
 ## References
 
+- [Tile clip sockets lab](../../labs/tile-clip-sockets/README.md) — Build123d generator for OpenLOCK-style and Dragonbite-style sockets and clips at several scales, with an insertion check and the maintained scaling table.
 - [Printed Joints Lab](../../labs/printed-joints/README.md) — independent native reconstructions with their actual verification status. An example library, not a validated catalogue of structural joints.

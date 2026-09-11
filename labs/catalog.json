@@ -31,5 +31,22 @@
     "runnable": "uv run python labs/checker-lab/build.py",
     "source": "labs/checker-lab/build.py",
     "source_sha256": ""
+  },
+  {
+    "id": "tile-clip-sockets",
+    "title": "Does a scaled pocket still take its scaled clip?",
+    "kind": "Parametric generator lab",
+    "tag": "Joints",
+    "image": "site/assets/tile-clips-sections.svg",
+    "summary": "OpenLOCK-style and Dragonbite-style sockets and clips generated in Build123d at five scales, with process floors for clearance, interference, roof and rim, and an insertion check per scale.",
+    "skills": [
+      "cad-joints",
+      "cad-khana",
+      "cad-fdm-design"
+    ],
+    "document": "labs/tile-clip-sockets/README.md",
+    "runnable": "uv run python labs/tile-clip-sockets/build.py --all",
+    "source": "labs/tile-clip-sockets/spec.py (dimensions from provenance/references/tile-clips/manifest.json)",
+    "source_sha256": ""
   }
 ]

@@ -11,7 +11,7 @@ Every entrypoint has the same shape: front matter (`name`, `description`), an H1
 **References** list, and where applicable an **Environment** line pointing at
 [`profiles/environment/local-workstation.yaml`](../profiles/environment/local-workstation.yaml).
 
-## The ten skills
+## The eleven skills
 
 | Skill | Use when |
 | --- | --- |
@@ -24,6 +24,7 @@ Every entrypoint has the same shape: front matter (`name`, `description`), an H1
 | [cad-fdm-design](cad-fdm-design/SKILL.md) | A part is designed or prepared for FDM: print pose, fits, assembly access, slicer output. |
 | [cad-joints](cad-joints/SKILL.md) | The connection between two parts is the design problem: snaps, slides, dovetails, retention. |
 | [cad-design-system](cad-design-system/SKILL.md) | A reusable design language is defined, applied to a part family or screened against a process. |
+| [cad-physics-simulation](cad-physics-simulation/SKILL.md) | A CAD mechanism handling loose parts is simulated or animated, or control software runs against a virtual machine. |
 | [scan-reverse-engineering](scan-reverse-engineering/SKILL.md) | A 3D scan has to become measured, parametric CAD. |
 
 ## Layering

@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-11",
+  "scope": "Local documentation desktop/mobile inspection and helper CLI integration; not a CAD or manufacturing release",
+  "desktop": {
+    "viewport": [
+      1440,
+      900
+    ],
+    "page": "docs/cad-work-basis.md",
+    "visual_inspection": "passed",
+    "horizontal_overflow": false
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "page": "skills/cad-workflow/references/worker-jobs.md",
+    "visual_inspection": "passed",
+    "horizontal_overflow": false
+  },
+  "interactions": {
+    "worker_reference_link": "passed",
+    "search_and_open_delegation_article": "passed"
+  },
+  "helper_smoke": {
+    "source_snapshot": "complete",
+    "bounded_excerpt_characters": 1200,
+    "worker_contract": "review, correctly retaining unrun Astra applicability check",
+    "existing_SC15_3MF_inspection": "no_findings; two plates, twelve meshes; format scope only"
+  },
+  "screenshots": {
+    "validation/workflow-ui/toolroom-work-basis-desktop.png": "524a026eb2e8f79bbafe717e969cb5efddd11fd214422ea931cee29ef5c1ea54",
+    "validation/workflow-ui/toolroom-worker-mobile.png": "974e5689bd8ae85f7bda9274d59eba28b578e7d29018e7959a0ae964b5250736"
+  },
+  "site_sha256": {
+    "index.html": "22085a3ca2bb3515e6477c722a677191bd51686a42a23dadc88c2b1391b2e6f4",
+    "site/data.js": "071f0a61cb9b84ba7cac538ab671480f314b87d01ba528783819a7f0cfc71c72",
+    "site/app.js": "426390e8570419d8dc2b92ff5b98bf7360f433f99e9f5b390ae915b6c85569d3",
+    "site/style.css": "df8ee4935b3716673ce777ed0f51f160d91d8b133c2a8fd93c111854e6f66dd3"
+  }
+}

@@ -22,6 +22,7 @@ A joint is described by its geometry, assembly path, manufacturing process and i
 | Use several fingers for geometric interlocking | Finger or Drop-Lock principle | Spacing, withdrawal direction and load sharing |
 | Apply preload after joining and release deliberately | Scarf with opposing wedges | Wedge access, push-out travel, stops and lateral guidance |
 | Connect quickly and open frequently | Snap fit | Strain limit, notches, fatigue and release access |
+| Join modular tiles or panels edge to edge, repeatedly and without tools | Clip in two identical side pockets (OpenLOCK, Dragonbite) | Pocket profile, neck and chamber, clearance floors, roof and rim thickness; see [clip-in-pocket tile joints: OpenLOCK and a merged design](tile-clip-joints.md) |
 
 This is a selection guide, not a strength ranking. Printed threads, bayonets, pins, magnet pockets and adhesive joints can extend the knowledge later; the first native collection covers the three linked video sources.
 

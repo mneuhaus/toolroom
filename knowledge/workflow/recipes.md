@@ -29,3 +29,7 @@ Current geometry and load assumptions → actual print orientations → appropri
 ## Select and construct a joint
 
 [cad-joints](../../skills/cad-joints/SKILL.md) establishes loads, assembly paths, geometric restraint and locking. The selected CAD skill creates native geometry; [cad-fdm-design](../../skills/cad-fdm-design/SKILL.md) handles print pose and physical fit trials. The [Printed Joints Lab](../../labs/printed-joints/README.md) presents eight reconstructed principles from three video sources.
+
+## Simulate or animate a mechanism with loose parts
+
+Question and required evidence → assembly export with honoured tolerances and a known frame → collision set for touched parts only, part library with explicit mass and inertia → velocity-driven heavy joints, contact masks, overlap-free spawn → logged poses → cheap camera and window preview → replay render bound to log, camera and export. The [cad-physics-simulation](../../skills/cad-physics-simulation/SKILL.md) skill and [CAD to rigid-body simulation](../simulation/cad-to-physics-simulation.md) carry the decisions; an uncalibrated run is a hypothesis, not a throughput figure.

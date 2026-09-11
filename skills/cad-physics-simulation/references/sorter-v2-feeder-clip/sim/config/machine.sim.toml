@@ -1,0 +1,54 @@
+# Machine config for the sorter-v2 backend when it runs against the simulator.
+# Point MACHINE_SPECIFIC_PARAMS_PATH at this file. The camera URLs are the
+# simulator's MJPEG streams (sim.cameras, roadmap step 2); the setup is the
+# classification-channel topology, so C4 is the classification camera's rotor.
+# Mode names below are the ones a real machine ran with; they get confirmed
+# the first time the backend boots against the sim.
+
+[machine]
+nickname = "sim"
+
+[machine_setup]
+type = "classification_channel"
+
+[cameras]
+layout = "split_feeder"
+c_channel_2 = "http://127.0.0.1:8770/c_channel_2.mjpg"
+c_channel_3 = "http://127.0.0.1:8770/c_channel_3.mjpg"
+classification_channel = "http://127.0.0.1:8770/classification_channel.mjpg"
+
+[camera_capture_modes.c_channel_2]
+width = 1280
+height = 720
+fps = 30
+fourcc = "MJPG"
+
+[camera_capture_modes.c_channel_3]
+width = 1280
+height = 720
+fps = 30
+fourcc = "MJPG"
+
+[camera_capture_modes.classification_channel]
+width = 1280
+height = 720
+fps = 30
+fourcc = "MJPG"
+
+[feeder]
+mode = "pulse_perception_rev01"
+
+[classification_channel]
+mode = "simple_state_machine_rev01"
+
+# Background-subtraction detection runs anywhere; the machine's own models
+# target its NPU and are not available on a dev host.
+[detection.feeder.algorithm_by_role]
+c_channel_2 = "mog2"
+c_channel_3 = "mog2"
+
+[detection.carousel]
+algorithm = "mog2"
+
+[servo]
+backend = "pca9685"
