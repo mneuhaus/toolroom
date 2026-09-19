@@ -162,6 +162,12 @@
       "title": "Bounded delegation without lowering CAD quality",
       "summary": "Small source-bound worker jobs, critical lead decisions, evidence returns and reusable tools.",
       "section": "workflow"
+    },
+    {
+      "path": "knowledge/workflow/offline-verification.md",
+      "title": "Offline verification of native CAD parts",
+      "summary": "pruefstand: STEP + machine manifest, tool access, posed overlap and contour-step checks that have caught defects; the rules the checker enforces on itself.",
+      "section": "workflow"
     }
   ]
 }

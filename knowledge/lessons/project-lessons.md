@@ -44,10 +44,23 @@ Describe a joint by its function, interface and limitations; the edge treatment,
 
 Origin: Modular camera-arm mount family, fork-and-tongue interfaces.
 
+## A checker earns trust by catching what a look would miss
+
+Building verification tooling is only worth its cost when a check finds a defect before the
+part is printed that inspection of the model would not have shown: an unreachable screw, a
+sliver cutting into a wall, a collision at a pose nobody rendered. Measuring what a glance at
+the model already shows, or confirming that nothing needs to change, is not progress and must not
+be reported as a revision. Keep the checker to the few checks that have proven themselves, run
+them beside real design work, and extend only when a new part exposes a real gap. See
+[offline verification](../workflow/offline-verification.md).
+
+Origin: Single Step feeder R6d, verification tool build-out, September 2026.
+
 ## Origins
 
 | Project | Contribution | Maintained home |
 | --- | --- | --- |
+| Single Step feeder R6d (tray, hopper floor R1) | Offline STEP checks; trust earned per check, not per tool | [offline verification](../workflow/offline-verification.md) |
 | Sparky X/Z unit (R13→R14) | Separation of design language, process profile and protected interfaces | [the design-system skill](../../skills/cad-design-system/SKILL.md), [the shared core](../foundations/core.md) |
 | C2 Channel assembly manual | Counting layers, build stages, accessible fastener sequence | [assembly review](../construction/assembly-review.md), [the assembly-manual skill](../../skills/onshape-build-manuals/SKILL.md) |
 | Distributor contact study (R8) | Binding a simulation result to its exact model | [verification](../foundations/verification.md) |

@@ -1,0 +1,1686 @@
+Belastbarer Prüfstand für parametrische CAD-
+Modelle: Architekturentscheidung für Onshape,
+STEP, OCCT und spezialisierte Geometrie-
+Backends
+Executive Summary
+Der bereitgestellte Forschungsauftrag zielt nicht auf einen weiteren CAD-Konverter, sondern auf eine
+belastbare Nachweiskette vom nativen Konstruktionszustand bis zum reproduzierbaren Offline-
+Test. Die zentrale Frage ist damit weniger „welches Geometrieformat ist das beste?“ als: Welche
+Information darf an welcher Stelle Autorität besitzen, und welche Aussage kann ein konkreter
+Algorithmus tatsächlich beweisen? Die Randbedingungen – Onshape als primäre
+Konstruktionsumgebung, Python/pytest und OCCT im lokalen Stack, keine lokale Parasolid-Lizenz,
+unveränderliche Offline-Pakete und reale Montage-/Fertigungsfragen – stammen aus dem
+bereitgestellten Briefing. fileciteturn0file0
+
+
+Hauptergebnis: Empfohlen wird kein universelles neues CAD-Format und kein kompletter
+Neuaufbau, sondern eine native-angereicherte, multi-repräsentationale Snapshot-Architektur. Onshape
+bleibt Autorität für Quellzustand, Konfiguration, Baugruppenstruktur und Konstruktionsabsicht; STEP
+AP242 plus OCCT-BRep/XCAF bilden die lokale BRep-Repräsentation; deterministisch daraus erzeugte
+Netze dienen als schnelle Kollisions- und Vorauswahlrepräsentation; FCL beziehungsweise optional Coal
+übernimmt Mesh-Distanz/CCD; analytische Spezialprüfungen und OCCT eskalieren zweifelhafte Fälle.
+Funktionale Schnittstellen werden separat von flüchtigen Topologie-IDs identifiziert. Die Tests laufen
+anschließend vollständig offline.
+
+
+Die wichtigste Verbesserung liegt daher tatsächlich in einer anderen Aufgabenverteilung zwischen
+vorhandenen Werkzeugen, nicht in einer neuen Sprache oder einem neuen Geometriekern. Das
+bestehende System sollte seine Python-/pytest-Orchestrierung, STEP-, BRep-, trimesh- und FCL-Pfade
+zunächst behalten. Neu nötig sind vor allem vier klar abgegrenzte Fähigkeiten: ein konsistenter
+Onshape-Erfassungsschritt, semantische Schnittstellen-IDs, ein explizites Evidenz-/Unsicherheitsmodell
+und eine adaptive Prüfkaskade.
+
+
+Die Recherche widerlegt beziehungsweise relativiert mehrere mögliche Ausgangsannahmen:
+
+
+ Annahme                              Befund
+
+                                      Bereits die Ausgangslage enthält BRep-Pfade; sinnvoll ist
+ „Der Prüfstand misst im
+                                      deren systematische Aufwertung, nicht ein
+ Wesentlichen nur auf Meshes.“
+                                      Paradigmenwechsel. fileciteturn0file0
+
+
+
+
+                                                   1
+ Annahme                               Befund
+
+                                       Falsch. ISO AP242 hat einen sehr breiten normativen Scope,
+                                       einschließlich Konfiguration, Schnittstellen, Mating, Kinematik
+ „STEP AP242 kann viel                 und V&V; die konkrete Onshape-Unterstützung ist wesentlich
+ Information tragen, also kommt        schmaler. Onshape dokumentiert bei STEP-Import nur
+ sie automatisch lokal an.“            Geometrie und Flächenfarbe; bei Part-/Part-Studio-Export
+                                       AP242 zusätzlich MBD, bei Assembly-Export wiederum nur
+                                       Geometrie und Flächenfarbe. 1
+
+                                       Dafür gibt es derzeit keine belastbare Dokumentation. Das
+ „ includeExportIds löst die           aktuelle öffentliche Onshape-OpenAPI-Schema v16 beschreibt
+ STEP-Korrespondenz.“                  die Option ausdrücklich als Export von Topologie-IDs als
+                                       Parasolid-Attribute. Das ist kein Nachweis für STEP. 2
+
+                                       Falsch. Onshape erklärt explizit, dass Topologie-IDs nicht
+ „Native Face-IDs sind dauerhafte
+                                       persistent sind; idtranslations kann null, ein oder
+ Namen.“
+                                       mehrere Ziele liefern.   3
+
+
+ „Eine feine Tessellierung macht       Nicht ohne eine separat begründete Fehler- oder
+ Mesh-Tests automatisch                Einschlussschranke. Export-/Meshingparameter spezifizieren
+ beweiskräftig gegenüber der           eine Diskretisierung; daraus folgt nicht automatisch ein
+ ursprünglichen CAD-Geometrie.“        zertifiziertes globales Oberflächen-Enveloping.
+
+                                       CCD kann Kollisionsfreiheit gegenüber seinen
+ „CCD auf dem Mesh beweist             Eingabegeometrien nachweisen; ohne konservative Relation
+ Kollisionsfreiheit der                Mesh↔BRep bleibt die Übertragung auf das CAD-Modell offen.
+ ursprünglichen BRep-                  FCL selbst arbeitet unter anderem mit triangulierten Modellen
+ Geometrie.“                           und bietet diskrete sowie kontinuierliche Kollisionsabfragen.
+                                         4
+
+
+                                       Nein. CGAL unterscheidet selbst zwischen exakten Prädikaten
+ „Exact predicates bedeuten            und exakten Konstruktionen; bei inexact constructions können
+ exakte CAD-Geometrie.“                trotz korrekter kombinatorischer Entscheidungen
+                                       geometrische Einbettungsprobleme verbleiben. 5
+
+                                       Nicht grundsätzlich. Sprache und FFI ändern weder die
+ „Ein neuer C++-/Rust-Wrapper          numerischen Grenzfälle des Kernalgorithmus noch die
+ macht denselben Kernel                Importgeometrie. Ein Sprachwechsel ist nur gerechtfertigt,
+ robuster.“                            wenn er eine konkrete fehlende Fähigkeit oder messbaren
+                                       Betriebsengpass löst.
+
+                                       Nein. Diese Aussagen benötigen zusätzlich
+ „CAD-Geometrie beweist reale          Fertigungsannahmen, Messunsicherheit, Material-/
+ Passung, Festigkeit oder              Prozessdaten beziehungsweise CAE oder physische Evidenz;
+ Lebensdauer.“                         das GUM behandelt Messunsicherheit explizit als eigene
+                                       Größe. 6
+
+Empfohlene Zielentscheidung: Architektur B in der späteren Matrix – stärkere native Erfassung + lokaler
+hybrider Offline-Prüfstand – sollte das Zielbild sein. Architektur A, der schrittweise Ausbau des heutigen
+Systems, ist der Migrationspfad dorthin. Architektur C, mehrere spezialisierte offene Backends, sollte als
+kontrollierte Eskalationsschicht hinzukommen, wenn Benchmarks einen konkreten Nutzen belegen.
+Eine SDF-/Voxel-/CSG-zentrierte Universalrepräsentation sollte nicht zur neuen Messautorität werden.
+
+
+
+
+                                                    2
+Die fünf wichtigsten unmittelbar umsetzbaren Maßnahmen sind:
+
+
+    1. Kein technischer Fehler und kein fehlgeschlagener Fallback darf mehr zu PASS werden.
+       Ergebniszustände werden PASS , FAIL , INDETERMINATE , UNSUPPORTED , ERROR .
+    2. Snapshots erhalten vollständige Quellidentität: Microversion/Version, Konfiguration,
+       Element/Part, vollständiger Assembly-Instanzpfad, Transformationen, Einheiten und Hashes.
+    3. Funktionale Schnittstellen bekommen semantische IDs, unabhängig von STEP-Face-
+       Nummern oder geometrischen Hashes.
+    4. STEP/BRep und Mesh werden komplementär eingesetzt: BRep als lokale geometrische
+       Referenz, Mesh als Beschleuniger und bei entsprechendem Nachweis als ausreichende Evidenz.
+    5. Native↔STEP-Korrespondenz wird experimentell validiert statt angenommen. Das ist die
+       wichtigste offene technische Frage.
+
+
+Forschungsrahmen, Prüfbegriff und Evidenzmodell
+Ein CAD-Test sollte nicht als „Geometrieabfrage mit Assertion“ definiert werden, sondern als
+ausführbarer Vertrag zwischen einer Anforderung und einer beobachtbaren Eigenschaft eines
+eingefrorenen Modellzustands. Dabei unterscheiden sich sechs Ebenen fundamental.
+
+
+Eine Bauteilprüfung fragt etwa nach Durchmesser, Wandstärke, Volumen oder Existenz einer
+bestimmten Schnittstelle. Eine Schnittstellenprüfung vergleicht zwei Bauteile, beispielsweise
+Schraubenschaft und Bohrung. Eine Montageprüfung betrachtet einen kontinuierlichen Pfad durch
+den Konfigurationsraum. Eine Funktionsprüfung betrachtet ein ganzes zulässiges Bewegungs- oder
+Konfigurationsgebiet. Eine Regressionsprüfung vergleicht Revisionen und muss deshalb Identität/
+Korrespondenz modellieren. Eine Fertigungs- oder physische Prüfung fügt tolerierte beziehungsweise
+gemessene reale Größen hinzu. Diese Ebenen dürfen nicht stillschweigend ineinander übergehen.
+
+
+Das deckt sich mit der breiten Sicht moderner Systemmodelle: SysML v2 wurde 2025 final angenommen
+und ist explizit für Spezifikation, Analyse und Verifikation komplexer Systeme vorgesehen. Für den hier
+betrachteten Umfang wäre SysML v2 allerdings eher eine mögliche äußere Requirement-Schicht als
+die interne Geometrie-Engine. 7
+
+
+Entscheidend ist die Trennung von Soll und Ist. Ein Test
+
+
+       „Bohrungsdurchmesser muss mindestens 5,20 mm sein“
+
+
+ist nur dann eine echte Validierung gegen eine Anforderung, wenn 5,20 mm aus einer unabhängigen
+Anforderungsquelle stammt. Wird der Sollwert aus derselben Geometrie abgeleitet, die anschließend
+„gemessen“ wird, testet man primär die Messpipeline gegen sich selbst. Ein Geometrieabgleich ohne
+unabhängige Anforderung kann dennoch sehr wertvoll sein – dann ist er aber ein Invarianz-,
+Konsistenz- oder Regressionstest.
+
+
+Für den Prüfstand empfiehlt sich deshalb eine feste Evidenzleiter:
+
+
+ Evidenzstufe                Beispiel                                Zulässige Aussage
+
+                             Onshape-Konfiguration, Mate,
+ Semantische/native                                                  Konstruktionsabsicht und
+                             FeatureScript-Attribut,
+ Quelle                                                              Quellzustand
+                             dokumentierte Anforderung
+
+
+
+
+                                                   3
+ Evidenzstufe               Beispiel                               Zulässige Aussage
+
+                            capture-time evDistance ,
+                                                                   Referenzmessung im nativen
+ Native Messung              evCollision , analytische
+                                                                   Modell für genau diese Revision
+                            Flächenbeschreibung
+
+                                                                   Aussage über die importierte
+ Lokale BRep-Messung        OCCT auf importiertem STEP
+                                                                   lokale BRep-Geometrie
+
+ Konservativ gebundene      Mesh/Envelope mit bewiesener           Aussage über BRep, soweit die
+ Approximation              Schranke                               Schranke sie trägt
+
+ Ungebundene                                                       Hinweis/Kandidat oder Aussage
+                            normales Mesh, SDF, Sampling
+ Approximation                                                     nur über diese Approximation
+
+                            Toleranzintervalle, statistische       Aussage über erwartete
+ Produktionsmodell
+                            Prozessdaten                           Fertigung
+
+                                                                   Aussage über das konkrete reale
+ Physische Messung          CMM, Lehre, Versuch                    Exemplar innerhalb
+                                                                   Messunsicherheit
+
+Onshapes FeatureScript bietet eine brauchbare capture-time Referenzschicht. evDistance bestimmt
+minimale beziehungsweise maximale Abstände und liefert die Orte/Parameter der Extrema; bei nicht
+eindeutigen Extremstellen werden Gleichstände nicht semantisch aufgelöst. evCollision
+unterscheidet unter anderem Interferenz, Abutment und Einschlussfälle. evSurfaceDefinition
+kann analytische Typen wie Ebene, Zylinder, Kegel, Kugel und Torus sowie B-Spline-Flächen beschreiben.
+ 8
+
+
+
+
+Das ist wichtig für das Ergebnisformat: Ein Distanzminimum kann beispielsweise an einer Kante oder
+einem Vertex liegen. Der Prüfstand sollte deshalb nicht voraussetzen, dass jede Distanzmessung
+genau „eine beteiligte Fläche“ besitzt.
+
+
+Annahmen und verbleibende Unsicherheiten: Die Empfehlung setzt voraus, dass Onshape read-only
+über API/FeatureScript abgefragt werden darf und dass der vorhandene STEP-Pfad reproduzierbar
+automatisierbar ist. Nicht empirisch geklärt ist bislang, welche Onshape-Exportdetails im konkreten
+Account/API-Zugang verfügbar sind, wie stabil STEP-Topologie im realen Modellbestand ist und ob
+Onshapes aktuelle Exportpipeline irgendwo außerhalb des dokumentierten Parasolid-Falls Topologie-
+IDs transportiert. Letzteres muss als offene Hypothese gelten, nicht als Funktion.
+
+
+Zielarchitektur und Entscheidung zwischen den Optionen
+Die empfohlene Architektur trennt Erfassung, unveränderliche Evidenz und Ausführung. Diese
+Trennung macht API-Zugriff und native CAD-Funktionen zu einem versionierten Build-Schritt statt zu
+einer Laufzeitabhängigkeit jedes pytest-Laufs.
+
+
+
+
+                                                   4
+                                                                                                                                Broad phase / Mesh
+                                                                                                                                trimesh + FCL/Coal
+
+                                                                STEP AP242
+
+
+                                  Read-only Capture
+                                                                                                                                  Analytic checks
+
+           Onshape                                          Assembly identities                                                                                                   PASS / FAIL /
+                                                                                                              Python + pytest
+    Microversion / Version /                                paths / transforms /       Immutable snapshot                                                Evidence merger        INDETERMINATE
+                                                                                                               orchestrator
+        Configuration                                         configurations                                                                                                  UNSUPPORTED / ERROR
+
+                                                                                                                                 OCCT BRep/XCAF
+
+
+                                     Native queries
+                                  interfaces / mates /   Semantic interface sidecar
+                               reference measurements
+                                                                                                                                Optional specialist
+                                                                                                                                     backend
+
+
+
+
+Onshape unterstützt dieses Modell konzeptionell gut: Microversions bilden unveränderliche historische
+Zustände, Konfigurationen müssen für reproduzierbare API-Ergebnisse explizit angegeben werden, und
+Tessellierungen werden aus dem Modellzustand erzeugt statt als dauerhafte Quellgeometrie geführt.
+  9 Assemblies besitzen Occurrences; über die Assembly-API stehen hierarchische Pfade und
+
+Transformationen zur Verfügung, was eine bessere Instanzidentität liefert als Dateinamen oder
+Körpernamen. 10
+
+
+Entscheidungsmatrix
+
+Bewertung: 1 = schwach, 5 = stark. „Aufwand“ ist invertiert: 5 bedeutet geringer Zusatzaufwand.
+
+
+ Architektur                                              Evidenzqualität                          Identität               Bewegung                   Offline              Betriebsaufwand                Lizenzfit   Ges
+
+ A – heutigen
+                                                                                                                                                                                                                      Sof
+ Hybridstack                                                                           3                    2→3                           3                  5                                       5           5
+                                                                                                                                                                                                                      Mig
+ schrittweise härten
+
+ B – native Erfassung +
+                                                                                                                                                                                                                      Em
+ STEP/OCCT + lokale                                                                    5                      5                           4                  5                                       4           5
+                                                                                                                                                                                                                      Zie
+ Mehrfachrepräsentation
+
+ C – B plus mehrere
+                                                                                                                                                                                                            3–5 je    Gez
+ Spezialbackends, z. B.                                                                5                      5                           5                  5                                      2–3
+                                                                                                                                                                                                            Paket     Esk
+ Coal/Manifold/CGAL
+
+ D – neue SDF/Volumen-/
+                                                                                                                                                                                                                      Nic
+ Universalrepräsentation                                                              2–4                     2                           4                  5                                      1–2          5
+                                                                                                                                                                                                                      Pri
+ als Primärmodell
+
+A – Ausbau des vorhandenen Stacks. Dies liefert das schnellste Ergebnis. Python/pytest bleibt
+Orchestrator, STEP und vorhandene BRep-Pfade bleiben erhalten, die Mesh-Pipeline wird nicht ersetzt.
+Der Nachteil ist, dass Identitätsverlust und unklare Evidenzgrenzen bestehen bleiben, wenn die
+Capture-Seite nicht ebenfalls verbessert wird.
+
+
+B – native-angereicherter Snapshot. Das ist der beste Kompromiss. Native Identität und
+Konstruktionsabsicht werden dort gewonnen, wo sie existieren; lokal laufen ausschließlich offene/
+zulässige Komponenten. Onshape dokumentiert selbst, dass topologische IDs nicht persistent sind,
+bietet aber Microversion-basierte Übersetzung; genau diese Information gehört in den Snapshot. 11
+STEP AP242 bleibt Geometrietransport, darf aber nicht zum alleinigen Identitäts- oder Requirement-
+Container hochgestuft werden.
+
+
+C – spezialisierte Backends. Die Option lohnt sich erst, sobald ein Benchmark eine konkrete Fähigkeit
+vermissen lässt: beispielsweise robuste Mesh-Booleans, andere CCD-Eigenschaften oder exakte
+polygonale Konstruktionen. Coal 3.0.4 ist Stand Juni 2026 eine gepflegte Weiterentwicklung der FCL-
+
+
+
+                                                                                                     5
+Linie; die 3.0-Reihe bietet unter anderem steuerbare Signed-Distance-Berechnung und Python-
+Unterstützung. Ein Wechsel von python-fcl allein wegen Aktualität wäre dennoch unbegründet.        12
+
+
+
+
+D – alternative Primärrepräsentation. OpenVDB kann beispielsweise Narrow-Band-Signed-Distance-
+Felder erzeugen; das ist attraktiv für Abstands- und Raumsuchen, doch ein daraus numerisch
+aufgebautes Feld ist eine diskretisierte Ableitung. „Signed“ beschreibt die Innen-/Außenkonvention,
+nicht eine Zertifizierung gegen die ursprüngliche BRep. 13 Als Cache oder Forschungsbackend ist das
+sinnvoll, als neue Messautorität derzeit nicht.
+
+
+Der vorgeschlagene Architekturgrundsatz lautet daher:
+
+
+      Eine Repräsentation pro Aufgabe, eine einzige explizite Nachweiskette pro Ergebnis.
+
+
+Das bedeutet insbesondere: Das Anzeigemodell muss nicht Messautorität sein; das Kollisionmesh muss
+nicht Revisionsträger sein; STEP muss nicht Requirement-Container sein; Onshape muss nicht bei jedem
+Testlauf online sein.
+
+
+Geometrie, Austauschformate, Identität und Backends
+Die Formatauswahl sollte danach erfolgen, welche Information tatsächlich durch die konkrete
+Toolchain gelangt, nicht danach, was eine Spezifikation grundsätzlich ausdrücken kann.
+
+
+Repräsentationen und ihre Rolle
+
+ Repräsentation     Stärken im Prüfstand       Grenzen                     Empfohlene Rolle
+
+                    BRep-Austausch,
+                    Produkt-/Assembly-         Reale Onshape-Pipeline
+                    Konzept; aktueller         transportiert nur einen
+                                                                           Primärer offener
+ STEP AP242         Standard ISO               Ausschnitt; Import
+                                                                           Geometrietransport
+                    10303-242:2025 hat         dokumentiert Geometrie +
+                    breiten MBD/PDM/           Face Color. 15
+                    V&V-Scope. 14
+
+                    Lokale BRep-Topologie/
+                    Geometrie; XCAF/           OCCT-Topologie ist nicht
+                                                                           Lokale BRep-
+ OCCT BRep/         STEPCAF kann               automatisch native
+                                                                           Arbeitsrepräsentation
+ XCAF               Assembly-/Name-/           Onshape-Topologie;
+                                                                           und Cache
+                    GD&T-Strukturen            importabhängig
+                    aufnehmen. 16
+
+                                               Approximiert gekrümmte      Broadphase, CCD,
+                    BVH, Distanz, Kollision,
+                                               BRep; ohne formale Hülle    Kandidatfilter, ggf.
+ Triangle Mesh      Visualisierung, hohe
+                                               keine globale CAD-          ausreichend bei großer
+                    Geschwindigkeit
+                                               Garantie                    Margin
+
+
+
+
+                                                  6
+ Repräsentation     Stärken im Prüfstand      Grenzen                       Empfohlene Rolle
+
+                    Explizite
+                    Szenenhierarchie,
+                                              Polygonrepräsentation;
+                    Transformationen,
+                                              Namen sind nicht einmal       Viewer, Debug-/
+ glTF/GLB           Wiederverwendung
+                                              zwingend eindeutig; keine     Fehlerartefakte
+                    desselben Meshs in
+                                              BRep-Messautorität. 17
+                    mehreren Nodes; gut
+                    für Visualisierung. 17
+
+                    Einheit, Mesh,
+                                              Keine allgemeine
+                    Metadaten und                                           Druck-/AM-spezifischer
+ 3MF                                          analytische BRep-
+                    produktionsnahe AM-                                     Export und Beleg
+                                              Messrepräsentation
+                    Erweiterungen. 18
+
+                    Schnelle                  Diskretisierungs-/
+                    Raumabfragen,             Rekonstruktionsfehler         Optionaler Accelerator/
+ SDF/OpenVDB
+                    Morphologie, Narrow-      müssen eigens gebunden        Forschungsbackend
+                    Band-Level-Sets. 19       werden
+
+                    Spezialisierte            Ergebnis bleibt polygonal
+ Mesh-CSG/                                                                  Fallback/Spezialfall,
+                    polygonale Boolesche      und löst CAD-Identität
+ Manifold                                                                   nicht Kernmodell
+                    Operationen               nicht
+
+                                              Für die gegebenen
+                    Für große                 Prüfanforderungen
+                    Szenengraphen/Asset-      entsteht gegenüber
+ USD                                                                        Derzeit nicht einführen
+                    Pipelines prinzipiell     Manifest + glTF + BRep
+                    attraktiv                 keine belegte fehlende
+                                              Fähigkeit
+
+Der Unterschied zwischen Normfähigkeit und Pipelinefähigkeit ist bei AP242 besonders deutlich. ISO
+10303-242:2025 ist inzwischen sogar auf Requirements Management sowie Verification & Validation
+ausgerichtet. 20 Daraus folgt jedoch nicht, dass Onshape all diese AP242-Konstrukte schreibt oder
+OCCT sie semantisch vollständig rekonstruiert. Onshapes aktuelle Dokumentation nennt beim STEP-
+Import ausdrücklich nur Geometrie und Face Color; bei Assembly-Export ebenfalls nur diese beiden
+Kategorien. 15
+
+
+Daraus folgt eine wichtige Architekturentscheidung: STEP-Dateien nicht mit Informationen
+überfrachten, die sich zuverlässiger als Sidecar speichern lassen.
+
+
+Native Identität vor geometrischem Matching
+
+Onshape beschreibt den Kern des Topological-Naming-Problems sehr klar: Für Flächen, Kanten und
+ähnliche Topologieelemente gibt es keine allgemein persistenten IDs. Der vorgesehene Workflow
+speichert Quell-Microversion und Topologie-ID und übersetzt anschließend in eine andere Microversion.
+Eine Entität kann dabei unverändert abgebildet, geteilt oder nicht mehr auflösbar sein. 11
+
+
+Der Prüfstand sollte deshalb mindestens fünf verschiedene Identitäten unterscheiden:
+
+
+
+
+                                                 7
+  Ebene                     Beispiel                                     Dauerhaftigkeit / Zweck
+
+                            Dokument + Element + Part +
+  Quelldefinition                                                        Welches Modell wurde erfasst?
+                            Konfiguration + Microversion
+
+  Assembly-                 vollständiger Instance-/Occurrence-          Welches konkrete Vorkommen
+  Occurrence                Pfad                                         eines Modells?
+
+  Feature                   Onshape Feature-ID                           Parametrische Herkunft
+
+  Topologieentität          Face-/Edge-ID in einer Microversion          Lokaler geometrischer Anker
+
+  Funktionale                mounting_hole_A , bearing_axis ,            Stabiler semantischer Vertrag
+  Schnittstelle              tool_keepout                                des Prüfstands
+
+
+Gerade die letzte Ebene sollte die Tests referenzieren. Ein Test sollte nicht heißen
+
+
+
+  face "JHO" muss 0,30 mm Abstand zu face "JX4" haben
+
+
+sondern sinngemäß
+
+
+
+  interface "bearing_outer_diameter"
+  muss relativ zu
+  interface "housing_bore"
+  radiales Spiel [0.020 mm, 0.060 mm] erfüllen
+
+
+Die Schnittstelle darf intern auf native Queries, Attribute, Flächen, Achsen und lokale Frames verweisen.
+
+
+FeatureScript bietet hierfür nützliche Mechanismen: Queries können historisch beziehungsweise
+zustandsbezogen formuliert werden; Attribute können auf Bodies/Faces/Edges/Vertices gesetzt werden;
+Tracking-Funktionen erlauben robustere Beziehungen als rohe Face-Strings. Attribute brauchen
+trotzdem Ambiguitätsregeln: Bei Splits können sie auf mehrere Entitäten gelangen, bei Merges müssen
+Werte vereinigt beziehungsweise priorisiert werden. 21
+
+
+Ein Attribut ist damit ein Anker, kein mathematischer Identitätsbeweis.
+
+
+Das includeExportIds -Ergebnis
+
+Dieser Punkt lässt sich inzwischen deutlich enger eingrenzen als im Ausgangsbriefing. Das aktuelle
+öffentlich zugängliche Onshape-OpenAPI-Schema weist sich als API v16 aus; die Schema-Version ist
+dort als 1.219.86588-c1cb28d1e26c angegeben. 22 An den gefundenen includeExportIds -
+Definitionen lautet die Beschreibung:
+
+
+       Topologie-IDs werden als Parasolid attributes exportiert.
+
+
+Die relevante Aussage ist damit nicht, dass der Parameter nur in einem einzigen Parameterobjekt
+auftaucht – das Schema führt ihn in mehreren Exportoptionen –, sondern dass seine dokumentierte
+Semantik Parasolid-Attribute nennt. 23
+
+
+Daraus folgt:
+
+
+
+                                                     8
+Für STEP darf includeExportIds derzeit nicht als Korrespondenzmechanismus eingeplant
+werden. Ob irgendein aktueller Onshape-STEP-Exporter solche Informationen faktisch in einem
+Vendor-Property-Mechanismus mitführt, ist eine empirische Frage. Die öffentliche Dokumentation
+belegt es nicht. Zusätzlich dokumentiert Onshape STEP-Import nur mit Geometrie und Face Color. 15
+
+
+Damit ist ein Sidecar-Mapping native Topologie → semantische Schnittstelle → importierte
+Geometrie wesentlich belastbarer als die Hoffnung auf persistente IDs im STEP.
+
+
+Geometrisches Matching nur als kontrollierter Fallback
+
+Wo native Korrespondenz fehlt, sollte das Matching eine Folge zunehmend schwächerer Merkmale
+verwenden:
+
+
+analytischer Typ und Parameter → lokales Koordinatensystem → Trimmgeometrie →
+Adjazenzgraph → metrische Eigenschaften → geometrische Nähe.
+
+
+Eine Zylinderfläche kann etwa durch Radius, Achse, axialen Bereich, benachbarte Ringkanten und
+Kontext beschrieben werden. Bei B-Splines gehören Surface-Definition, Trimmloops und Nachbarschaft
+hinzu. Symmetrische Kandidaten müssen anhand des Baugruppenkontexts oder semantischer Anker
+disambiguiert werden.
+
+
+Nicht akzeptabel wäre:
+
+
+
+  ID = hash(round(area), round(centroid))
+
+
+Ein solcher Hash ist ein nützlicher Kandidatenindex, aber kein Identitätsbeweis. Zwei symmetrische
+Faces können dieselben Invarianten besitzen; ein Face-Split verändert die Struktur; leicht modifizierte
+Flächen können nach Rundung kollidieren.
+
+
+Die einzig sichere API eines Matchers lautet deshalb sinngemäß:
+
+
+
+  UNIQUE(match, confidence/evidence)
+  AMBIGUOUS(candidate_1, candidate_2, ...)
+  MISSING
+
+
+und nie „besten Kandidaten ungefragt nehmen“.
+
+
+Auswahl der offenen Geometriebackends
+
+ Backend       Relevante Fähigkeit             Lizenz-/Betriebshinweis            Empfehlung
+
+                                               OCCT wird unter LGPL-2.1 mit
+               BRep, STEP/XCAF, Distanz,
+                                               eigener Exception angeboten;
+ OCCT          Booleans, Meshing,                                                 Kernbackend
+                                               8.0.1 wurde am 30. Juli 2026
+               analytische CAD-Geometrie
+                                               veröffentlicht. 24
+
+
+
+
+                                                    9
+ Backend      Relevante Fähigkeit            Lizenz-/Betriebshinweis            Empfehlung
+
+                                             Bewährte C++-Bibliothek;
+              Mesh-/Primitive-Kollision,     ursprüngliche Arbeit umfasst       Vorhandenen Pfad
+ FCL
+              Distanz, CCD, BVHs             diskrete/continuous collision      zunächst behalten
+                                             und Distance Queries. 4
+
+              Weiterentwicklung der FCL-                                        Adapter/
+                                             v3.0.4 vom 29.06.2026; BSD-
+              Familie; moderne Python-                                          Benchmark, kein
+ Coal                                        lizenziert laut
+              Bindings, verbesserte                                             sofortiger
+                                             Projektmetadaten. 12
+              Narrowphase-Optionen                                              Zwangswechsel
+
+                                             6.2.1 ist aktuelle stabile
+              Starke Polygon-/
+                                             Version; Lizenzen sind
+              Computational-Geometry-
+                                             paketabhängig GPL/LGPL bzw.
+ CGAL         Verfahren, exact                                                  Spezialbackend
+                                             kommerziell, daher vor
+              predicates/constructions je
+                                             Integration paketweise prüfen.
+              Kernel
+                                               25
+
+
+              Robuste/manifold-
+                                             Aktive 3.x-Reihe; Apache-2.0.      Guter Mesh-
+ Manifold     orientierte Mesh-Booleans
+                                               26                               Boolean-Kandidat
+              und CSG
+
+                                             Forschungsnahes
+              Polygonale Booleans,           Computational-Geometry-
+              numerisch robuste              Werkzeug; exact predicates         Benchmark-/
+ Geogram
+              Prädikate, räumliche           nicht mit exakter NURBS/           Spezialbackend
+              Strukturen                     BRep-Geometrie verwechseln.
+                                               27
+
+
+                                             Apache-2.0; native Rust-
+                                                                                Langfristiger
+              Moderne Rust-                  Architektur attraktiv, aber kein
+ Parry                                                                          Kandidat, derzeit
+              Kollisionsbibliothek           konkreter Grund für Migration
+                                                                                nicht nötig
+                                             des Python-Stacks allein. 28
+
+OCCT sollte dabei nicht als absolut fehlerfreie Wahrheit behandelt werden. CAD-Booleans, Sewing,
+degenerierte Topologie und Importhealing sind notorisch komplexe Operationen; gerade deshalb
+gehören Kernelaufrufe in isolierbare Worker und technische Fehler in den Ergebnisvertrag. Die
+Tatsache, dass OCCT weiterhin Releases mit Modeling-, Healing-, Meshing- und STEP-Fixes
+veröffentlicht, ist selbst ein Argument gegen die Annahme eines unfehlbaren In-Process-Solvers. 29
+
+
+Prüfanforderungen, Bewegung, Toleranzen und Nachweisstufen
+Die folgende Tabelle ist die zentrale Zuordnung „Anforderung → notwendige Information →
+Algorithmus → Evidenz/Grenze“.
+
+
+
+
+                                                    10
+                         Notwendige                                          Belastbare Evidenz /
+Prüfanforderung                                    Geeigneter Algorithmus
+                         Information                                         Grenze
+
+                         semantische
+                                                                             Stark bei eindeutigem
+Einzelmaß / Radius /     Schnittstelle,            analytischer Extractor
+                                                                             Feature; nicht auf
+Achse                    BRep/analytische          oder OCCT/FeatureScript
+                                                                             Tessellation reduzieren
+                         Fläche, Einheit
+
+                                                                             Mesh-PASS nur bei
+                         zwei Geometrien/          BVH-Distanz als           ausreichender
+Mindestabstand           Schnittstellen,           Vorauswahl; OCCT BRep     Fehlerreserve; BRep-
+                         Pose                      bei Grenzfall             Ergebnis gilt für
+                                                                             importierte BRep
+
+                                                                             distance≈0 allein
+                         Oberflächen +             Distanz + lokale          unterscheidet Tangenz,
+Berührung
+                         Toleranzmodell            Klassifikation            Flächenkontakt und
+                                                                             numerische Nähe nicht
+
+                                                                             Boolean-Fehler =
+                                                   Collision broadphase →
+                         geschlossene                                         ERROR/
+Volumenüberschneidung                              BRep/robuster Mesh-
+                         Körper                                              INDETERMINATE ,
+                                                   Boolean
+                                                                             niemals 0 mm³
+
+                                                                             Keine
+                         geschlossene Ziel-        Punkt-/Solid-
+                                                                             Oberflächenschneidung
+Einschluss               und                       Klassifikation plus
+                                                                             beweist allein keinen
+                         Werkzeugkörper            Schnittprüfung
+                                                                             korrekten Einschluss
+
+                                                                             Nicht mit euklidischem
+Richtungsabhängiges      Frame/Richtung +          Ray/support-/swept
+                                                                             Mindestabstand
+Spiel                    Kontaktgeometrie          directional query
+                                                                             gleichsetzen
+
+                         Start, Ziel,                                        Gilt für geprüfte
+                                                   CCD / konservatives
+Einbaupfad               Trajektorie,                                        Geometrie und
+                                                   Vorrücken
+                         zulässige Kontakte                                  Trajektorie
+
+                         vollständige
+                                                   CCD beziehungsweise       Gesampelte Posen
+Rotation / gekoppelte     SE(3) -
+                                                   adaptive zeitliche        allein beweisen die
+Bewegung                 Trajektorie oder
+                                                   Einhüllung                Zwischenräume nicht
+                         Mate-Gesetz
+
+                         Start-/
+Unbekannter                                        Motion Planner /          Erst hier wird ein echter
+                         Zielkonfiguration,
+Montagepfad                                        Konfigurationsraumsuche   Planner gerechtfertigt
+                         DOF, Hindernisse
+
+                         Werkzeughülle,
+                                                   Swept-volume/CCD-         Werkzeug ist Volumen,
+Werkzeugzugang           Anfahr-/
+                                                   ähnliche Prüfung          nicht nur Achsenstrahl
+                         Bedienpfad
+
+                         Schrauben-/
+                                                   analytische
+                         Bohrungsachse,                                      Nominales CAD-Spiel ist
+Schraube durch Bohrung                             Passungsprüfung + CCD +
+                         Profile, Path,                                      nur Teil des Nachweises
+                                                   Toleranzrechnung
+                         Toleranzen
+
+
+
+
+                                              11
+                               Notwendige                                          Belastbare Evidenz /
+ Prüfanforderung                                        Geeigneter Algorithmus
+                               Information                                         Grenze
+
+                                                                                   gleiche ID ≠
+                               semantische              native
+                                                                                   unveränderte
+ Revision unverändert          Identität + Alt-/         idtranslations +
+                                                                                   Geometrie; neue ID ≠
+                               Neugeometrie             Geometrievergleich
+                                                                                   funktionale Änderung
+
+                                                                                   Prozessspezifischer
+                               Orientierung,
+                                                                                   Nachweis, keine
+ Druckbarkeit                  Prozessprofil,           Slicer-/AM-Regeln
+                                                                                   allgemeine
+                               Mesh/BRep
+                                                                                   Festigkeitsgarantie
+
+                               Lasten,
+                                                                                   Geometrieassertionen
+ Festigkeit/Lebensdauer        Randbedingungen,         FEA/Fatigue/Versuch
+                                                                                   allein reichen nicht
+                               Materialmodell
+
+
+Adaptive Prüfung statt „ein Solver entscheidet alles“
+
+Die lokale Engine sollte eine Anfrage stufenweise eskalieren:
+
+
+Stufe A – konservative räumliche Vorauswahl. AABB/OBB/BVH können offensichtlich weit entfernte
+Paare eliminieren.
+
+
+Stufe B – Mesh-/Primitive-Abfrage. FCL beziehungsweise Coal liefert schnell Distanz, Kollision und
+gegebenenfalls CCD. Die FCL-Arbeit beschreibt explizit diskrete und kontinuierliche Kollisionsabfragen
+sowie Separation Distance für triangulierte Modelle. 30
+
+
+Stufe C – analytische Spezialfälle. Zwei koaxiale Zylinder, Ebene gegen Zylinder, Schraubenschaft
+gegen zylindrische Bohrung oder bekannte Mate-Achsen können oft einfacher, schneller und
+erklärbarer analytisch geprüft werden als per allgemeinem Boolean.
+
+
+Stufe D – lokale BRep-Messung. Grenzfälle gehen an OCCT.
+
+
+Stufe E – native Referenzmessung. Für besonders kritische oder zur Qualifikation der lokalen Pipeline
+ausgewählte Fälle wird beim Snapshot-Capture zusätzlich Onshape/FeatureScript gemessen. Das
+gehört nicht in jeden Offline-Lauf, sondern in die eingefrorene Evidenz.
+
+
+Das spart Rechenzeit, ohne schwächere Methoden als stärkere auszugeben.
+
+
+Reichweite des bestehenden konservativen Bewegungstests
+
+Der heutige geradlinige Conservative-Advancement-Test mit Mesh-Abständen kann – unter korrekter
+Implementierung und den Annahmen des verwendeten Distanzalgorithmus – einen starken Nachweis
+für genau die verwendeten Kollisionsgeometrien liefern. Das ist bereits deutlich besser als diskretes
+Pose-Sampling. FCL wurde gerade für solche kontinuierlichen Kollisions-/Proximity-Anfragen entwickelt.
+ 30
+
+
+
+
+Die Garantie endet aber an der Repräsentationsgrenze:
+
+
+
+
+                                                   12
+  CAD-BRep
+     ↓ Tessellierung
+  Triangle Mesh
+     ↓ Distance/CCD
+  collision-free trajectory
+
+
+Ohne eine nachgewiesene Beziehung
+
+
+                                         dH (BRep, Mesh) ≤ ε
+
+oder eine konservative innere/äußere Hülle folgt aus „Mesh kollisionsfrei“ nicht automatisch „BRep
+kollisionsfrei“.
+
+
+Das ist besonders relevant bei dünnen Hindernissen, stark gekrümmten Bereichen, kleinen Spalten und
+Freiformflächen.
+
+
+Für Rotation und gekoppelte Bewegung gibt es zwei sinnvolle Wege:
+
+
+      • Ein CCD-Backend, dessen Bewegungsmodell die konkrete Transformation zwischen Anfang und
+        Ende korrekt abbildet.
+      • Eine eigene adaptive Schrittweitenlogik mit bewiesener Geschwindigkeits-/Displacement-
+        Schranke.
+
+Für einen starren Körper mit Translation v , Winkelgeschwindigkeit ω und maximalem Radius R vom
+Rotationszentrum gilt als einfache konservative kinematische Schranke
+
+
+                                         vmax ≤ ∥v∥ + R∥ω∥.
+
+Daraus kann bei aktuellem freien Abstand d eine Zeitspanne unterhalb von ungefähr d/vmax als Basis
+für Conservative Advancement dienen. Das ist eine mathematische Schrankenidee, keine fertige
+Garantie für den konkreten Solver: Numerik, Kontaktmodell, relative Bewegung beider Körper und die
+Repräsentationsabweichung müssen zusätzlich berücksichtigt werden.
+
+
+Bei bekannten Onshape-Mates sollte nicht vorschnell ein kompletter Mechaniksolver eingeführt
+werden. Onshape-Mates definieren Freiheitsgrade über Mate-Connector-Systeme; Revolute-, Slider- und
+andere Mate-Typen sowie gekoppelte Relations können bekannte Bewegungszusammenhänge liefern.
+ 31
+
+
+
+
+Ein Motion Planner ist erst dann wirklich die fehlende Fähigkeit, wenn die Frage lautet:
+
+
+       „Existiert irgendein kollisionsfreier Montagepfad?“
+
+
+und nicht:
+
+
+       „Ist dieser konstruktiv vorgegebene Montagepfad kollisionsfrei?“
+
+
+Toleranzen: sechs verschiedene Fehlerarten
+
+Der Prüfstand sollte nicht ein einziges Feld tolerance verwenden. Mindestens folgende Größen
+müssen semantisch getrennt werden:
+
+
+
+
+                                                   13
+        Größe                            Bedeutung
+
+        numerical_error                  Rundung, Solver-/Konvergenztoleranz
+
+        representation_error             Tessellierung/SDF/Approximation
+
+        import_model_error               mögliche Änderung durch STEP-Translation/Healing
+
+        design_tolerance                 erlaubte Maß-/Geometrieabweichung aus Spezifikation
+
+        process_variation                reale Fertigungsstreuung
+
+        measurement_uncertainty          Unsicherheit einer realen Messung
+
+Das internationale GUM behandelt Messunsicherheit ausdrücklich als Eigenschaft des Messergebnisses
+und liefert allgemeine Regeln für deren Bewertung; die JCGM-Reihe enthält zusätzlich ein Monte-Carlo-
+Supplement und seit 2026 Ergänzungen zu nichtlinearen Messmodellen. 32
+
+
+Für kleine mechanische Baugruppen ist ein Worst-Case-/Intervallmodell die sinnvollste erste Stufe.
+Beispiel:
+
+
+                                 C = DBohrung − DSchraube − EAusrichtung
+
+wobei jedes D zunächst ein zulässiges Intervall erhält. Ein belastbares PASS erfordert dann
+beispielsweise:
+
+
+                                          inf(C) > Cerforderlich .
+
+Wenn
+
+
+                                         sup(C) < Cerforderlich ,
+
+liegt FAIL vor. Schneidet das resultierende Intervall die Grenze, lautet der korrekte Zustand
+  INDETERMINATE – nicht „wahrscheinlich okay“.
+
+
+Statistische Monte-Carlo-Rechnungen sind sinnvoll, sobald tatsächliche Prozessverteilungen und
+Korrelationen bekannt sind. Sie sollten aber nicht aus Bequemlichkeit unabhängige
+Normalverteilungen erfinden. Das GUM-Supplement JCGM 101 stellt Monte-Carlo-Propagation als
+Methode für Messmodelle bereit; die Qualität der Eingangswahrscheinlichkeiten bleibt dabei eine
+separate Modellannahme.     33
+
+
+
+
+Insbesondere gemeinsame Ursachen – Druckerskalierung, Werkzeugverschleiß, Chargenschrumpfung,
+Temperatur – müssen als korrelierte Variable behandelt werden. Sonst kann ein statistischer Stack-up
+unrealistisch optimistisch werden.
+
+
+Snapshot-, Requirement- und Ergebnisvertrag
+Die größte Architekturverbesserung entsteht wahrscheinlich nicht im Geometriealgorithmus, sondern
+darin, dass jede Aussage ihre Herkunft und ihren Geltungsbereich mitführt.
+
+
+
+
+                                                    14
+Minimaler Snapshotvertrag
+
+Ein Snapshot sollte inhaltlich etwa folgende Struktur besitzen; das ist ein Architekturvorschlag, kein
+existierender Onshape-Standard:
+
+
+  Bereich                           Pflichtinhalt                            Grund
+
+                                    Schema-Version, Capture-Zeit,
+  snapshot                                                                   Unveränderlichkeit
+                                    Snapshot-ID, Root-Hash
+
+                                    Document-ID, Element-ID, Version/
+  sources                                                                    exakter nativer Quellstand
+                                    Microversion, Konfiguration
+
+                                    Part-/Subassembly-Definition, STEP-      Geometrie nur einmal je
+  definitions
+                                    Datei, Hash, Einheiten                   tatsächlicher Quelle
+
+                                    eigene ID, vollständiger Assembly-       wiederholte Instanzen
+  occurrences
+                                    Pfad, Definition-Ref, Transform          korrekt unterscheiden
+
+                                    semantische ID, Rolle, lokaler
+  interfaces                        Frame, native Query/Attribute,           funktionale Identität
+                                    Topologieanker
+
+                                    native Ref → lokale BRep-Entität,
+  correspondence                                                             keine stillen Matches
+                                    Status + Begründung
+
+                                    Mate-/Relation-Daten oder explizite
+  motions                                                                    Funktionsprüfung
+                                    Trajektorie
+
+                                    unabhängiger Sollwert, Einheit,
+  requirements                                                               ausführbarer Vertrag
+                                    Relation, betroffene Interfaces
+
+                                    Maßtoleranzen, Prozessannahmen,
+  manufacturing_profiles                                                     Fertigungsevidenz
+                                    Korrelationen
+
+                                    optionale native                         Qualifikation/
+  capture_evidence
+                                    Referenzmessungen                        Differentialtest
+
+                                    API-/Exporter-/Parser-/OCCT-
+  toolchain                                                                  Reproduzierbarkeit
+                                    Version, Exportoptionen
+
+                                    alle Artefakte und relevante
+  hashes                                                                     Integrität
+                                    Metadaten
+
+Das Wiederverwenden von Geometrie ist wichtig. Zehn Instanzen derselben Schraube sollten eine
+Geometriedefinition und zehn Occurrences mit eigener Pose/Identität besitzen. glTF verwendet
+dasselbe Prinzip technisch bereits: mehrere Nodes dürfen dasselbe Mesh mit unterschiedlichen
+Transformationen instanziieren. 17
+
+
+Onshape selbst liefert die dafür benötigte konzeptionelle Trennung von Part-/Assembly-Struktur und
+Occurrences; Microversions sind historische Modellzustände und Assembly-Occurrences sind
+eigenständige Instanzobjekte. 34
+
+
+
+
+                                                    15
+Funktionale Schnittstellen als First-Class Objects
+
+Für eine Schraube-Bohrung-Beziehung sollte der Requirement-Graph ungefähr so aussehen:
+
+
+
+  requirement: bolt_installation_R17
+    bolt_interface: fastener_M4_shank
+    receiving_interface: plate_mounting_hole_A
+
+
+    nominal_fit:
+      minimum_radial_clearance: 0.15 mm
+
+    installation:
+      path: along hole_A.axis
+      tool_envelope: hex_driver_3mm
+      allowed_contacts: [washer_seat]
+
+
+    production_model:
+      bolt_diameter: [...]
+      hole_diameter: [...]
+      positional_error: [...]
+      correlations: [...]
+
+    evidence_required:
+      nominal_geometry: BREP
+      path: CCD
+      manufacturing: WORST_CASE
+
+
+Das beantwortet die Leitfrage des Briefings besser als eine schwergewichtige neue geometrische
+Datenstruktur: Die Schraube, die Bohrung, ihr Pfad und die Fertigungsannahmen werden als
+unterschiedliche Begriffe modelliert und erst durch eine ausführbare Requirement-Definition
+verbunden.
+
+
+Die semantische Schnittstelle kann intern aus mehreren geometrischen Entitäten bestehen:
+
+
+
+  interface: plate_mounting_hole_A
+      frame
+      bore_surface
+      entrance_edge
+      exit_edge
+      nominal_axis
+      depth_range
+
+
+Damit bleibt sie auch nach einem Face-Split als Konzept dieselbe, obwohl sich ihre Topologieabbildung
+geändert hat.
+
+
+Ergebnisvertrag
+
+Ein Testergebnis sollte nicht nur assert True/False liefern. Empfohlen ist:
+
+
+
+
+                                                  16
+  result:
+    requirement_id
+    snapshot_id
+
+    status:
+      PASS | FAIL | INDETERMINATE | UNSUPPORTED | ERROR
+
+    measured:
+       value / interval
+       unit
+
+    procedure:
+      algorithm
+      backend
+      version
+      parameters
+
+    evidence:
+      source_geometry_hashes
+      interface_ids
+      matched_entities
+      witness_points
+      contact_or_collision_class
+      time_of_impact
+      optional_artifacts
+
+    uncertainty:
+      numerical
+      representation
+      import
+      manufacturing
+      measurement
+
+    assumptions:
+      ...
+
+    validity_scope:
+      ...
+
+    fallbacks_used:
+      ...
+
+    reproducer:
+      ...
+
+
+Die fünf Ergebniszustände haben klare Semantik:
+
+
+
+
+                                                  17
+ Status                 Bedeutung
+
+                        verfügbare Evidenz reicht aus, die Anforderung unter dokumentierten
+ PASS
+                        Annahmen zu beweisen
+
+ FAIL                   Evidenz beweist Verletzung
+
+ INDETERMINATE          Daten/Evidenz reichen nicht zur Entscheidung
+
+ UNSUPPORTED            der Prüfstand besitzt kein geeignetes Verfahren für diese Requirement-Klasse
+
+ ERROR                  vorgesehenes Verfahren konnte technisch nicht korrekt ausgeführt werden
+
+Diese Unterscheidung beseitigt eine besonders gefährliche Fehlerklasse: Solver-Ausfall wird nie als
+geometrisches Ergebnis interpretiert.
+
+
+Für Provenienz reicht zunächst ein kleines typisiertes JSON-/Pydantic-Modell. Das W3C-PROV-Modell
+zeigt eine geeignete spätere Verallgemeinerung: Es unterscheidet Entities, Activities und Agents sowie
+Beziehungen wie „used“, „wasGeneratedBy“ und „wasDerivedFrom“. 35 Man könnte deshalb später
+ausdrücken, dass ein Messergebnis durch OCCT-distance-v8.0.1 aus zwei Snapshot-Geometrien
+erzeugt wurde, ohne die interne Datenstruktur sofort auf RDF umzustellen.
+
+
+Ähnlich gilt für SysML v2: Der 2025 final angenommene Standard besitzt nun auch maschinenlesbare
+Modelle und ein JSON-Schema. 36 Das macht ihn interessant, falls Requirements über CAD hinaus mit
+Elektrik, Software, Systemfunktion und Verifikationsfällen verbunden werden müssen. Für den heutigen
+kleinen/mittleren mechanischen Prüfstand wäre ein zwingendes SysML-Repository aber mehr
+Integrationsaufwand als Nutzen.
+
+
+Cache und Prozessmodell
+
+Der Cache-Schlüssel darf nicht nur hash(step_file) sein. Sinnvoll ist konzeptionell:
+
+
+                                    K = H(G, T , A, V , P , R, C)
+
+mit
+
+
+      • G: Geometrie-/Snapshot-Hashes,
+      • T : Transformationen,
+      • A: Algorithmus/Backend,
+      • V : Tool-/Kernelversion,
+      • P : numerische Parameter/Toleranzen,
+      • R: Requirement,
+      • C : relevanter Kontext wie Fertigungsprofil und Bewegungsdefinition.
+
+Ändert sich beispielsweise nur die Pose einer Occurrence, muss das STEP der Definition nicht neu
+importiert werden; der Assembly-/Collision-Cache kann trotzdem invalidiert werden.
+
+
+Für native Kerneloperationen empfiehlt sich ein langlebiger Pool isolierter Worker-Prozesse: STEP
+laden und BVHs/BReps wiederverwenden, aber pro Job Timeout, Speichergrenze und Crash-Erkennung
+anwenden. Das kombiniert Caching mit Fehlerisolierung. Der Python-Hauptprozess sammelt nur
+typisierte Resultate. Ein Segfault oder endloser Boolean wird dann zu ERROR plus reproduzierbarem
+Input-Artefakt statt zum Absturz der Testsuite.
+
+
+
+
+                                                     18
+Ein Wechsel des gesamten Systems zu C++ oder Rust ist derzeit nicht gerechtfertigt. Vorher müssen
+Profildaten STEP-Parsing, BRep-Aufbau, Tessellierung, BVH-Aufbau, FFI-/Prozesskosten und eigentliche
+Query-Zeit separat ausweisen. Parry zeigt zwar, dass ein moderner Rust-Collision-Stack existiert, und
+Coal hat einen aktuellen C++/Python-Pfad; daraus folgt aber kein Geschwindigkeitsvorteil für den
+bestehenden Workload. 37
+
+
+Experimente, Benchmark, Migration und konkrete
+Handlungsempfehlungen
+Vor einer größeren Implementierung sollten wenige Experimente Architekturunsicherheit beseitigen.
+Dabei ist die wichtigste Qualitätsmetrik nicht durchschnittliche Laufzeit, sondern zunächst die Zahl
+falsch bestandener Prüfungen.
+
+
+Entscheidende Experimente
+
+                                                Vorher festgelegtes
+ Experiment           Gegenfälle / Daten                                   Architekturentscheidung
+                                                Erfolgskriterium
+
+                                                0 stille
+                      Ebenen, Zylinder, B-
+                                                Fehlzuordnungen im
+                      Spline, symmetrische
+ Native↔STEP-                                   Benchmark; unlösbare       Reicht Sidecar +
+                      Faces, Face-Split/
+ Korrespondenz                                  Fälle müssen               Geometriematcher?
+                      Merge, Export-
+                                                 AMBIGUOUS/MISSING
+                      Preprocessing an/aus
+                                                liefern
+
+                      korrekter Fall, zu
+                      kleine Bohrung,           jeder Defekt wird FAIL
+                      Achsversatz,              oder INDETERMINATE,
+ Vollständiger
+                      Zwischenhindernis, zu     niemals falsches PASS;     Validiert gesamtes
+ Schraube-
+                      enge                      vollständige               Datenmodell
+ Bohrung-Fall
+                      Fertigungstoleranz,       Evidenzkette
+                      fehlendes Interface-      reproduzierbar
+                      Mapping
+
+                                                empirische
+                                                Fehlerverteilung
+                      Kugeln/Zylinder, Torus,
+                                                dokumentiert; keine
+                      freie NURBS, sehr
+ Mesh↔BRep-                                     Mesh-PASS-Regel            Definition der
+                      kleine Spalte, dünnes
+ Grenze                                         behauptet CAD-             Eskalationsschwellen
+                      Hindernis; mehrere
+                                                Sicherheit außerhalb
+                      Tessellierungen
+                                                einer bewiesenen
+                                                Margin
+
+                                                0 verpasste Kollisionen
+ Translation/         geradlinig, revolut,
+                                                relativ zur jeweiligen     FCL behalten, Coal
+ Rotation/            screw-like, Hindernis
+                                                Referenzgeometrie;         ergänzen oder eigenes
+ gekoppelte           zwischen Samples,
+                                                Interpolations-/CCD-       Bound nötig?
+ Bewegung             tangentialer Kontakt
+                                                Modell dokumentiert
+
+
+
+
+                                                  19
+                                                 Vorher festgelegtes
+ Experiment           Gegenfälle / Daten                                     Architekturentscheidung
+                                                 Erfolgskriterium
+
+                      kaputtes STEP, near-       0 falsch-positive PASS;
+                      coincident Faces,          reproduzierbarer
+ Failure              degenerierte                ERROR/                     Betriebsarchitektur
+ containment          Geometrie,                 INDETERMINATE ;             qualifiziert
+                      absichtlicher Timeout,     restliche Suite läuft
+                      Worker-Crash               weiter
+
+
+Native↔STEP-Test. Der Test muss zwei Fragen getrennt beantworten:
+
+
+    1. Können explizit benannte funktionale Schnittstellen nach dem Export zuverlässig lokal
+       wiedergefunden werden?
+    2. Können beliebige native Faces generell korrespondiert werden?
+
+Die erste Frage ist wesentlich wichtiger und wahrscheinlich leichter lösbar. Die zweite muss nicht zu 100
+% lösbar sein.
+
+
+Als Kontrollarm sollte includeExportIds experimentell bei den Formaten ausprobiert werden, die
+die API tatsächlich akzeptiert. Erwartung aufgrund des aktuellen Schemas ist, dass die relevante ID-
+Semantik an Parasolid-Attribute gebunden ist; STEP-ID-Transport wäre ein überraschendes, extra zu
+belegendes Ergebnis. 38
+
+
+Schraube-Bohrung-End-to-End. Dieses Experiment sollte die Architektur zu einer einzigen
+verständlichen Aussage zwingen:
+
+
+       „Diese M4-Schraube kann entlang dieses Pfades durch diese Bohrung montiert werden
+       und besitzt unter dem angegebenen Fertigungsmodell mindestens X Spiel.“
+
+
+Dafür müssen nacheinander geprüft werden:
+
+
+
+  semantische Zuordnung
+  → nominale Achse/Profile
+  → statische Passung
+  → Einbaupfad/CCD
+  → Werkzeugraum
+  → Toleranzmodell
+  → Ergebnisintervall
+  → Evidenzbericht
+
+
+Schon ein einziger unbekannter Schritt – etwa keine eindeutige Zuordnung der Bohrung – muss den
+Gesamtstatus von PASS auf INDETERMINATE verschieben.
+
+
+Benchmarkkorpus
+
+Der Korpus aus dem Briefing ist gut gewählt und sollte bewusst klein bleiben: tangentialer Kontakt, fast
+koinzidente Flächen, winzige Interferenz, vollständiger Einschluss, dünnes Hindernis im
+Bewegungsweg, freie NURBS-Flächen, wiederholte identische Instanzen, Face-Split/-Merge, falsche
+
+
+
+
+                                                   20
+Einheit, falsche Pose, defekte Geometrie, Timeout, fehlende Korrespondenz und korrelierte
+Toleranzquelle.
+
+
+Hinzu kommen drei analytische „Gold“-Familien, deren exakte Lösung leicht kontrollierbar ist:
+
+
+     • Kugel/Kugel, Ebene/Kugel, koaxiale beziehungsweise versetzte Zylinder für Distanzen;
+     • Quader mit bekannten Schnittvolumina;
+     • starre Bewegung einfacher Primitive an Hindernissen mit analytisch berechenbarem
+       Kontaktzeitpunkt.
+
+Differentialtests zwischen OCCT, FCL/Coal und einem nativen Onshape-Capture-Wert sind wertvoll, aber
+Mehrheitsentscheid ist kein Wahrheitsbeweis. Bei Diskrepanz sollte der Fall automatisch als
+Benchmarkartefakt konserviert werden.
+
+
+Property-Based und metamorphe Tests sind insbesondere für folgende Invarianten geeignet:
+
+
+                                          d(A, B) = d(B, A)
+
+bei symmetrischer Distanz,
+
+
+                                         d(T A, TB) = d(A, B)
+
+für dieselbe starre Transformation T , sowie Skalierungsbeziehungen bei einheitlicher Skalierung.
+Einheiten- und Transformationsfehler werden damit oft effektiver entdeckt als mit weiteren
+handgeschriebenen CAD-Modellen.
+
+
+Inkrementeller Migrationsplan
+
+Sofort nutzbares erstes Ergebnis: Noch ohne neuen Geometriebackend sollte die bestehende
+Testsuite einen gemeinsamen Ergebnisvertrag und fünf Zustände erhalten. Jeder bisherige Fallback, der
+bei Ausnahme oder fehlender Geometrie „kein Konflikt“ meldet, muss auf INDETERMINATE oder
+ERROR umgestellt werden. Gleichzeitig werden Toolversion, Geometriehash und Parameter
+mitprotokolliert. Dieser Schritt reduziert unmittelbar das Risiko falsch bestandener Tests.
+
+
+Danach Snapshot-Identität: Der Exporter/Capture-Schritt friert Onshape-Microversion
+beziehungsweise Version, Konfiguration, vollständige Occurrence-Pfade, absolute Transformationen
+und Einheiten ein. Die API-Architektur von Onshape macht Microversions zu geeigneten
+unveränderlichen Referenzen; Konfigurationen gehören ausdrücklich zum Modellzustand. 9
+
+
+Danach semantische Schnittstellen: Ein kleiner FeatureScript-/API-Adapter extrahiert oder verwaltet
+benannte Interfaces mit Attributen/Queries und lokalen Frames. Hier entsteht der erste wirklich neue
+fachliche Baustein, weil keine vorhandene allgemeine Bibliothek weiß, dass eine konkrete
+Zylinderfläche „Bohrung für Schraube X“ bedeutet. FeatureScript liefert dafür Query-, Attribute- und
+Tracking-Mechanismen. 21
+
+
+Danach BRep-Eskalation: OCCT/XCAF wird zur systematischen lokalen BRep-Schicht. Meshes sollten,
+soweit möglich, deterministisch aus genau derselben importierten BRep generiert und mit Provenienz
+versehen werden; vorhandene STL-Maschinenkörper bleiben als mesh_only unterstützt.
+
+
+Danach Bewegung: Der heutige lineare Conservative-Advancement-Test wird in eine Trajektorien-API
+überführt. Translation ist der erste Trajektorientyp; Rotation und gekoppelte Bewegung folgen mit
+
+
+
+
+                                                    21
+expliziter Interpolations-/Geschwindigkeitsschranke. FCL bleibt zunächst Backend. Coal wird parallel auf
+demselben Benchmark getestet; seine aktuelle 3.0.x-Linie rechtfertigt einen Adapterversuch, aber noch
+keine Migration. 39
+
+
+Danach Fertigung: Requirement-Modelle erhalten Intervalle, Korrelationen und optional empirische
+Prozessverteilungen. Physische Messergebnisse können dieselben semantischen Interfaces
+referenzieren, werden aber als andere Evidenzquelle geführt.
+
+
+Langfristige Forschungsrichtung: Am interessantesten ist nicht ein Universal-SDF, sondern eine
+zertifizierbare Relation zwischen BRep und schneller Kollisionsrepräsentation. Denkbar sind
+konservative Hüllmeshes, lokale Fehlerbounds oder adaptive Envelopes. Gelingt das, könnten viele
+heute nur als Kandidatfilter verwendbare Mesh-Distanzen tatsächlich PASS/FAIL mit formaler Margin
+entscheiden. Eine zweite langfristige Forschungsfrage ist eine robuste native→STEP-Korrespondenz
+über analytische und topologische Signaturen – aber nur mit explizitem Ambiguitätsmodell.
+
+
+Priorisierte Build/Buy/Reuse-Entscheidung
+
+ Priorität         Maßnahme                               Entscheidung
+
+ Sehr hoch         pytest/Python-Orchestrierung           Wiederverwenden
+
+                   gemeinsamer Result-/Evidence-          Neu entwickeln; klein und
+ Sehr hoch
+                   Vertrag                                domänenspezifisch
+
+ Sehr hoch         Onshape Snapshot Capture               Adapter ergänzen
+
+                   semantische Interfaces + native        Neu entwickeln, weil
+ Sehr hoch
+                   Anchors                                Konstruktionsabsicht projektspezifisch ist
+
+ Sehr hoch         OCCT-BRep                              Vorhandenen Stack ausbauen
+
+                   trimesh/FCL für schnelle               Wiederverwenden, aber Evidenzgrenzen
+ Hoch
+                   Geometrie                              dokumentieren
+
+                   Worker-Isolation/Timeout/
+ Hoch                                                     Architektur verbessern
+                   Reproducer
+
+ Mittel            Coal                                   Benchmark + Adapter, dann entscheiden
+
+                                                          Nur für konkrete Mesh-Boolean-/Repair-
+ Mittel            Manifold
+                                                          Lücke
+
+                                                          Nur wenn ein konkreter Algorithmus den
+ Niedrig           CGAL
+                                                          GPL-/Integrationsaufwand rechtfertigt
+
+ Niedrig           Rust/Parry-Rewrite                     Derzeit nicht empfehlen
+
+                   eigene universelle SDF/
+ Niedrig                                                  Nicht empfehlen
+                   Volumenrepräsentation
+
+ Nicht                                                    Durch Randbedingung ausgeschlossen
+                   eigene Parasolid-Integration
+ empfehlen                                                und architektonisch unnötig
+
+ Nicht             STEP als alleinige Identitäts-/        Pipeline unterstützt die benötigte
+ empfehlen         Requirement-Datenbank                  Semantik nicht zuverlässig
+
+
+
+
+                                                     22
+  Priorität         Maßnahme                                Entscheidung
+
+  Nicht             Face-Hash aus Fläche/
+                                                            Nur Kandidatenfilter
+  empfehlen         Schwerpunkt als Identität
+
+  Nicht
+                    Solver-Fehler → „keine Kollision“       Unsicherheitsmodell verletzend
+  empfehlen
+
+
+Kommentierte maßgebliche Quellen und Implementierungen
+
+Onshape Architecture und Associativity sind die wichtigsten Primärquellen für das Identitätsmodell.
+Sie belegen Microversions, Modellstruktur und insbesondere die Nicht-Persistenz topologischer IDs
+sowie Split-/Resolve-Verhalten von idtranslations . 40
+Evidenzart: Hersteller-/API-Spezifikation; hohe Autorität für Onshape-Verhalten.
+
+
+Aktuelles öffentliches Onshape-OpenAPI-Schema v16 ist für includeExportIds entscheidend.
+Die aktuelle Beschreibung bindet die Topologie-IDs an Parasolid-Attribute; dies ist starke negative
+Evidenz gegen die Annahme eines dokumentierten STEP-ID-Pfads. 2
+Evidenzart: öffentliches maschinenlesbares API-Schema. Die tatsächliche STEP-Ausgabe muss dennoch
+experimentell getestet werden.
+
+
+Onshape Supported File Formats/MBD dokumentiert die reale Import-/Exportmatrix. Besonders
+wichtig ist die Differenz zwischen AP242-Normumfang und Onshapes tatsächlicher Unterstützung.            41
+
+Evidenzart: aktuelle Herstellerdokumentation, zuletzt im September 2026 aktualisiert. 42
+
+
+ISO 10303-242:2025 ist die aktuelle vierte Edition von AP242 und umfasst deutlich mehr als reine BRep-
+Geometrie, darunter PDM/Konfiguration und V&V-bezogene Daten. 14
+Evidenzart: normative Primärquelle. Sie belegt Formatfähigkeit, nicht Implementierungsunterstützung.
+
+
+FeatureScript Standard Library ist für native Referenzmessungen, Queries, Tracking und semantische
+Attribute zentral. evDistance , evCollision und Oberflächendefinitionen eignen sich gut als
+Capture-time Referenz beziehungsweise Differential-Oracle.       43
+
+Evidenzart: Hersteller-API-Dokumentation.
+
+
+Open CASCADE Technology ist der sinnvollste lokale BRep-Kern unter den Randbedingungen. Die 8.0-
+Reihe ist 2026 aktiv gepflegt; XCAF/STEPCAF bietet den relevanten STEP-/Assembly-/Metadatenpfad.
+ 44
+
+Evidenzart: Implementierungsdokumentation und Releases. Empfehlung für Robustheit muss
+trotzdem durch den eigenen Benchmark qualifiziert werden.
+
+
+FCL-Arbeit von Pan, Chitta und Manocha liefert die wissenschaftliche Grundlage für die verwendete
+Klasse von Kollisions-/Proximity-Verfahren und beschreibt diskrete Kollision, CCD und Distanzabfragen.
+ 30
+
+Evidenzart: peer-reviewte Primärarbeit plus gepflegte Implementierung.         45
+
+
+
+
+Coal ist eine aktuell gepflegte Evolution dieser Bibliotheksfamilie; Stand 29. Juni 2026 ist v3.0.4 aktuell.
+ 12
+
+Evidenzart: Projekt-Releases. Dies beweist Wartung und Funktionen, nicht automatisch bessere
+Performance für diesen Prüfstand.
+
+
+
+
+                                                     23
+CGAL Polygon Mesh Processing ist eine wichtige Referenz dafür, wie „Exact predicates“ korrekt
+einzuordnen sind: selbst CGAL weist darauf hin, dass exakte Prädikate ohne exakte Konstruktionen
+nicht alle geometrischen Einbettungsprobleme beseitigen. 5 Die aktuelle Lizenzsituation muss
+paketbezogen bewertet werden. 46
+Evidenzart: Implementierungsdokumentation.
+
+
+Khronos glTF 2.0 belegt den Nutzen eines getrennten Szenen-/Darstellungsformats: Hierarchie, Node-
+Transformationen und wiederverwendete Mesh-Instanzen sind native Konzepte, während die
+Geometrie polygonal bleibt. 17
+Evidenzart: offene Formatspezifikation.
+
+
+3MF Consortium ist relevant für den AM-/Druckpfad; die Core-Spezifikation und Erweiterungen
+adressieren Einheiten, Meshes, Transformationen und Fertigungsmetadaten. 18
+Evidenzart: Formatspezifikation/Consortium-Dokumentation.
+
+
+BIPM/JCGM GUM sollte die begriffliche Grundlage für reale Messunsicherheit und statistische
+Propagation bilden. Die JCGM-Publikationsreihe umfasst GUM, Monte-Carlo-Propagation und seit 2026
+weitere Ergänzungen. 6
+Evidenzart: internationale metrologische Primärquelle.
+
+
+W3C PROV-O und SysML v2 zeigen zwei sinnvolle Skalierungsrichtungen des Requirement-/
+Nachweismodells: PROV für standardisierte Herkunftsbeziehungen, SysML v2 für umfassende
+Systemanforderungen und Verifikation. 47 Für den aktuellen Scope rechtfertigt keiner der beiden
+Standards, das kleine interne Contract-Modell sofort zu ersetzen.
+
+
+Schlussentscheidung: Der Prüfstand sollte nicht versuchen, CAD in ein einziges „testbares
+Universalformat“ zu übersetzen. Die robuste Lösung besteht darin, Quellidentität und
+Konstruktionsabsicht nativ einzufrieren, BRep und Mesh bewusst nebeneinander zu halten,
+Anforderungen von Messungen zu trennen und jeder Prüfaussage explizit zuzuordnen, was sie
+tatsächlich beweist. Unter diesen Regeln ist der vorhandene Python-/OCCT-/Mesh-/FCL-Stack kein
+Übergangsproblem, sondern bereits eine gute Basis. Die größte fehlende Komponente ist die
+belastbare Verbindung zwischen Onshape-Identität, semantischen Schnittstellen, lokaler STEP/
+BRep-Geometrie und einem formal ehrlichen Evidenzvertrag.
+
+
+
+ 1  20 ISO 10303-242:2025 - Industrial automation systems and integration — Product data
+
+representation and exchange — Part 242: Application protocol: Managed model-based 3D engineering
+https://www.iso.org/standard/84300.html?utm_source=chatgpt.com
+
+ 2   22   23   38   github.com
+https://github.com/onshape-public/go-client/raw/refs/heads/master/openapi.json
+
+ 3   11   Associativity |
+https://onshape-public.github.io/docs/api-adv/associativity/?utm_source=chatgpt.com
+
+ 4   30FCL: A general purpose library for collision and proximity queries | IEEE Conference Publication |
+IEEE Xplore
+https://ieeexplore.ieee.org/document/6225337?utm_source=chatgpt.com
+
+ 5   CGAL 6.0 - Polygon Mesh Processing: User Manual
+https://doc.cgal.org/6.0/Polygon_mesh_processing/index.html?utm_source=chatgpt.com
+
+
+
+
+                                                          24
+ 6   32   JCGM100-2008E - BIPM
+https://www.bipm.org/fr/doi/10.59161/jcgm100-2008e?utm_source=chatgpt.com
+
+ 7   Object Management Group Approves Final Adoption of the SysML V2 Specification | Object
+     36
+
+Management Group
+https://www.omg.org/news/releases/pr2025/07-21-25.htm?utm_source=chatgpt.com
+
+ 8   Standard Library Documentation
+https://cad.onshape.com/FsDoc/library.html
+
+ 9   34   40   Architecture |
+https://onshape-public.github.io/docs/api-intro/architecture/?utm_source=chatgpt.com
+
+10   Assemblies |
+https://onshape-public.github.io/docs/api-adv/assemblies/?utm_source=chatgpt.com
+
+12   39   Releases · coal-library/coal · GitHub
+https://github.com/coal-library/coal/releases?utm_source=chatgpt.com
+
+13   19   OpenVDB: openvdb/tools/TopologyToLevelSet.h File Reference
+https://www.openvdb.org/documentation/doxygen/TopologyToLevelSet_8h.html?utm_source=chatgpt.com
+
+14 ISO 10303-242:2025 - Industrial automation systems and integration — Product data representation
+and exchange — Part 242: Application protocol: Managed model-based 3D engineering
+https://www.iso.org/es/contents/data/standard/08/43/84300.html?utm_source=chatgpt.com
+
+15   41   Supported File Formats
+https://cad.onshape.com/help/Content/File/supported_file_formats.htm?utm_source=chatgpt.com
+
+16   Open CASCADE Technology: Data Fields
+https://dev.opencascade.org/doc/dev/refman/html/functions_g.html?utm_source=chatgpt.com
+
+17   glTF™ 2.0 Specification
+https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html?utm_source=chatgpt.com
+
+18   3MF Consortium – The File Format for 3D Printing
+https://3mf.io/?utm_source=chatgpt.com
+
+21   43   Standard Library Documentation
+https://cad.onshape.com/FsDoc/library.html?utm_source=chatgpt.com
+
+24   29   44   Releases · Open-Cascade-SAS/OCCT · GitHub
+https://github.com/Open-Cascade-SAS/OCCT/releases?utm_source=chatgpt.com
+
+25   The Computational Geometry Algorithms Library
+https://www.cgal.org/?utm_source=chatgpt.com
+
+26   Releases · elalish/manifold · GitHub
+https://github.com/elalish/manifold/releases?utm_source=chatgpt.com
+
+27   GitHub - BrunoLevy/geogram: a programming library with geometric algorithms · GitHub
+https://github.com/BrunoLevy/geogram?utm_source=chatgpt.com
+
+28   37   GitHub - dimforge/parry: 2D and 3D collision-detection library for Rust. · GitHub
+https://github.com/dimforge/parry?utm_source=chatgpt.com
+
+31   Mates
+https://cad.onshape.com/help/Content/Assembly/mates.htm?utm_source=chatgpt.com
+
+33   Guides in Metrology - BIPM
+https://www.bipm.org/en/web/guest/publications/guides?utm_source=chatgpt.com
+
+
+
+
+                                                          25
+35   47   PROV-O: The PROV Ontology
+https://www.w3.org/TR/prov-o/?utm_source=chatgpt.com
+
+42   Formatos de archivo compatibles
+https://cad.onshape.com/help/es/Content/File/supported_file_formats.htm?utm_source=chatgpt.com
+
+45   GitHub - flexible-collision-library/fcl: Flexible Collision Library · GitHub
+https://github.com/flexible-collision-library/fcl?utm_source=chatgpt.com
+
+46   CGAL 6.0.3 - Manual: License
+https://doc.cgal.org/6.0.3/Manual/license.html?utm_source=chatgpt.com
+
+
+
+
+                                                            26
+

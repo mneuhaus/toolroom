@@ -1,0 +1,32 @@
+[project]
+name = "pruefstand"
+version = "0.1.0"
+description = "pytest-Prüfstand für Onshape-native CAD-Teile: Spalte, Überschneidungen, Abdeckung, Vorstehen, Unverändert-Regionen gegen einen Maschinenkontext (STEP/STL + machine.json)"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "numpy>=2,<3", "scipy>=1.14,<2", "trimesh>=4.5,<5", "rtree>=1.3,<2", "pyyaml>=6,<7",
+  "shapely>=2.0,<3", "networkx>=3,<4",
+  "build123d==0.10.0", "ocp-gordon==0.2.0",
+  "python-fcl>=0.7", "pytest>=8", "pillow>=10",
+  "cad-khana",
+]
+
+[project.scripts]
+pruefstand = "pruefstand.cli:main"
+
+[project.entry-points.pytest11]
+pruefstand = "pruefstand.pytest_plugin"
+
+[tool.uv.sources]
+cad-khana = { path = "../../cad-khana", editable = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pruefstand"]
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider -p pytester"
+testpaths = ["tests"]

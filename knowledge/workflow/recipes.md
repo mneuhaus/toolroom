@@ -4,7 +4,7 @@ A recipe selects existing capabilities and their handoffs. It does not require a
 
 ## Design a new FDM part
 
-Requirements and interfaces → selected CAD backend → deliberate print pose → geometry and assembly checks → actual slicer profile → verified export. Give any required fit experiment its own small coupon.
+Requirements and interfaces → selected CAD backend → deliberate print pose → geometry and assembly checks ([offline verification](offline-verification.md) for parts that mate with a machine) → actual slicer profile → verified export. Give any required fit experiment its own small coupon.
 
 ## Revise an existing Onshape mount
 

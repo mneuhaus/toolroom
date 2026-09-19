@@ -1,0 +1,92 @@
+:root {
+  --bg: #15171a;
+  --panel: #1d2024;
+  --panel-2: #24282d;
+  --line: #333840;
+  --text: #dfe3e8;
+  --dim: #8d959f;
+  --rot: #c8503f;
+  --gelb: #c9a227;
+  --gruen: #5c8a4a;
+  --blau: #6a8fae;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--bg); color: var(--text);
+  font: 13px/1.45 -apple-system, "Helvetica Neue", Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; padding: 12px 18px; background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+header h1 { font-size: 15px; font-weight: 600; margin: 0 0 2px; }
+header .meta { color: var(--dim); font-size: 12px; }
+.ampel { display: flex; gap: 10px; }
+.ampel .zelle {
+  min-width: 78px; padding: 6px 10px; border-radius: 3px;
+  background: var(--panel-2); border: 1px solid var(--line); text-align: right;
+}
+.ampel .zahl { font-size: 18px; font-weight: 600; display: block; }
+.ampel .was { font-size: 11px; color: var(--dim); }
+.ampel .failed .zahl, .ampel .error .zahl { color: var(--rot); }
+.ampel .warnung .zahl { color: var(--gelb); }
+.ampel .passed .zahl { color: var(--gruen); }
+
+main { flex: 1; display: flex; min-height: 0; }
+#liste {
+  width: 400px; flex: none; overflow-y: auto;
+  background: var(--panel); border-right: 1px solid var(--line);
+}
+#buehne { flex: 1; position: relative; min-width: 0; }
+#canvas { position: absolute; inset: 0; overflow: hidden; }
+#canvas canvas { display: block; width: 100%; height: 100%; }
+
+.test { border-bottom: 1px solid var(--line); }
+.test > .kopf {
+  display: flex; gap: 8px; align-items: baseline;
+  padding: 8px 12px; cursor: pointer;
+}
+.test > .kopf:hover { background: var(--panel-2); }
+.test .punkt { width: 8px; height: 8px; border-radius: 50%; flex: none; margin-top: 5px; background: var(--dim); }
+.test.failed .punkt, .test.error .punkt { background: var(--rot); }
+.test.warnung .punkt { background: var(--gelb); }
+.test.passed .punkt { background: var(--gruen); }
+.test.xfailed .punkt, .test.skipped .punkt { background: #5b6571; }
+.test .name { flex: 1; word-break: break-word; }
+.test .status { color: var(--dim); font-size: 11px; white-space: nowrap; }
+.test .inhalt { display: none; padding: 0 12px 10px 28px; }
+.test.offen .inhalt { display: block; }
+
+.mess {
+  border-left: 2px solid var(--line); padding: 6px 10px; margin: 6px 0;
+  background: var(--panel-2); cursor: pointer;
+}
+.mess:hover { border-left-color: var(--blau); }
+.mess.aktiv { border-left-color: var(--blau); background: #2b323a; }
+.mess.fehler { border-left-color: var(--rot); }
+.mess .titel { font-weight: 600; }
+.mess .prim { color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+.mess table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+.mess td { padding: 1px 0; vertical-align: top; }
+.mess td.k { color: var(--dim); padding-right: 10px; width: 55%; }
+.mess td.v { font-variant-numeric: tabular-nums; }
+.mess .hinweis { color: var(--gelb); margin-top: 6px; font-size: 11.5px; }
+.mess img { max-width: 100%; margin-top: 8px; border: 1px solid var(--line); }
+.mess .ohne { color: var(--dim); font-size: 11.5px; margin-top: 4px; }
+.leer { color: var(--dim); padding: 4px 0; }
+
+#hud {
+  position: absolute; left: 14px; top: 14px; max-width: 46%;
+  background: rgba(24,27,31,.88); border: 1px solid var(--line);
+  border-radius: 3px; padding: 8px 12px; pointer-events: none;
+}
+#hud-titel { font-weight: 600; }
+#hud-text { color: var(--dim); font-size: 12px; }
+#legende {
+  position: absolute; right: 14px; bottom: 12px; color: var(--dim);
+  font-size: 11.5px; text-align: right; pointer-events: none;
+}
+#warnungen { padding: 8px 12px; color: var(--gelb); font-size: 11.5px; border-bottom: 1px solid var(--line); }
