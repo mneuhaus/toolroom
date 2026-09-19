@@ -1,6 +1,11 @@
 # Prüfstand — Handoff für die Implementierungs-Session
 
-> Etappen 1 und 2 sind abgenommen. Der aktuelle Auftrag steht in `PLAN-etappe3.md`.
+> **Stand 19.09.2026:** Etappen 1–5 sind gebaut und abgenommen (Suite 298 passed; Berichte in `docs/berichte/`,
+> Pläne `PLAN-etappe3.md`/`PLAN-etappe4.md` sind erledigt). **Kein weiterer Ausbau geplant.** Marcs Urteil
+> 18.09.: der Mehrwert ist offen; bewährt haben sich `access`, posiertes `overlap`/`gap` und `absatz`
+> (siehe `../knowledge/workflow/offline-verification.md`). Der Prüfstand läuft ab jetzt nur nebenbei am
+> nächsten echten Teil mit. Bekannte offene Werkzeugfehler: `overlap` meldete 2 090 mm³ Durchdringung als
+> „touching" (SC15-Adapter R1, im Spec per Manifold gegengeprüft) — ungefixt.
 
 Stand 17.09.2026, abgestimmt mit Marc am Ende der R6d-Session. Diese Datei ist der Auftrag für eine **frische Session**: lesen, dann bauen. Hintergrund in den Memories `cadspec-plan`, `delegation-preference`, `cad-design-preferences`.
 
