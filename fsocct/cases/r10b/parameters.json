@@ -1,0 +1,8 @@
+{
+  "edgeAngle": "R10bEdgeAngle.K15",
+  "overrideNose": "false",
+  "noseLength": "0*millimeter",
+  "catchPitch": "4*millimeter",
+  "catchHeight": "0.5*millimeter",
+  "innerWallThickness": "3.2*millimeter"
+}

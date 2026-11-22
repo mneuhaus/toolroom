@@ -8,6 +8,8 @@ Declare the build orientation and actual usable plate. A nominal machine volume 
 
 An overhang angle is measured from vertical in these profiles. The 45-degree angle and 20 mm bridge span are uncalibrated search limits. The classifier cannot decide adhesion, cooling, support contact or surface quality. Existing deliberately supported mating faces can be the correct choice. The strength and surface consequences of a chosen pose are collected in [print orientation](print-orientation.md).
 
+Put horizontal faces of the print pose on a layer boundary. The slicer cuts each layer at its middle; a flat face at exactly that height (4.9 mm with 0.2 mm layers) is printed or dropped triangle by triangle once the mesh carries any height noise, for example after turning the part in the slicer, and the surface shows angular patches one layer deep. Multiples of 0.2 mm from the bed are safe for 0.2 and 0.1 mm layers with a 0.2 mm first layer. Seen on the filament drawer front plate, 15.11.2026.
+
 Retain approved screw contours and fits. A generic insert table, plain pilot-hole diameter or hole compensation cannot replace a purchased insert's geometry or a custom crush-rib feature. State whether a clearance is radial, diametral or per side before using it.
 
 A sketch text box, font em size, x-height and physical stroke width are different quantities. Check actual glyph geometry and sliced strokes; test small labels. A 0.3 mm engraving may cross one or two layers at a 0.2 mm layer height depending on orientation and slicing phase. Do not promise legibility from the nominal box size.

@@ -1,0 +1,10 @@
+{
+  "9a9e7448c98b9ecd76377f8f@e0aa7b219e284b36c72c543e": "dependencies/carrier.json",
+  "082fddfe5e1cad4cfb319dea@e0aa7b219e284b36c72c543e": "dependencies/base.json",
+  "ea496e50411086ad1e5586ce@e0aa7b219e284b36c72c543e": "dependencies/frame.json",
+  "b319ae3e559c6c22f081d866@e0aa7b219e284b36c72c543e": "dependencies/tray.json",
+  "8c89f201cd695250a1d425d3@e0aa7b219e284b36c72c543e": "dependencies/adapter.json",
+  "3217838e20e9b6c7d5238e77@e0aa7b219e284b36c72c543e": "dependencies/camera.json",
+  "5d7f2d0f5999bf34c12bade6@e0aa7b219e284b36c72c543e": "dependencies/belt.json",
+  "a8a4f8bca2c83318af0e51ee@e0aa7b219e284b36c72c543e": "dependencies/floor.json"
+}

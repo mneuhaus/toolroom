@@ -60,7 +60,7 @@ Apply the [assembly review](../../../knowledge/construction/assembly-review.md) 
 These were Marc's project standards in the source notes; apply their dimensions only through an explicit current project profile.
 
 - **Geometric interlocking before screws; avoid notches:** 0.42 mm chamfers / R4.2 rounds. Print plastic screws horizontally.
-- **M3 crush grip** (`m3_hybrid_hole`): wall r2.1, three ribs formed by R0.84 arcs tangent to r1.1 (clear diameter 2.2 mm), transitions R0.42. Retrofit recipe: Ø6.3 clean bore → fresh Ø6.6 disc with 0.15 mm anchoring overlap → one wavy contour cut comprising 12 arcs. Through-hole diameter: 3.4 mm.
+- **M3 crush grip**: use the selected [printed screw joint standard](../../../knowledge/construction/printed-screw-joints.md) and its exact profile/module. Historical retrofit recipe: Ø6.3 clean bore → fresh Ø6.6 disc with 0.15 mm anchoring overlap → one wavy contour cut comprising 12 arcs. Check the actual remaining wall and source variant before retrofitting.
 - **608 bearing seat:** Ø22.7 pocket plus six crush ribs, r0.7 at r11.6.
 - **Shaft clamp:** an axial M3 screw presses the flank against the D-flat through a Ø2.8 channel with 0.2 mm overlap into the bore wall.
 - **Revision engraving:** each part carries “NAME Rn”, height 2.4 mm, on a hidden underside or inside face. Maintain a central `REVS` table (`const REVS = {...}` in the Feature Studio). Increment for geometry changes; cosmetic engraving-position changes do not increment it.

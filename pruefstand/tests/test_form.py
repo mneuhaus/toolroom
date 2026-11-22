@@ -7,12 +7,13 @@ Zahl vorher kennt.
 """
 import numpy as np
 import pytest
-from build123d import Axis, Box, Cylinder, Location, Pos, fillet
+from build123d import Axis, Box, Compound, Cylinder, Location, Pos, fillet
 
-from pruefstand import (Body, absatz, kanten, kerbe, load_form, splitter, unverrundet)
+from pruefstand import (Body, Frame, absatz, kanten, kerbe, load_form, splitter,
+                        unverrundet)
 from pruefstand.form import KONKAV, KONVEX, TANGENTIAL, SCHEMA, load_form as _lf
 from pruefstand.teile import SCHEMA as TEILE_SCHEMA
-from pruefstand.results import forget_open
+from pruefstand.results import forget_open, forget_technical
 
 
 def teil(solid, key='P') -> Body:
@@ -410,7 +411,108 @@ def test_schmale_stufe_hinterlaesst_kanten_unter_der_bahnbreite():
     r = splitter(stufe(0.3))
     assert len(r.kurze_kanten) == 4, r.kurze_kanten
     assert all(k['laenge_mm'] == pytest.approx(0.3) for k in r.kurze_kanten)
+    assert r.erklaert == 0 and r.unerklaert == r.anzahl
+    assert all('keine deklarierten Bereiche' in k['grund'] for k in r.kurze_kanten)
     assert not r.passed
+
+
+def test_splitter_klassifiziert_deklarierte_region_im_lokalen_frame(tmp_path):
+    """Eine deklarierte Gravur erklärt nur ihren Befund; der andere Sliver bleibt offen."""
+    frame = Frame.rot_z(90, (100, 200, 0))
+
+    class Machine:
+        def frame(self, name):
+            assert name == 'part'
+            return frame
+
+    p = tmp_path / 'form.yaml'
+    p.write_text(f"""schema: {SCHEMA}
+teile:
+  - key: P
+    erklaert:
+      - name: Revision engraving
+        bereich: {{frame: part, von: [-11, -11, 4], bis: [-9, -9, 6]}}
+        grund: Intentional revision text
+""")
+    body = stufe(0.3).transformed(frame.matrix())
+    r = splitter(body, erklaert=load_form(p).teil('P'), machine=Machine())
+
+    assert r.anzahl == 4, 'raw findings remain present'
+    assert len(r.kurze_kanten) == 4
+    assert r.erklaert == 1 and r.unerklaert == 3
+    assert not r.passed, 'the unexplained slivers still require review'
+    marked = [k for k in r.kurze_kanten if k['erklaert']]
+    assert len(marked) == 1
+    assert marked[0]['erklaert_bereich'] == {'name': 'Revision engraving', 'frame': 'part'}
+    assert 'Intentional revision text' in marked[0]['grund']
+    assert all(k['grund'] for k in r.kurze_kanten)
+
+
+def test_splitter_analysis_error_is_technical_failure(monkeypatch):
+    """A failed BRep analysis must not look like an empty successful result."""
+    import pruefstand.form as form
+
+    def kaputt(_body):
+        raise RuntimeError('injected edge analysis failure')
+
+    monkeypatch.setattr(form, 'kanten', kaputt)
+    r = splitter(teil(Box(20, 20, 10).solid()))
+    assert r.technischer_fehler
+    assert not r.passed
+    assert 'injected edge analysis failure' in r.fehler_grund
+    forget_technical()
+
+
+def test_splitter_empty_compound_is_technical_failure():
+    """A non-None but empty BRep compound must not report a clean zero."""
+    r = splitter(teil(Compound(), key='EMPTY'))
+    assert r.technischer_fehler
+    assert not r.passed
+    assert 'BRep ist leer' in r.fehler_grund
+    assert r.anzahl == 0
+    forget_technical()
+
+
+def test_splitter_invalid_brep_is_technical_failure():
+    """An explicitly invalid BRep stops before a zero-finding result is possible."""
+    class InvalidSolid:
+        wrapped = object()
+
+        @staticmethod
+        def is_valid():
+            return False
+
+    r = splitter(teil(InvalidSolid(), key='INVALID'))
+    assert r.technischer_fehler
+    assert not r.passed
+    assert 'BRep ist ungültig' in r.fehler_grund
+    forget_technical()
+
+
+def test_splitter_missing_named_frame_keeps_raw_findings(tmp_path):
+    """Frame lookup failure is incomplete analysis with the discovered candidates retained."""
+    p = tmp_path / 'form.yaml'
+    p.write_text(f"""schema: {SCHEMA}
+teile:
+  - key: P
+    erklaert:
+      - name: Revision engraving
+        bereich: {{frame: missing-part-frame, von: [-20, -20, 0], bis: [20, 20, 10]}}
+        grund: Intentional revision text
+""")
+
+    class Machine:
+        @staticmethod
+        def frame(name):
+            raise KeyError(f'Frame {name!r} missing')
+
+    r = splitter(stufe(0.3), erklaert=load_form(p).teil('P'), machine=Machine())
+    assert r.technischer_fehler and not r.passed
+    assert 'missing-part-frame' in r.fehler_grund
+    assert r.anzahl == 4 and len(r.kurze_kanten) == 4
+    assert all(set(k) >= {'ort', 'laenge_mm', 'typ', 'kante'} for k in r.kurze_kanten)
+    assert not any('erklaert' in k for k in r.kurze_kanten), 'partial raw evidence was rewritten'
+    forget_technical()
 
 
 def test_winzige_flaeche_zwischen_grossen_nachbarn():

@@ -16,6 +16,8 @@ und `../SPEC.md` (verbindlicher Schnittstellenvertrag).
 | [primitive.md](primitive.md) | Die beschriebenen Primitive: Zweck, Signatur, Rückgabe, Bild, echtes Beispiel. |
 | [erste-pruefung.md](erste-pruefung.md) | Schritt für Schritt von `pruefstand.yaml` bis zum ersten roten Test. |
 | [fallstricke.md](fallstricke.md) | Was schon Zeit gekostet hat. |
+| [Purpose coverage](purpose-coverage.md) | Require a disposition for every expected occurrence, source contribution and finding; keep unreviewed or unresolved items visible. |
+| [Purpose dependencies](purpose-dependencies.md) | Generate functional dependencies with FeatureScript, bind native witnesses to assembly occurrences, and check orphaned features offline. |
 
 ## Was heute fertig ist
 

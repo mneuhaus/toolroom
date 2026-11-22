@@ -6,6 +6,7 @@ A pattern describes a function, its boundary conditions and the appropriate evid
 | --- | --- | --- | --- |
 | Sliding guide with end latch | Separate guidance from retention | Insertion, full travel, release and remaining clearance | Electronics enclosure lid, funnel insert |
 | Crush ribs | Local compliance instead of relying solely on a tight round hole | Exact coupon in the same print pose, assembly and retention force | Press-fit bearing seat, plug-in post joint |
+| Printed screw receiver | Separate a clearance path from one biting member | Source-derived profile, screw stack, tool access and physical retention; see [printed screw joints](printed-screw-joints.md) | M3 joints using the selected hybrid-hole profile |
 | Printed hand-operated thread | Tool-free adjustment within the available space | Layer direction, thread engagement, access and service load | Camera arm and tripod adapter |
 | Split assembly | Accommodate build volume or assembly access | Individual subassembly sequences and the complete closing sequence | Large enclosure that exceeds the bed, two-part interface |
 | Symmetric common part | Reduce variants and spare-part inventory | The same native part in both actual installed poses | Left/right guide pair, mirrored mounting plates |

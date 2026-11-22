@@ -48,6 +48,15 @@ does. Style-rule counts without a declared print pose are upper bounds, and the 
 
 ## Limits
 
+For generated functional groups being revised, [purpose dependencies](../../pruefstand/docs/purpose-dependencies.md)
+can record the consumer and its owned support geometry at creation, then detect
+orphaned contributions after assembly changes. The first native mutation test
+removed a hammer and correctly exposed its retained seat, neck and pocket. This is
+qualification on a deliberately introduced defect, not evidence of another discovered
+production defect or measured time savings. Adopt it alongside ongoing generator
+work; do not require a blanket purpose annotation of legacy CAD. Unknown ownership
+or incomplete capture stays unresolved, and declared purpose is not a removal proof.
+
 Measuring is not designing. The tool confirms or refutes an intended geometry; it does not
 produce a revision, and a run that changes nothing is not progress. Intent files
 (`schrauben.yaml`, `schnittstellen.yaml`, `montage.yaml`) are worth writing before the geometry,

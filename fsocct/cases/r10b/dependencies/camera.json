@@ -1,0 +1,19 @@
+{
+  "schema": "fsocct-partstudio-v1",
+  "source": {
+    "file": "camera.step",
+    "sha256": "01c4a18587bdcd987260315fa745d82bea7ff7d45046971b925f709d412b45d2"
+  },
+  "parts": [
+    {
+      "name": "C00 STIFF R1 - camera mast",
+      "file": "camera-parts/000.brep",
+      "sha256": "fd1c421cf693373f75fbc799e34a6ec20001812ebbad6f87222f0a400e717623"
+    },
+    {
+      "name": "C07 STIFF R1 - camera arm",
+      "file": "camera-parts/001.brep",
+      "sha256": "46d3af696de7560783707e737a886915f4920a917ba7ae9271005d676f4450e9"
+    }
+  ]
+}

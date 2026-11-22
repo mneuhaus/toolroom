@@ -1,0 +1,14 @@
+{
+  "schema": "fsocct-partstudio-v1",
+  "source": {
+    "file": "frame.step",
+    "sha256": "233e0a3edf979320ef42f0fcb8e2903bc1c63eeacc2d537a491db6ac3eb0542f"
+  },
+  "parts": [
+    {
+      "name": "T41 R6d-F2 wide upper side L - continuous inner lip",
+      "file": "frame-parts/000.brep",
+      "sha256": "8dfbe6b6e6195bd5da9fa3488cf07de7efc62491eb6de6a367ef94956465cdf6"
+    }
+  ]
+}

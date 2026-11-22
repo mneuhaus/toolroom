@@ -1,0 +1,19 @@
+{
+  "requestState": "DONE",
+  "requestElementId": "a8a4f8bca2c83318af0e51ee",
+  "resultExternalDataIds": [
+    "6ab186c23af86e90b9d7ffec"
+  ],
+  "versionId": null,
+  "workspaceId": "74173860f79223047fcff52e",
+  "documentId": "889f3a9e9f331412ddbd6dd0",
+  "exportRuleFileName": null,
+  "resultElementIds": null,
+  "resultDocumentId": "889f3a9e9f331412ddbd6dd0",
+  "failureReason": null,
+  "correlationId": null,
+  "resultWorkspaceId": "74173860f79223047fcff52e",
+  "name": "CAD - Single step R6d hopper floor R2",
+  "id": "6ab186be1f9b4e99a5532222",
+  "href": "https://cad.onshape.com/api/v1/translations/6ab186be1f9b4e99a5532222"
+}

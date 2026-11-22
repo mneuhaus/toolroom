@@ -418,7 +418,8 @@ unverrundet(body, pose=None, *, teil=None, kontext=None, at=None, machine=None,
     # kanten[{ort, laenge_mm, typ, knick_deg, richtung, nach_aussen, flaechen, kante}],
     #   anzahl, gesamt_mm, radius_mm, ausnahmen {bettseite, fugenkanten, griffkanten}.
 
-splitter(body, *, kante_mm=0.42, flaeche_mm2=1.0, nachbar_mm2=100.0, knick_deg=0.5)
+splitter(body, *, kante_mm=0.42, flaeche_mm2=1.0, nachbar_mm2=100.0, knick_deg=0.5,
+         erklaert=None, machine=None)
     # Drei Listen: kurze_kanten (< Bahnbreite), winzige_flaechen (< flaeche_mm2 mit einem
     # Nachbarn > nachbar_mm2), unverschmolzen (Knick < knick_deg zwischen ZWEI
     # VERSCHIEDENEN und UNGEKRÜMMTEN Flächen). Zwei Einschränkungen, beide belegt:
@@ -429,6 +430,12 @@ splitter(body, *, kante_mm=0.42, flaeche_mm2=1.0, nachbar_mm2=100.0, knick_deg=0
     #     früheren Treffer von dieser Art; sie stehen jetzt in `rundungsuebergaenge`
     #     (mit `flaechentypen`), zählen aber nicht mit. Übrig bleibt der echte Fall: zwei
     #     Ebenen mit Knick 0, die eine Kante trennt -- eine Boolesche Spur.
+    # Befunde in `erklaert`-Regionen werden mit Name, Grund und deklariertem Frame
+    # klassifiziert, aber nie aus den drei Rohlisten entfernt. `erklaert` und
+    # `unerklaert` zaehlen beide Gruppen; passed = keine unerklaerten Befunde.
+    # Klassifiziert wird nur der aufgezeichnete Repraesentativpunkt (Kantenmitte bzw.
+    # Flaechenzentrum), nicht die vollstaendige Aufnahme des Befunds in den Bereich.
+    # Eine fehlgeschlagene BRep- oder Frame-Analyse ist `technischer_fehler`, nie 0 Treffer.
     # Nur BRep. Auf dem Netz wäre die Frage sinnlos (über die Hälfte aller Dreiecke einer
     # Tessellierung sind Winzlinge, ganz ohne Modellierfehler).
 ```

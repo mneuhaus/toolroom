@@ -1,0 +1,69 @@
+{
+  "schema": "fsocct-partstudio-v1",
+  "source": {
+    "file": "carrier.step",
+    "sha256": "debeb660c7f4236b810ee6fb20f7bc7b9b6d50c2590a0a54a0d35043f504d277"
+  },
+  "parts": [
+    {
+      "name": "T40 R5 lower side frame R",
+      "file": "carrier-parts/000.brep",
+      "sha256": "21a68caff1af058d0e3fffbd208c4e057e9157d90e494dec5ab744a0d8c79791"
+    },
+    {
+      "name": "P01 R5 continuous pickup plate - fixed side guides",
+      "file": "carrier-parts/001.brep",
+      "sha256": "8bc63143fc65f62c1a5f42e09e829b612085730bff16fcad65e8603c2774e8dc"
+    },
+    {
+      "name": "T06 R5 rear wall - outside fastening",
+      "file": "carrier-parts/002.brep",
+      "sha256": "639c7d5accde42d8cc4890fe2a86d4f1ad660891cacd7d23b5818c14c8ccf427"
+    },
+    {
+      "name": "P02 R5 moving rail carrier right",
+      "file": "carrier-parts/003.brep",
+      "sha256": "670856373dbfc35f980f570ec758f0ad732e9d5a45f67ee6cd4d422518bd7a16"
+    },
+    {
+      "name": "P02 R5 moving rail carrier left",
+      "file": "carrier-parts/004.brep",
+      "sha256": "21e6397b06bacbcfed6aef50a31d828023cafe6954a89f93df58b44eaee002f5"
+    },
+    {
+      "name": "T41 R5 continuous upper wall and guide R",
+      "file": "carrier-parts/005.brep",
+      "sha256": "6e3273a10c64baecb84802111707a993404a3b30af1a064647ea24dc0860af1a"
+    },
+    {
+      "name": "T40 R5 lower side frame L",
+      "file": "carrier-parts/006.brep",
+      "sha256": "83c72361ed39ba73885a4f668b202e128d3b6fafdfa23e36457e6e6a76149290"
+    },
+    {
+      "name": "T05 R5 smooth hopper floor - underside fastening",
+      "file": "carrier-parts/007.brep",
+      "sha256": "350da11a8308585b46ab307eb8cf281f0a9efd9513e88182590a8b583e69067d"
+    },
+    {
+      "name": "P14 R5 base-supported motor and lower idler core",
+      "file": "carrier-parts/008.brep",
+      "sha256": "7e372169bf2ee275b0d5b2c0da390d0ec8a7c43b08b72bdddfb25ccb0d8891f6"
+    },
+    {
+      "name": "T41 R5 continuous upper wall and guide L",
+      "file": "carrier-parts/009.brep",
+      "sha256": "11d6d64a9eafb861b8b8bba055581950e7964af28d6ee926b5eafa7f50691465"
+    },
+    {
+      "name": "REF GT2 R5 open belt - low motor route",
+      "file": "carrier-parts/010.brep",
+      "sha256": "5b861b62745976d02df4f9b4d656ceff52951212e5c0df726822c78ee1c72ddc"
+    },
+    {
+      "name": "C00 R5 single-camera support blade",
+      "file": "carrier-parts/011.brep",
+      "sha256": "302adce6855f55fbd10e1bef6f3bb58deead2c20609a2b77e64f11ae5897ca70"
+    }
+  ]
+}

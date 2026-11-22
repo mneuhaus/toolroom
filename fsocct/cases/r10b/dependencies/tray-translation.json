@@ -1,0 +1,19 @@
+{
+  "requestState": "DONE",
+  "requestElementId": "b319ae3e559c6c22f081d866",
+  "resultExternalDataIds": [
+    "6ab186a83af86e90b9d7ffcc"
+  ],
+  "versionId": null,
+  "exportRuleFileName": null,
+  "workspaceId": "74173860f79223047fcff52e",
+  "documentId": "889f3a9e9f331412ddbd6dd0",
+  "resultElementIds": null,
+  "resultDocumentId": "889f3a9e9f331412ddbd6dd0",
+  "failureReason": null,
+  "correlationId": null,
+  "resultWorkspaceId": "74173860f79223047fcff52e",
+  "name": "CAD - Single step R6d tray R1 - tray, hubs, strips",
+  "id": "6ab186a51f9b4e99a5532194",
+  "href": "https://cad.onshape.com/api/v1/translations/6ab186a51f9b4e99a5532194"
+}

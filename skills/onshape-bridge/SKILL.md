@@ -16,7 +16,7 @@ The endpoint, the app location and the start command come from the environment p
 3. Check endpoint budgets before a batch. Make one real request to the endpoint the batch needs and inspect its forwarded `x-rate-limit-remaining` header.
 4. Issue requests sequentially and keep a single consuming writer for this adapter.
 5. If a write times out, reconcile the destination state before retrying — a timeout can follow a successful mutation. Carry the uncertain operation across interrupted work.
-6. For uploads, a successful status is not evidence: download the artifact and hash it. Request and response bodies behave differently for binary data in the inspected implementation.
+6. For uploads, a successful status is not evidence: download the artifact and hash it. Check the running bridge's `binaryRequestBodies` capability; older versions decoded uploads as UTF-8. The transport reference below covers the legacy workaround.
 
 **No call may reach the Onshape servers directly.** If the bridge is down, calls must fail. A connection failure must never silently fall back to API-key authentication or change the user's account configuration. If the key counter moves, something leaked to the metered API — stop and fix it. Use the recipient's own sign-in when setting up a new installation.
 

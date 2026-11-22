@@ -1,0 +1,752 @@
+{
+  "description": "Observed frozen workspace corpus results; local solid validity, not Onshape conformance.",
+  "command": "uv run fsocct batch cases/workspace/manifest.json --output output/workspace-current --timeout 240",
+  "baseline": {
+    "passed": 0,
+    "total": 21,
+    "manifest_sha256": "41d8eb4c93e0e7b282f28ca8f191c41af630459aaf52c965bada4c2849b5733c",
+    "cases": [
+      {
+        "id": "neon_gt-neonGT",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/neon_gt.fs:110:12: Unknown symbol 'evSurfaceDefinition'; it may require an unimplemented library API"
+      },
+      {
+        "id": "neon_gt-neonGTPrint",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/neon_gt.fs:110:12: Unknown symbol 'evSurfaceDefinition'; it may require an unimplemented library API"
+      },
+      {
+        "id": "hot_wire-hotWireDeployed",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/hot_wire.fs:166:5: Sketch must consist of closed, unbranched loops; no constraint solver"
+      },
+      {
+        "id": "hot_wire-hotWireStowed",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/hot_wire.fs:166:5: Sketch must consist of closed, unbranched loops; no constraint solver"
+      },
+      {
+        "id": "lochwand-lochwand",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/lochwand.fs:103:13: Unknown type 'Color'"
+      },
+      {
+        "id": "step_feeder-stepFeeder",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/step_feeder.fs:55:467: Unknown symbol 'qContainsPoint'; it may require an unimplemented library API"
+      },
+      {
+        "id": "mini_camera-miniCameraR4",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/mini_camera.fs:101:18: Expected a dimensionless number, got <Transform>"
+      },
+      {
+        "id": "corner_loft-cornerInsertsR1",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/corner_loft.fs:48:63: Unknown symbol 'mirrorAcross'; it may require an unimplemented library API"
+      },
+      {
+        "id": "corner_ramp-cornerInsertsR3",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/corner_ramp.fs:30:41: Incompatible units"
+      },
+      {
+        "id": "rear_wall-hopperRearWallR29",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/rear_wall.fs:35:9: Nested/intersecting sketch loops need a planar region solver; use separate sketches and opBoolean"
+      },
+      {
+        "id": "channel_bases-channelBasesR3",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/channel_bases.fs:22:2: Invalid boolean result (UNION)"
+      },
+      {
+        "id": "skirt_halves-skirtHalves",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/skirt_halves.fs:88:5: Unknown symbol 'skText'; it may require an unimplemented library API"
+      },
+      {
+        "id": "printed_joints-printedJoint=1",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/printed_joints.fs:242:17: Unknown symbol 'unitless'; it may require an unimplemented library API"
+      },
+      {
+        "id": "printed_joints-printedJoint=2",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/printed_joints.fs:242:17: Unknown symbol 'unitless'; it may require an unimplemented library API"
+      },
+      {
+        "id": "printed_joints-printedJoint=3",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/printed_joints.fs:242:17: Unknown symbol 'unitless'; it may require an unimplemented library API"
+      },
+      {
+        "id": "printed_joints-printedJoint=4",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/printed_joints.fs:242:17: Unknown symbol 'unitless'; it may require an unimplemented library API"
+      },
+      {
+        "id": "printed_joints-printedJoint=5",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/printed_joints.fs:242:17: Unknown symbol 'unitless'; it may require an unimplemented library API"
+      },
+      {
+        "id": "printed_joints-printedJoint=6",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/printed_joints.fs:242:17: Unknown symbol 'unitless'; it may require an unimplemented library API"
+      },
+      {
+        "id": "printed_joints-printedJoint=7",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/printed_joints.fs:242:17: Unknown symbol 'unitless'; it may require an unimplemented library API"
+      },
+      {
+        "id": "printed_joints-printedJoint=8",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/printed_joints.fs:242:17: Unknown symbol 'unitless'; it may require an unimplemented library API"
+      },
+      {
+        "id": "sparky_z-sparkyZ",
+        "status": "failed",
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/sparky_z.fs:7:1: Import 'ba32090a2fb2f5ef1388a6a9' version 'f411a9d279243d5a0e23f6ba' needs a local --imports mapping"
+      }
+    ]
+  },
+  "latest": {
+    "schema_version": 1,
+    "started_utc": "2026-09-21T21:07:22.146799+00:00",
+    "manifest_sha256": "d3eed0df24148f294619f107376b441a26cb3279573c8548fe9a8823b6ee4b7e",
+    "implementation_sha256": {
+      "__init__.py": "caa7c108970a9468b1021b06ae7c5069ea65c4735cefa1efc8a7f54d59783785",
+      "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "api.py": "c750f2f1b2a88b3ed8cd2cbd811e811b675503c8e055815b7cffb5a42709de98",
+      "cli.py": "cb83f9f911e3056c2c620104d02edbc188ab70d85cc3a664ca47ddc0e03128a0",
+      "corpus.py": "9b7cac7690dafd2d3c16032e4401a7fd0658e397855cc79ca046f98ba299f724",
+      "kernel.py": "8b55b6d4040971799873de8bc3e966c7058beb14913a05a2bcfdb41115014fbb",
+      "partstudio.py": "bc29447f370ec4b9c1a1359c890681450ac2343bce6f800c98cac644daea3be7",
+      "runtime.py": "95ea07aa889330a5c1551428b39c27cf35c46083a34c55a689363e1ba6d441df",
+      "syntax.py": "ff25bc9668ba77305b86303d0ef06b962a1615417350607edd8969906f785a9e",
+      "values.py": "ba2cdd5bbe2d4d96f49291f9cc8ce1e3970a926134719eec26048f782857a61a"
+    },
+    "selected_count": 21,
+    "cases": [
+      {
+        "id": "neon_gt-neonGT",
+        "feature": "neonGT",
+        "source": "neon_gt.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 2.2537372920196503,
+        "body_count": 7,
+        "volume_mm3": 134324.44290524896,
+        "operation_count": 193,
+        "recovered_operations": [],
+        "report_sha256": "8f4389c940abe9a47a0454e87dd431d19da6f81b823ef72d88662d75e53f24b9"
+      },
+      {
+        "id": "neon_gt-neonGTPrint",
+        "feature": "neonGTPrint",
+        "source": "neon_gt.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 2.285950083984062,
+        "body_count": 7,
+        "volume_mm3": 134324.44290524896,
+        "operation_count": 193,
+        "recovered_operations": [],
+        "report_sha256": "a7cf90e114c17931657ec410fd7a64eab5d2458e66ed8e7f10a02567c6d84be6"
+      },
+      {
+        "id": "hot_wire-hotWireDeployed",
+        "feature": "hotWireDeployed",
+        "source": "hot_wire.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 1.309999042074196,
+        "body_count": 65,
+        "volume_mm3": 11495690.36150857,
+        "operation_count": 434,
+        "recovered_operations": [],
+        "report_sha256": "b1f49c8b692d2b620e14d6db82336249a670055ea83ca3ed9fd85d22766a80a4"
+      },
+      {
+        "id": "hot_wire-hotWireStowed",
+        "feature": "hotWireStowed",
+        "source": "hot_wire.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 1.261624375008978,
+        "body_count": 66,
+        "volume_mm3": 12472490.361508572,
+        "operation_count": 436,
+        "recovered_operations": [],
+        "report_sha256": "ffc33e9e1bee5bb013cf6f889858df3757a836de8ba48408953c73fc3a31953c"
+      },
+      {
+        "id": "lochwand-lochwand",
+        "feature": "lochwand",
+        "source": "lochwand.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 1.4179214170435444,
+        "body_count": 34,
+        "volume_mm3": 18354616.456257116,
+        "operation_count": 352,
+        "recovered_operations": [],
+        "report_sha256": "4d7bee6f953c5b10c7238963d9504d7e7897916bac338eb1e664106777e47e81"
+      },
+      {
+        "id": "step_feeder-stepFeeder",
+        "feature": "stepFeeder",
+        "source": "step_feeder.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.8210672499844804,
+        "body_count": 5,
+        "volume_mm3": 210843.85367992058,
+        "operation_count": 54,
+        "recovered_operations": [],
+        "report_sha256": "09925fa53643d3c73666a0ca33a94e947a2e07af836186830f80873a368ed6e9"
+      },
+      {
+        "id": "mini_camera-miniCameraR4",
+        "feature": "miniCameraR4",
+        "source": "mini_camera.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.7059336249949411,
+        "body_count": 3,
+        "volume_mm3": 139005.700093924,
+        "operation_count": 65,
+        "recovered_operations": [],
+        "report_sha256": "6cf9967f0ea0f30494964dc950c0b235c46bd636085fbbcc4b84035ae72d7263"
+      },
+      {
+        "id": "corner_loft-cornerInsertsR1",
+        "feature": "cornerInsertsR1",
+        "source": "corner_loft.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 1.0711953750578687,
+        "body_count": 2,
+        "volume_mm3": 285859.4390728208,
+        "operation_count": 10,
+        "recovered_operations": [],
+        "report_sha256": "4b350de6c2bf2bd82e7ca2dbf75c6c6ac8a3126308a96136257b0724b7c2110c"
+      },
+      {
+        "id": "corner_ramp-cornerInsertsR3",
+        "feature": "cornerInsertsR3",
+        "source": "corner_ramp.fs",
+        "status": "failed",
+        "exit_code": 2,
+        "elapsed_seconds": 0.5464155829977244,
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/corner_ramp.fs:30:41: Incompatible units"
+      },
+      {
+        "id": "rear_wall-hopperRearWallR29",
+        "feature": "hopperRearWallR29",
+        "source": "rear_wall.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.7125831670127809,
+        "body_count": 1,
+        "volume_mm3": 378082.3356092342,
+        "operation_count": 14,
+        "recovered_operations": [],
+        "report_sha256": "b2c679868b69cbd89088b06384376e13f1e1fd6da5ab0509cb10ec319d9b63a3"
+      },
+      {
+        "id": "channel_bases-channelBasesR3",
+        "feature": "channelBasesR3",
+        "source": "channel_bases.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 4.983272708952427,
+        "body_count": 2,
+        "volume_mm3": 269946.9328540499,
+        "operation_count": 525,
+        "recovered_operations": [],
+        "report_sha256": "e7741619c7c4235c545d298ab6c053ddfcb0ed1228706dbd486a58c7f006799d"
+      },
+      {
+        "id": "skirt_halves-skirtHalves",
+        "feature": "skirtHalves",
+        "source": "skirt_halves.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 2.4841937080491334,
+        "body_count": 2,
+        "volume_mm3": 546159.9671355549,
+        "operation_count": 56,
+        "recovered_operations": [],
+        "report_sha256": "f118a7b1ce56ecf1c1ff7013fb8e950b8894bdba32e039ca9eb18f4a49e86e4f"
+      },
+      {
+        "id": "printed_joints-printedJoint=1",
+        "feature": "printedJoint",
+        "source": "printed_joints.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.6050720829516649,
+        "body_count": 2,
+        "volume_mm3": 55902.03408352443,
+        "operation_count": 16,
+        "recovered_operations": [],
+        "report_sha256": "b11dbc925a72d96690235307344e3a06f9ed6681d287fb8f0fd45fb7e83d1963"
+      },
+      {
+        "id": "printed_joints-printedJoint=2",
+        "feature": "printedJoint",
+        "source": "printed_joints.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.7223980830749497,
+        "body_count": 2,
+        "volume_mm3": 55902.489028871525,
+        "operation_count": 16,
+        "recovered_operations": [],
+        "report_sha256": "dc812203b596fa27f0837515816cd54d86907b8a6462db14d6468ac91f1bf9a2"
+      },
+      {
+        "id": "printed_joints-printedJoint=3",
+        "feature": "printedJoint",
+        "source": "printed_joints.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.6540942910360172,
+        "body_count": 2,
+        "volume_mm3": 55902.489028663316,
+        "operation_count": 17,
+        "recovered_operations": [],
+        "report_sha256": "3b6ff0f40bf5ed79b29c08d9dff2695859d0d9fca687868decc809168b7acfc2"
+      },
+      {
+        "id": "printed_joints-printedJoint=4",
+        "feature": "printedJoint",
+        "source": "printed_joints.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.7448763750726357,
+        "body_count": 2,
+        "volume_mm3": 55900.599114128316,
+        "operation_count": 25,
+        "recovered_operations": [],
+        "report_sha256": "c9209dbb7699de8b8d5750d58e05922855ed19282101ecbaeb0fcce67e397c79"
+      },
+      {
+        "id": "printed_joints-printedJoint=5",
+        "feature": "printedJoint",
+        "source": "printed_joints.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.7854195409454405,
+        "body_count": 2,
+        "volume_mm3": 55901.22911209007,
+        "operation_count": 25,
+        "recovered_operations": [],
+        "report_sha256": "63dd019ba2aee94b429f45dd6f1686aae53a6456e3e5d3b7730b1b3afcb75906"
+      },
+      {
+        "id": "printed_joints-printedJoint=6",
+        "feature": "printedJoint",
+        "source": "printed_joints.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.8371776660205796,
+        "body_count": 2,
+        "volume_mm3": 55855.73034272884,
+        "operation_count": 28,
+        "recovered_operations": [],
+        "report_sha256": "920837bf1a150e204e69ee35c4394c5b780686fb0750773edd1be1d85b547d63"
+      },
+      {
+        "id": "printed_joints-printedJoint=7",
+        "feature": "printedJoint",
+        "source": "printed_joints.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.9326629170682281,
+        "body_count": 2,
+        "volume_mm3": 55815.00059998171,
+        "operation_count": 40,
+        "recovered_operations": [],
+        "report_sha256": "f52779add604a8b4aae7241793835b7f8e31b7a631cc16458b8beb97e7a5f518"
+      },
+      {
+        "id": "printed_joints-printedJoint=8",
+        "feature": "printedJoint",
+        "source": "printed_joints.fs",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.6251775410491973,
+        "body_count": 4,
+        "volume_mm3": 67270.3722773419,
+        "operation_count": 17,
+        "recovered_operations": [],
+        "report_sha256": "406dbe7454388a2f9f8dfc51813e19f8065d39bb45a3b741ec63ec22b7beaf94"
+      },
+      {
+        "id": "sparky_z-sparkyZ",
+        "feature": "sparkyZ",
+        "source": "sparky_z.fs",
+        "status": "failed",
+        "exit_code": 2,
+        "elapsed_seconds": 0.6064864590298384,
+        "error": "fsocct: /Users/mneuhaus/Workspace/cad/toolroom/fsocct/cases/workspace/sparky_z.fs:7:1: Import 'ba32090a2fb2f5ef1388a6a9' version 'f411a9d279243d5a0e23f6ba' needs a local --imports mapping"
+      }
+    ],
+    "passed": 19,
+    "recovered": 0,
+    "total": 21,
+    "complete": true
+  },
+  "skirt_text_cut_check": {
+    "text_cuts": [
+      {
+        "id": [
+          "skirtHalves",
+          "revA",
+          "revCut"
+        ],
+        "removed_mm3": 3.8867529681301676
+      },
+      {
+        "id": [
+          "skirtHalves",
+          "revB",
+          "revCut"
+        ],
+        "removed_mm3": 4.066339851939119
+      }
+    ],
+    "failed_operations": [],
+    "volume_mm3": 546159.9671355549
+  },
+  "step_exports": [
+    {
+      "case": "neon_gt-neonGT",
+      "file": "neon_gt-neonGT.step",
+      "status": "passed",
+      "bytes": 1287024,
+      "sha256": "82e95c797b4622fa42d7644ff911130a2b5c3fdd7a1e5a99b47121b1258b8289",
+      "verification": {
+        "valid_solids": 7,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": -2.996443072333932e-06,
+        "maximum_relative_solid_volume_difference": 2.5223331383417053e-11,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "neon_gt-neonGTPrint",
+      "file": "neon_gt-neonGTPrint.step",
+      "status": "passed",
+      "bytes": 1286750,
+      "sha256": "d4bca29b045c02fcb504534cbadc5e36474d6f889866efc99c6e8cac5cd5df8c",
+      "verification": {
+        "valid_solids": 7,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": -2.996646799147129e-06,
+        "maximum_relative_solid_volume_difference": 2.5223331383417053e-11,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "hot_wire-hotWireDeployed",
+      "file": "hot_wire-hotWireDeployed.step",
+      "status": "passed",
+      "bytes": 1551240,
+      "sha256": "01a355b5db2e0e2c2d4953998d24ba051fb582d2c961f1567b305a2ce2256293",
+      "verification": {
+        "valid_solids": 65,
+        "closed_faces_split": true,
+        "split_solid_count": 1,
+        "volume_difference_mm3": 0.01242142729461193,
+        "maximum_relative_solid_volume_difference": 1.1935190735797463e-06,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "hot_wire-hotWireStowed",
+      "file": "hot_wire-hotWireStowed.step",
+      "status": "passed",
+      "bytes": 1563663,
+      "sha256": "5156c393386d6a46ca899904347197122fce0080f59d03de9916b3b79941c104",
+      "verification": {
+        "valid_solids": 66,
+        "closed_faces_split": true,
+        "split_solid_count": 1,
+        "volume_difference_mm3": 0.012422220781445503,
+        "maximum_relative_solid_volume_difference": 1.1935190735797463e-06,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "lochwand-lochwand",
+      "file": "lochwand-lochwand.step",
+      "status": "passed",
+      "bytes": 991618,
+      "sha256": "3aa7f2b28b4f0d6d54a056471212ba4d2baf1d71c48f805e9281ed096c6654fd",
+      "verification": {
+        "valid_solids": 34,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": 8.303672075271606e-06,
+        "maximum_relative_solid_volume_difference": 9.619429697935094e-12,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "step_feeder-stepFeeder",
+      "file": "step_feeder-stepFeeder.step",
+      "status": "passed",
+      "bytes": 327756,
+      "sha256": "782e9e8deabe1f032143f5c023d1f5bbe4350bddefd36b67142495045de5e942",
+      "verification": {
+        "valid_solids": 5,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": 6.402842700481415e-10,
+        "maximum_relative_solid_volume_difference": 1.3493034031893472e-14,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "mini_camera-miniCameraR4",
+      "file": "mini_camera-miniCameraR4.step",
+      "status": "passed",
+      "bytes": 224318,
+      "sha256": "bb5bfd453bec752a3eb8730b0dd8771c9ba6447234b543a7e37e078ae91118b8",
+      "verification": {
+        "valid_solids": 3,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": 9.516952559351921e-09,
+        "maximum_relative_solid_volume_difference": 1.469801820588981e-12,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "corner_loft-cornerInsertsR1",
+      "file": "corner_loft-cornerInsertsR1.step",
+      "status": "passed",
+      "bytes": 557110,
+      "sha256": "318780cbbbb50e86c0cc3c0b048f42214b8448e54306bf7ad2c3c5a66d43486e",
+      "verification": {
+        "valid_solids": 2,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": 0.007244967971928418,
+        "maximum_relative_solid_volume_difference": 3.090162572081483e-08,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "rear_wall-hopperRearWallR29",
+      "file": "rear_wall-hopperRearWallR29.step",
+      "status": "passed",
+      "bytes": 188860,
+      "sha256": "35396c7ac4998faf34f900fb263150a135491a4f66c05b0ef261eb901b3c972d",
+      "verification": {
+        "valid_solids": 1,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": -1.3132812455296516e-06,
+        "maximum_relative_solid_volume_difference": 3.4735324077319216e-12,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "channel_bases-channelBasesR3",
+      "file": "channel_bases-channelBasesR3.step",
+      "status": "passed",
+      "bytes": 1109206,
+      "sha256": "2c89149998602ad68a90fd69fb04e65864b1e39c1673012aba255d5e83caf38a",
+      "verification": {
+        "valid_solids": 2,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": 0.005963382893241942,
+        "maximum_relative_solid_volume_difference": 1.265341165805569e-07,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "skirt_halves-skirtHalves",
+      "file": "skirt_halves-skirtHalves.step",
+      "status": "passed",
+      "bytes": 1857162,
+      "sha256": "2cb678108ecac9d1fb6d04f1182a798d0c6a9aae5552464d155ba39a350e1e51",
+      "verification": {
+        "valid_solids": 2,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": -7.753260433673859e-08,
+        "maximum_relative_solid_volume_difference": 3.773196416861737e-13,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "printed_joints-printedJoint=1",
+      "file": "printed_joints-printedJoint=1.step",
+      "status": "passed",
+      "bytes": 65207,
+      "sha256": "63f5f5a01077408770ab0b2ad32dd428169b7dfe26b148725d67e0f7940180e0",
+      "verification": {
+        "valid_solids": 2,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": 3.3396645449101925e-09,
+        "maximum_relative_solid_volume_difference": 1.0305125203464937e-13,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "printed_joints-printedJoint=2",
+      "file": "printed_joints-printedJoint=2.step",
+      "status": "passed",
+      "bytes": 70063,
+      "sha256": "b1b72146765881439425cb8dcf1ff6f251d241032060d16a997d234a100c43fc",
+      "verification": {
+        "valid_solids": 2,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": 2.1827872842550278e-10,
+        "maximum_relative_solid_volume_difference": 7.669683158027923e-15,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "printed_joints-printedJoint=3",
+      "file": "printed_joints-printedJoint=3.step",
+      "status": "passed",
+      "bytes": 81335,
+      "sha256": "08c0627d220c30c6f0ffb2f33055f67938a0377d5f654a141bc383ae2d0d2c68",
+      "verification": {
+        "valid_solids": 2,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": -1.2369127944111824e-10,
+        "maximum_relative_solid_volume_difference": 1.1321913233250794e-14,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "printed_joints-printedJoint=4",
+      "file": "printed_joints-printedJoint=4.step",
+      "status": "passed",
+      "bytes": 114870,
+      "sha256": "83f8c82460a2425296f58cfe58140fa2c73f944c1301e5475d55005f40021bf4",
+      "verification": {
+        "valid_solids": 2,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": 1.8098944565281272e-07,
+        "maximum_relative_solid_volume_difference": 1.287976479101789e-11,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "printed_joints-printedJoint=5",
+      "file": "printed_joints-printedJoint=5.step",
+      "status": "passed",
+      "bytes": 125260,
+      "sha256": "514d4ed8f78e6f13e2e33703934cdb146b3afdde4c3d67ae527657e8e2683587",
+      "verification": {
+        "valid_solids": 2,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": -1.4655961422249675e-07,
+        "maximum_relative_solid_volume_difference": 4.556287203952991e-12,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "printed_joints-printedJoint=6",
+      "file": "printed_joints-printedJoint=6.step",
+      "status": "passed",
+      "bytes": 175889,
+      "sha256": "958023d1e6d6f9267c3d7caf0211e1db4d0c885aa80301dcb4f8e62e9bf6d6fc",
+      "verification": {
+        "valid_solids": 2,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": 2.0372681319713593e-10,
+        "maximum_relative_solid_volume_difference": 1.447650160659452e-14,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "printed_joints-printedJoint=7",
+      "file": "printed_joints-printedJoint=7.step",
+      "status": "passed",
+      "bytes": 231482,
+      "sha256": "6b9bd8aa871518c92d41062ae6f5e7c8e6cb3da0b2e1cc667a4bae01b00188e6",
+      "verification": {
+        "valid_solids": 2,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": 3.536115400493145e-09,
+        "maximum_relative_solid_volume_difference": 1.3328543710536792e-13,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    },
+    {
+      "case": "printed_joints-printedJoint=8",
+      "file": "printed_joints-printedJoint=8.step",
+      "status": "passed",
+      "bytes": 142050,
+      "sha256": "9a28e7ad087db49146c61990e04890169382a9aef16db0cf640470ef227efc76",
+      "verification": {
+        "valid_solids": 4,
+        "closed_faces_split": false,
+        "split_solid_count": 0,
+        "volume_difference_mm3": 4.016328603029251e-09,
+        "maximum_relative_solid_volume_difference": 6.98086732353555e-14,
+        "volume_relative_tolerance": 1e-05,
+        "volume_absolute_tolerance_mm3": 0.001,
+        "bounds_tolerance_mm": 0.001
+      }
+    }
+  ]
+}

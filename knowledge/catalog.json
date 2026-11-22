@@ -104,6 +104,12 @@
       "section": "construction"
     },
     {
+      "path": "knowledge/construction/printed-screw-joints.md",
+      "title": "Printed screw joints",
+      "summary": "Canonical receiving profiles, clearance paths, shared modules and assembly evidence.",
+      "section": "construction"
+    },
+    {
       "path": "knowledge/manufacturing/print-preparation.md",
       "title": "Slicer preparation and review",
       "summary": "Machine profiles, geometry provenance, support and bridge evidence in OrcaSlicer and Bambu Studio.",

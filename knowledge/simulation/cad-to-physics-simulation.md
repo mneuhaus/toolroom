@@ -109,6 +109,39 @@ Calibration is the open step. Rim friction and facet behaviour have not been fit
 
 The control-software boundary is deliberately narrow: the backend talks to boards over a serial bus and to cameras by URL. A fake firmware answers the bus protocol on a pseudo-terminal per board, fake cameras serve the MuJoCo cameras as MJPEG streams named in the machine config, and a ground-truth side channel provides piece poses so perception can be stubbed with truth [sim/AGENTS.md, "Plugging in the control software"; sim/config/machine.sim.toml]. The scene camera's field of view is a placeholder until the real lens is measured [sim/sim/scene.py, `CAMERA_FOVY_DEG`].
 
+## Qualifying a loose-part orientation change
+
+Separate **loading, capture, turning, landing and reset**. A part deliberately placed at a useful contact can turn successfully while a freely dropped part never reaches that contact. A deep receiving pocket can permit one turn but prevent the next. Test these initial conditions separately, then repeat the complete cycle without respawning the part.
+
+A planar section is a useful first model for the gravity line, contact edge and opposing-wall clearance. Measure stop height normal to the actual supporting ramp, not relative to the tray's lowest point. A high stop and an elevated turning location have different effects. Let the part translate, rotate and release freely in the subsequent contact simulation; a permanently pinned pivot only tests a conditional kinematic path. Yaw, cavities, studs and interlocked parts require later three-dimensional checks.
+
+Define the requested observation before scoring. A large angle between two surface normals does not by itself mean that the required top and bottom changed places, especially on different resting slopes. Compare settled observations at a declared tray pose. For a marked top face, opposite signs of its world-up projection can identify a side change, with a declared minimum projection to exclude ambiguous edge-on states. Symmetric parts need a different requirement. Preserve earlier scores when refining the criterion and reassess the original trajectories rather than silently relabelling them.
+
+For repeated turning, count transitions between distinct settled states: A→B→B is one turn, A→B→A is two. Do not respawn between them. If different tray poses are admissible, check both world and tray-relative orientation: either frame alone can mistake carrier rotation for a turn. Combine the side labels with a declared minimum change of the marked normal to exclude partial rocking. Verify the motion bound throughout the trajectory and its interpolation, rather than only at observation times. Missing orientation evidence cannot establish a pass.
+
+Low directional stops can be of the same order as contact penetration or collision-proxy errors. Compare timestep, contact softness and contour resolution before ranking small geometric changes. A successful clip whose outcome changes under numerical refinement is mechanism evidence, not a qualified reliability result. Counts on a chosen friction/orientation grid are not measured success probabilities. For long parts spanning a concave bowl, use their actual supporting chord and additional contacts; the tangent directly below one edge is not the part's support angle.
+
+Spawn from the **collision geometry**, which may extend beyond the visual mesh after decomposition. Check initial overlap, stationary-drive controls and a bounded timestep comparison before interpreting successes. Failed settling, numerical errors and unclassified orientations remain separate from physical failures. Apply the [verification evidence rules](../foundations/verification.md) to every reported result.
+
+For a return-path sphere, unsigned distance to obstacle surfaces also requires an initially outside center before it can support a solid-clearance conclusion. An open obstacle mesh remains surface evidence unless an independent enclosing bound excludes the whole path. A corridor for each individual part does not prove a corridor for an interlocked pair or its carrier.
+
+Separate the retained manipulation range from deliberate discharge. Material protruding above a rim is not necessarily lost; complete separation from a conservative container box is a sufficient, potentially late exit witness, not the earliest release angle. Test reversals and braking as well as a slow one-way discharge, and distinguish leaving the container from reaching the intended receiver. When comparing amplitudes, record whether move times were scaled to preserve speed. Return to a common inspection pose when large carrier angles make side classification ambiguous. Exploratory larger-angle trials must not silently widen the operating contract.
+
+Check positional actuator travel across all modes of the same joint, including discharge, with explicit end reserves and transmission ratio. A shifted zero can place the required interval inside the actuator range but cannot reduce its span. Asymmetric manipulation may use travel already needed for discharge; a geometrically successful motion outside the joint budget remains only a diagnostic case.
+
+Origin: Single Step Feeder tray and return-path study, September 2026. These are modelling and evidence rules; the study's mechanism dimensions, uncalibrated trial outcomes and raw trajectories remain in the originating project.
+
+## Piles of loose parts in a hopper
+
+- **Write `type="mesh"` on every mesh geom.** A geom that names a mesh through a default class but has no explicit type compiles as a sphere; every piece fell through the floor until the type was set.
+- **Show the render group of the pieces.** The default visual options draw geom groups 0 to 2 only; pieces kept in group 3 to separate them from the machine are invisible until `geomgroup[3]` is switched on.
+- **Measure pile mobility, not only deliveries.** Count per stroke the pieces in the machine that moved more than a few millimetres. A floor flatter than the friction angle (tan of the slope below μ) gives empty strokes while the pile stands still, which a delivery count alone cannot tell apart from an empty hopper.
+- **Run a second seed before ranking variants.** A narrowed pickup that looked like a clear improvement on one seed starved on the next.
+- **Large piles are expensive.** With 120 to 150 free pieces at a 0.25 ms timestep the CG solver ran about twice as fast as Newton with equivalent outcomes in a side-by-side check. Newton with 300 pieces ran about 100 times slower than real time. Pick the piece count for the question; a full bulk bin of thousands of pieces is usually out of reach.
+- **Separate hull seams from mechanism edges.** Force peaks recurring at one height where two machine parts meet can come from the seam between their convex hulls. Ray-cast from the moving face through both the CAD meshes and the hulls before calling it a step in the design. The joint remains the edge a carried part runs over, so specify the downstream part set back or chamfered rather than proud.
+
+Origin: Single Step Feeder S2 LEGO hopper study, October 2026. Dimensions, run results and videos remain in the originating project.
+
 ## Checklist
 
 1. Export through the route that honours tessellation tolerances, and record the preset.

@@ -1,0 +1,17 @@
+{
+  "keyCount" : 0,
+  "apiUsageStartDate" : "2026-02-20T00:00:00.000+00:00",
+  "keyOverageCount" : 0,
+  "clientOverageCount" : 0,
+  "allocationInfo" : {
+    "allocationStartDate" : "2025-11-08T00:00:00.000+00:00",
+    "allocationEndDate" : "2026-11-08T00:00:00.000+00:00",
+    "apiLimit" : 2500,
+    "ownerType" : 0,
+    "overageEnabled" : false
+  },
+  "endDate" : "2026-09-21T00:00:00.000+00:00",
+  "startDate" : "2026-09-01T00:00:00.000+00:00",
+  "ownerId" : "690fd877d8a869b5dbb7945d",
+  "clientCount" : 0
+}

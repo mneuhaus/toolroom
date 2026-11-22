@@ -14,7 +14,8 @@ description: "Construct or revise native Onshape geometry with FeatureScript, pr
 3. For adapters and shared variants, align mounting axes and seats before detailing. Select functional parts semantically, never by their position in an API array.
 4. Verify part count, bounds, changed contours and protected interfaces. Volume is a change signal, not a shape identity.
 5. After topology changes, reacquire queries and inspect all affected assembly references; repair only the broken ones. Verify nested leaf poses after applying assembly transforms.
-6. Keep source revisions, exports and the actual checks together. This task does not require changing unrelated documents.
+6. For new fastenings or changed access, complete the [assembly review before delivery](../../knowledge/construction/assembly-review.md#review-before-delivery), including the actual sequence and tool use.
+7. Keep source revisions, exports and the actual checks together. This task does not require changing unrelated documents.
 
 Style is an explicit profile choice. The historical workshop edge family is available as [workshop-042](../../profiles/design-language/workshop-042.yaml); it never overrides functional edges or load paths.
 

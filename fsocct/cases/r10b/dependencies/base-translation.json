@@ -1,0 +1,19 @@
+{
+  "requestState": "DONE",
+  "requestElementId": "082fddfe5e1cad4cfb319dea",
+  "resultExternalDataIds": [
+    "6ab1869b3af86e90b9d7ffc4"
+  ],
+  "exportRuleFileName": null,
+  "documentId": "889f3a9e9f331412ddbd6dd0",
+  "workspaceId": "74173860f79223047fcff52e",
+  "versionId": null,
+  "resultElementIds": null,
+  "resultDocumentId": "889f3a9e9f331412ddbd6dd0",
+  "failureReason": null,
+  "correlationId": null,
+  "resultWorkspaceId": "74173860f79223047fcff52e",
+  "name": "CAD - Single step R6d - Continuous upper and lower cores",
+  "id": "6ab186951f9b4e99a5532150",
+  "href": "https://cad.onshape.com/api/v1/translations/6ab186951f9b4e99a5532150"
+}

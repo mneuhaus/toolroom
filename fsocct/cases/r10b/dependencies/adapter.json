@@ -1,0 +1,29 @@
+{
+  "schema": "fsocct-partstudio-v1",
+  "source": {
+    "file": "adapter.step",
+    "sha256": "149992581db57c30772345340c9e0c7198ba0be6a4c6d1982caa6700169877b1"
+  },
+  "parts": [
+    {
+      "name": "REF SC15 servo horn and connector envelope [M]",
+      "file": "adapter-parts/000.brep",
+      "sha256": "848e79509c78b3656819055fbdd4e4da5efdd8f87d1bf7b6532d338d8c4fb0c8"
+    },
+    {
+      "name": "A03 R6d-SC15 R2 retainer bracket - holds servo from behind, connector window",
+      "file": "adapter-parts/001.brep",
+      "sha256": "a2683eded2bc64c45d4d0d02c460de2b1269914ed282271f635e7d67998476c6"
+    },
+    {
+      "name": "A01 R6d-SC15 R2 adapter plate - nose in T41R recess, servo socket and rails",
+      "file": "adapter-parts/002.brep",
+      "sha256": "3a9643d62f46c5b21964944d0b72b2eb2767d88ebbeff4b6786cb22c32008daf"
+    },
+    {
+      "name": "A02 R6d-SC15 R2 coupling - horn flange, neck and key into T61 pocket",
+      "file": "adapter-parts/003.brep",
+      "sha256": "8b2d9fd0347b358608d8ad5b1865dc03d9c0539f8b5f93b8201fe77f3a992f9d"
+    }
+  ]
+}

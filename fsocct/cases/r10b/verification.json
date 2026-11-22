@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-21",
+  "command": "uv run python cases/r10b/verify.py",
+  "ocp_version": "7.9.3.1.1",
+  "operation_count": 1920,
+  "ast_steps": 2476944,
+  "elapsed_seconds": 161.7557934160577,
+  "volume_mm3": 2939235.4622764643,
+  "step_verification": {
+    "status": "passed",
+    "body_count": 38,
+    "all_solids_valid_before_and_after_export": true,
+    "expected_part_names_matched": true,
+    "caught_operation_failures": 0,
+    "step_sha256": "c71bad1823f6f2f5848ca1bf96b2391092d35aba256bc874ce7dc2c2a2df7d7d",
+    "step_volume_mm3": 2939235.4576134775,
+    "step_volume_difference_mm3": -0.004662986844778061,
+    "per_solid_volume_relative_tolerance": 1e-07,
+    "per_solid_volume_absolute_tolerance_mm3": 0.001,
+    "bounds_tolerance_mm": 0.0001,
+    "implementation_sha256": {
+      "src/fsocct/__init__.py": "caa7c108970a9468b1021b06ae7c5069ea65c4735cefa1efc8a7f54d59783785",
+      "src/fsocct/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "src/fsocct/api.py": "c750f2f1b2a88b3ed8cd2cbd811e811b675503c8e055815b7cffb5a42709de98",
+      "src/fsocct/cli.py": "cb83f9f911e3056c2c620104d02edbc188ab70d85cc3a664ca47ddc0e03128a0",
+      "src/fsocct/corpus.py": "9b7cac7690dafd2d3c16032e4401a7fd0658e397855cc79ca046f98ba299f724",
+      "src/fsocct/kernel.py": "8b55b6d4040971799873de8bc3e966c7058beb14913a05a2bcfdb41115014fbb",
+      "src/fsocct/partstudio.py": "bc29447f370ec4b9c1a1359c890681450ac2343bce6f800c98cac644daea3be7",
+      "src/fsocct/runtime.py": "95ea07aa889330a5c1551428b39c27cf35c46083a34c55a689363e1ba6d441df",
+      "src/fsocct/syntax.py": "ff25bc9668ba77305b86303d0ef06b962a1615417350607edd8969906f785a9e",
+      "src/fsocct/values.py": "ba2cdd5bbe2d4d96f49291f9cc8ce1e3970a926134719eec26048f782857a61a"
+    }
+  },
+  "baseline_comparison": {
+    "status": "passed",
+    "matching_named_solids": 38,
+    "maximum_per_solid_volume_delta_mm3": 7.841561455279589e-06,
+    "total_volume_delta_mm3": -2.270704135298729e-05,
+    "maximum_bounds_delta_mm": 5.684341886080802e-14,
+    "baseline_report_sha256": "ee8dbcf45c7e947df3fe2c3ecab02dc52f6b829c5620b53556bfb299b1c30141",
+    "current_report_sha256": "f3cbddb3da5cde93894a95a8144fce5e19bdf3b9cacfaf8dadabc46da8cd1972"
+  }
+}

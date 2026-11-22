@@ -1,0 +1,89 @@
+{
+  "schema": "fsocct-partstudio-v1",
+  "source": {
+    "file": "tray.step",
+    "sha256": "cdea529752ba0b06428fa3f9bfad128bb86251869ddeb8d34936d80857fb6ed4"
+  },
+  "parts": [
+    {
+      "name": "REF H10 M3x12 countersunk hub screw 4 [M]",
+      "file": "tray-parts/000.brep",
+      "sha256": "a61761cb829aae38eda5ca42410285ae031f08f3f9ed17cae55018a14a6b54cb"
+    },
+    {
+      "name": "T66 R6d-M2 hook strip - comb 3x6, 8/8 (shown 150 mm below)",
+      "file": "tray-parts/001.brep",
+      "sha256": "9489cc5bf11bb87e3ba3201186d55b516947a4393dd8c1e1abe97aa3e1962460"
+    },
+    {
+      "name": "REF H10 M3x12 countersunk journal screw 5 [M]",
+      "file": "tray-parts/002.brep",
+      "sha256": "582506ed08f484b85d7ca040f2a01a6e1262f6377f4287fed8fd4b2d77423f95"
+    },
+    {
+      "name": "T61 R6d-M3 servo hub - SC09 horn seat with centring spigot, M3 from inside",
+      "file": "tray-parts/003.brep",
+      "sha256": "5fe9fe0cef48d1c131f9273ee961637d6db739b508c2a9df45c72147bb8b73fe"
+    },
+    {
+      "name": "REF H10 M3x12 countersunk hub screw 1 [M]",
+      "file": "tray-parts/004.brep",
+      "sha256": "21dbb9641e12dbba24b9f1485ae2d919e98414b6ae7dccf1ac413f743dec5f2e"
+    },
+    {
+      "name": "T60 R6d-M3 608 journal - collar and pin with centring spigot, M3 from inside",
+      "file": "tray-parts/005.brep",
+      "sha256": "8f06d750cf91cabc5239d253a3e3ce577604bbe9b44e17e4f1419271755bb5f6"
+    },
+    {
+      "name": "T62 R6d-M2 hook strip - rectangle 3x6",
+      "file": "tray-parts/006.brep",
+      "sha256": "51ed0f2f18d32e24dd9284b2a8014ba4f2516756554dcab620af0023afbcc7a3"
+    },
+    {
+      "name": "REF H10 M3x12 countersunk strip screw 6 [M]",
+      "file": "tray-parts/007.brep",
+      "sha256": "ffad755b6bd7559aa77510174b41f1f007aaddbcd1ff36ef4d4e64244b177e3f"
+    },
+    {
+      "name": "T67 R6d-M2 hook strip - J hook, 3 mm nose (shown 180 mm below)",
+      "file": "tray-parts/008.brep",
+      "sha256": "4c27c63488e3bf50278c2aa172ae2bff2cd043d828b83b4eeb41990c2e08fe52"
+    },
+    {
+      "name": "REF H10 M3x12 countersunk hub screw 3 [M]",
+      "file": "tray-parts/009.brep",
+      "sha256": "fff880ead5c99250899f73a5b49c60d17db5a0bb4ef54ba93dda680d76407a46"
+    },
+    {
+      "name": "T64 R6d-M2 hook strip - blank (shown 90 mm below)",
+      "file": "tray-parts/010.brep",
+      "sha256": "14e8ffceaf8ee765d4ac565d206546b195aa081a69c444d7886b5ea081c29e69"
+    },
+    {
+      "name": "T01 R6d-M4 modular V-tray - flat end walls, both hubs separate, strip seat",
+      "file": "tray-parts/011.brep",
+      "sha256": "71d0c1628736ab48079602ed8481145e397bbba82918aced2e06371aaef6fe48"
+    },
+    {
+      "name": "T65 R6d-M2 hook strip - sawtooth 20deg/4 (shown 120 mm below)",
+      "file": "tray-parts/012.brep",
+      "sha256": "117334f63f80708d0b083f506196ff6ccd27f3b92ecce10041f7f171b5fe17bd"
+    },
+    {
+      "name": "REF H10 M3x12 countersunk strip screw 7 [M]",
+      "file": "tray-parts/013.brep",
+      "sha256": "6a7cb5e97e74cf916b0a4318a3b638b06a272a6945a9e194afef68698ec0d663"
+    },
+    {
+      "name": "REF H10 M3x12 countersunk hub screw 2 [M]",
+      "file": "tray-parts/014.brep",
+      "sha256": "1900a635de3e3a2ffd7ce11dcfd4d6d5851301b1349f5e35657fd23821bcd287"
+    },
+    {
+      "name": "T63 R6d-M2 hook strip - trapezoid 10/3x6 (shown 60 mm below)",
+      "file": "tray-parts/015.brep",
+      "sha256": "c9d966bcd43cd70a16072494e3bd6b0f8aa456bd39ba98056160ef9376123b40"
+    }
+  ]
+}

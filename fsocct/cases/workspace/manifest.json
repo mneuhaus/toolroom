@@ -1,0 +1,260 @@
+{
+  "captured_utc": "2026-09-21T19:53:47.092899+00:00",
+  "sources": [
+    {
+      "key": "neon_gt",
+      "original_path": "/Users/mneuhaus/Workspace/cad/neon-gt/src/neon-gt.fs",
+      "file": "neon_gt.fs",
+      "sha256": "9fd71e3e9bb264773f2229da84516c291bf6b34ea7426c6705baa85491aa1aa7",
+      "bytes": 10363
+    },
+    {
+      "key": "hot_wire",
+      "original_path": "/Users/mneuhaus/Workspace/cad/halloween-spiele-2026/heisser-draht/job/source.fs",
+      "file": "hot_wire.fs",
+      "sha256": "a8b0f2a3c006e8e147d4eb2542c51deca9762438495e121aa395cdcd15f65ad4",
+      "bytes": 20253
+    },
+    {
+      "key": "lochwand",
+      "original_path": "/Users/mneuhaus/Workspace/cad/halloween-spiele-2026/lochwand/job/source.fs",
+      "file": "lochwand.fs",
+      "sha256": "50a1f888a71cb21a4e7d85942c88fece71ea96e76823c0f5ddf0ea23cb24b8c2",
+      "bytes": 15314
+    },
+    {
+      "key": "step_feeder",
+      "original_path": "/Users/mneuhaus/Workspace/cad/step-feeder/step_feeder.fs",
+      "file": "step_feeder.fs",
+      "sha256": "60081c0a8a15588c6c268653150cb2ee4e88a8fc95cf96725e0a377af6fde2b2",
+      "bytes": 20063
+    },
+    {
+      "key": "mini_camera",
+      "original_path": "/Users/mneuhaus/Workspace/cad/step-feeder/single-stage-gt2-mini-camera-r4/camera.fs",
+      "file": "mini_camera.fs",
+      "sha256": "1a48c8230e0bc476e98d497adaff9b069fd7cec27c6cdf8fb688900c99e8fe65",
+      "bytes": 7547
+    },
+    {
+      "key": "corner_loft",
+      "original_path": "/Users/mneuhaus/Workspace/cad/sorter-main-integration/hopper-corner-inserts-r1/inserts.fs",
+      "file": "corner_loft.fs",
+      "sha256": "ba2fb8d600079acb925688ec6580a51760310586fb6dcb36d1518dfe41c61e1a",
+      "bytes": 4151
+    },
+    {
+      "key": "corner_ramp",
+      "original_path": "/Users/mneuhaus/Workspace/cad/sorter-main-integration/hopper-corner-inserts-r3/inserts-r3.fs",
+      "file": "corner_ramp.fs",
+      "sha256": "ff9c24443ca98fdd1269050665b25e8c8620bc560016c618b229cf70ead0536a",
+      "bytes": 2081
+    },
+    {
+      "key": "rear_wall",
+      "original_path": "/Users/mneuhaus/Workspace/cad/sorter-main-integration/belt-fixed-r29/wall-r29/hopper-rear-wall-r29.fs",
+      "file": "rear_wall.fs",
+      "sha256": "188c7a5629a55b774fb8a1d621605b06d0c38bcaf3a11a12db592a688afcdacf",
+      "bytes": 12969
+    },
+    {
+      "key": "channel_bases",
+      "original_path": "/Users/mneuhaus/Workspace/cad/sorter-main-integration/c-channel-bases-r3/channel-bases-r3.fs",
+      "file": "channel_bases.fs",
+      "sha256": "9c248a3e391c3f8aecbaeb838c82d7ed2a7b40e62c8614018a33ec434b2214a8",
+      "bytes": 34664
+    },
+    {
+      "key": "skirt_halves",
+      "original_path": "/Users/mneuhaus/Workspace/cad/sorter-beltfeeder-handoff/scripts/skirt_halves.fs",
+      "file": "skirt_halves.fs",
+      "sha256": "f0be1a8a147bdbdce0a7fcac87835453ddecfd417be2d92644c8547832a6757f",
+      "bytes": 14455
+    },
+    {
+      "key": "printed_joints",
+      "original_path": "/Users/mneuhaus/Workspace/cad/toolroom/labs/printed-joints/joints.fs",
+      "file": "printed_joints.fs",
+      "sha256": "6d5d23e9fedf705e351d657a5b22f617ff42a773b70d9e34ce64d40f8252b34a",
+      "bytes": 15649
+    },
+    {
+      "key": "sparky_z",
+      "original_path": "/Users/mneuhaus/Workspace/cad/spar-key-z-axis/src/z-axis.fs",
+      "file": "sparky_z.fs",
+      "sha256": "8c53903382179085df2a7777fbdd9f3d198a5cb94590fc6521269aafddbd5ba3",
+      "bytes": 50712
+    }
+  ],
+  "cases": [
+    {
+      "id": "neon_gt-neonGT",
+      "source": "neon_gt.fs",
+      "feature": "neonGT",
+      "parameters": {}
+    },
+    {
+      "id": "neon_gt-neonGTPrint",
+      "source": "neon_gt.fs",
+      "feature": "neonGTPrint",
+      "parameters": {}
+    },
+    {
+      "id": "hot_wire-hotWireDeployed",
+      "source": "hot_wire.fs",
+      "feature": "hotWireDeployed",
+      "parameters": {}
+    },
+    {
+      "id": "hot_wire-hotWireStowed",
+      "source": "hot_wire.fs",
+      "feature": "hotWireStowed",
+      "parameters": {}
+    },
+    {
+      "id": "lochwand-lochwand",
+      "source": "lochwand.fs",
+      "feature": "lochwand",
+      "parameters": {
+        "width": "600*millimeter",
+        "panelHeight": "350*millimeter",
+        "front": "6*millimeter",
+        "back": "4*millimeter",
+        "depth": "48*millimeter",
+        "ball": "30*millimeter",
+        "returnView": "false"
+      }
+    },
+    {
+      "id": "step_feeder-stepFeeder",
+      "source": "step_feeder.fs",
+      "feature": "stepFeeder",
+      "parameters": {
+        "angle": "0*degree"
+      }
+    },
+    {
+      "id": "mini_camera-miniCameraR4",
+      "source": "mini_camera.fs",
+      "feature": "miniCameraR4",
+      "parameters": {}
+    },
+    {
+      "id": "corner_loft-cornerInsertsR1",
+      "source": "corner_loft.fs",
+      "feature": "cornerInsertsR1",
+      "parameters": {}
+    },
+    {
+      "id": "corner_ramp-cornerInsertsR3",
+      "source": "corner_ramp.fs",
+      "feature": "cornerInsertsR3",
+      "parameters": {}
+    },
+    {
+      "id": "rear_wall-hopperRearWallR29",
+      "source": "rear_wall.fs",
+      "feature": "hopperRearWallR29",
+      "parameters": {}
+    },
+    {
+      "id": "channel_bases-channelBasesR3",
+      "source": "channel_bases.fs",
+      "feature": "channelBasesR3",
+      "parameters": {}
+    },
+    {
+      "id": "skirt_halves-skirtHalves",
+      "source": "skirt_halves.fs",
+      "feature": "skirtHalves",
+      "parameters": {},
+      "fonts": "fonts.json"
+    },
+    {
+      "id": "printed_joints-printedJoint=1",
+      "source": "printed_joints.fs",
+      "feature": "printedJoint",
+      "parameters": {
+        "kind": "1",
+        "gap": "0.1*millimeter",
+        "separate": "false"
+      }
+    },
+    {
+      "id": "printed_joints-printedJoint=2",
+      "source": "printed_joints.fs",
+      "feature": "printedJoint",
+      "parameters": {
+        "kind": "2",
+        "gap": "0.1*millimeter",
+        "separate": "false"
+      }
+    },
+    {
+      "id": "printed_joints-printedJoint=3",
+      "source": "printed_joints.fs",
+      "feature": "printedJoint",
+      "parameters": {
+        "kind": "3",
+        "gap": "0.1*millimeter",
+        "separate": "false"
+      }
+    },
+    {
+      "id": "printed_joints-printedJoint=4",
+      "source": "printed_joints.fs",
+      "feature": "printedJoint",
+      "parameters": {
+        "kind": "4",
+        "gap": "0.1*millimeter",
+        "separate": "false"
+      }
+    },
+    {
+      "id": "printed_joints-printedJoint=5",
+      "source": "printed_joints.fs",
+      "feature": "printedJoint",
+      "parameters": {
+        "kind": "5",
+        "gap": "0.1*millimeter",
+        "separate": "false"
+      }
+    },
+    {
+      "id": "printed_joints-printedJoint=6",
+      "source": "printed_joints.fs",
+      "feature": "printedJoint",
+      "parameters": {
+        "kind": "6",
+        "gap": "0.1*millimeter",
+        "separate": "false"
+      }
+    },
+    {
+      "id": "printed_joints-printedJoint=7",
+      "source": "printed_joints.fs",
+      "feature": "printedJoint",
+      "parameters": {
+        "kind": "7",
+        "gap": "0.1*millimeter",
+        "separate": "false"
+      }
+    },
+    {
+      "id": "printed_joints-printedJoint=8",
+      "source": "printed_joints.fs",
+      "feature": "printedJoint",
+      "parameters": {
+        "kind": "8",
+        "gap": "0.1*millimeter",
+        "separate": "false"
+      }
+    },
+    {
+      "id": "sparky_z-sparkyZ",
+      "source": "sparky_z.fs",
+      "feature": "sparkyZ",
+      "parameters": {}
+    }
+  ]
+}

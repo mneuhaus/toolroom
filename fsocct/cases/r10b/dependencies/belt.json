@@ -1,0 +1,49 @@
+{
+  "schema": "fsocct-partstudio-v1",
+  "source": {
+    "file": "belt.step",
+    "sha256": "dfdf4674fab70bb785f83ffe097ee27b7005c72b2e33b7958658670ea63c0ad1"
+  },
+  "parts": [
+    {
+      "name": "REF H10 M3x16 GT2 Klemmbacke 2 - belt line [M]",
+      "file": "belt-parts/000.brep",
+      "sha256": "6945bb89afccdb4f0ac310f82632372f07ea7849e75b8d342f2ecba20d29a6ee"
+    },
+    {
+      "name": "REF P04 GT2 Klemmbacke lower - teeth on belt [M]",
+      "file": "belt-parts/001.brep",
+      "sha256": "bfbaad735811f1c069fdc8420a0749913ccb99f491c70c96e87e11c8ef17c670"
+    },
+    {
+      "name": "REF H10 M3x16 GT2 Klemmbacke 3 - belt line [M]",
+      "file": "belt-parts/002.brep",
+      "sha256": "cf258bec44574449f8fa86ee72178d1cf9645c35e622956851884eca3ba19fc0"
+    },
+    {
+      "name": "REF GT2 R6d-C2 open belt - clamp gap Z-169..-165",
+      "file": "belt-parts/003.brep",
+      "sha256": "21627aea546ee5b6c11c0f1990eab434a8815ced4bd080c11cad57663cd0e2b2"
+    },
+    {
+      "name": "P03 R6d-C2 wide pull bow - GT2 clamped on the strand, rear wall removed",
+      "file": "belt-parts/004.brep",
+      "sha256": "6a45534d40179b74703647981fb535980beaece18b5c0ef9278d334c86681b15"
+    },
+    {
+      "name": "REF P04 GT2 Klemmbacke upper - teeth on belt [M]",
+      "file": "belt-parts/005.brep",
+      "sha256": "b6bed6f9c704631f8b2ec0d93888583f8e88e1f4cfa00acf91b4df0a0a82b94d"
+    },
+    {
+      "name": "REF H10 M3x16 GT2 Klemmbacke 4 - belt line [M]",
+      "file": "belt-parts/006.brep",
+      "sha256": "ca5ece0b0f9514ff2d1c0c2df4011c24c35e335e8a468257ba5d95f318945db2"
+    },
+    {
+      "name": "REF H10 M3x16 GT2 Klemmbacke 5 - belt line [M]",
+      "file": "belt-parts/007.brep",
+      "sha256": "71325da67a06788e69590fe401140e4cf7a0a7c947d56c545bc121cbd75206e0"
+    }
+  ]
+}

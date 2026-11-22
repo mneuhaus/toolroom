@@ -1,0 +1,579 @@
+[ {
+  "name" : "P10 R6d 180mm upper core - raised accessible idler",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "ZtoDD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&9d6$eJylVtuSmkAQ/ZnJS6qkGJkBefTCbkjiJQO5+LQ1QutOggwZxrjm6zNAxN1ko5gtSyyZPvTp7tNHX40o+rADdZi60QqloMQPSG+U3I7tqcvsM1fK7GH/Becvv9KII8i10If4UMCIo6D9EhE0mk+WpqR7UWqpmpsDNGbBMA7ns8hHYltIpWO+mTiEeiZSFqC4FjIP01EfhekQRxhbnnlhi1pra4Bu9vsBjXajj8GXT/ZkeWeXcqcScH637fUW1AZuvt4vb99+Gk1+/thT22/SzAuT8XvV55qIi8LpYs5ihlmfOYxECRJ5qXmewIxvIcIIM2/sGwY9bvVWlmP5iFFfFguuNaiccVPgeL5YHh/AUnMjkcXhEQy7hjY1nx4SaQYqkwnPGGcYn1AMO08RPbyyXFNwhZJZ+g4OvAvEM9d1DSpEJjUm/wEibhcQaUFKSn1dGlPQ8CGDbj04gtYZzzedME+ora9D8Kt58SSBsuyC4S1mfw+QRXuAogtu1eLKgiegOgMb0e2lytJL4a41eNSFslDA00KWQpuFymDdDPjRxuM+SkXJtyux2dXLOuGaD/G0//dJvWnYQXMW3oaz4fu7SbAIZpNgNl6aZZRKbETOs3JIarPCY8esUDC5DWqmT2tyjIacgaGKLRdVtKa8/FbuhYK5aUiUouhdEI/f3AWzOIyXEaDyG+jkvvGjMI08iyK505nIoXo39ogZabriMVLtC6GMuFGPmLVFVRTuFNXvFOW0I3i2sB6xrb7xGHiQRfCg1S41YjTuGn0OFvFd5aTnJn58iOP/No7V06n/M7pKKQtZjKTMgFeu5qNwFgcsCsZxh4yDxwLN30qRX1TnMTu00C4Qt47cCqWk6hLflHfMkMOGV3r+Q8vMgUq4zFkzYjOCj0JsR/kXcQr1pHrEtJn00XHOjHh/isBdnQ79c4erc4fpmRG2XEyN1K64UHKp8RWm6gt1nun8mXDjJ9StUyRdUlD/quHWmOv04DUuD9Vfi4u2fbK3Pc8u/gA7bbSWF832VKhW/HDy5184bqnU\",id);",
+  "partIdentity" : "50ec526b2f3aaa39cad837c7",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 0,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 87,
+      "green" : 117,
+      "blue" : 130
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "P14 R6d wide low drive core",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "Z2qDD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&2f65$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\",id);",
+  "partIdentity" : "550cb33cb9ee60f402ee02d9",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 1,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 87,
+      "green" : 117,
+      "blue" : 130
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "P01 R6d continuous wide pickup plate - 180mm working channel",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "ZlrDD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&6e9$eJyVVVFzojAY/DO5l5uBIQFRHxWwpVfRBq5X78UJEm2uQmiItd6vvxCqVtuqNwwoyX5fNrub4Vu/Be5WVGyGbpyCjAr2QrOB4LlnDV1s7Z4tbPXQ0dj/zL+hYgJoIZncJJuS9gkIdi+xA/ojf6JIPLJKctEMdoCHg14SjqK4C1heciETsvAd6CKF5CUVRDJehFkfgTDrwRhCs60uaLZM/deYmUZmGtScmx0wWK87rXjV/xk83Fv+ZGpVfCVmtPW27e85FQs6yH5Prm/aD97zcO456RZkD/48Tq5u7vv+35d1y+o2ZEal4vVc66fpuiAcjkc4wRAjbGMnngFWVJIUMxqRnMYQQNz2uoqnQUwj3bMz5qYBLdM2uwBDi5djIiUVBSZKFm80nmwb4kwNzHi5+bJNR+3dgLqNFCzHRF0Q7usxtE/UGpC+r749LqaHtbDToE8toTAd09l1LnnFpFJ7SedS170LB0QgYxXJU7ZYaV99IkkPDtHHGS03tMEIh1dh1Lud+sE4iPwg8ibKES7YghVkWfUcnU3o2Uq3wL8KNMMDcgaytWguqCkNSfVUrZmgo1KJn4H4R5B419MgSsJkElNQPVE5e2xiG2Zx22wBvpJLVtD6bk6CEsJp1sHIVXtE6rcTG7YKJahR8CIUughl72T/sCkDpSZSgaKvvAxepVhlVG2JgPhXME6m9WE7YVnTwHkLU3ro8KfIeile8rLP+ZKSOrpdEEZJgOPAS86stA9eVZLihrPiXKT0qnSf1zNwV6NyJgQX59Nab2fbuaALUuf1KKsYWXUwMVJ91NPeBm1n1wFZp6vdMJA6bCgDWx8x6h6b7GT7yfTUZHZqcv6FVVsetnq305qH7Z4SWeOVFvZnKn8OdSx1Q92anmvtOBcbqPGX+93WKEHrL0lj3T+eOOjQ\",id);",
+  "partIdentity" : "c291584be7ccb16e2c86d0e6",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 2,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 217,
+      "green" : 110,
+      "blue" : 33
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "P03 R6d wide pull bow - outside GT2 screws",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "ZusDD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&824$eJylVNty2jAQ/Rn1pTN4kGUb8+hbUqflUtlNyhMjY0HUgOXKIoR+fSUDDgkJOO145Blpz2rP7jmjT74Nvq+p2A6cJAM5FeyR5leCr4LuwMFd9bdx1zOb3en/X+J2QgAtJJPbdFtSn4Co2SQW8EfhRJG5Z5XkYnfoggBHXhqPhkkfsFXJhUzJIoTQ7CIF5SUVRDJexLlvgjj3YAKh0VMfNGxjbrjgarNx7WTt/4h+3nbDybRb8bWYUbTv+POKigW9+nU/ub659cM/jxu729/VGZWq5G89opqJA+LBeIRTDLGJEbaSGWBFJUkxo0OyogkEEPeCvmLQIUYnM5DRB9i2eTkmUlJRYKI6DEbjyeECnKuDGS+3R2nQMRzDNSxFvwN7oCoFJXnJKyYV2SWdS4IJhvBontAEOavIKmOLdT2JkEjiwYF5GqnbgAiMcHwdD71v0zAaR8MwGgYT1SkXbMEKsqw8qxYPBkjxi8LrqCb7gmMHZmrNFFNoOEDzGpDqodowQUelajQHydcoDb5Mo2Eap5OEguqBytn9Tu04T3qGDfhaLllB9drZBWKY7WphmOs+KYbzpGNmCqxRsBXKbIVCjQpvNtYxbcNUAtInXkZPUqxzqtoiILmLxulU+/RZRQzRO5fAfK9jVqt2oaRC65K85KXP+ZISbZk+iIdphJMoSFtUdNWf7p1DihvOipeFz3ClTWqbFKdGrpgQXLTBu3V7hwoFXRBt6FdexrCnjYuhi2EfQ3IwYiPlCXEL1Up1TLU3d8y1ztg8MZRlPQdPHHIcfF3zRdA5I+GBC7LUsjUXM780eJ2j54LcNyZ/Bq7OUKbhyG5TAn1M3DrnYym9GimofrjppYR+c7V6AqhIBVv9jxNIo39znX/GCQ4644Tj4IkTjoPvOcGat3eA1U55q73iWTNZMpPq0efijmaX5HhOKujG2+fVSX8BXedABw==\",id);",
+  "partIdentity" : "97c1fb04086608accb8d550e",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 3,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 217,
+      "green" : 110,
+      "blue" : 33
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "T41 R6d wide upper side L - 608 and 180mm guide",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "ZgwDD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&6455$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\",id);",
+  "partIdentity" : "8fc6b5b18ad4a96d922283e7",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 4,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 87,
+      "green" : 117,
+      "blue" : 130
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "T41 R6d wide upper side R - SC09 and 180mm guide",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "ZVzDD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&59db$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\",id);",
+  "partIdentity" : "ead62e3a2d03b67dd7eaa9a6",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 5,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 87,
+      "green" : 117,
+      "blue" : 130
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "T40 R6d wide lower frame L",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "ZT0DD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&57be$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\",id);",
+  "partIdentity" : "d0250a6187ab10b5f817295d",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 6,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 87,
+      "green" : 117,
+      "blue" : 130
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "T40 R6d wide lower frame R",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "ZQ1DD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&5018$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\",id);",
+  "partIdentity" : "42fc3bc34d75b03826ffd26b",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 7,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 87,
+      "green" : 117,
+      "blue" : 130
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "T05 R6d 249.2mm hopper floor",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "Z/1DD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&b28$eJylVtuSmkAQ/ZnJS6qgmAsXHxXZDUm8ZCAX82INMG6mogwZMLv+fQbwsroacbcUCqe7T/f0Oc34bmCDL2uuNiMnSkDGlfjLszslV741cqi1v9vU6qOTtVvsHXz7Tmur7xEDPK9EtYk3BR8wEOx/RAQEw/tAF/tLlJVU7aIHfBr043Ay1gZZcMUqIfMwGyAQZn0YQWi6+gNN29SP2CT60QF3j4+eHa0HX4Mf36zhbG6Vcq1Sbm/b8H7F1QO/y37OPnx0f/h/RgufJHMrtuxyyZLyUSg+KaIe+FP3rykjA9GnIPY/zINxHMaziIPyN6/SX235YRa5pg3kulqKnNeXRSFFFFNCbd/TZRo902CmkZhGahqZaXDTWJgGtPSlNwDEqlAir6gXuSAcTWk4jg8tO0BRl3q0R1lkwDpfnQg+s3JtXXSMQ6+Ms18Z57wyzj2NiyACmSjZKhEP60YMQ1axPhyhl5aGOojBhIb34bj/eT4MpsF4GIz9mWZXKvEgcrYs+w5NKdQd0aV4FCYUcgp9rAU5mAxnXVhEZg/wJ1kET5VaZ7pOLfPoezCN5w2C3oJXw0QpEHlZsTzlY7aqFZ/KYvM/cFsDP0q1zGQxZVXFVa6xCfAn0wMqRRlF/H8onh4KA2OgOFOxEiumG4nh0YiSc3xcRuw1wjV0x3eYg5Y6mnRSPt4BMHBRDHirBgqfixyzDgHktoBnesMvIimCtboo0l9MEekTinX7Uoo5JfDAwrXtIr2Asnq7KLmBOwM7W/aShrWOCZ1Gk7KQxUDKJWe1bnpAv1cCGgV+fJN4DOw2BZQG3Gi1Wyd1XEVwjxGI/QaA11XgHAGcKSCCAB4DLBr3K4nq7pA9diFLUenzZckX1fGE2S9FdGHSdFrS9Hw7XjXWiJW/d9N1omDH2c/IRQu5ZCHWOTG1FRg26irZXYA+zPDZrp11JXp/BNWutnUN+5kEC5Z/lCK/ykuTJ9vHXfV3GreVUEqqDqS3u22xc/7AatrfQLmdtg3fkn6BbM++RPbBckr23nKR7F3uzmQ3Ad3I3rl2JrsJcLvT1gTcQLO7PQfrP5gtYf8AItb5tw==\",id);",
+  "partIdentity" : "f0c84d6b2e089707ce140603",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 8,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 87,
+      "green" : 117,
+      "blue" : 130
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "T06 R6d 249.2mm rear hopper wall",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "Zu2DD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&94d$eJytVttymzAQ/Rn1pTMwiLsfMcYJaX2poG3cF48A2dHEICpwE+frKwknTp3YsZM+iDGsztndo6Mdf+o74Nua8M3ITTJQEE7/kGLIWRkaIxcZT08HGYG59+2c+JFnYHd4+UwwIFVL2026qUkfg+jpJbFBNLiIRJE3tGkZ7z76IERRkMaTsQiwmnDcUlbFRd8EcRHABELd1z0d6o4ufnq6lularmuFfLN0WwRcMLy7851k3f8eXf8wBrO50bA1z4mbb9X4XBK+JMPggZS4uA5jf1Ma6HGXMyx+zS6vvOvw92gR2tncSA23WeGsuaOcTOqkB35LeVW1BUi+RGl4OY/GaZzOEgKaW9LmN12XcZF4ugPYul3RishlIIhMZCEbOaEvutF6uoZ3PWhE1xbPXqEhFhTLFMvSPUDLmtOqRX7igXg0RfE43Um940Ye8lEP4USDPVGAzAyfRYmILk7Eme/EWfu4BJqgoA0uM7pcq0Md4BYHcGS+jChtoQUmKL6Ix8HX+SCaRuNBNA5nQn7G6ZJWeNUENsoRFBWKUnwEQ0tYqj8ZzN4lsKn3ALlndXTf8nUhShbOTX5G03SuKEU3qp0kB7RqWlzlZIxLaeKc1Zuzskn39kCjwQfTsTCrp7htCa9ERhuEk+kuFzI9ZPpncmuW6McyO37PENKb2UcY3R2jKvg/E75SYQIBPMoIO/h5lSjQIaDl/gs8LYOaRfYTbc0a2or5siKLViGfzVKYSacjKPxaIEi2E/LlMFCJF4JW3ncN2kCSjXBz210wlO1dPNveBiA8GLEPRrxdby9K0GwxdEyhhZkpHZyjOnQIQ++UyPaEe3WrvHCsZnWfsRXB0v49IOZZhJIoTN9M5u9cVOPqitHq7cNSmYsjNtgHuGpfSTln/BQvyLYe2SuyxNINH3GCY3THsPXCAQ+4Bz3gHvSA+7YHHpOf7gGFkMt5Td8De8XEsn251zmFPTvj9BTinOP21D5O5L+R7tz+AtbXc+I=\",id);",
+  "partIdentity" : "755901594276cb765d518250",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 9,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 87,
+      "green" : 117,
+      "blue" : 130
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "T02 R6d continuous 180mm transfer",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "Zw4DD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&455$eJytk2FvmzAQhv+M92USiCOBhI+FJFMqpWSGVcun6QKX4AlsZpyi7NfPSTq6appopcnSST69z713Z/lDHLDPJ9LnTZjtWUlaPFG50qpJvE3Ivf8egwwZSSPMOT+3FCNbDpdsyuJ0sbNtVKIzSt+Sc5bw5V2+Th+yiImmVdrkeFz44INVqpY0GqHkuox9ti7vIANwZ/aAG7gHd85WfT8PslP8Zfn10VvsvnmdOumCJs+jfmxIH2n1vdp9un+MFz+f+sCLbjZpax1/XHZzbSRk68025TkH7vMJn2YFE7IzKAt6wIYyYMBnSWQ7cNB19u7EjVju+ardojGkJUc7YJJud78L8NImCtWe/8AgdKe2dQdm7GCrI0cO8AJwmLwWRzYWV7mQho52FzSG4IDstSiPdK+EfDvTY11fCAfGGPAHyFRaoYkHu3E4+stw3A/+6fcetlY9aS6apCbUl8d9+24O9amr7N+RZoyZD0xX4cE4U3+MmA1ERVi+C7hajAPhK4dxffEyt5BYJ0rTStwm/wUR5ztg\",id);",
+  "partIdentity" : "a419b7a1d05f98217b98c7dc",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 10,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 87,
+      "green" : 117,
+      "blue" : 130
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "T01 R6d 180mm continuous V-tray - 608 journal",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "Zy5DD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&816$eJylVWtzojAU/TPZLzsDQ8JD+SiPdumujwbaXT85EaJNFwkNWOv++k1QsbZdtLOjQSDn3ntyz0n84tngdk3FdujEc5BRwZ5pdiX4yjeGDjY6rjY2Bug/5k+wMQG0qFm9TbYl9QgI24fYAt44mEpyD6yqudi97AMfh4MkGo9iF7BVyUWdkGXg9hxXInlJBakZL6LMQyDKBjCGUO/JD9RtvbnVUl3LdI3qC70Prjabvh2vvbvw170RTGdGxdcipc6+HV9XVCzp1SQJy6fF4+DWeFreLQ8g8+rxYXp9c+8Ff543tuHuyIxLyetJ9bWh64BoOBnjBEOMsImtOAWsqGpSpHREVjSGAOKe70qeGtG1+ZGdttA1aOim7oLEgLyckLqmosBEtsUfT6aHhDiTL1JebjvS9NXa5a8LUsE3BcEEQ3hMgKHZGezIK23CxbooqPhk+Hxf+5nkOd16OS2y9G0KeppBRqmIzkISY+lqHMhtWEZLXrFaKpfTRd1EvzIaRCBjFVnN2XLdeCQgNRnAIXo/00gHTTDG0XU0GvyYBeEkHAXhyJ9KdblgS1aQvBpYjduhb0oNwuA6bHieUNSQ7B7qSaJQd4CiNSTV72rDBB2XUswMxN/DxP82C0dJlExjCqrftE4fdtsgyuKebgO+rnNWUDV2+0u2pLerhZEr14nkdx5rpi3BCgUvQqGLUGYrwIcL09BCR9Kk9IWX4Ust1hmVyyIg/hlOkpnawB0CHpP09yaZn2r+T7QqyUteepznlKht4YJolIQ4Dv3kgor91jZVSYobzopzZmur0zb0khCnQa6YELx74+zx/WZ5hwoFXRLl5zdexshUxsXIwkg+OAcjtlK+I25ljVKaacgBwUFnjNK3JrCN4yTtmDTfWfH1JOqQsOUi12guFBfTPdf4JkbeW+iDznfA5fFg2QpundVWxVj9T4nbxHzOD73dQUrVPxo9F3A8eXmeTc579IhPeZ6Ts4YzW3y5T/4X4KU3Ew==\",id);",
+  "partIdentity" : "7f51a31007256b5e00627243",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 11,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 204,
+      "green" : 212,
+      "blue" : 209
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "T50 R6d plain removable drop shield",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "ZQ6DD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&309$eJyNkUuP2yAUhf/M7dLIED/ipR/M1Gpjp+A+soqIoRM0E9vFuJn8+2KnapV2kVmABPd8514O77IQPk3KXDYRP4BURv9U8sH0p9zfRMz/Zw85JiD1KE4H/TQJq/uuEFakeEP+rzSXQXG8gpqVj2WVftwXdEurglb5jifQG/2kO/EyptFiLEB1VtvLTGUC6J8DD4AWj9RNd9Sj7c31cg05o2lT1pUr9IMyS8tSZgRKmWKOMVqhAGEUwcP5vA75lH2m3774xW7vN6E/PutuPGuj6sHN8mMOYLGVwD/QJn+/p1VTNjuuYHxWtj1exyklj1EI/WRfdKfmtYTCQhaxmK1Zwg6sZZIp7uHICWcFvqsgdxWru4rgrsJV89hlmdXF7irKW5eTJ5GnkPcdEZSAeu0H+mrNJBVr3Y/wr3Tb7BciZFjNGG/BJWdF16pKnObPafvhcmO2dqknMLZGnb0kFP2wFdYq0znLAPJ6+9eMkRUjwQ0cI48c3GrhqIR0vHsIid9GLC3fQEQ3PX4DvwBWdu1x\",id);",
+  "partIdentity" : "cd0f01ffdbf3325f7b179218",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 12,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 87,
+      "green" : 117,
+      "blue" : 130
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "T51 R6d 608 outer-race retaining cap",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "Z76DD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&2df$eJyNkFtvmzAYhv+Md4mFKZBwycHt0BbIbHbIVeTYXxprBJgxS/Pva5KtU1Sp3Y0lH57nfT9/yCL0ZQJzXsV8hxQY/RvUvemPub+Kmf/GGnESIKVHcdzpx0lY3XeFsCIlq+D1TXMegJM7VLPyoazSz9uCrmlV0Crf8AT1Rj/qTrRjSi5igaCz2p5nKhOIvmx4iGjxQF3Tgx5tb66HS5QzmjZlXbmLfgBziSxVFqBSpYQTgu9wiAmO0f3ptIz4lH2lP775xWbrNxFxTeV40gbqwXX5NX/GRasQ/0Sb/OOWVk3ZbDig8SdYebjWKRWPkdRGtsCifOGaZXWxYQu2ZEkuXaqnsAfY2+MAJwie+oE+WTMpYNLNx7/TdbO9EBEj4YxxiXQ3WtFJqMRxHlX2w/lGtnMzJGg8iL1l0GrYi35YC2vBdM4aorxe//MxkjAibniJPbLHXuA7h4ZWXSVMMqLewhYu9i946FvwSBi8Cy3d8/gFk2M+Wce9i8U32Jz2H9DiddYf6hmbCt7J\",id);",
+  "partIdentity" : "5fda7c472e515e712da5f3b0",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 13,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 87,
+      "green" : 117,
+      "blue" : 130
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "REF R6d 608-2Z 8x22x7 nominal envelope",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "ZG7DD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"%B5$QueryM6Sb$derivedFromC0M5S12$disambiguationDataA1M2S12$disambiguationTypeS13$ORIGINAL_DEPENDENCYS9$originalsA1C0M5Sa$entityTypeBa$EntityTypeS4$EDGESb$historyTypeS8$CREATIONSb$operationIdB2$IdA1S11.4.5.1.6$Fww85SuBUEXV0DY_0H608outerswireOpS9$queryTypeSd$SKETCH_ENTITYSe$sketchEntityIdS6$circleR5C7S4$BODYR7R8R9CcA1S-d.-e.-f.2.9$exopExtrudeRcSa$SWEPT_BODYR5R14R7R8Sc$instanceNameS4$copyR9CcA1S-d.-e.4.1.9$boreaopPatternRcS4$COPY\",id);",
+  "partIdentity" : "41d72acb3d1e95af69a9d4a5",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 14,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 191,
+      "green" : 196,
+      "blue" : 199
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "REF GT2 R6d open belt - raised upper idler",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "ZZ7DD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&2ab$eJx9kV9v2yAUxb8MewwKODjJo//QztpiZ+B2zVNEDG3QHPAwXppvX+xIrapqeQAJ7vmdezl8Swn4NSh32cT8AKRy+p+Sd86esvkmZvP3nXCEgdS9OB30yyC8tiYXXiRog79W6kunOIpAxYr7okx+7nO6pWVOy2zH18A6/aKNaPsknowFUMZrfxmpVAD6fuALQPN7GuY66t5bd71cgYzRpC6qMhRsp9zUspApBoVMEEcIRpBABGNwdz6vCB/SB/r0OM93+zlDxA5euf6snaq6MMzf8e2TrwT8B62z73ta1kW94wr0f5Rvjtd5ChmmEa6ZsmCExWzJVmzNDqxhkilOQKuN+l91QtFNFN9Co5toxEi2DMK0yndXQdaEIGYSzhScPUMM10C92o6+ejdIxZoQOf9Nt/V+IghDasR4A7TpvTCNKsVp7NzY7vLJbIx1Dfqjalthu63wIUsT/BYgq7YfTgxHDC8+kSs4w4uwyPhlhhrZhyfg5S2ETPKzda2ctG/WZdVX\",id);",
+  "partIdentity" : "1e92d0142c6ae45e02f13680",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 15,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 41,
+      "green" : 43,
+      "blue" : 48
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+}, {
+  "name" : "C07 R6d extended straight camera arm",
+  "state" : "IN_PROGRESS",
+  "description" : null,
+  "revision" : null,
+  "partNumber" : null,
+  "elementId" : "082fddfe5e1cad4cfb319dea",
+  "partId" : "Zy7DD",
+  "bodyType" : "solid",
+  "microversionId" : "e0aa7b219e284b36c72c543e",
+  "isFlattenedBody" : false,
+  "partQuery" : "query=qCompressed(1.0,\"&6d3$eJylVdGSmjAU/Zn0pTNkSIiAj4jslraiTWi7PjkR4m6mQmjAuvbrm+COum533W4HkhHuPefenBziu9EAfNkIvZv4bAlKoeUvUV5pVcXuxKfuYR5QN8Jn7y7Okb9H2plxIOpOdrt814gRB8nhgRGQjK8TU/5Otp3S+5chiGkS5ek0MwHVCM07qeq0HGGQlhFiCMEQBhDBATQ/PXMh6IOr7TYcsM3oa3LzzR3PF26rNroQfvGwsveV0LfiKvotKl7exGm4q1y6MA0GXFftVmoxbdgQ/LSK9G2UgH1K8vjDIsnyNJ8zAdofoivu9u2nJQvgAKhNt5a1sMOliGLqUUIHcWjadIbQ4dBZQqeATgkdAZ0VdJBrBoIBkFWjZd3RkAUgncxomuVHyY5UNKAhHVLOHGTr2ULoJCpMdPVKHH4jznsjjrwRNzjHMYRBKVteLeXtpjfDmHc8QhP8NNJvHfLAlKbXaRZ9XoyTWZKNkyyem91VWt7Kmq/byKcFRUYRUyykaEmRoCj2jCFH0/H8NbuI4RCIe9Uk953elKZPY3P2PZnli57BLCG0NKwAsm47Xhci45V1fKGa3Uvk1s5DsOYNV82Md53QtSEnIJ7OjrQUlxSLl2jMk+eZQSwVK7TYEkyMmh76PxLyzyTkQNIK3j1BMwTQY/iqT75QZgX9Pq2SWit9MZmcttHwei1W+1ZOzjmMrKcoNrdHMYnIY6uesDnEnkH2Q3aMAy3XhLc/9k6myzOHkweLU4SejZBnI8FxVecdOMSsCRulcWnVwsuXBNgDsDGXlWB5JtjfMq3DVaOakVJrwa0Jh8CcUgllSZxfKhU+UvujkvXFLerrlgfcxfygT9PC/nOIPvsPFq/lRA==\",id);",
+  "partIdentity" : "236c574ec03a7ef03a53dd3d",
+  "meshState" : "NO_MESH",
+  "isHidden" : false,
+  "configurationId" : "",
+  "thumbnailConfigurationId" : "",
+  "propertySourceTypes" : {
+    "57f3fb8efa3416c06701d60d" : 2,
+    "57f3fb8efa3416c06701d60c" : 2
+  },
+  "metadataMicroversion" : "3c49ec4ecc31874fbaa6875d",
+  "defaultColorHash" : "Fww85SuBUEXV0DY_0_0",
+  "ordinal" : 16,
+  "isMesh" : false,
+  "appearance" : {
+    "color" : {
+      "red" : 102,
+      "green" : 117,
+      "blue" : 125
+    },
+    "isGenerated" : false,
+    "opacity" : 255
+  }
+} ]

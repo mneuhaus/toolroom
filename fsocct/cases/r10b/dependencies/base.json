@@ -1,0 +1,94 @@
+{
+  "schema": "fsocct-partstudio-v1",
+  "source": {
+    "file": "base.step",
+    "sha256": "250b14c7301d5ab1e42a54c928fc0f0ad3b98e647f48008ff260791aa5994b1a"
+  },
+  "parts": [
+    {
+      "name": "T41 R6d wide upper side R - SC09 and 180mm guide",
+      "file": "base-parts/000.brep",
+      "sha256": "22de27e5a86c0a0fac62220730bc2325be5aba028303e86dcf3772ee4a349d98"
+    },
+    {
+      "name": "T40 R6d wide lower frame R",
+      "file": "base-parts/001.brep",
+      "sha256": "d2a8c0cf157873b0a47560105183fc23d07a5eb82ef3bdb0392e43e2a99a8760"
+    },
+    {
+      "name": "T50 R6d plain removable drop shield",
+      "file": "base-parts/002.brep",
+      "sha256": "b940a747b533393193177ffb98bb7abe7cb74363ee603cb4700baa6afd35166f"
+    },
+    {
+      "name": "P01 R6d continuous wide pickup plate - 180mm working channel",
+      "file": "base-parts/003.brep",
+      "sha256": "2a7983a76c42a1ac924aa50f2c0f3ed1d7a9475f630fa287252506057b7c1627"
+    },
+    {
+      "name": "REF GT2 R6d open belt - raised upper idler",
+      "file": "base-parts/004.brep",
+      "sha256": "37978e7e7ca5e9450021594ff768f788313e76500f8335bf0faf6980d89dbdc4"
+    },
+    {
+      "name": "T40 R6d wide lower frame L",
+      "file": "base-parts/005.brep",
+      "sha256": "635626f191663270a350c6110e847a59030847fcaf471f07f3d962c985798be2"
+    },
+    {
+      "name": "T41 R6d wide upper side L - 608 and 180mm guide",
+      "file": "base-parts/006.brep",
+      "sha256": "21aadacb4ae8eae9bb315d7b96ebc26dd1179343735df7f45dd5ff26a6d31a20"
+    },
+    {
+      "name": "P03 R6d wide pull bow - outside GT2 screws",
+      "file": "base-parts/007.brep",
+      "sha256": "43c632549469a4891da8aa54390d08b26549eaf34c65b7222b6fee555c39690c"
+    },
+    {
+      "name": "C07 R6d extended straight camera arm",
+      "file": "base-parts/008.brep",
+      "sha256": "77e5b2844cfb489004ce24a64b99b38695b0c571b743225f64e0b470ec1e47ae"
+    },
+    {
+      "name": "P14 R6d wide low drive core",
+      "file": "base-parts/009.brep",
+      "sha256": "8c240244f5e55161c1530827b309a79765a20742a243a58780f81e93259b1b50"
+    },
+    {
+      "name": "T05 R6d 249.2mm hopper floor",
+      "file": "base-parts/010.brep",
+      "sha256": "5b6d4791a0f1728ed1803a8d144c3daff29c86242e6dcb64d772adee56c8aca8"
+    },
+    {
+      "name": "T51 R6d 608 outer-race retaining cap",
+      "file": "base-parts/011.brep",
+      "sha256": "c26e235f43fd2a93608cb49c5e3f42504672af3d0ea2e8078e4c56fa962a9136"
+    },
+    {
+      "name": "T01 R6d 180mm continuous V-tray - 608 journal",
+      "file": "base-parts/012.brep",
+      "sha256": "0efac5d850b4bd48daf6dbe31c15e5d9e8dc7f99b2968a7abda704cb015c6685"
+    },
+    {
+      "name": "T02 R6d continuous 180mm transfer",
+      "file": "base-parts/013.brep",
+      "sha256": "3eccd85c31909c55e3d6dd7afa53a0a360eab2b0792eb1c7af5ff149e1b5a1e1"
+    },
+    {
+      "name": "T06 R6d 249.2mm rear hopper wall",
+      "file": "base-parts/014.brep",
+      "sha256": "aa0b5e563ae9d569e28ff7a72de4faa03929c8f0a2f600f52317ed0f5b9ff002"
+    },
+    {
+      "name": "P10 R6d 180mm upper core - raised accessible idler",
+      "file": "base-parts/015.brep",
+      "sha256": "bf839c03cf2c9c3df0723a94f12cd9ec1ad68a0e814320f5c953339b7e9ac064"
+    },
+    {
+      "name": "REF R6d 608-2Z 8x22x7 nominal envelope",
+      "file": "base-parts/016.brep",
+      "sha256": "6cb4dde1f0009c2bf3b55a8150e0c8079de9e5e2d6fb6c56100b655b98dcff30"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "requestState": "DONE",
+  "requestElementId": "ea496e50411086ad1e5586ce",
+  "resultExternalDataIds": [
+    "6ab186a23af86e90b9d7ffca"
+  ],
+  "versionId": null,
+  "workspaceId": "74173860f79223047fcff52e",
+  "documentId": "889f3a9e9f331412ddbd6dd0",
+  "exportRuleFileName": null,
+  "resultElementIds": null,
+  "resultDocumentId": "889f3a9e9f331412ddbd6dd0",
+  "failureReason": null,
+  "correlationId": null,
+  "resultWorkspaceId": "74173860f79223047fcff52e",
+  "name": "CAD - Single step R6d frame R2 - T41 L/R, hopper floor R3",
+  "id": "6ab1869e1f9b4e99a553217d",
+  "href": "https://cad.onshape.com/api/v1/translations/6ab1869e1f9b4e99a553217d"
+}

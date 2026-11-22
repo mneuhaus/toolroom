@@ -1,0 +1,50 @@
+{
+  "source_path": "/Users/mneuhaus/Workspace/cad/step-feeder/single-step-r10/jobs/r10b/r10b.fs",
+  "snapshot": "r10b.fs",
+  "sha256": "662e09ef212e163dadd691358fa8b89cc60f52b951767c92ae57f7cf09fd6ecd",
+  "bytes": 402921,
+  "captured_utc": "2026-09-21T19:12:55.797170+00:00",
+  "entrypoint": "singleStepR10b",
+  "imports": [
+    {
+      "namespace": "carrier",
+      "path": "9a9e7448c98b9ecd76377f8f",
+      "version": "e0aa7b219e284b36c72c543e"
+    },
+    {
+      "namespace": "base",
+      "path": "082fddfe5e1cad4cfb319dea",
+      "version": "e0aa7b219e284b36c72c543e"
+    },
+    {
+      "namespace": "frame",
+      "path": "ea496e50411086ad1e5586ce",
+      "version": "e0aa7b219e284b36c72c543e"
+    },
+    {
+      "namespace": "tray",
+      "path": "b319ae3e559c6c22f081d866",
+      "version": "e0aa7b219e284b36c72c543e"
+    },
+    {
+      "namespace": "adapter",
+      "path": "8c89f201cd695250a1d425d3",
+      "version": "e0aa7b219e284b36c72c543e"
+    },
+    {
+      "namespace": "camera",
+      "path": "3217838e20e9b6c7d5238e77",
+      "version": "e0aa7b219e284b36c72c543e"
+    },
+    {
+      "namespace": "belt",
+      "path": "5d7f2d0f5999bf34c12bade6",
+      "version": "e0aa7b219e284b36c72c543e"
+    },
+    {
+      "namespace": "floor",
+      "path": "a8a4f8bca2c83318af0e51ee",
+      "version": "e0aa7b219e284b36c72c543e"
+    }
+  ]
+}

@@ -4,6 +4,25 @@ Use for screwed adapters, rail carriages, belt tensioners and compact mechanisms
 Derived from Sparky R4–R7 and Alternate Chute / SC15 (September 2026); the
 particular hardware and dimensions are examples, not universal design rules.
 
+## Review before delivery
+
+For new or changed fastenings, complete the installation, joining and service
+checks below before describing the assembly as ready to build or test-print.
+Review the affected connections in their real assembly context, including
+fasteners whose access is changed by a neighbouring part. Reuse valid evidence
+for unaffected connections under the [verification rules](../foundations/verification.md#choosing-and-reusing-checks).
+
+Record a short, feasible sequence and the evidence for each affected connection:
+which parts are already present, how the loose hardware reaches its seat, how
+the specified tool tightens it, and how later adjustment or removal is reached.
+A visible screw head, an empty bore, a collision-free final pose or a sliced
+part is not evidence that the connection can actually be assembled. Resolve
+blocked paths in the design; retain any unverified tool or hardware assumptions
+explicitly rather than marking the assembly review complete.
+
+Origin: Single Step Feeder P03 GT2 clamp, 14 September 2026; inward-facing
+screws were inaccessible in the assembled feeder despite valid final geometry.
+
 ## Retrofitting an existing interface
 
 Measure mounting-hole axes, seating planes and the real hardware envelope
@@ -12,6 +31,16 @@ merely to conceal misalignment. Set the intended flush contact and verify the
 axes together; if the envelopes conflict, redesign the load path explicitly.
 Keep purchased hardware geometry faithful to the source. A large chamfer on a
 printed housing can change; a real servo case cannot be reshaped to pass a check.
+
+When relocating or inverting a module, inventory every leaf and retain its
+functional interfaces as a unit. Recheck gravity retention for every previously
+top-inserted slide, plug, pin and loose spacer. Being captive after several
+millimetres of travel does not preserve seating depth, cable grip or stop
+engagement. Add the smallest positive restraint that preserves those functions;
+verify its installation and removal before calling the inverted module usable.
+Check added supports against the actual sensor or connector bodies as well as
+their screws. An integral retaining roof may prevent the original pin from ever
+being installed; a removable keeper can preserve the assembly sequence.
 
 Connector access includes the inserted plug, insertion/removal path and cable
 exit/bend space. For a daisy-chained servo, check **both sockets**, including the
@@ -53,6 +82,10 @@ lift the entire plate off the bed.
    pockets and nut insertion path. Check the head's travel separately from the
    thinner driver shaft. Model the straight tool approach and working space;
    never assume a ball-end key or a special tool the user has not specified.
+   Include bit/key engagement, insertion depth, handle or key turning space,
+   and access for counterholding or positioning the loose clamp, washer or nut
+   while starting the thread. A clear driver-axis cylinder alone does not prove
+   these handling and tightening operations.
 2. **Subassembly joining:** move the pre-fastened subassemblies through the real
    insertion path, with their screws and already-installed accessories present.
    A sensor flange or its screw head may clear the final position but block the
@@ -62,9 +95,14 @@ lift the entire plate off the bed.
    near collisions; use denser/adaptive samples or swept envelopes for narrow
    obstacles. A finite sample set is not a proof for every intermediate pose.
    Include a suitable overtravel negative control when checking travel stops.
+   Check loosening, withdrawal and any belt retensioning in the assembled or
+   explicitly documented service state; do not rely only on first-time access.
 
 Compare the complete hardware envelope against width/depth limits. Check collars,
 washer diameters, head protrusion and screw tips, not just the printed silhouette.
+Verify each reference part's own local head centre and shaft direction before
+constructing its placement transform. Different screw lengths in the same source
+Part Studio may have different display offsets.
 Sparky's washers affected PCB clearance; a half-millimeter screw-tip protrusion
 also breached the width limit. Removing either from the test would hide the bug.
 
@@ -95,6 +133,19 @@ expected printed-part count separately from hardware/reference body count.
 Record intentional contacts narrowly (for example simplified smooth belt envelope
 against tooth pockets), and investigate every other contact. Numerical slivers
 need a localized diagnosis; do not globally delete “small” bodies to pass counts.
+
+For an access repair, reproduce the reported obstruction with the old arrangement
+when available, then check the replacement with equivalent hardware and tool
+assumptions. Keep the failed baseline and the new insertion/tool paths together;
+the repaired final pose alone does not demonstrate that the original failure was
+addressed. Keep project-specific dimensions and detailed evidence in the project.
+
+Use conservative continuous axial or radial separation bounds to eliminate
+impossible motion contacts before expensive mesh sweeps. Reuse collision managers
+and their acceleration structures while changing poses; rebuilding the same large
+mesh for every angle can dominate runtime. Keep actual cable deformation and
+independent gear ratios in the remaining checks. A rigid whole-cable snapshot is
+not a substitute for its prescribed moving route.
 
 A larger volume or unchanged minimum layer section does not establish stiffness.
 Assess the actual load path and chosen print orientation; distinguish geometric

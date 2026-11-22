@@ -1,0 +1,23 @@
+[project]
+name = "fsocct"
+version = "0.1.0"
+description = "A local FeatureScript subset interpreter backed by OpenCascade"
+requires-python = ">=3.12,<3.14"
+dependencies = ["cadquery-ocp>=7.8,<7.10"]
+
+[project.scripts]
+fsocct = "fsocct.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.12"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+

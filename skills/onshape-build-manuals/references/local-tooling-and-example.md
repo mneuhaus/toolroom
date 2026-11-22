@@ -49,9 +49,23 @@ occurrence could collapse child placements. Do not copy a transform operation
 without verifying all nested part poses. Guide stages can use directly placed
 part references where this makes ownership and verification clearer.
 
-## Binary PDF upload failure and workaround
+## Binary uploads: detect the running bridge
 
-In the inspected `onshape-app/src/main.js`, **responses** use an array-buffer/base64
+The maintained `onshape-app` was corrected on 12 September 2026: HTTP request
+bytes now cross the Node/renderer boundary as base64 and are decoded to a
+`Uint8Array` before the authenticated fetch. `/_bridge/health` reports
+`capabilities.binaryRequestBodies: true` in the running fixed version. A real
+13,232,394-byte SolidWorks ZIP upload/download matched SHA-256 and translated
+successfully; the app's multipart/Unicode regression checks also passed.
+Source changes alone do not establish that an older running process has the fix.
+
+With that capability present, upload the original bytes normally and retain the
+download/hash verification. The following PDF workaround is for older bridges
+that still decode request bodies as UTF-8; it is unnecessary for the fixed one.
+
+### Historical PDF failure and legacy workaround
+
+In the previously inspected `onshape-app/src/main.js`, **responses** use an array-buffer/base64
 round trip and preserve binary bytes. **Requests** are collected with
 `Buffer.concat(chunks).toString('utf8')`. This includes multipart uploads: binary
 PDF font streams become Unicode replacement characters before reaching Onshape.

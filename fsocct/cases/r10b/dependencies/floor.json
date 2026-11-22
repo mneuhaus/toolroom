@@ -1,0 +1,14 @@
+{
+  "schema": "fsocct-partstudio-v1",
+  "source": {
+    "file": "floor.step",
+    "sha256": "0050cdd058dc26f6b13195bec46af6384cb6e23e51764faefb4a489c0b33511d"
+  },
+  "parts": [
+    {
+      "name": "T05 R6d-F2 hopper floor - closed front corners, 0.5 mm clearance per face",
+      "file": "floor-parts/000.brep",
+      "sha256": "cc4e8e10cfb874d0023f4911be4c695d4d786cf05c7857eb1da744c046451d2c"
+    }
+  ]
+}

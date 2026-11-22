@@ -1,37 +1,26 @@
 ---
 name: cad-joints
-description: "Select, reconstruct or design mechanical connections between CAD parts, including printed sliding joints, dovetails, keyed scarfs and snap fits. Use for joint geometry, assembly paths, retention or comparative fit coupons; cosmetic seams and ordinary assembly illustration alone do not require this skill."
+description: Design or compare mechanical joints between CAD parts, including their fit, retention and assembly or release path.
 ---
 
 # CAD joints
 
-**Use when** two parts have to be connected and the connection is the design problem: selecting, reconstructing or dimensioning printed sliding joints, dovetails, keyed scarfs, snap fits, assembly paths, retention or comparative fit coupons. **Do not use when** the seam is cosmetic, or when an existing joint only has to be illustrated in an assembly drawing.
+Design both mating parts around the requested connection, load directions and permitted movement. Preserve the user's part-count, material and simplicity requirements. Distinguish rigid stops, friction and elastic retention; add a mechanism only when it serves an identified requirement.
 
-## Procedure
+- Derive mating surfaces from common reference geometry. State which part owns the allowance and whether it is per face, diametral or normal to the surface; do not offset both parts accidentally.
+- Check insertion and removal with the surrounding parts and tools present. A clear final pose does not prove a usable assembly path. A rigid interference check cannot establish elastic insertion or holding force.
+- Keep nominal dimensions, source observations and measured fits distinct. A source clip's proportions or a successful coupon do not transfer its force or lifetime to another size, material or print pose.
 
-1. Start from load direction, required freedoms, assembly access and whether disassembly must be possible. Separate geometric restraint, friction or preload, and any added locking element. Classify the assembly as rigid, elastic or both before choosing a verification method. Ask only for the missing constraints that change the choice.
-2. Distinguish source observations, measured dimensions and proposed reconstruction values. Link the original reference and its timestamp. A video demonstration is not a transferable strength rating.
-3. Construct both mating parts from common reference geometry. Define which part owns the allowance and in which direction — per face, diametral, profile-plane or normal to the surface. Do not offset both parts by accident.
-4. Check the complete assembly and removal paths including keys, adjacent parts and stops. End-position nonintersection does not prove assembly. For elastic snaps, record the free, maximally deflected and seated shapes, identify the compliant region, and justify the strain through an appropriate model or a measured coupon; a rigid overlap test cannot establish elastic assembly. Preserve failed path findings and state the sampling resolution.
-5. Verify native feature status, expected solid count, valid geometry, pairwise interference and revision-bound exports. Record the transforms between assembled, separated and print poses explicitly.
-6. Prepare a small clearance series in the intended material and orientation. Keep CAD clearance, measured fit, insertion force, repeated assembly, creep and load testing as separate levels of evidence.
+Read the relevant reference when that issue is part of the task:
 
-For bending and tensile loads, examine the weakest root, the remaining socket wall and the layer-normal opening load. A longer engagement or a steeper wedge does not by itself establish strength; compare matched specimens against a continuous control before ranking designs.
+| Question | Reference |
+| --- | --- |
+| Selecting or reconstructing a joint | [Joint principles](../../knowledge/construction/joints.md) |
+| Sliding fit, pressfit, preload or an elastic latch | [Fits and retention](../../knowledge/construction/fits-and-retention.md), including unloaded, insertion and seated states |
+| Access, hardware, assembly sequence or moving neighbours | [Assembly review](../../knowledge/construction/assembly-review.md) |
+| OpenLOCK/Dragonbite-style sockets and clips | [Tile clip joints](../../knowledge/construction/tile-clip-joints.md) and the [socket lab](../../labs/tile-clip-sockets/README.md) |
+| Other printed connection examples | [Panel and clip references](../../knowledge/construction/joints-panels-and-clips.md) or the [joint lab](../../labs/printed-joints/README.md) |
 
-Use the project's authoritative CAD backend: [onshape-cad](../onshape-cad/SKILL.md) for native cloud construction, [cad-fdm-design](../cad-fdm-design/SKILL.md) for print pose, material and slicing.
+For bending or tensile claims, assess the weakest root, remaining socket wall and layer direction; larger engagement alone proves no strength gain. Elastic checks need an appropriate deflection model or measured coupon, with assumptions and limits recorded.
 
-## Knowledge
-
-- [Joints: connections as construction knowledge](../../knowledge/construction/joints.md) — selection and verification.
-- [Slide-in fit, preload and one-piece latches](../../knowledge/construction/fits-and-retention.md) — snaps, preload, compensation.
-- [Assembly, access and load-path review](../../knowledge/construction/assembly-review.md) — access and completeness.
-- [Print orientation for FDM parts](../../knowledge/manufacturing/print-orientation.md) — layer direction against the opening load on a printed joint.
-- [Clip-in-pocket tile joints: OpenLOCK and a merged design](../../knowledge/construction/tile-clip-joints.md) — sourced socket and clip geometry, lying and standing pockets, scaling with process floors, matching clips.
-- [Pivoting snap latches: closing two parts under preload](../../knowledge/construction/pivoting-snap-latches.md) — separate latch part with pivot, hooked arms and a flexing tongue; preload, detent and wear rules.
-- [Further joint references: panels and elastic clips](../../knowledge/construction/joints-panels-and-clips.md) — reviewed references with no reconstructed CAD or physical verification yet; keep them distinct from the lab.
-- [Shared project and evidence conventions](../../knowledge/foundations/core.md) and [what a check actually establishes](../../knowledge/foundations/verification.md).
-
-## References
-
-- [Tile clip sockets lab](../../labs/tile-clip-sockets/README.md) — Build123d generator for OpenLOCK-style and Dragonbite-style sockets and clips at several scales, with an insertion check and the maintained scaling table.
-- [Printed Joints Lab](../../labs/printed-joints/README.md) — independent native reconstructions with their actual verification status. An example library, not a validated catalogue of structural joints.
+Use the selected CAD backend for construction. For printed fit comparisons, use [FDM preparation](../cad-fdm-design/SKILL.md), fixed counterpart geometry and a small allowance series in the intended pose/material. Apply [verification](../../knowledge/foundations/verification.md) to the changed interfaces; distinguish geometric acceptance, print readiness and physical fit/load results.

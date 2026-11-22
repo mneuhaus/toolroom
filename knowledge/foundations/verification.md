@@ -21,6 +21,16 @@ The shared geometry checkers use `no_findings`, `review` and `incomplete`, with 
 
 A report identifies the input file and hash, source and revision, selected orientation, process profile, tool version, actual inspection values, raw findings and limitations. Justified exceptions remain visible. A thin structural plate must not automatically be exempted as a decorative colour layer.
 
+## Choosing and reusing checks
+
+Define the evidence required by the requested deliverable and the changed behaviour. A new joint needs its mating geometry and assembly path assessed; repacking approved meshes needs source/pose preservation and the final print paths checked. Repacking alone does not invalidate a prior mechanical review.
+
+For changed native geometry, inspect feature status, expected solids, geometry validity and mating interference. Bind exports to that revision and record assembly-to-print transforms. For sampled assembly or removal paths, retain the sampling resolution and failed poses; a final-position check cannot replace the path check.
+
+Reuse evidence only while its relevant source, revision, pose, profile and tool assumptions still hold. After a change, rerun the affected checks. Broaden inspection when a failure, changed assumption or unresolved concern warrants it; an extra handoff or renamed copy of identical bytes is not itself a new engineering test.
+
+Assign each critical decision an accountable reviewer. Automated checks, routine preparation and critical review answer different questions; the lead inspects the evidence and findings without automatically repeating the worker's whole execution. Preserve actual failures and missing work. Acceptance of a test-print file may leave physical retention or lifetime unmeasured, and must say so.
+
 ## Concrete failure cases from the projects
 
 - A narrow free-standing underside needs an anchor. Small width alone does not make it a printable lip.

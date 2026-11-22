@@ -56,6 +56,27 @@ them beside real design work, and extend only when a new part exposes a real gap
 
 Origin: Single Step feeder R6d, verification tool build-out, September 2026.
 
+## A wire-forming jig is checked along the punch paths, not at the end pose
+
+Pins and punches that look fine in the closed pose can still crush the blank on the way there.
+For spring wire formed by round punches against fixed pins, three rules held in a 2D plastic-hinge
+simulation of 0.8 mm spring steel:
+
+- Keep the punch-to-pin centre distance at least the sum of both radii plus 1.8 wire diameters
+  (Ø4 punch to Ø2 pin: 3.8 mm) along the whole punch path. Closer than that, the wire is wedged
+  and the force climbs past 100 kN instead of bending.
+- Hold the wire beyond every shoulder (a hold pin opposite the bend, or a tunnel for a free tail).
+  An unheld end lifts or slides instead of bending.
+- In a single-stroke press all punches move together, so the punch whose end point lies deepest
+  bites first. The order cannot be chosen; design the stations so that order works, or use a cam.
+
+Measure the released bends as curvature clusters in order along the wire. Fixed arc-length
+windows give wrong angles as soon as the wire slides through the clamping points. A wire shape
+whose punch path crosses a pin or the blank itself (a hairpin next to a knee, a 65° knee inside a
+loop) cannot be formed in one pass; change the part, not the jig.
+
+Origin: Bristle-bot forming jigs (Drehteller, Hubpresse), November 2026.
+
 ## Origins
 
 | Project | Contribution | Maintained home |
@@ -67,4 +88,5 @@ Origin: Single Step feeder R6d, verification tool build-out, September 2026.
 | LINAK scan reconstruction | Scan as hypothesis; local instead of averaged deviation | [the scan reconstruction skill](../../skills/scan-reverse-engineering/SKILL.md) |
 | File-trolley laser extension | Single ownership of manufacturing compensation | [laser cutting](../manufacturing/laser.md) |
 | Bristlebot variants | Shared frame, one question per variant, honest comparisons | [construction patterns](../construction/patterns.md) |
+| Bristle-bot forming jigs | Punch-path clearance, holding beyond shoulders, bite order of a single stroke | this page |
 | Camera-arm mount family | Joint families share a principle, not dimensions | [joints](../construction/joints.md), [fits and retention](../construction/fits-and-retention.md) |

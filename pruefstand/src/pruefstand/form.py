@@ -797,6 +797,8 @@ class SplitterResult(Result):
     """Spuren von Block-auf-Block: Reste, die kein Drucker mehr auflöst."""
 
     anzahl: int = 0
+    erklaert: int = 0
+    unerklaert: int = 0
     kurze_kanten: list = field(default_factory=list)
     winzige_flaechen: list = field(default_factory=list)
     unverschmolzen: list = field(default_factory=list)
@@ -805,12 +807,52 @@ class SplitterResult(Result):
     rundungsuebergaenge: list = field(default_factory=list)
     passed: bool = True
     primitive: str = 'splitter'
-    _fields: tuple = ('anzahl', 'kurze_kanten', 'winzige_flaechen', 'unverschmolzen',
-                      'rundungsuebergaenge')
+    _fields: tuple = ('anzahl', 'erklaert', 'unerklaert', 'kurze_kanten',
+                      'winzige_flaechen', 'unverschmolzen', 'rundungsuebergaenge')
+
+
+def _splitter_klassifikation(eintrag, erklaert, machine):
+    """Einen Rohbefund mit einer deklarierten Erklärung versehen, nie ausfiltern."""
+    zone = None if erklaert is None else erklaert.erklaerung(eintrag['ort'], machine)
+    if zone is None:
+        eintrag['erklaert'] = False
+        eintrag['grund'] = ('nicht erklärt: keine deklarierten Bereiche übergeben'
+                            if erklaert is None or not erklaert.erklaert
+                            else 'nicht erklärt: außerhalb der deklarierten Bereiche')
+        eintrag['erklaert_bereich'] = None
+        return
+    eintrag['erklaert'] = True
+    eintrag['grund'] = f'erklärt: {zone.name} (Frame {zone.frame})'
+    if zone.grund:
+        eintrag['grund'] += f' — {zone.grund}'
+    eintrag['erklaert_bereich'] = {'name': zone.name, 'frame': zone.frame}
+
+
+def _splitter_topologie(body):
+    """Auswertbare BRep-Topologie oder ein technischer Fehler -- nie eine leere Null."""
+    solid = body.solid
+    wrapped = getattr(solid, 'wrapped', None)
+    if wrapped is None or (hasattr(wrapped, 'IsNull') and wrapped.IsNull()):
+        raise ValueError('BRep ist leer (kein gewrapptes Shape)')
+    is_valid = getattr(solid, 'is_valid', None)
+    if is_valid is not None:
+        gueltig = is_valid() if callable(is_valid) else is_valid
+        if not bool(gueltig):
+            raise ValueError('BRep ist ungültig')
+    flaechen = list(solid.faces())
+    edges = list(solid.edges())
+    if not flaechen or not edges:
+        raise ValueError(f'BRep-Topologie ist leer: {len(flaechen)} Flächen, '
+                         f'{len(edges)} Kanten')
+    ks = kanten(body)
+    if len(ks) != len(edges):
+        raise RuntimeError(f'Kantenanalyse unvollständig: {len(ks)} von '
+                           f'{len(edges)} BRep-Kanten ausgewertet')
+    return ks, flaechen
 
 
 def splitter(body, *, kante_mm=BAHNBREITE_MM, flaeche_mm2=1.0, nachbar_mm2=100.0,
-             knick_deg=0.5) -> SplitterResult:
+             knick_deg=0.5, erklaert=None, machine=None) -> SplitterResult:
     """Splitter suchen: zu kurze Kanten, zu kleine Flächen, unverschmolzene Nachbarn.
 
     Drei Spuren derselben Ursache -- ein Block wurde an einen anderen gesetzt, statt
@@ -827,57 +869,77 @@ def splitter(body, *, kante_mm=BAHNBREITE_MM, flaeche_mm2=1.0, nachbar_mm2=100.0
     Nur BRep -- auf dem Netz wäre die Frage sinnlos: über die Hälfte aller Dreiecke
     einer Tessellierung sind Winzlinge, ganz ohne Modellierfehler.
     """
+    # Aufrufargumente bleiben normale API-Fehler. Erst Fehler der eigentlichen
+    # BRep-/Frame-Analyse werden als technischer Ergebniszustand festgehalten.
+    kante_mm = float(kante_mm)
+    flaeche_mm2 = float(flaeche_mm2)
+    nachbar_mm2 = float(nachbar_mm2)
+    knick_deg = float(knick_deg)
     r = SplitterResult()
     r.urteil_auf = 'brep'
     if _kein_brep(r, body):
         return r
-    ks = kanten(body)
-    flaechen = list(body.solid.faces())
+    try:
+        ks, flaechen = _splitter_topologie(body)
 
-    kurz = [{'ort': _ort(k.mitte), 'laenge_mm': round(k.laenge_mm, 4), 'typ': k.typ,
-             'kante': k.index} for k in ks if k.laenge_mm < float(kante_mm)]
+        kurz = [{'ort': _ort(k.mitte), 'laenge_mm': round(k.laenge_mm, 4), 'typ': k.typ,
+                 'kante': k.index} for k in ks if k.laenge_mm < kante_mm]
 
-    winzig = []
-    for i, f in enumerate(flaechen):
-        a = float(f.area)
-        if a >= float(flaeche_mm2):
-            continue
-        nachbarn = [max(k.flaechen_mm2) for k in ks if f'{body.key}#{i}' in k.flaechen]
-        if nachbarn and max(nachbarn) > float(nachbar_mm2):
-            winzig.append({'flaeche': f'{body.key}#{i}', 'ort': _ort(tuple(f.center())),
-                           'mm2': round(a, 4), 'groesster_nachbar_mm2': round(max(nachbarn), 2)})
+        winzig = []
+        for i, f in enumerate(flaechen):
+            a = float(f.area)
+            if a >= flaeche_mm2:
+                continue
+            nachbarn = [max(k.flaechen_mm2) for k in ks if f'{body.key}#{i}' in k.flaechen]
+            if nachbarn and max(nachbarn) > nachbar_mm2:
+                winzig.append({'flaeche': f'{body.key}#{i}', 'ort': _ort(tuple(f.center())),
+                               'mm2': round(a, 4),
+                               'groesster_nachbar_mm2': round(max(nachbarn), 2)})
 
-    # Nahtkanten zählen nicht: bei einem Zylinder schließt sich die Parameterfläche an
-    # einer Kante mit sich selbst. Beide Nachbarn sind dieselbe Fläche, der Knick ist
-    # null -- „unverschmolzen" wäre dazu die falsche Behauptung. An der Wanne sind das
-    # 14 von 14 Treffern; ohne diese Unterscheidung meldete jeder Rundzapfen Splitter.
-    #
-    # Und der zweite, größere Irrtum (Etappe 4, alle 20/16 Treffer an T41): ein sauber
-    # tangentialer Fillet **ist** eine Fläche, die glatt in eine Rundung übergeht. Der
-    # Übergang ist das Merkmal, nicht der Rest. Unverschmolzen bleibt nur, was zwischen
-    # zwei *ungekrümmten* Flächen glatt durchläuft -- zwei Ebenen mit Knick 0, die
-    # trotzdem eine Kante trennt, sind wirklich eine Boolesche Spur.
-    glatt, rundung = [], []
-    for k in ks:
-        if k.art != TANGENTIAL or k.knick_deg >= float(knick_deg) or len(set(k.flaechen)) != 2:
-            continue
-        typen = sorted(_flaechentyp(flaechen, f) for f in k.flaechen)
-        eintrag = {'ort': _ort(k.mitte), 'knick_deg': round(k.knick_deg, 4),
-                   'laenge_mm': round(k.laenge_mm, 3), 'flaechen': list(k.flaechen),
-                   'flaechentypen': typen, 'kante': k.index}
-        (rundung if any(t in GEKRUEMMT for t in typen) else glatt).append(eintrag)
+        # Nahtkanten zählen nicht: bei einem Zylinder schließt sich die Parameterfläche an
+        # einer Kante mit sich selbst. Beide Nachbarn sind dieselbe Fläche, der Knick ist
+        # null -- „unverschmolzen" wäre dazu die falsche Behauptung. An der Wanne sind das
+        # 14 von 14 Treffern; ohne diese Unterscheidung meldete jeder Rundzapfen Splitter.
+        #
+        # Und der zweite, größere Irrtum (Etappe 4, alle 20/16 Treffer an T41): ein sauber
+        # tangentialer Fillet **ist** eine Fläche, die glatt in eine Rundung übergeht. Der
+        # Übergang ist das Merkmal, nicht der Rest. Unverschmolzen bleibt nur, was zwischen
+        # zwei *ungekrümmten* Flächen glatt durchläuft -- zwei Ebenen mit Knick 0, die
+        # trotzdem eine Kante trennt, sind wirklich eine Boolesche Spur.
+        glatt, rundung = [], []
+        for k in ks:
+            if (k.art != TANGENTIAL or k.knick_deg >= knick_deg
+                    or len(set(k.flaechen)) != 2):
+                continue
+            typen = sorted(_flaechentyp(flaechen, f) for f in k.flaechen)
+            eintrag = {'ort': _ort(k.mitte), 'knick_deg': round(k.knick_deg, 4),
+                       'laenge_mm': round(k.laenge_mm, 3), 'flaechen': list(k.flaechen),
+                       'flaechentypen': typen, 'kante': k.index}
+            (rundung if any(t in GEKRUEMMT for t in typen) else glatt).append(eintrag)
 
-    r.kurze_kanten = sorted(kurz, key=lambda x: x['laenge_mm'])
-    r.winzige_flaechen = sorted(winzig, key=lambda x: x['mm2'])
-    r.unverschmolzen = sorted(glatt, key=lambda x: -x['laenge_mm'])
-    r.rundungsuebergaenge = sorted(rundung, key=lambda x: -x['laenge_mm'])
-    r.anzahl = len(kurz) + len(winzig) + len(glatt)
-    r.passed = r.anzahl == 0
-    r.annahmen.append({'regel': 'splitter', 'kante_mm': float(kante_mm),
-                       'flaeche_mm2': float(flaeche_mm2), 'nachbar_mm2': float(nachbar_mm2),
-                       'knick_deg': float(knick_deg), 'kanten': len(ks),
-                       'flaechen': len(flaechen),
-                       'rundungsuebergaenge': len(rundung)})
+        r.kurze_kanten = sorted(kurz, key=lambda x: x['laenge_mm'])
+        r.winzige_flaechen = sorted(winzig, key=lambda x: x['mm2'])
+        r.unverschmolzen = sorted(glatt, key=lambda x: -x['laenge_mm'])
+        r.rundungsuebergaenge = sorted(rundung, key=lambda x: -x['laenge_mm'])
+        befund = r.kurze_kanten + r.winzige_flaechen + r.unverschmolzen
+        r.anzahl = len(befund)
+        for eintrag in befund:
+            _splitter_klassifikation(eintrag, erklaert, machine)
+        r.erklaert = sum(1 for eintrag in befund if eintrag['erklaert'])
+        r.unerklaert = r.anzahl - r.erklaert
+        r.passed = r.unerklaert == 0
+        r.annahmen.append({'regel': 'splitter', 'kante_mm': kante_mm,
+                           'flaeche_mm2': flaeche_mm2,
+                           'nachbar_mm2': nachbar_mm2,
+                           'knick_deg': knick_deg, 'kanten': len(ks),
+                           'flaechen': len(flaechen),
+                           'deklarierte_bereiche': len(getattr(erklaert, 'erklaert', ())),
+                           'rundungsuebergaenge': len(rundung)})
+    except Exception as exc:
+        # Ein gescheiterter BRep-/Frame-Weg ist keine leere erfolgreiche Analyse.
+        # Der gemeinsame Result-Zustand macht den ganzen Lauf `incomplete`.
+        r.technischer_fehler = True
+        r.fehler_grund = f'Splitter-BRep-Analyse gescheitert: {type(exc).__name__}: {exc}'
     r._publish()
     return r
 
@@ -951,10 +1013,15 @@ class TeilForm:
 
     def trifft(self, punkt, machine=None) -> str:
         """Name der erklärten Zone, in der der Punkt liegt -- sonst ''."""
+        zone = self.erklaerung(punkt, machine)
+        return '' if zone is None else zone.name
+
+    def erklaerung(self, punkt, machine=None) -> ErklaerteZone | None:
+        """Deklarierte Zone am Punkt, einschließlich Grund und Frame."""
         for z in self.erklaert:
             if z.enthaelt(punkt, machine):
-                return z.name
-        return ''
+                return z
+        return None
 
     def __repr__(self):
         return f'TeilForm({self.key!r}, {[z.name for z in self.erklaert]})'

@@ -7,7 +7,7 @@
       "id": "cad-workflow",
       "title": "CAD workflow",
       "category": "workflow",
-      "description": "Coordinate multi-stage CAD work: establish the authoritative design, select the required CAD, manufacturing or documentation skills, and retain revision-bound evidence. Use for a new CAD project, cross-tool work or an explicit workflow review; a small isolated edit does not need a full lifecycle.",
+      "description": "Coordinate CAD work spanning stages or backends, or review a CAD workflow. Use a specialist skill directly for an isolated task.",
       "document": "skills/cad-workflow/SKILL.md",
       "state": "curated",
       "runtime": "local"
@@ -43,7 +43,7 @@
       "id": "cad-fdm-design",
       "title": "FDM design & preparation",
       "category": "manufacturing",
-      "description": "Design or revise FDM parts in the selected CAD backend: choose the print pose, preserve mating interfaces, assess assembly access and fits, and inspect actual slicer output. Also use for preparing or comparing print files.",
+      "description": "Design FDM parts or prepare and inspect print files, preserving mating interfaces and the intended print orientation.",
       "document": "skills/cad-fdm-design/SKILL.md",
       "state": "local-tools",
       "runtime": "local"
@@ -52,7 +52,7 @@
       "id": "cad-joints",
       "title": "CAD Joints",
       "category": "construction",
-      "description": "Select, reconstruct or design mechanical connections between CAD parts, including printed sliding joints, dovetails, keyed scarfs and snap fits. Use for joint geometry, assembly paths, retention or comparative fit coupons; cosmetic seams and ordinary assembly illustration alone do not require this skill.",
+      "description": "Design or compare mechanical joints between CAD parts, including their fit, retention and assembly or release path.",
       "document": "skills/cad-joints/SKILL.md",
       "state": "curated",
       "runtime": "local"
