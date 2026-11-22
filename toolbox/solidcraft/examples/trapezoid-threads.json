@@ -1,0 +1,9 @@
+{"commands":[
+ {"command":"solid.cylinder","params":{"diameter":"11 mm","height":"20 mm","base":[0,0,0],"name":"Shaft","body_name":"Screw"}},
+ {"command":"solid.thread","params":{"face":[5.5,0,10],"form":"trapezoidal","designation":"Tr11x3","modeled":true,"name":"ExtTr11"}},
+ {"command":"solid.box","params":{"length":"24 mm","width":"24 mm","height":"12 mm","center":[40,0,6],"name":"NutBlock","body_name":"Nut"}},
+ {"command":"solid.cylinder","params":{"diameter":"9 mm","height":"12 mm","base":[40,0,0],"operation":"cut","targets":["Nut"],"name":"Bore"}},
+ {"command":"solid.thread","params":{"face":[44.5,0,6],"form":"trapezoidal","designation":"Tr12x3","modeled":true,"name":"IntTr12"}},
+ {"command":"inspect.measure","params":{}},
+ {"command":"file.export","params":{"path":"thread.stl","quality":"fine"}}
+]}

@@ -1,0 +1,5 @@
+{"commands":[
+ {"command":"solid.box","params":{"length":"20 mm","width":"20 mm","height":"2 mm","corner":[0,0,0],"name":"Floor","body_name":"Floor"}},
+ {"command":"solid.hole","params":{"position":[10,10,0],"clearance":"M3","head":"ISO 4762","targets":["Floor"],"name":"Recess"}},
+ {"command":"inspect.measure","params":{}}
+]}

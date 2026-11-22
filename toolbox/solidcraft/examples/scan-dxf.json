@@ -1,0 +1,6 @@
+{"commands":[
+ {"command":"sketch.insert_dxf","params":{"path":"outline.dxf","plane":"XY"}},
+ {"command":"sketch.finish","params":{}},
+ {"command":"solid.extrude","params":{"distance":"10 mm","operation":"new","body_name":"FromDxf","name":"FromDxf"}},
+ {"command":"inspect.measure","params":{}}
+]}

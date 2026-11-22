@@ -1,0 +1,7 @@
+{"commands":[
+ {"command":"solid.box","params":{"length":"40 mm","width":"30 mm","height":"3 mm","corner":[0,0,0],"name":"Floor","body_name":"Part"}},
+ {"command":"inspect.measure","params":{}},
+ {"command":"plastic.snap_fit","params":{"position":[20,15,3],"hook":[1,0,0],"length":"12 mm","thickness":"1.6 mm","width":"6 mm","catch_depth":"1 mm","catch_length":"2 mm","body":"Part"}},
+ {"command":"inspect.measure","params":{}},
+ {"command":"file.export","params":{"path":"snap.stl","quality":"fine"}}
+]}

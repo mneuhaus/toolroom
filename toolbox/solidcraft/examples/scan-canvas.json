@@ -1,0 +1,59 @@
+{
+ "commands": [
+  {
+   "command": "canvas.insert",
+   "params": {
+    "path": "scan.png",
+    "plane": "XY",
+    "center": [
+     0,
+     0
+    ],
+    "width": 100,
+    "name": "Scan"
+   }
+  },
+  {
+   "command": "canvas.calibrate",
+   "params": {
+    "canvas": "Scan",
+    "a": [
+     -35.714,
+     -36.429
+    ],
+    "b": [
+     35.714,
+     -36.429
+    ],
+    "distance": 50
+   }
+  },
+  {
+   "command": "canvas.to_sketch",
+   "params": {
+    "canvas": "Scan",
+    "name": "Traced"
+   }
+  },
+  {
+   "command": "sketch.inspect",
+   "params": {
+    "sketch": "Traced"
+   }
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "Traced",
+    "distance": "10 mm",
+    "operation": "new",
+    "body_name": "FromCanvas",
+    "name": "FromCanvas"
+   }
+  },
+  {
+   "command": "inspect.measure",
+   "params": {}
+  }
+ ]
+}

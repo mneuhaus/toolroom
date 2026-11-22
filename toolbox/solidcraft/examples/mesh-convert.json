@@ -1,0 +1,126 @@
+{
+ "commands": [
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "30 mm",
+    "width": "20 mm",
+    "height": "10 mm",
+    "corner": [
+     0,
+     0,
+     0
+    ],
+    "name": "Block",
+    "body_name": "Block"
+   }
+  },
+  {
+   "command": "file.export",
+   "params": {
+    "path": "convert-flat.stl",
+    "bodies": [
+     "Block"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": "8 mm",
+    "height": "10 mm",
+    "base": [
+     15,
+     10,
+     0
+    ],
+    "operation": "cut",
+    "targets": [
+     "Block"
+    ],
+    "name": "Bore"
+   }
+  },
+  {
+   "command": "file.export",
+   "params": {
+    "path": "convert-bore.stl",
+    "bodies": [
+     "Block"
+    ]
+   }
+  },
+  {
+   "command": "solid.cone",
+   "params": {
+    "radius": "6 mm",
+    "height": "-6 mm",
+    "base": [
+     15,
+     10,
+     10
+    ],
+    "operation": "cut",
+    "targets": [
+     "Block"
+    ],
+    "name": "Countersink"
+   }
+  },
+  {
+   "command": "file.export",
+   "params": {
+    "path": "convert-cone.stl",
+    "bodies": [
+     "Block"
+    ]
+   }
+  },
+  {
+   "command": "file.insert_mesh",
+   "params": {
+    "path": "convert-flat.stl",
+    "name": "FlatMesh"
+   }
+  },
+  {
+   "command": "mesh.convert",
+   "params": {
+    "body": "convert-flat",
+    "name": "Flat solid"
+   }
+  },
+  {
+   "command": "file.insert_mesh",
+   "params": {
+    "path": "convert-bore.stl",
+    "name": "BoreMesh"
+   }
+  },
+  {
+   "command": "mesh.convert",
+   "params": {
+    "body": "convert-bore",
+    "name": "Bore solid"
+   }
+  },
+  {
+   "command": "file.insert_mesh",
+   "params": {
+    "path": "convert-cone.stl",
+    "name": "ConeMesh"
+   }
+  },
+  {
+   "command": "mesh.convert",
+   "params": {
+    "body": "convert-cone",
+    "name": "Cone solid"
+   }
+  },
+  {
+   "command": "inspect.measure",
+   "params": {}
+  }
+ ]
+}

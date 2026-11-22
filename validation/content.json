@@ -1,12 +1,12 @@
 {
   "status": "passed",
-  "checks_run": 145,
+  "checks_run": 151,
   "errors": [],
   "checks": [
     {
       "check": "markdown links and headings",
       "passed": true,
-      "detail": "393"
+      "detail": "397"
     },
     {
       "check": "unique module identifiers",
@@ -184,6 +184,11 @@
       "detail": ""
     },
     {
+      "check": "knowledge article: knowledge/construction/printed-screw-joints.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "knowledge article: knowledge/manufacturing/print-preparation.md",
       "passed": true,
       "detail": ""
@@ -230,6 +235,11 @@
     },
     {
       "check": "knowledge article: knowledge/workflow/delegation.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "knowledge article: knowledge/workflow/offline-verification.md",
       "passed": true,
       "detail": ""
     },
@@ -649,6 +659,11 @@
       "detail": ""
     },
     {
+      "check": "test evidence current: profiles/interfaces/m3-hybrid-hole.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "test evidence current: skills/cad-design-system/scripts/check_mesh.py",
       "passed": true,
       "detail": ""
@@ -694,12 +709,27 @@
       "detail": ""
     },
     {
+      "check": "test evidence current: skills/onshape-cad/lib/m3_hybrid_hole.fs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: skills/onshape-cad/scripts/m3_hybrid_hole.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "test evidence current: tests/test_checker_regressions.py",
       "passed": true,
       "detail": ""
     },
     {
       "check": "test evidence current: tests/test_checkers.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test evidence current: tests/test_m3_hybrid_hole.py",
       "passed": true,
       "detail": ""
     },

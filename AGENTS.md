@@ -3,9 +3,10 @@
 ## Where things go
 
 - `knowledge/` holds the reasoning: rule, why, evidence, limits. Backend-independent. One maintained source per rule; other places link to it. Every article is listed in `knowledge/catalog.json`.
-- `skills/` holds thin entrypoints (`SKILL.md`, under about 60 lines) that say when to load which knowledge and how to do the work in a backend. Backend details and imported field notes live in `skills/<name>/references/`. Helper scripts live in `skills/<name>/scripts/` and are covered by tests and evidence hashes.
+- `skills/` holds concise entrypoints (`SKILL.md`) with precise triggers, essential constraints and task-specific routes. Keep substantial conditional detail in references; a low line count alone does not make an entrypoint small. Backend details and imported field notes live in `skills/<name>/references/`. Helper scripts live in `skills/<name>/scripts/` and are covered by tests and evidence hashes.
 - `profiles/` holds numbers: design languages, manufacturing processes, protected interfaces and the workstation profile. A value that describes one machine or one setup belongs here, not in a knowledge article.
 - `labs/` holds reproducible experiments with their own inputs, outputs and hashes. Each lab is listed in `labs/catalog.json`.
+- `toolbox/` holds working tools collected from projects (print pipeline, mesh checks, scan tracing) and, in `toolbox/solidcraft/`, the house reference for SolidCraft with its tested examples. Its README states for each tool where it came from and what was actually run; a new project calls a tool from there instead of copying it again. A statement in the house reference marked as run is a check in `toolbox/solidcraft/examples/run-examples.sh`; add the check when you add the statement.
 - `docs/` is about the repository itself: architecture, scope, history, provenance.
 - Personal project narratives do not belong in the repository. Distil the transferable rule into `knowledge/lessons/` and name the origin in one line.
 
@@ -27,4 +28,6 @@
 
 ## Using Toolroom for CAD work
 
-For a CAD task using this knowledge base, follow the [workflow entrypoint](skills/cad-workflow/SKILL.md). For independent routine work, the [delegation rules](knowledge/workflow/delegation.md) and [team profile](profiles/agents/cad-team.yaml) define narrow worker scopes; critical engineering decisions remain with Astra at the highest available quality. Repository maintenance itself does not require loading every CAD skill.
+Use the [workflow entrypoint](skills/cad-workflow/SKILL.md) for CAD tasks spanning stages or backends. For an isolated edit, print-file preparation or documentation change, use the relevant skill directly. Load linked material only when it affects the task, and reuse already-read guidance within the session.
+
+For independent routine work, the [delegation rules](knowledge/workflow/delegation.md) and [team profile](profiles/agents/cad-team.yaml) define narrow worker scopes. Critical engineering decisions remain with Astra at the highest available quality. The lead owns the user-facing delivery through acceptance and handoff; a worker's completed preparation is an internal milestone.

@@ -1,0 +1,9 @@
+{"commands":[
+ {"command":"solid.box","params":{"length":"80 mm","width":"50 mm","height":"2 mm","corner":[0,0,0],"name":"Panel","body_name":"Panel"}},
+ {"command":"sketch.create","params":{"plane":{"origin":[0,0,2],"x_dir":[1,0,0],"y_dir":[0,1,0]},"name":"Field"}},
+ {"command":"sketch.line","params":{"points":[[6,6],[74,6],[74,44],[6,44]],"closed":true}},
+ {"command":"sketch.finish","params":{}},
+ {"command":"solid.cell_grid","params":{"size":"8 mm","web":"1.6 mm","through_all":true,"shape":"hexagon","anchor":[40,25,2],"clip":"whole","margin":"0.8 mm","direction":"negative","sketch":"Field","targets":["Panel"],"name":"Honeycomb"}},
+ {"command":"inspect.measure","params":{}},
+ {"command":"file.export","params":{"path":"grid.stl"}}
+]}

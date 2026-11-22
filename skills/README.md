@@ -27,6 +27,13 @@ Every entrypoint has the same shape: front matter (`name`, `description`), an H1
 | [cad-physics-simulation](cad-physics-simulation/SKILL.md) | A CAD mechanism handling loose parts is simulated or animated, or control software runs against a virtual machine. |
 | [scan-reverse-engineering](scan-reverse-engineering/SKILL.md) | A 3D scan has to become measured, parametric CAD. |
 
+## Backend
+
+SolidCraft is the CAD backend for new work since 22 November 2026. Its skills ship with SolidCraft and are not part
+of this repository; how this workspace uses it is recorded in the
+[house reference](../toolbox/solidcraft/README.md). The Onshape skills stay in use for the sorting machine. The
+Build123d and Fusion skills are kept for the projects built with them.
+
 ## Layering
 
 **Entrypoint → references → knowledge.** The entrypoint carries the procedure and

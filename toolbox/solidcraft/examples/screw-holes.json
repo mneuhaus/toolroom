@@ -1,0 +1,11 @@
+{"commands":[
+ {"command":"solid.box","params":{"length":"60 mm","width":"20 mm","height":"10 mm","corner":[0,0,0],"name":"Plate","body_name":"Plate"}},
+ {"command":"inspect.measure","params":{}},
+ {"command":"solid.hole","params":{"position":[10,10,0],"clearance":"M3","fit":"normal","head":"ISO 4762","bridge":"0.2 mm","targets":["Plate"],"name":"CapScrewBridged"}},
+ {"command":"inspect.measure","params":{}},
+ {"command":"solid.hole","params":{"position":[25,10,10],"clearance":"M3","fit":"close","targets":["Plate"],"name":"ClearClose"}},
+ {"command":"solid.hole","params":{"position":[35,10,10],"clearance":"M3","fit":"loose","targets":["Plate"],"name":"ClearLoose"}},
+ {"command":"solid.hole","params":{"position":[48,10,10],"thread":"M3","depth":"8 mm","modeled":true,"targets":["Plate"],"name":"TappedM3"}},
+ {"command":"inspect.measure","params":{}},
+ {"command":"file.export","params":{"path":"plate.stl","quality":"fine"}}
+]}

@@ -1,0 +1,152 @@
+{
+ "commands": [
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "L",
+    "expression": "40 mm"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "W",
+    "expression": "20 mm"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "T",
+    "expression": "4 mm"
+   }
+  },
+  {
+   "command": "parameters.add",
+   "params": {
+    "name": "H",
+    "expression": "30 mm"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "L",
+    "width": "W",
+    "height": "T",
+    "corner": [
+     0,
+     0,
+     0
+    ],
+    "name": "Base",
+    "body_name": "Bracket"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "T",
+    "width": "W",
+    "height": "H",
+    "corner": [
+     0,
+     0,
+     0
+    ],
+    "operation": "join",
+    "targets": [
+     "Bracket"
+    ],
+    "name": "Upright"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "10 mm",
+    "width": "10 mm",
+    "height": "10 mm",
+    "corner": [
+     60,
+     0,
+     0
+    ],
+    "name": "CubeF",
+    "body_name": "Cube"
+   }
+  },
+  {
+   "command": "body.print_face",
+   "params": {
+    "body": "Bracket",
+    "point": [
+     20,
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "command": "inspect.measure",
+   "params": {}
+  },
+  {
+   "command": "file.export",
+   "params": {
+    "path": "bracket-as-modelled.stl",
+    "bodies": [
+     "Bracket"
+    ]
+   }
+  },
+  {
+   "command": "file.export",
+   "params": {
+    "path": "bracket-laid.stl",
+    "bodies": [
+     "Bracket"
+    ],
+    "lay_on_print_faces": true
+   }
+  },
+  {
+   "command": "file.export",
+   "params": {
+    "path": "both-laid.3mf",
+    "lay_on_print_faces": true
+   }
+  },
+  {
+   "command": "file.export",
+   "params": {
+    "path": "cube-laid.stl",
+    "bodies": [
+     "Cube"
+    ],
+    "lay_on_print_faces": true
+   }
+  },
+  {
+   "command": "file.slicers",
+   "params": {}
+  },
+  {
+   "command": "parameters.change",
+   "params": {
+    "name": "H",
+    "expression": "50 mm"
+   }
+  },
+  {
+   "command": "file.export",
+   "params": {
+    "path": "bracket-laid-h50.stl",
+    "bodies": [
+     "Bracket"
+    ],
+    "lay_on_print_faces": true
+   }
+  }
+ ]
+}

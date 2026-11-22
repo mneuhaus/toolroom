@@ -22,9 +22,20 @@ Then open `http://127.0.0.1:4176`.
 | [`labs/`](labs/README.md) | Reproducible experiments with their own evidence | What a helper or a joint principle actually demonstrates |
 | [`docs/`](docs/architecture.md) | Architecture, scope, history and provenance of this repository | How Toolroom itself is organised and why |
 | `tools/`, `tests/` | Site builder, validator, reading-edition builder and regression tests | How to rebuild and check the repository |
+| [`toolbox/`](toolbox/README.md) | Working tools collected from earlier projects: build plates and slicing for Bambu printers, printability checks on meshes, scan tracing; and the [SolidCraft house reference](toolbox/solidcraft/README.md) with tested examples | Which tool already does this job, how far it was tested, and which SolidCraft command is the house way |
+| [`fsocct/`](fsocct/README.md) | Experimental local FeatureScript interpreter with an OpenCascade backend | How to evaluate a supported FeatureScript subset and export STEP/STL offline |
 | `provenance/`, `validation/` | Import hashes, original skill snapshots, reference manifests and the results of checks that were actually run | Where content came from and what was verified |
 
 The rule of thumb: a **why** goes into `knowledge/`, a **when and how** into `skills/`, a **number** into `profiles/`, an **experiment** into `labs/`, and anything about the repository itself into `docs/`.
+
+## CAD backend
+
+Since 22 November 2026 SolidCraft is the CAD backend for new work; its own skills (`solidcraft-modeling`,
+`solidcraft-editing`, `solidcraft-checking`, `solidcraft-mechanisms`) ship with SolidCraft and are not part of this
+repository. The knowledge base, the profiles and the [toolbox](toolbox/README.md) do not depend on a backend and stay
+in use. The Onshape skills and `knowledge/onshape` stay in active use for the sorting machine, which continues in
+Onshape. The Fusion and Build123d skills and `fsocct` are kept for the existing projects built with them and are no
+longer the default route.
 
 ## Shared CAD work basis
 

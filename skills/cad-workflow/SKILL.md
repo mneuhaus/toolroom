@@ -1,48 +1,38 @@
 ---
 name: cad-workflow
-description: "Coordinate multi-stage CAD work: establish the authoritative design, select the required CAD, manufacturing or documentation skills, and retain revision-bound evidence. Use for a new CAD project, cross-tool work or an explicit workflow review; a small isolated edit does not need a full lifecycle."
+description: Coordinate CAD work spanning stages or backends, or review a CAD workflow. Use a specialist skill directly for an isolated task.
 ---
 
 # CAD workflow
 
-**Use when** a CAD job spans several stages or tools: a new project, work that crosses backends, or an explicit review of how a project is organised and evidenced. **Do not use when** the task is one isolated edit, a layout change or a question answered by a single skill — read that skill directly.
+Establish the requested deliverable, authoritative source and protected interfaces. Preserve the user's chosen mechanism and scope; added complexity needs a concrete functional reason. Define completion for this task, such as a checked native revision and a usable test-print package, with remaining physical tests stated separately.
 
-## Procedure
+Load only the branch needed now. A link is a route, not an instruction to read every document.
 
-1. State the requested outcome, the current project and its source authority before touching a tool. Preserve the user's selected backend, established interfaces and existing authorization.
-2. Identify affected parts, protected interfaces and the actual output. Reuse the project's native CAD when it contains user edits a generator does not have.
-3. Select only the applicable branches below. A manual layout change needs no CAD rebuild; a process profile cannot authorize a machine job or a cloud publication.
-4. Keep source revisions, exports and checks together. State unmeasured quantities explicitly and preserve incomplete results rather than rounding them up to a pass.
+SolidCraft is the CAD backend for new work since 22 November 2026. Its own skills (`solidcraft-modeling`,
+`solidcraft-editing`, `solidcraft-checking`, `solidcraft-mechanisms`) ship with SolidCraft and are installed beside
+this repository, not in it. The sorting machine continues in Onshape; Build123d and Fusion are for existing projects
+only.
 
-| Work | Skill | Shared reference |
-| --- | --- | --- |
-| Native Onshape design or revision | [onshape-cad](../onshape-cad/SKILL.md) | [Assembly](../../knowledge/construction/assembly-review.md) |
-| Session-backed Onshape transport | [onshape-bridge](../onshape-bridge/SKILL.md) | [Evidence](../../knowledge/foundations/verification.md) |
-| Local Build123d design | [cad-khana](../cad-khana/SKILL.md) | [Patterns](../../knowledge/construction/patterns.md) |
-| Fusion source-program workflow | [fusion360](../fusion360/SKILL.md) | [Assembly](../../knowledge/construction/assembly-review.md) |
-| Printed parts and slicer preparation | [cad-fdm-design](../cad-fdm-design/SKILL.md) | [Print preparation](../../knowledge/manufacturing/print-preparation.md) |
-| Mechanical connections between parts | [cad-joints](../cad-joints/SKILL.md) | [Joints](../../knowledge/construction/joints.md) |
-| A coherent product design language | [cad-design-system](../cad-design-system/SKILL.md) | [Profiles](../../profiles/README.md) |
-| Illustrated CAD assembly manual | [onshape-build-manuals](../onshape-build-manuals/SKILL.md) | [Evidence](../../knowledge/foundations/verification.md) |
-| Scan-derived replacement geometry | [scan-reverse-engineering](../scan-reverse-engineering/SKILL.md) | [Recipes](../../knowledge/workflow/recipes.md) |
-| Physics simulation or physically driven footage of a mechanism | [cad-physics-simulation](../cad-physics-simulation/SKILL.md) | [Verification](../../knowledge/foundations/verification.md) |
+| Task | Guidance |
+| --- | --- |
+| New part or a change, in SolidCraft | The installed skills `solidcraft-modeling` and `solidcraft-editing`, with the [house reference](../../toolbox/solidcraft/README.md) for print hand-off, screw joints and scans |
+| A look at a design before printing | [check](../../toolbox/check/README.md): hints on thin spots, tiny gaps and overlaps |
+| Build plate and slicing | [toolbox](../../toolbox/README.md) |
+| Sorting machine: native Onshape design or revision | [onshape-cad](../onshape-cad/SKILL.md) |
+| Sorting machine: session-backed Onshape transport | [onshape-bridge](../onshape-bridge/SKILL.md) |
+| Existing Build123d project | [cad-khana](../cad-khana/SKILL.md) |
+| Existing Fusion project | [fusion360](../fusion360/SKILL.md) |
+| FDM design or print preparation | [cad-fdm-design](../cad-fdm-design/SKILL.md) |
+| Joint geometry, fit or retention | [cad-joints](../cad-joints/SKILL.md) |
+| Fastenings or changes to their assembly/service access | [Required assembly review](../../knowledge/construction/assembly-review.md#review-before-delivery) |
+| Product-family design language | [cad-design-system](../cad-design-system/SKILL.md) |
+| Illustrated assembly manual | [onshape-build-manuals](../onshape-build-manuals/SKILL.md) |
+| Scan-derived replacement | [scan-reverse-engineering](../scan-reverse-engineering/SKILL.md) |
+| Physics simulation | [cad-physics-simulation](../cad-physics-simulation/SKILL.md) |
 
-## Knowledge
+Use [verification](../../knowledge/foundations/verification.md) to define the evidence needed for the deliverable and reuse valid checks. The lead carries authorized work through that evidence and delivery; internal review milestones do not create new user-approval requirements. Physical printing or publication requires its own existing authorization.
 
-- [Shared project and evidence conventions](../../knowledge/foundations/core.md) — source identity, units, revisions, evidence.
-- [What a check actually establishes](../../knowledge/foundations/verification.md) — before calling a result a pass.
-- [CAD project files and revisions](../../knowledge/workflow/project-layout.md) — for a longer project; a small prototype needs only the files it uses.
-- [Combining tasks](../../knowledge/workflow/recipes.md) — worked multi-skill sequences.
-- [Lessons from projects](../../knowledge/lessons/project-lessons.md) — what went wrong before.
+For delegation, use [bounded worker scopes and delivery ownership](../../knowledge/workflow/delegation.md), the [team profile](../../profiles/agents/cad-team.yaml) and [worker-job helper](references/worker-jobs.md). Routine workers receive concrete execution inputs; Astra retains critical decisions without inheriting a prescribed script for every design choice.
 
-## Routine work and shared tools
-
-For bounded delegation, read [the delegation rules](../../knowledge/workflow/delegation.md) and [team profile](../../profiles/agents/cad-team.yaml). Critical decisions stay with Astra at the highest available quality. Keep worker contexts fresh and task-scoped.
-
-- [Worker jobs](references/worker-jobs.md): prepare compact briefs and verify returned source/artifact bindings.
-- [Source extraction](references/source-extraction.md): hash-bound snapshots and focused evidence passages.
-- [Print packages](../cad-fdm-design/references/print-package.md): native multi-plate inspection, slice/reimport and verified cache.
-
-## Environment
-
-Endpoints, installed runtimes and this machine's default profiles are in [`profiles/environment/local-workstation.yaml`](../../profiles/environment/local-workstation.yaml). Cloud adapters and full CAD runtimes stay separately installed; see [scope](../../docs/scope.md).
+Reusable tools: [source extraction](references/source-extraction.md) for focused source evidence; [print packages](../cad-fdm-design/references/print-package.md) for frozen posed 3MFs. Environment endpoints and defaults live in the [workstation profile](../../profiles/environment/local-workstation.yaml). Use [project layout](../../knowledge/workflow/project-layout.md) when organizing persistent sources and evidence.

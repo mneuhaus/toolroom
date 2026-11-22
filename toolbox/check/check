@@ -1,0 +1,4 @@
+#!/bin/zsh
+# Hints for a SolidCraft design before printing (thin spots, tiny gaps, overlaps, bed size). See check.py.
+# Usage: toolbox/check/check design.sc [--printed "Base,Lid"] [--json hints.json]
+exec uv run --no-project --with trimesh --with numpy --with rtree --with pyyaml python -I ${0:A:h}/check.py "$@"

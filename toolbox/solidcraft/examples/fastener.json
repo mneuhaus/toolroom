@@ -1,0 +1,74 @@
+{
+ "commands": [
+  {
+   "command": "solid.box",
+   "params": {
+    "length": "30 mm",
+    "width": "20 mm",
+    "height": "6 mm",
+    "corner": [
+     0,
+     0,
+     0
+    ],
+    "name": "Plate",
+    "body_name": "Plate"
+   }
+  },
+  {
+   "command": "solid.hole",
+   "params": {
+    "position": [
+     15,
+     10,
+     6
+    ],
+    "clearance": "M3",
+    "head": "ISO 4762",
+    "targets": [
+     "Plate"
+    ],
+    "name": "Hole"
+   }
+  },
+  {
+   "command": "parts.insert",
+   "params": {
+    "family": "socket_head_cap_screw",
+    "size": "M3",
+    "length": 10,
+    "at": [
+     15,
+     11.7,
+     4
+    ],
+    "name": "Screw"
+   }
+  },
+  {
+   "command": "inspect.measure",
+   "params": {}
+  },
+  {
+   "command": "inspect.clearance",
+   "params": {
+    "bodies": [
+     "Plate"
+    ],
+    "clearance": 1
+   }
+  },
+  {
+   "command": "inspect.clearance",
+   "params": {
+    "bodies": [
+     "Plate"
+    ],
+    "against": [
+     "Body1"
+    ],
+    "clearance": 1
+   }
+  }
+ ]
+}

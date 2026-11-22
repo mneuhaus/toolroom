@@ -1,0 +1,5 @@
+{"commands":[
+ {"command":"solid.box","params":{"length":"40 mm","width":"20 mm","height":"10 mm","corner":[0,0,0],"name":"Block","body_name":"Block"}},
+ {"command":"pointcloud.insert","params":{"path":"cloud.xyz","name":"Scan"}},
+ {"command":"pointcloud.deviation","params":{"cloud":"Scan","body":"Block","tolerance":0.1,"worst":3}}
+]}
