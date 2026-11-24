@@ -1,5 +1,5 @@
 // Builds a ready-to-slice 3MF build plate (Bambu Lab A1: 256 x 256 mm) from STL parts exported by the CAD backend.
-// Each part gets a print orientation (rotations in 90-degree steps, exact), is dropped onto the bed (min z = 0) and
+// Each part gets a print orientation (rotations in 90-degree steps, exact; about z any angle), is dropped onto the bed (min z = 0) and
 // placed at a plate position; the transforms are baked into the mesh. The meshes stay the CAD export's own
 // tessellation; this tool only moves them rigidly, it never re-tessellates.
 // Usage: node plate-3mf.mjs <plate.json>
@@ -35,10 +35,15 @@ function readStl(file) {
   return tris;
 }
 
-// Exact quarter-turn rotations: coordinates are only permuted and negated.
+// Exact quarter-turn rotations: coordinates are only permuted and negated. About z (the bed's normal) any other angle
+// is allowed too, to lay a part diagonally on the bed: that turn is computed (cos, sin) and leaves z as it is.
 function rotate(p, axis, degrees) {
   const turns = ((Math.round(degrees / 90) % 4) + 4) % 4;
-  if (Math.abs(degrees / 90 - Math.round(degrees / 90)) > 1e-12) throw new Error(`rotation ${degrees} is not a multiple of 90 degrees`);
+  if (Math.abs(degrees / 90 - Math.round(degrees / 90)) > 1e-12) {
+    if (axis !== 'z') throw new Error(`rotation ${degrees} about ${axis} is not a multiple of 90 degrees (only z may be turned freely)`);
+    const a = degrees * Math.PI / 180, c = Math.cos(a), s = Math.sin(a);
+    return [p[0] * c - p[1] * s, p[0] * s + p[1] * c, p[2]];
+  }
   let [x, y, z] = p;
   for (let t = 0; t < turns; t++) {
     if (axis === 'x') [y, z] = [-z, y];
