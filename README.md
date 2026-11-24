@@ -4,13 +4,38 @@ A CAD knowledge base and skill framework for AI-assisted design. Toolroom keeps 
 
 The name is the workshop metaphor: a toolroom is where the jigs, gauges and fixtures live that make the shop's work repeatable. Here the jigs are **skills**, the gauges are the **knowledge base** with its verification rules, and the fixtures are **profiles** that describe a machine, a style or a workstation. Toolroom is not a CAD kernel and does not run machines. It tells an agent what to do, where the reasoning is, and which evidence counts.
 
-**Start:** open [`index.html`](index.html) for the offline documentation, or read [the architecture](docs/architecture.md). Local preview:
+**Reading as a person:** open [`index.html`](index.html) for the offline documentation, or read [the architecture](docs/architecture.md). Local preview:
 
 ```sh
 uv run python tools/serve.py
 ```
 
 Then open `http://127.0.0.1:4176`.
+
+## Start here as an agent
+
+Read these six pages in this order, then stop: this page, [the conventions](AGENTS.md), [the skill list](skills/README.md), [the workflow entrypoint](skills/cad-workflow/SKILL.md), [the toolbox](toolbox/README.md) and [the SolidCraft house reference](toolbox/solidcraft/README.md). Load anything else only when the task needs it; the repository is too large to read whole.
+
+**Set up once**
+
+1. Check what the machine has and report what is missing instead of working around it: SolidCraft (the tools call `/Applications/SolidCraft.app/Contents/MacOS/solidcraft-cli`; its own skills ship with the app), `uv`, `node`, and Bambu Studio for build plates.
+2. Install the skills by symlinking each folder from the checkout, for example `ln -s "$PWD/skills/cad-fdm-design" ~/.claude/skills/cad-fdm-design`. A skill folder is an entrypoint, not a standalone package: it links into `../../knowledge` and `../../profiles`, and a copy breaks those links. For new printed parts take `cad-workflow`, `cad-fdm-design`, `cad-joints`, `cad-design-system` and `scan-reverse-engineering`; the Onshape, Build123d and Fusion skills serve existing projects. Do not overwrite a skill that is already installed under the same name.
+3. Run `uv run python tools/validate.py`, `toolbox/check/selftest.sh` and `toolbox/solidcraft/examples/run-examples.sh`. The last two need SolidCraft, the last one also Bambu Studio. When one fails, find the cause (a path, another SolidCraft version, a missing program) before changing anything.
+
+**Build a part**
+
+1. Model it in SolidCraft with SolidCraft's own skills, and load `cad-fdm-design` for print orientation, fits and house style. The house reference says which command is the tried way for screw joints, bosses, threads, honeycomb and scans.
+2. Store the print orientation in the design (`body.print_face`).
+3. Run [`toolbox/check/check design.sc`](toolbox/check/README.md) before printing. It lists thin spots, tiny gaps and overlaps as hints, not as rules; judge each one and say which matter.
+4. Build the plate and slice it as described in [print hand-off](toolbox/solidcraft/print-handoff.md), and deliver the normal 3MF.
+
+**What belongs to one person's setup**
+
+- The tools assume macOS with the programs under `/Applications`. [The A1 profile](profiles/manufacturing/fdm-bambu-a1-0.4.yaml) is for a Bambu Lab A1 with a 0.4 mm nozzle and is marked uncalibrated; for another printer add a profile next to it from the template instead of changing this one. The same goes for the workstation profile in [`profiles/environment/`](profiles/environment/README.md) (endpoints, default printer, library paths).
+- A statement in the house reference marked as run was run on the SolidCraft version named there. On another version, what `run-examples.sh` reports on that machine counts.
+- House-style numbers (R4.2 fillets, 0.42 mm chamfers, the M3 hybrid hole) are the owner's defaults. For another user they are proposals.
+- The Onshape bridge, the sorting machine, `fsocct`, `pruefstand` and the delegation rules with their team profile describe the owner's projects and agent team. Skip them unless the task is about them.
+- Keep your own projects outside this repository, one folder per project. Change Toolroom itself only when asked to.
 
 ## Map
 
@@ -41,11 +66,9 @@ longer the default route.
 
 [Start here](docs/cad-work-basis.md) for the bounded worker, source-extraction and print-package commands. These keep routine work small while preserving critical CAD decisions and evidence requirements.
 
-## Using it with an agent
+## Installed skill copies
 
-Skill folders are entrypoints, not standalone packages: they link into `../../knowledge` and `../../profiles`. Install them by symlinking the folder from a checkout, for example `ln -s "$PWD/skills/cad-fdm-design" ~/.claude/skills/cad-fdm-design`, so the links keep resolving. The older skills already installed under `~/.claude/skills` stay independent until they are replaced; `provenance/originals/` preserves their entrypoints for comparison.
-
-The workstation profile in `profiles/environment/` describes one specific setup (endpoints, default printer, library paths). Another user replaces it with their own copy of the template.
+Skills installed under `~/.claude/skills` before this repository existed stay independent copies until they are replaced by symlinks; `provenance/originals/` preserves their entrypoints for comparison.
 
 ## Rebuild the documentation and run the checks
 

@@ -2,7 +2,7 @@
   "status": "passed",
   "documents": 88,
   "source_files": 188,
-  "local_links": 397,
+  "local_links": 406,
   "modules": 11,
   "knowledge_sections": 7,
   "knowledge_articles": 23,
@@ -13,6 +13,6 @@
     "index.html": "1355daf4fed2a5ffc5e2f41625beb5b94a160e677ebe26ba02550da0e9b5f253",
     "site/style.css": "c53670a35aacaaf7f0f44032aeeadef0fd8abbc4cd5844b0b981ed503b81ac1e",
     "site/app.js": "67d2f724492a98ea12d360ed749ff415f2a1713b25c07e77674a5d1e345ac601",
-    "site/data.js": "17ace5e259b458573e766337b20b684c5684d441133f9dfdd1fdea085995832f"
+    "site/data.js": "c391c33a08eac8dd0132f427fdc4938bea6bc5c711c0f036994d79e9dc9481e7"
   }
 }

@@ -6,7 +6,7 @@
     {
       "check": "markdown links and headings",
       "passed": true,
-      "detail": "397"
+      "detail": "406"
     },
     {
       "check": "unique module identifiers",
